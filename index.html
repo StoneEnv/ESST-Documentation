@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>ESST Documentation</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <main>
+      <main class="flex-2">
+        <div class="w-full">
+          <div id="documentation-scroll" class="overflow-y-auto p-2">
+            <div class="prose p-2 scroll-section">
+              <h2 style="font-weight: bold">Introduction</h2>
+              <p>
+                The U.S. Department of Agriculture Natural Resources
+                Conservation Service (NRCS) defines ecological sites as “a
+                distinctive kind of land with specific physical characteristics
+                that differs from other kinds of land in its ability to produce
+                a distinctive kind and amount of vegetation” (<a
+                  href="https://www.nrcs.usda.gov/wps/portal/nrcs/detail/national/landuse/rangepasture/?cid=stelprdb1068392"
+                  >USDA–NRCS, 2006</a
+                >). Ecological sites determine not only the ecological potential
+                of a site, but also how a site can respond to natural
+                disturbance and management actions. Ecological sites have been
+                delineated for many areas using physical and biotic features and
+                are linked to soil map units. Soils, climate, hydrology,
+                geology, physiographic features, plants species occurrences,
+                plant community composition, annual biomass production, and
+                plant-wildlife interactions all contribute to the proerties of
+                ecological sites. Ecological Site Descriptions (ESDs) describe
+                the underlying factors associated with a specific ecological
+                site, as well as different ecological states within a given site
+                based on factors such as grazing, fire, drought, and other
+                management actions. For an example of an ESD, see
+                <a
+                  href="https://edit.jornada.nmsu.edu/page?content=class-description&amp;catalog=3&amp;spatial=84&amp;class=5802#top-bookmark"
+                  >EDIT Jornada</a
+                >.
+              </p>
+            </div>
+
+            <div class="prose p-2 scroll-section">
+              <h2 style="font-weight: bold">Ecological Site Summary</h2>
+              <p>
+                Using ecological monitoring data, the overall status of an
+                Ecological Site can be summarized into an Ecological Site
+                Summary (ESS). At the site level, ecological site summaries
+                generated from monitoring data can tell us about the condition
+                and health of ecological sites based on indicators such as cover
+                by structure and functional group, species dominance, species
+                occurrences, canopy gap measurements, and soil stability
+                measurements. These indicators can help inform the user of the
+                ecological state of a given plot or overall site
+                (i.e.&nbsp;shrubland state vs.&nbsp;grassland state).
+                Identifying the ecological state allows us to not only determine
+                the degree of departure from the corresponding reference
+                ecological states, but also to inform management and restoration
+                actions accordingly by determining the best pathway to a less
+                degraded state. For more on state and transition models (STMs),
+                see see
+                <a
+                  href="https://link.springer.com/content/pdf/10.1007%2F978-3-319-46709-2_9.pdf"
+                  >Bestelmeyer et al., 2017</a
+                >. A major data source for developing these summaries is the
+                Assessment, Inventory, and Monitoring (AIM) Program along with
+                the Landscape Monitoring Framework (LMF). AIM and LMF include
+                almost 25,000 plots throughout the western United States (<em
+                  >see</em
+                >
+                <a
+                  href="https://aim.landscapetoolbox.org/data-management-project-evaluation/databases/"
+                  >AIM Data Portal</a
+                >) stored in the Terrestrial AIM Database (TerrADat). Data
+                garnered from AIM and LMF plots is both generalizable and
+                scalable and thus applicable to management decisions across
+                multiple disciplines at both local and national levels.
+              </p>
+            </div>
+
+            <div class="prose p-2 scroll-section">
+              <h2 style="font-weight: bold">ESS Tool</h2>
+
+              <p>
+                An Ecological Site Summary (ESS) tool has been developed to help
+                users visualize the overall status of their region of interest
+                within a specific ecological site, or across an ecological site
+                group. This information can be summarized within a given
+                administrative state or across political boundaries for
+                landscape scale analysis. Ecological site summaries are
+                generated using an R Markdown script with an interactive HTML
+                output in which users can query summary tables, download full or
+                filtered summary tables to view in Excel, explore interactive
+                figures, and download static figures for their own use.
+              </p>
+              <p>
+                This report is an automated process and can be continually
+                updated as new data becomes available each year or as lines of
+                inquiry shift. This ESS information can be included in decision
+                making processes for BLM managers, as it can help inform land
+                use plans, grazing permit renewals, shrub or invasive species
+                treatments, and/or seed menu development for ecological
+                restoration and reclamation.
+              </p>
+            </div>
+
+            <div class="prose p-2 scroll-section">
+              <h2 style="font-weight: bold">Using the ESS Tool</h2>
+
+              <p>
+                This report generates many tables and figures that can be
+                queried, filtered, and downloaded to meet your management and
+                reporting needs. Multiple output types are used to meet multiple
+                needs, so select the most relevant and useful output.
+              </p>
+
+              <h3 style="font-weight: bold">
+                I want this report generated for me
+              </h3>
+              <p class="pl-4 border-l-2">
+                This report is generated in RMarkdown. If you have R limitations
+                and would prefer the report to be generated for you, use this
+                <a
+                  href="https://github.com/R-Burke/EcologicalSiteSummaries/blob/master/ESS_Template.xlsx"
+                  >template</a
+                >
+                to request that Jornada run the report.
+              </p>
+
+              <h3 style="font-weight: bold">
+                I want to group by other features for a custom report
+              </h3>
+              <p class="pl-4 border-l-2">
+                In cases where ESDs are not developed, grouping AIM data by
+                other features can provide similar information, and potentially
+                lead to the development of new ESDs. For this purpose, it may be
+                informative to group data by features such as watershed units,
+                soil map units, or biophysical settings. Spatial groupings may
+                also be beneficial if you want to compare data that’s in the
+                same ecological site but across multiple management units such
+                as grazing allotments, pastures, prescribed burn areas, etc.
+                Grouping indicators by other spatial attributes is available in
+                a customized report on page two of this
+                <a
+                  href="https://github.com/R-Burke/EcologicalSiteSummaries/blob/master/ESS_Template.xlsx"
+                  >template</a
+                >.
+              </p>
+
+              <h3 style="font-weight: bold">
+                I want to run this report myself
+              </h3>
+              <div class="pl-4 border-l-2">
+                <h3 style="font-weight: bold">Download the data</h3>
+                <p>
+                  Download the ESS_Tool folder from the AIM Sharepoint that
+                  contains the ESS_Tool project (ESS_Tool.Rproj), RMarkdown
+                  script (ESS_Tool.Rmd), report rending script (RenderReport.R)
+                  and supporting documents (BannerPhoto.jpg, Boxplot_text.png,
+                  and jornadalogo.png, and defaults folder containing
+                  EDIT_public_ecological_site_list.csv). Unzip the folder into
+                  your local drive documents
+                  (i.e.&nbsp;<em>C:/Users/</em>JSmith/Documents/). Open the
+                  ESS_Tool.Rproj using RStudio. From there, go to file, open
+                  file, and open RenderReport.R.
+                </p>
+                <h3 style="font-weight: bold">
+                  Set your defaults and run the report
+                </h3>
+                <p>
+                  In RenderReport.R, set your EcologicalSiteId, path to the
+                  TerrADat geodatabase (NULL if you are working within the BLM
+                  network, the script will default to AIMPub), your working
+                  folder (the location on your local drive where you placed the
+                  ESS_Tool folder), your library path (<em
+                    >note: make sure your library is on your local drive, not
+                    the BLM server, or you will not be able to render this
+                    report-
+                    i.e.&nbsp;C:/Users/JSmith/Documents/R/win-library/3.6</em
+                  >). Set BLM to TRUE (if you are working within BLM
+                  network/VPN) or FALSE (if you are accessing TerrADat
+                  externally). Set your state (2 letter abbreviation, all caps).
+                </p>
+                <p>
+                  Now run every line in the RenderReport.R. The report should
+                  only take several minutes, but may take longer if accessing
+                  internal data from VPN. The output HTML document will be saved
+                  in the project folder. View the document in Google Chrome or
+                  Firefox (<em
+                    >some features will be disabled in Internet Explorer</em
+                  >). You need to be connected to the internet to run the
+                  report, but you can view it without internet (<em
+                    >note that the basemap feature will be disabled offline</em
+                  >).
+                </p>
+              </div>
+            </div>
+
+            <div class="h-o md:h-[300px]"></div>
+          </div>
+        </div>
+      </main>
+    </main>
+  </body>
+</html>
