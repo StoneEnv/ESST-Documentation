@@ -1,12 +1,20 @@
 <!DOCTYPE html>
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>ESST</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>ESST Documentation</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"/>
+
     <link rel="stylesheet" href="./base.css" />
-    <link rel="stylesheet" href="./style.css" /> 
+    <link rel="stylesheet" href="./style.css" />
     <link rel="icon" href="./favicon.ico" type="image/x-icon" />
   </head>
 
@@ -36,39 +44,37 @@
             <div  class="hidden md:block">
               <ul  id="scroll-links" class="sticky top-0 menu bg-base-200 rounded-box">
                 <li >
-                <a data-container="section1" class="active">Introduction</a>
+                <a href="#section1" class="active">Introduction</a>
                 </li>
                 <li>
-                <a data-container="section2" class>Background</a>
+                <a href="#section2" class>Background</a>
                 </li>
                 <li>
-                <a data-container="section3">Ecological Site Summary</a>
+                <a href-="#section3">Ecological Site Summary</a>
                 </li>
                 <li>
-                <a data-container="section4">Using the ESS Tool</a>
+                <a href="#section4">Using the ESS Tool</a>
                 </li>
-                <li><a data-container="section5">Glossary of Terms and Acronyms</a>
+                <li><a href="#section5">Glossary of Terms and Acronyms</a>
                 </li>
               </ul>
             </div>
             <div class="col-span-5 md:col-span-4">
             <div id="documentation-scroll" class="overflow-y-auto p-2" style="height: 892px;">
             <div id="section1" class="prose p-2 scroll-section">
-              <h2 style="font-weight: bold">Introduction</h2>
-
-              <h2 style="font-weight: bold">How to use this guide</h2>
+              <h3>Introduction</h3>
               <ul class = "list-decimal">
-                <li>The section “Use the ESS Tool” later in this guide has instructions for creating an ecological site summary (ESS).</li> 
+                <li>The section "Use the ESS Tool" later in this guide has instructions for creating an ecological site summary (ESS).</li> 
                 <li>Learn the science behind the ESS Tool after this introduction.</li> 
-                <li>Reference the “Glossary of Terms and Acronyms” at the end of the guide and look for more helpful resources.</li>
+                <li>Reference the "Glossary of Terms and Acronyms" at the end of the guide and look for more helpful resources.</li>
               </ul> 
             </div>
 
             <div id="section2" class="prose p-2 scroll-section">
-              <h2 style="font-weight: bold">Background</h2>
+              <h3>Background</h3>
                 <p> The U.S. Department of Agriculture Natural Resources Conservation Service <b><a href="https://www.nrcs.usda.gov/">(NRCS)</a></b> defines ecological sites as 
-                  “a distinctive kind of land with specific physical characteristics that differs from other kinds of land in its ability 
-                  to produce a distinctive kind and amount of vegetation” <b><a href="https://www.ars.usda.gov/plains-area/las-cruces-nm/range-management-research/docs/ecological-site-descriptions-introduction/">(USDA-NRCS)</a></b>. 
+                  "a distinctive kind of land with specific physical characteristics that differs from other kinds of land in its ability 
+                  to produce a distinctive kind and amount of vegetation" <b><a href="https://www.ars.usda.gov/plains-area/las-cruces-nm/range-management-research/docs/ecological-site-descriptions-introduction/">(USDA-NRCS)</a></b>. 
                   Ecological sites determine not only the 
                   ecological potential of a site, but also how a site can respond to natural disturbance and management actions. Ecological sites 
                   have been delineated for many areas using physical and biotic features and are linked to soil map units. Soils, climate, 
@@ -81,7 +87,7 @@
             </div>
               
             <div id="section3" class="prose p-2 scroll-section">
-                <h2 style="font-weight: bold">Ecological Site Summary</h2>
+                <h3>Ecological Site Summary</h3>
               <p margin-bottom: 1em>Using ecological monitoring data, the overall status of an Ecological Site can be summarized into an Ecological Site Summary (ESS). 
                 At the site level, ecological site summaries generated from monitoring data can tell us about the condition and health of ecological 
                 sites based on indicators such as cover by structure and functional group, species dominance, species occurrences, canopy gap 
@@ -109,7 +115,7 @@
             </div>
 
             <div id="section4" class="prose p-2 scroll-section">
-              <h2 style="font-weight: bold">Using the ESS Tool</h2>
+              <h3>Using the ESS Tool</h3>
                 <p>This tool generates many tables and figures that can be queried, filtered, and downloaded to meet your management and reporting needs. 
                   Multiple output types are used to meet multiple needs, so select the most relevant and useful output. In cases where ESDs are not 
                   developed, grouping AIM data by other features can provide similar information, and potentially lead to the development of new ESDs. 
@@ -118,52 +124,64 @@
                   grazing allotments, pastures, prescribed burn areas, etc. The report you generate can be customized to select and compare indicators
                   by both spatial and non-spatial groupings.  
                 </p>
-              <h3 style="font-weight: bold">Step 1: Access the tool</h3>
-                <p>To use the ESS Tool, navigate to https://www.stone-env.net/esst/. Click “Get Started” to pull up a map and query the data.
-                  Use the tab to expand and collapse the form and map in the application. 
+              <h4 margin-top: 1em>Step 1: Access the tool</h4>
+                <p>To use the ESS Tool, navigate to <b><a href = https://www.stone-env.net/esst/>https://www.stone-env.net/esst/.</a></b>
                 </p>
-              <h3 style="font-weight: bold">Step 2: Select attributes and indicators</h3>
-                <p> Use the attribute buttons at the top of the form to filter the data by “Soil Attributes”, “Plant Attributes”, “Erosion Indicators”, 
-                  or “Indicators of Rangeland Health”. Select indicators under one or more attributes to use in your query. You will be able to sort your 
+                <img id="Task1Part1" src="Screenshots/task1part1.png">
+                <p> Click "Get Started" to pull up a map and query the data.
+                  Use the tab to expand and collapse the form and map in the application. </p>
+                <img id="Task1Part2" src="Screenshots/task1part2.png">
+              <h4>Step 2: Select attributes and indicators</h4>
+                <p> Use the attribute buttons at the top of the form to filter the data by "Soil Attributes", "Plant Attributes", "Erosion Indicators", 
+                  or "Indicators of Rangeland Health". Select indicators under one or more attributes to use in your query. You will be able to sort your 
                   data by indicator and set benchmarks in a later step. 
-                  Click "Add New Row” to add a statement to your query group. Use the dropdown under “Property” to add an indicator to your query statement,
-                  choose an operator, then input a value to complete the statement. Add additional rows to your group to complete your query statements.
-                  Click “X” to the right of any row to remove it from the group. 
                 </p>
-              <h3 style="font-weight: bold">Step 3: Select an area of interest (AOI)</h3>
-                <p>Click “Add AOI” for options to include select the area of interest to include in your query: 
-                  Draw Polygon: Use the Zoom In and Zoom Out buttons on the map. After selecting "Add AOI” > “Draw Polygon”, click on the map to start drawing. 
-                  Continue clicking until the polygon is your intended size and shape. You may add additional separate polygons to the same query group. 
-                  Project: Use this option to select one or more projects using a Project Key, ESD, MLRA, or Ecoregion Level #3. ESDs and MLRAs are described in 
-                  more detail in EDIT Jornada. Ecoregions can be found on the EPA's website.  
+                <img id="Task2Part1" src="Screenshots/task2part1.png">
+                <p>Click "Add New Row" to add a statement to your query group. Use the dropdown under "Property" to add an indicator to your query statement,
+                  choose an operator, then input a value to complete the statement. Add additional rows to your group to complete your query statements.
+                  Click "X" to the right of any row to remove it from the group. </p>
+                <img id="Task2Part2" src="Screenshots/task2part2.png">
+
+              <h4>Step 3: Select an area of interest (AOI)</h4>
+                <p>Click "Add AOI" for options to include select the area of interest to include in your query:   
+                </p>
+                <img id="Task3Part1" src="Screenshots/task3part1.png">
+                <p>Draw Polygon: Use the Zoom In and Zoom Out buttons on the map. After selecting "Add AOI" > "Draw Polygon", click on the map to start drawing. 
+                  Continue clicking until the polygon is your intended size and shape. You may add additional separate polygons to the same query group. </p>
+                <img id="Task3Part2" src="Screenshots/task3part2.png">
+                <p>Project: Use this option to select one or more projects using a Project Key, ESD, MLRA, or Ecoregion Level #3. ESDs and MLRAs are described in 
+                  more detail in <b><a href= "https://edit.jornada.nmsu.edu/">EDIT Jornada.</a></b>. Ecoregions can be found on the <b><a href="https://www.nrcs.usda.gov/resources/data-and-reports/major-land-resource-area-mlra">EPA's website</a></b></p>
+                <img id="Task3Part3" src="Screenshots/task3part3.png">
+                <p>
                   Upload Shapefile: This option allows you to upload a shapefile from your device into the tool. 
                   Note: you may combine any of these AOI options in one query. For example, you can select an MLRA and a shapefile or an ESD, a 
-                  shapefile, and a hand-drawn polygon.  
-                </p>
-              <h3 style="font-weight: bold">Step 4: Manage query group and geodata</h3>
+                  shapefile, and a hand-drawn polygon.</p>
+                  <img id="Task3Part4" src="Screenshots/task3part4.png">
+
+                <h4>Step 4: Manage query group and geodata</h4>
                 <p> Select the + sign to add a query group. Choose a property from the Property dropdown menu. You may also choose an operator 
                   and a value. You may add multiple properties to the same query group by clicking the + sign. You may name your group using the filter 
                   button and selecting Rename Group. 
-                  To create an additional query group you may select “Add New Group” to start an empty new query group or you may create a duplicate of your existing 
-                  query group by using the Query Group Settings button and selecting “Clone Group”. This clone can then be modified or renamed. 
-                  You may also delete groups by using the filter button and selecting “Delete Group.” You may delete queries within a group by clicking the X at the 
+                  To create an additional query group you may select "Add New Group" to start an empty new query group or you may create a duplicate of your existing 
+                  query group by using the Query Group Settings button and selecting "Clone Group". This clone can then be modified or renamed. 
+                  You may also delete groups by using the filter button and selecting "Delete Group." You may delete queries within a group by clicking the X at the 
                   end of the line.  
-                  Rename your query group using the Query Group Settings. After clicking the settings button, choose “Rename Group”. 
+                  Rename your query group using the Query Group Settings. After clicking the settings button, choose "Rename Group". 
                   After selecting your query group property settings and area of interest, use the [sliders icon] button and select Manage GeoData. Use the GeoData 
                   Manager to inspect your AOI selections and the number of unique sites they each contain. Click a table row to zoom the map to that selection's 
-                  extent. Bu default, unique sites in each selection are added together in the query. To subtract a selection's sites from the query, click “Exclude” under
-                  the Toggle Selection. To remove a selection, click the “X” Destroy button. Remove all selections with the Clear All button. Press the Close button to 
+                  extent. Bu default, unique sites in each selection are added together in the query. To subtract a selection's sites from the query, click "Exclude" under
+                  the Toggle Selection. To remove a selection, click the "X" Destroy button. Remove all selections with the Clear All button. Press the Close button to 
                   return to the Query Form. 
                 </p>
-              <h3 style="font-weight: bold">Step 5: View and interact with query results</h3>
+              <h4>Step 5: View and interact with query results</h4>
                 <p>Once you have set your query group properties and areas of interest, click Submit to run the query. 
                   Errors: too many sites, no data available 
                   After the query runs, click the Results tab. In Results, click the Graph and Table tabs to view the data. 
               </p>
 
-                <h3 style="font-weight: bold">Step 6: Compare data from multiple query groups</h3>
+                <h4>Step 6: Compare data from multiple query groups</h4>
 
-                <h3 style="font-weight: bold">Step 7: Export data</h3>
+                <h4>Step 7: Export data</h4>
 
                 <p>CSV: data table, no visualizations 
 
@@ -171,8 +189,8 @@
                 </p>
             </div>
             <div id = section5 class="prose p-2 scroll-section">
-              <h2 style="font-weight: bold">  Glossary of Terms and Acronyms </h2>
-              <h3 style="font-weight: bold">Acronyms</h3>
+              <h3>  Glossary of Terms and Acronyms </h3>
+              <h4>Acronyms</h4>
               <ul class = "list-disc">
               <li><b>ESD: </b>Ecological Site Description </li>
               <li><b>ESS: </b>Ecological Site Summary </li>
@@ -183,11 +201,11 @@
               <li><b>BLM: </b>Bureau of Land Management</li>  
               <li><b>TerrADat: </b>Terrestrial AIM Database</li>  
               </ul>
-              <h3 style="font-weight: bold">Terms</h3>
+              <h4>Terms</h4>
               <ul class = "list-disc">
-              <li><b>Ecological site: </b>“is a distinctive kind of land with specific soil and physical characteristics that differ from other kinds 
+              <li><b>Ecological site: </b> a distinctive kind of land with specific soil and physical characteristics that differ from other kinds 
                 of land in its ability to produce distinctive kinds and amounts of vegetation, and in its ability to respond similarly to 
-                management actions and natural disturbances” (USDA-NRCS, 2006).</li>
+                management actions and natural disturbances <b><a href="https://www.ars.usda.gov/plains-area/las-cruces-nm/range-management-research/docs/ecological-site-descriptions-introduction/">(USDA-NRCS).</a></b></li>
               <li><b>Ecoregion: </b> a major ecosystem defined by distinctive geography and receiving uniform solar radiation and moisture. They are 
                 areas where ecosystems (and the type, quality, and quantity of environmental resources) are generally similar. Designed to serve
                 as a spatial framework for the research, assessment, and monitoring of ecosystems and ecosystem components, ecoregions 
@@ -216,12 +234,12 @@
                   predation, parasitism, commensalism, or mutualism and do not require direct physical contact. Important plant-wildlife 
                   interactions are pollination, seed dispersal, and herbivory. The plants and animals have co-evolved these adaptive mechanisms 
                   to maximize the chance of survival.</li>
-                <li><b>State-and-Transition Model: </b>“These models synthesize literature and informal knowledge tied to particular ecological sites 
+                <li><b>State-and-Transition Model: </b>"These models synthesize literature and informal knowledge tied to particular ecological sites 
                   to distinguish changes
                   in vegetation and soils that are easily reversible versus changes that are subject to thresholds beyond which reversal is 
                   costly or impossible. The models describe all possible states, community phases (i.e., easily-reversible variants of states), 
                   and transitions between communities and states. Transitions contain information about mechanisms, triggers, thresholds, 
-                  and indicators of threshold development.” More details can be found on the <a href = "https://jornada.nmsu.edu/knowledge-systems/esd"> Jornada website.</a></li>
+                  and indicators of threshold development." More details can be found on the <b><a href = "https://jornada.nmsu.edu/knowledge-systems/esd"> Jornada website.</a></b></li>
                 <li><b>Ecological restoration and reclamation: </b>The process of assisting the recovery of severely degraded ecosystems to benefit 
                   native biota through the establishment of habitats, populations, communities, or ecosystems that are similar, but not 
                   necessarily identical to surrounding and naturally occurring ecosystems. 
