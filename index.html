@@ -2,9 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <title>ESST</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>ESST Documentation</title>
     <link rel="stylesheet" href="./base.css" />
     <link rel="stylesheet" href="./style.css" /> 
     <link rel="icon" href="./favicon.ico" type="image/x-icon" />
@@ -28,79 +28,87 @@
         </button>
         </div>
     </app-header>
- </div>
-
-
-    <main>
+    </div>
+    <app-documentation>
       <main class="flex-2">
         <div class="w-full">
           <div  class="grid grid-cols-5 gap-3">
             <div  class="hidden md:block">
               <ul  id="scroll-links" class="sticky top-0 menu bg-base-200 rounded-box">
                 <li >
-                <a  data-container="section1" class="active">Introduction</a>
-                <a  data-container="section2" class>Background</a>
-                <a  data-container="section3">Ecological Site Summary</a>
-                <a  data-container="section4">Using the ESS Tool</a>
-                <a  data-container="section5">Glossary of Terms and Acronyms</a>
+                <a data-container="section1" class="active">Introduction</a>
+                </li>
+                <li>
+                <a data-container="section2" class>Background</a>
+                </li>
+                <li>
+                <a data-container="section3">Ecological Site Summary</a>
+                </li>
+                <li>
+                <a data-container="section4">Using the ESS Tool</a>
+                </li>
+                <li><a data-container="section5">Glossary of Terms and Acronyms</a>
                 </li>
               </ul>
             </div>
-
-            <div class="col-span-5 md:col-span-4"></div>
-            <div id="documentation-scroll" class="overflow-y-auto p-2">
-            <div id = section1 class="prose p-2 scroll-section">
+            <div class="col-span-5 md:col-span-4">
+            <div id="documentation-scroll" class="overflow-y-auto p-2" style="height: 892px;">
+            <div id="section1" class="prose p-2 scroll-section">
               <h2 style="font-weight: bold">Introduction</h2>
 
               <h2 style="font-weight: bold">How to use this guide</h2>
-                <p>1. The section “Use the ESS Tool” later in this guide has instructions for creating an ecological site summary (ESS). 
-                  2. Learn the science behind the ESS Tool after this introduction. 
-                  3. Reference the “Glossary of Terms and Acronyms” at the end of the guide.
-                </p>
+              <ul class = "list-decimal">
+                <li>The section “Use the ESS Tool” later in this guide has instructions for creating an ecological site summary (ESS).</li> 
+                <li>Learn the science behind the ESS Tool after this introduction.</li> 
+                <li>Reference the “Glossary of Terms and Acronyms” at the end of the guide and look for more helpful resources.</li>
+              </ul> 
             </div>
 
-              <div id="section2" class="prose p-2 scroll-section">
+            <div id="section2" class="prose p-2 scroll-section">
               <h2 style="font-weight: bold">Background</h2>
-                <p> The U.S. Department of Agriculture Natural Resources Conservation Service (NRCS) defines ecological sites as 
+                <p> The U.S. Department of Agriculture Natural Resources Conservation Service <b><a href="https://www.nrcs.usda.gov/">(NRCS)</a></b> defines ecological sites as 
                   “a distinctive kind of land with specific physical characteristics that differs from other kinds of land in its ability 
-                  to produce a distinctive kind and amount of vegetation” (USDA–NRCS, 2006). Ecological sites determine not only the 
+                  to produce a distinctive kind and amount of vegetation” <b><a href="https://www.ars.usda.gov/plains-area/las-cruces-nm/range-management-research/docs/ecological-site-descriptions-introduction/">(USDA-NRCS)</a></b>. 
+                  Ecological sites determine not only the 
                   ecological potential of a site, but also how a site can respond to natural disturbance and management actions. Ecological sites 
                   have been delineated for many areas using physical and biotic features and are linked to soil map units. Soils, climate, 
                   hydrology, geology, physiographic features, plant species occurrences, plant community composition, annual biomass production, 
                   and plant-wildlife interactions all contribute to the properties of ecological sites. Ecological Site Descriptions (ESDs) describe 
                   the underlying factors associated with a specific ecological site, as well as different ecological states within a given site based 
-                  on factors such as grazing, fire, drought, and other management actions. For an example of an ESD, see EDIT Jornada.
+                  on factors such as grazing, fire, drought, and other management actions. For an example of an ESD, see 
+                  <b><a href= "https://edit.jornada.nmsu.edu/">EDIT Jornada.</a></b>
                 </p>
-              </div>
+            </div>
               
-              <div id="section3" class="prose p-2 scroll-section">
+            <div id="section3" class="prose p-2 scroll-section">
                 <h2 style="font-weight: bold">Ecological Site Summary</h2>
-              <p>Using ecological monitoring data, the overall status of an Ecological Site can be summarized into an Ecological Site Summary (ESS). 
+              <p margin-bottom: 1em>Using ecological monitoring data, the overall status of an Ecological Site can be summarized into an Ecological Site Summary (ESS). 
                 At the site level, ecological site summaries generated from monitoring data can tell us about the condition and health of ecological 
                 sites based on indicators such as cover by structure and functional group, species dominance, species occurrences, canopy gap 
                 measurements, and soil stability measurements. These indicators can help inform the user of the ecological state of a given plot or 
                 overall site (i.e. shrubland state vs. grassland state). Identifying the ecological state allows us to not only determine the degree of 
                 departure from the corresponding reference ecological states, but also to inform management and restoration actions accordingly by 
-                determining the best pathway to a less degraded state. For more on state and transition models (STMs), see Bestelmeyer et al., 2017.
-                 A major data source for developing these summaries is the Assessment, Inventory, and Monitoring (AIM) Program along with the Landscape 
+                determining the best pathway to a less degraded state. For more on state and transition models (STMs), see 
+                <b><a href="https://library.oapen.org/bitstream/handle/20.500.12657/27988/1002009.pdf?sequence=1#page=313">Bestelmeyer et al., 2017.</a></b>
+                 A major data source for developing these summaries is the 
+                 <b><a href = "https://www.blm.gov/aim">Assessment, Inventory, and Monitoring (AIM) Program</a></b> along with the Landscape 
                  Monitoring Framework (LMF). AIM and LMF include almost 25,000 plots throughout the western United States (see AIM Data Portal) stored 
-                 in the Terrestrial AIM Database (TerrADat). Data garnered from AIM and LMF plots is both generalizable and scalable and thus applicable
+                 in the <b><a href ="https://gbp-blm-egis.hub.arcgis.com/datasets/BLM-EGIS::blm-natl-aim-terradat-hub/about">Terrestrial AIM Database (TerrADat).</a></b> 
+                 Data garnered from AIM and LMF plots is both generalizable and scalable and thus applicable
                   to management decisions across multiple disciplines at both local and national levels.
                 </p>
-
-              <h2 style="font-weight: bold">ESS Tool</h2>
-                <p>An Ecological Site Summary (ESS) tool has been developed to help users visualize the overall status of their region of interest 
+                <p margin-bottom: 1em>An Ecological Site Summary (ESS) tool has been developed to help users visualize the overall status of their region of interest 
                   within a specific ecological site, or across an ecological site group. This information can be summarized within a given administrative
                    state or across political boundaries for landscape scale analysis. Users can query summary tables, download full or filtered summary 
                    tables to view in Excel, explore interactive figures, and download static figures for their own use. 
                 </p><p>
-                   This ESS information can be included in decision making processes for Bureau of Land Management (BLM) managers, as it can help inform
+                   This ESS information can be included in decision making processes for <b><a href = "https://www.blm.gov/">Bureau of Land Management (BLM)</a></b> managers, as it can help inform
                     land use plans, grazing permit renewals, shrub or invasive species treatments, and/or seed menu development for ecological restoration
                     and reclamation. As new data become available or lines of inquiry shift, the summary tables and report can be easily updated. 
                 </p>
-              </div>
+            </div>
 
-              <div id="section4" class="prose p-2 scroll-section">
+            <div id="section4" class="prose p-2 scroll-section">
               <h2 style="font-weight: bold">Using the ESS Tool</h2>
                 <p>This tool generates many tables and figures that can be queried, filtered, and downloaded to meet your management and reporting needs. 
                   Multiple output types are used to meet multiple needs, so select the most relevant and useful output. In cases where ESDs are not 
@@ -127,7 +135,7 @@
                   Draw Polygon: Use the Zoom In and Zoom Out buttons on the map. After selecting "Add AOI” > “Draw Polygon”, click on the map to start drawing. 
                   Continue clicking until the polygon is your intended size and shape. You may add additional separate polygons to the same query group. 
                   Project: Use this option to select one or more projects using a Project Key, ESD, MLRA, or Ecoregion Level #3. ESDs and MLRAs are described in 
-                  more detail in EDIT Jornada. Ecoregions can be found on the EPA’s website.  
+                  more detail in EDIT Jornada. Ecoregions can be found on the EPA's website.  
                   Upload Shapefile: This option allows you to upload a shapefile from your device into the tool. 
                   Note: you may combine any of these AOI options in one query. For example, you can select an MLRA and a shapefile or an ESD, a 
                   shapefile, and a hand-drawn polygon.  
@@ -161,87 +169,81 @@
 
                   PDF: report with visualizations 
                 </p>
-              
-                <div id = section5 class="prose p-2 scroll-section">
+            </div>
+            <div id = section5 class="prose p-2 scroll-section">
               <h2 style="font-weight: bold">  Glossary of Terms and Acronyms </h2>
               <h3 style="font-weight: bold">Acronyms</h3>
+              <ul class = "list-disc">
+              <li><b>ESD: </b>Ecological Site Description </li>
+              <li><b>ESS: </b>Ecological Site Summary </li>
+              <li><b>MLRA: </b>Major Land Resource Area</li> 
+              <li><b>STM: </b>State and Transition Model</li> 
+              <li><b>AIM: </b>Assessment, Inventory, and Monitoring Program</li>
+              <li><b>LMF: </b>Landscape Modeling Framework</li>
+              <li><b>BLM: </b>Bureau of Land Management</li>  
+              <li><b>TerrADat: </b>Terrestrial AIM Database</li>  
+              </ul>
+              <h3 style="font-weight: bold">Terms</h3>
+              <ul class = "list-disc">
+              <li><b>Ecological site: </b>“is a distinctive kind of land with specific soil and physical characteristics that differ from other kinds 
+                of land in its ability to produce distinctive kinds and amounts of vegetation, and in its ability to respond similarly to 
+                management actions and natural disturbances” (USDA-NRCS, 2006).</li>
+              <li><b>Ecoregion: </b> a major ecosystem defined by distinctive geography and receiving uniform solar radiation and moisture. They are 
+                areas where ecosystems (and the type, quality, and quantity of environmental resources) are generally similar. Designed to serve
+                as a spatial framework for the research, assessment, and monitoring of ecosystems and ecosystem components, ecoregions 
+                denote areas of similarity in the mosaic of biotic, abiotic, terrestrial, and aquatic ecosystem components with humans 
+                being considered as part of the biota. Ecoregions are identified by analyzing the patterns and composition of biotic and 
+                abiotic phenomena that affect or reflect differences in ecosystem quality and integrity (Omernik 1987, 1995). 
+                These phenomena include geology, landforms, soils, vegetation, climate, land use, wildlife, and hydrology. More details can
+                be found on the <b><a href = "https://www.epa.gov/eco-research/ecoregions">EPA's website</a></b>.
+                </li>
+                <li><b>Natural Disturbance: </b>Disturbances are events, like tornados, wildfires or floods that cause marked changes to the impacted 
+                  area. Examples of ecological disturbances include fires, landslides, flooding, windstorms and insect and pest outbreaks. 
+                  Disturbances often come in the form of short-term or temporary changes to the landscape but can have very significant 
+                  ecosystem impacts. These events often act quickly but with great impact and thereby 
+                  are able to promote changes to the physical structure of the system. For example, a fire burning over a mature forest 
+                  results in a different composition of species after the disturbance event. Other types of disturbances may occur over 
+                  longer, persistent timeframes that also can promote changes to the biodiversity or health of the system. 
+                  More details can be found on the <b><a href = "https://www.climatehubs.usda.gov/disturbances-and-stressors">USDA's website.</a></b></li>
+                <li><b>Management Actions:</b></li>
+                <li><b>Physiographic features: </b>the physical features and processes of landforms and their relation to geologic structures, 
+                  including the soils, topography, land slope and aspect, and local climate, that influence the form and species 
+                  composition of plant communities.</li>
+                <li> <b>Plant community composition: </b>a description of vegetation in a fixed area by the species present and their abundance. 
+                <b><a href= "https://climexhandbook.w.uib.no/2019/11/04/plant-community-composition/">(Jaroszynska et al.)</a></b></li>
+                <li><b>Annual biomass production: </b>the amount of organic plant matter produced in a given area over the course of a year.</li>
+                <li><b>Plant-wildlife interactions:</b> Relationships between the plants and animals in a given ecosystem. These relationships include 
+                  predation, parasitism, commensalism, or mutualism and do not require direct physical contact. Important plant-wildlife 
+                  interactions are pollination, seed dispersal, and herbivory. The plants and animals have co-evolved these adaptive mechanisms 
+                  to maximize the chance of survival.</li>
+                <li><b>State-and-Transition Model: </b>“These models synthesize literature and informal knowledge tied to particular ecological sites 
+                  to distinguish changes
+                  in vegetation and soils that are easily reversible versus changes that are subject to thresholds beyond which reversal is 
+                  costly or impossible. The models describe all possible states, community phases (i.e., easily-reversible variants of states), 
+                  and transitions between communities and states. Transitions contain information about mechanisms, triggers, thresholds, 
+                  and indicators of threshold development.” More details can be found on the <a href = "https://jornada.nmsu.edu/knowledge-systems/esd"> Jornada website.</a></li>
+                <li><b>Ecological restoration and reclamation: </b>The process of assisting the recovery of severely degraded ecosystems to benefit 
+                  native biota through the establishment of habitats, populations, communities, or ecosystems that are similar, but not 
+                  necessarily identical to surrounding and naturally occurring ecosystems. 
+                  <b><a href = "https://onlinelibrary.wiley.com/doi/10.1111/rec.13461">(Gerwing et al., 2021)</a></b> </li>
+              </ul>
+              <h3 style="font-weight: bold">Resources</h3>
+              <ul class = "list-disc">
+              <li>Reference URLs from the introduction</li>
+              <li>Tool URL</li>
+              <li>Reference URLs from the introduction</li>
+              <li>Contact or other help info</li>
+              </ul>
 
-                ESD: Ecological Site Description 
-                
-                ESS: Ecological Site Summary 
-                
-                MLRA: Major Land Resource Area 
-                
-                STM: State and Transition Model 
-                
-                AIM: Assessment, Inventory, and Monitoring Program.  
-                
-                LMF: Landscape Modeling Framework 
-                
-                BLM: Bureau of Land Management 
-                
-                TerrADat:Terrestrial AIM Database 
-                
-                <h3 style="font-weight: bold">Terms</h3>
-  
-  Ecological site: “is a distinctive kind of land with specific soil and physical characteristics that differ from other kinds of land in its ability 
-  to produce distinctive kinds and amounts of vegetation, and in its ability to respond similarly to management actions and natural disturbances” 
-  (USDA-NRCS, 2006). 
-
-  Ecoregion: a major ecosystem defined by distinctive geography and receiving uniform solar radiation and moisture. They are areas where ecosystems 
-  (and the type, quality, and quantity of environmental resources) are generally similar. Designed to serve as a spatial framework for the research, 
-  assessment, and monitoring of ecosystems and ecosystem components, ecoregions denote areas of similarity in the mosaic of biotic, abiotic, terrestrial, 
-  and aquatic ecosystem components with humans being considered as part of the biota. Ecoregions are identified by analyzing the patterns and composition
-  of biotic and abiotic phenomena that affect or reflect differences in ecosystem quality and integrity (Omernik 1987, 1995). These phenomena include
-  geology, landforms, soils, vegetation, climate, land use, wildlife, and hydrology.  (More details here: https://www.epa.gov/eco-research/ecoregions)
-      
-  Natural Disturbance: Disturbances are events, like tornados, wildfires or floods that cause marked changes to the impacted area. Examples of ecological 
-  disturbances include fires, landslides, flooding, windstorms and insect and pest outbreaks. Disturbances often come in the form of short-term or 
-  temporary changes to the landscape but can have very significant ecosystem impacts. These events often act quickly but with great impact and thereby 
-  are able to promote changes to the physical structure of the system. For example, a fire burning over a mature forest results in a different composition
-   of species after the disturbance event. Other types of disturbances may occur over longer, persistent timeframes that also can promote changes to 
-   the biodiversity or health of the system. (More details here: https://www.climatehubs.usda.gov/disturbances-and-stressors).  
-  
-  Management Actions:  
-  
-  Physiographic features: the physical features and processes of landforms and their relation to geologic structures, including the soils, topography,
-   land slope and aspect, and local climate, that influence the form and species composition of plant communities. 
-  
-  Plant community composition: a description of vegetation in a fixed area by the species present and their abundance. 
-  (More details here: https://climexhandbook.w.uib.no/2019/11/04/plant-community-composition/) 
-  
-  Annual biomass production: the amount of organic plant matter produced in a given area over the course of a year.  
-  
-  Plant-wildlife interactions: Relationships between the plants and animals in a given ecosystem. These relationships include predation, 
-  parasitism, commensalism, or mutualism and do not require direct physical contact. Important plant-wildlife interactions are pollination, 
-  seed dispersal, and herbivory. The plants and animals have co-evolved these adaptive mechanisms to maximize the chance of survival.  
-  
-  State-and-Transition Model: “These models synthesize literature and informal knowledge tied to particular ecological sites to distinguish changes
-   in vegetation and soils that are easily reversible versus changes that are subject to thresholds beyond which reversal is costly or impossible. 
-   The models describe all possible states, community phases (i.e., easily-reversible variants of states), and transitions between communities and 
-   states. Transitions contain information about mechanisms, triggers, thresholds, and indicators of threshold development.” 
-   (More details here” https://jornada.nmsu.edu/knowledge-systems/esd). 
-  
-  Ecological restoration and reclamation 
-  
-   
-  
-  Resources 
-  
-  Reference URLs from the introduction
-  Tool URL 
-
-Other useful URLs 
-
-Contact or other help info
-                </div>
-              </div>
+            </div>
+            </div>
             </div>
           </div>
-        </div>
+          </div>        
+        </main>
       </main>
-    </main>
+    </app-documentation>
     </app-root>
   </body>
-  </html>
+</html>
 
