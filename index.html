@@ -10,196 +10,204 @@
     <link rel="icon" href="./favicon.ico" type="image/x-icon" />
   </head>
   <body>
+    <app-header>
+      <div class="navbar bg-neutral text-neutral-content">
+        <div class="flex-1"></div>
+        <h4 class="block md:hidden">ESST</h4>
+        <h4 class="hidden md:block">Ecological Site Summary Tool</h4>
+        <div class="flex-none"></div>
+        <button class="btn" tabindex ="0">
+          <ng-icon name="bootstraphChevronLeft" style="--ng-icon__size: 1em;">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16" style="width:var(--ng-icon__size, 1em);height:var(--ng-icon__size, 1em)">…</svg>
+            </ng-icon>
+            <span _ngcontent-ng-c186958913 class="hidden md:block">Back to App</span>
+        </button>
+    </app-header>
     <main>
       <main class="flex-2">
         <div class="w-full">
           <div id="documentation-scroll" class="overflow-y-auto p-2">
             <div class="prose p-2 scroll-section">
               <h2 style="font-weight: bold">Introduction</h2>
-              <p>
-                The U.S. Department of Agriculture Natural Resources
-                Conservation Service (NRCS) defines ecological sites as “a
-                distinctive kind of land with specific physical characteristics
-                that differs from other kinds of land in its ability to produce
-                a distinctive kind and amount of vegetation” (<a
-                  href="https://www.nrcs.usda.gov/wps/portal/nrcs/detail/national/landuse/rangepasture/?cid=stelprdb1068392"
-                  >USDA–NRCS, 2006</a
-                >). Ecological sites determine not only the ecological potential
-                of a site, but also how a site can respond to natural
-                disturbance and management actions. Ecological sites have been
-                delineated for many areas using physical and biotic features and
-                are linked to soil map units. Soils, climate, hydrology,
-                geology, physiographic features, plants species occurrences,
-                plant community composition, annual biomass production, and
-                plant-wildlife interactions all contribute to the proerties of
-                ecological sites. Ecological Site Descriptions (ESDs) describe
-                the underlying factors associated with a specific ecological
-                site, as well as different ecological states within a given site
-                based on factors such as grazing, fire, drought, and other
-                management actions. For an example of an ESD, see
-                <a
-                  href="https://edit.jornada.nmsu.edu/page?content=class-description&amp;catalog=3&amp;spatial=84&amp;class=5802#top-bookmark"
-                  >EDIT Jornada</a
-                >.
-              </p>
-            </div>
 
-            <div class="prose p-2 scroll-section">
+              <h2 style="font-weight: bold">How to use this guide</h2>
+                <p>1. The section “Use the ESS Tool” later in this guide has instructions for creating an ecological site summary (ESS). 
+                  2. Learn the science behind the ESS Tool after this introduction. 
+                  3. Reference the “Glossary of Terms and Acronyms” at the end of the guide.
+                </p>
+
+              <h2 style="font-weight: bold">Background</h2>
+                <p> The U.S. Department of Agriculture Natural Resources Conservation Service (NRCS) defines ecological sites as 
+                  “a distinctive kind of land with specific physical characteristics that differs from other kinds of land in its ability 
+                  to produce a distinctive kind and amount of vegetation” (USDA–NRCS, 2006). Ecological sites determine not only the 
+                  ecological potential of a site, but also how a site can respond to natural disturbance and management actions. Ecological sites 
+                  have been delineated for many areas using physical and biotic features and are linked to soil map units. Soils, climate, 
+                  hydrology, geology, physiographic features, plant species occurrences, plant community composition, annual biomass production, 
+                  and plant-wildlife interactions all contribute to the properties of ecological sites. Ecological Site Descriptions (ESDs) describe 
+                  the underlying factors associated with a specific ecological site, as well as different ecological states within a given site based 
+                  on factors such as grazing, fire, drought, and other management actions. For an example of an ESD, see EDIT Jornada.
+                </p>
+              
               <h2 style="font-weight: bold">Ecological Site Summary</h2>
-              <p>
-                Using ecological monitoring data, the overall status of an
-                Ecological Site can be summarized into an Ecological Site
-                Summary (ESS). At the site level, ecological site summaries
-                generated from monitoring data can tell us about the condition
-                and health of ecological sites based on indicators such as cover
-                by structure and functional group, species dominance, species
-                occurrences, canopy gap measurements, and soil stability
-                measurements. These indicators can help inform the user of the
-                ecological state of a given plot or overall site
-                (i.e.&nbsp;shrubland state vs.&nbsp;grassland state).
-                Identifying the ecological state allows us to not only determine
-                the degree of departure from the corresponding reference
-                ecological states, but also to inform management and restoration
-                actions accordingly by determining the best pathway to a less
-                degraded state. For more on state and transition models (STMs),
-                see see
-                <a
-                  href="https://link.springer.com/content/pdf/10.1007%2F978-3-319-46709-2_9.pdf"
-                  >Bestelmeyer et al., 2017</a
-                >. A major data source for developing these summaries is the
-                Assessment, Inventory, and Monitoring (AIM) Program along with
-                the Landscape Monitoring Framework (LMF). AIM and LMF include
-                almost 25,000 plots throughout the western United States (<em
-                  >see</em
-                >
-                <a
-                  href="https://aim.landscapetoolbox.org/data-management-project-evaluation/databases/"
-                  >AIM Data Portal</a
-                >) stored in the Terrestrial AIM Database (TerrADat). Data
-                garnered from AIM and LMF plots is both generalizable and
-                scalable and thus applicable to management decisions across
-                multiple disciplines at both local and national levels.
-              </p>
-            </div>
-
-            <div class="prose p-2 scroll-section">
+              <p>Using ecological monitoring data, the overall status of an Ecological Site can be summarized into an Ecological Site Summary (ESS). 
+                At the site level, ecological site summaries generated from monitoring data can tell us about the condition and health of ecological 
+                sites based on indicators such as cover by structure and functional group, species dominance, species occurrences, canopy gap 
+                measurements, and soil stability measurements. These indicators can help inform the user of the ecological state of a given plot or 
+                overall site (i.e. shrubland state vs. grassland state). Identifying the ecological state allows us to not only determine the degree of 
+                departure from the corresponding reference ecological states, but also to inform management and restoration actions accordingly by 
+                determining the best pathway to a less degraded state. For more on state and transition models (STMs), see Bestelmeyer et al., 2017.
+                 A major data source for developing these summaries is the Assessment, Inventory, and Monitoring (AIM) Program along with the Landscape 
+                 Monitoring Framework (LMF). AIM and LMF include almost 25,000 plots throughout the western United States (see AIM Data Portal) stored 
+                 in the Terrestrial AIM Database (TerrADat). Data garnered from AIM and LMF plots is both generalizable and scalable and thus applicable
+                  to management decisions across multiple disciplines at both local and national levels.
+                </p>
               <h2 style="font-weight: bold">ESS Tool</h2>
-
-              <p>
-                An Ecological Site Summary (ESS) tool has been developed to help
-                users visualize the overall status of their region of interest
-                within a specific ecological site, or across an ecological site
-                group. This information can be summarized within a given
-                administrative state or across political boundaries for
-                landscape scale analysis. Ecological site summaries are
-                generated using an R Markdown script with an interactive HTML
-                output in which users can query summary tables, download full or
-                filtered summary tables to view in Excel, explore interactive
-                figures, and download static figures for their own use.
-              </p>
-              <p>
-                This report is an automated process and can be continually
-                updated as new data becomes available each year or as lines of
-                inquiry shift. This ESS information can be included in decision
-                making processes for BLM managers, as it can help inform land
-                use plans, grazing permit renewals, shrub or invasive species
-                treatments, and/or seed menu development for ecological
-                restoration and reclamation.
-              </p>
-            </div>
-
-            <div class="prose p-2 scroll-section">
+                <p>An Ecological Site Summary (ESS) tool has been developed to help users visualize the overall status of their region of interest 
+                  within a specific ecological site, or across an ecological site group. This information can be summarized within a given administrative
+                   state or across political boundaries for landscape scale analysis. Users can query summary tables, download full or filtered summary 
+                   tables to view in Excel, explore interactive figures, and download static figures for their own use. 
+                </p><p>
+                   This ESS information can be included in decision making processes for Bureau of Land Management (BLM) managers, as it can help inform
+                    land use plans, grazing permit renewals, shrub or invasive species treatments, and/or seed menu development for ecological restoration
+                    and reclamation. As new data become available or lines of inquiry shift, the summary tables and report can be easily updated. 
+                </p>
               <h2 style="font-weight: bold">Using the ESS Tool</h2>
-
-              <p>
-                This report generates many tables and figures that can be
-                queried, filtered, and downloaded to meet your management and
-                reporting needs. Multiple output types are used to meet multiple
-                needs, so select the most relevant and useful output.
-              </p>
-
-              <h3 style="font-weight: bold">
-                I want this report generated for me
-              </h3>
-              <p class="pl-4 border-l-2">
-                This report is generated in RMarkdown. If you have R limitations
-                and would prefer the report to be generated for you, use this
-                <a
-                  href="https://github.com/R-Burke/EcologicalSiteSummaries/blob/master/ESS_Template.xlsx"
-                  >template</a
-                >
-                to request that Jornada run the report.
-              </p>
-
-              <h3 style="font-weight: bold">
-                I want to group by other features for a custom report
-              </h3>
-              <p class="pl-4 border-l-2">
-                In cases where ESDs are not developed, grouping AIM data by
-                other features can provide similar information, and potentially
-                lead to the development of new ESDs. For this purpose, it may be
-                informative to group data by features such as watershed units,
-                soil map units, or biophysical settings. Spatial groupings may
-                also be beneficial if you want to compare data that’s in the
-                same ecological site but across multiple management units such
-                as grazing allotments, pastures, prescribed burn areas, etc.
-                Grouping indicators by other spatial attributes is available in
-                a customized report on page two of this
-                <a
-                  href="https://github.com/R-Burke/EcologicalSiteSummaries/blob/master/ESS_Template.xlsx"
-                  >template</a
-                >.
-              </p>
-
-              <h3 style="font-weight: bold">
-                I want to run this report myself
-              </h3>
-              <div class="pl-4 border-l-2">
-                <h3 style="font-weight: bold">Download the data</h3>
-                <p>
-                  Download the ESS_Tool folder from the AIM Sharepoint that
-                  contains the ESS_Tool project (ESS_Tool.Rproj), RMarkdown
-                  script (ESS_Tool.Rmd), report rending script (RenderReport.R)
-                  and supporting documents (BannerPhoto.jpg, Boxplot_text.png,
-                  and jornadalogo.png, and defaults folder containing
-                  EDIT_public_ecological_site_list.csv). Unzip the folder into
-                  your local drive documents
-                  (i.e.&nbsp;<em>C:/Users/</em>JSmith/Documents/). Open the
-                  ESS_Tool.Rproj using RStudio. From there, go to file, open
-                  file, and open RenderReport.R.
+                <p>This tool generates many tables and figures that can be queried, filtered, and downloaded to meet your management and reporting needs. 
+                  Multiple output types are used to meet multiple needs, so select the most relevant and useful output. In cases where ESDs are not 
+                  developed, grouping AIM data by other features can provide similar information, and potentially lead to the development of new ESDs. 
+                  For this purpose, it may be informative to group data by features such as biophysical indicators, location, or project. Spatial 
+                  groupings may also be beneficial if you want to compare data in the same ecological site across multiple management units such as
+                  grazing allotments, pastures, prescribed burn areas, etc. The report you generate can be customized to select and compare indicators
+                  by both spatial and non-spatial groupings.  
                 </p>
-                <h3 style="font-weight: bold">
-                  Set your defaults and run the report
-                </h3>
-                <p>
-                  In RenderReport.R, set your EcologicalSiteId, path to the
-                  TerrADat geodatabase (NULL if you are working within the BLM
-                  network, the script will default to AIMPub), your working
-                  folder (the location on your local drive where you placed the
-                  ESS_Tool folder), your library path (<em
-                    >note: make sure your library is on your local drive, not
-                    the BLM server, or you will not be able to render this
-                    report-
-                    i.e.&nbsp;C:/Users/JSmith/Documents/R/win-library/3.6</em
-                  >). Set BLM to TRUE (if you are working within BLM
-                  network/VPN) or FALSE (if you are accessing TerrADat
-                  externally). Set your state (2 letter abbreviation, all caps).
+              <h3 style="font-weight: bold">Step 1: Access the tool</h3>
+                <p>To use the ESS Tool, navigate to https://www.stone-env.net/esst/. Click “Get Started” to pull up a map and query the data.
+                  Use the tab to expand and collapse the form and map in the application. 
                 </p>
-                <p>
-                  Now run every line in the RenderReport.R. The report should
-                  only take several minutes, but may take longer if accessing
-                  internal data from VPN. The output HTML document will be saved
-                  in the project folder. View the document in Google Chrome or
-                  Firefox (<em
-                    >some features will be disabled in Internet Explorer</em
-                  >). You need to be connected to the internet to run the
-                  report, but you can view it without internet (<em
-                    >note that the basemap feature will be disabled offline</em
-                  >).
+              <h3 style="font-weight: bold">Step 2: Select attributes and indicators</h3>
+                <p> Use the attribute buttons at the top of the form to filter the data by “Soil Attributes”, “Plant Attributes”, “Erosion Indicators”, 
+                  or “Indicators of Rangeland Health”. Select indicators under one or more attributes to use in your query. You will be able to sort your 
+                  data by indicator and set benchmarks in a later step. 
+                  Click "Add New Row” to add a statement to your query group. Use the dropdown under “Property” to add an indicator to your query statement,
+                  choose an operator, then input a value to complete the statement. Add additional rows to your group to complete your query statements.
+                  Click “X” to the right of any row to remove it from the group. 
+                </p>
+              <h3 style="font-weight: bold">Step 3: Select an area of interest (AOI)</h3>
+                <p>Click “Add AOI” for options to include select the area of interest to include in your query: 
+                  Draw Polygon: Use the Zoom In and Zoom Out buttons on the map. After selecting "Add AOI” > “Draw Polygon”, click on the map to start drawing. 
+                  Continue clicking until the polygon is your intended size and shape. You may add additional separate polygons to the same query group. 
+                  Project: Use this option to select one or more projects using a Project Key, ESD, MLRA, or Ecoregion Level #3. ESDs and MLRAs are described in 
+                  more detail in EDIT Jornada. Ecoregions can be found on the EPA’s website.  
+                  Upload Shapefile: This option allows you to upload a shapefile from your device into the tool. 
+                  Note: you may combine any of these AOI options in one query. For example, you can select an MLRA and a shapefile or an ESD, a 
+                  shapefile, and a hand-drawn polygon.  
+                </p>
+              <h3 style="font-weight: bold">Step 4: Manage query group and geodata</h3>
+                <p> Select the + sign to add a query group. Choose a property from the Property dropdown menu. You may also choose an operator 
+                  and a value. You may add multiple properties to the same query group by clicking the + sign. You may name your group using the filter 
+                  button and selecting Rename Group. 
+                  To create an additional query group you may select “Add New Group” to start an empty new query group or you may create a duplicate of your existing 
+                  query group by using the Query Group Settings button and selecting “Clone Group”. This clone can then be modified or renamed. 
+                  You may also delete groups by using the filter button and selecting “Delete Group.” You may delete queries within a group by clicking the X at the 
+                  end of the line.  
+                  Rename your query group using the Query Group Settings. After clicking the settings button, choose “Rename Group”. 
+                  After selecting your query group property settings and area of interest, use the [sliders icon] button and select Manage GeoData. Use the GeoData 
+                  Manager to inspect your AOI selections and the number of unique sites they each contain. Click a table row to zoom the map to that selection's 
+                  extent. Bu default, unique sites in each selection are added together in the query. To subtract a selection's sites from the query, click “Exclude” under
+                  the Toggle Selection. To remove a selection, click the “X” Destroy button. Remove all selections with the Clear All button. Press the Close button to 
+                  return to the Query Form. 
+                </p>
+              <h3 style="font-weight: bold">Step 5: View and interact with query results</h3>
+                <p>Once you have set your query group properties and areas of interest, click Submit to run the query. 
+                  Errors: too many sites, no data available 
+                  After the query runs, click the Results tab. In Results, click the Graph and Table tabs to view the data. 
+              </p>
+
+                <h3 style="font-weight: bold">Step 6: Compare data from multiple query groups</h3>
+
+                <h3 style="font-weight: bold">Step 7: Export data</h3>
+
+                <p>CSV: data table, no visualizations 
+
+                  PDF: report with visualizations 
+                </p>
+
+              <h2 style="font-weight: bold">  Glossary of Terms and Acronyms </h2>
+              <h3 style="font-weight: bold">Acronyms</h3>
+
+                ESD: Ecological Site Description 
+                
+                ESS: Ecological Site Summary 
+                
+                MLRA: Major Land Resource Area 
+                
+                STM: State and Transition Model 
+                
+                AIM: Assessment, Inventory, and Monitoring Program.  
+                
+                LMF: Landscape Modeling Framework 
+                
+                BLM: Bureau of Land Management 
+                
+                TerrADat:Terrestrial AIM Database 
+                
+                <h3 style="font-weight: bold">Terms</h3>
+  
+  Ecological site: “is a distinctive kind of land with specific soil and physical characteristics that differ from other kinds of land in its ability 
+  to produce distinctive kinds and amounts of vegetation, and in its ability to respond similarly to management actions and natural disturbances” 
+  (USDA-NRCS, 2006). 
+
+  Ecoregion: a major ecosystem defined by distinctive geography and receiving uniform solar radiation and moisture. They are areas where ecosystems 
+  (and the type, quality, and quantity of environmental resources) are generally similar. Designed to serve as a spatial framework for the research, 
+  assessment, and monitoring of ecosystems and ecosystem components, ecoregions denote areas of similarity in the mosaic of biotic, abiotic, terrestrial, 
+  and aquatic ecosystem components with humans being considered as part of the biota. Ecoregions are identified by analyzing the patterns and composition
+   of biotic and abiotic phenomena that affect or reflect differences in ecosystem quality and integrity (Omernik 1987, 1995). These phenomena include
+    geology, landforms, soils, vegetation, climate, land use, wildlife, and hydrology.  (More details here: https://www.epa.gov/eco-research/ecoregions)
+      
+  Natural Disturbance: Disturbances are events, like tornados, wildfires or floods that cause marked changes to the impacted area. Examples of ecological 
+  disturbances include fires, landslides, flooding, windstorms and insect and pest outbreaks. Disturbances often come in the form of short-term or 
+  temporary changes to the landscape but can have very significant ecosystem impacts. These events often act quickly but with great impact and thereby 
+  are able to promote changes to the physical structure of the system. For example, a fire burning over a mature forest results in a different composition
+   of species after the disturbance event. Other types of disturbances may occur over longer, persistent timeframes that also can promote changes to 
+   the biodiversity or health of the system. (More details here: https://www.climatehubs.usda.gov/disturbances-and-stressors).  
+  
+  Management Actions:  
+  
+  Physiographic features: the physical features and processes of landforms and their relation to geologic structures, including the soils, topography,
+   land slope and aspect, and local climate, that influence the form and species composition of plant communities. 
+  
+  Plant community composition: a description of vegetation in a fixed area by the species present and their abundance. 
+  (More details here: https://climexhandbook.w.uib.no/2019/11/04/plant-community-composition/) 
+  
+  Annual biomass production: the amount of organic plant matter produced in a given area over the course of a year.  
+  
+  Plant-wildlife interactions: Relationships between the plants and animals in a given ecosystem. These relationships include predation, 
+  parasitism, commensalism, or mutualism and do not require direct physical contact. Important plant-wildlife interactions are pollination, 
+  seed dispersal, and herbivory. The plants and animals have co-evolved these adaptive mechanisms to maximize the chance of survival.  
+  
+  State-and-Transition Model: “These models synthesize literature and informal knowledge tied to particular ecological sites to distinguish changes
+   in vegetation and soils that are easily reversible versus changes that are subject to thresholds beyond which reversal is costly or impossible. 
+   The models describe all possible states, community phases (i.e., easily-reversible variants of states), and transitions between communities and 
+   states. Transitions contain information about mechanisms, triggers, thresholds, and indicators of threshold development.” 
+   (More details here” https://jornada.nmsu.edu/knowledge-systems/esd). 
+  
+  Ecological restoration and reclamation 
+  
+   
+  
+  Resources 
+  
+  Reference URLs from the introduction
+</p>
+ <p>
+Tool URL 
+
+Other useful URLs 
+
+Contact or other help info 
                 </p>
               </div>
             </div>
-
             <div class="h-o md:h-[300px]"></div>
           </div>
         </div>

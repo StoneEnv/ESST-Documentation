@@ -10,5 +10,5 @@ The style.css has already been generated with tailwind and shouldn't need any sc
 1. Install Node (preferably using NVM)
     - NVM: https://github.com/nvm-sh/nvm
     - NVM-Windows: https://github.com/coreybutler/nvm-windows
-2. Run `npm install` to isntall all the existing dependencies
+2. Run `npm install` to install all the existing dependencies
 3. Generate the Daisy UI and Tailwind styles with `npx postcss-cli tailwind.css -o base.css`
