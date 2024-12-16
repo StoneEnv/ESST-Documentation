@@ -6,28 +6,50 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>ESST Documentation</title>
     <link rel="stylesheet" href="./base.css" />
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./style.css" /> 
     <link rel="icon" href="./favicon.ico" type="image/x-icon" />
   </head>
+
   <body>
-    <app-header>
+    <app-root ng-version="18.0.3">
+    <div id="resize-div" class="flex flex-col h-screen overflow-hidden">
+      <app-header>
       <div class="navbar bg-neutral text-neutral-content">
-        <div class="flex-1"></div>
-        <h4 class="block md:hidden">ESST</h4>
-        <h4 class="hidden md:block">Ecological Site Summary Tool</h4>
-        <div class="flex-none"></div>
-        <button class="btn" tabindex ="0">
-          <ng-icon name="bootstraphChevronLeft" style="--ng-icon__size: 1em;">
+        <div class="flex-1">
+          <h4 class="hidden md:block">Ecological Site Summary Tool</h4>
+        </div>
+        <div class="flex-none">
+
+      <button class="btn" tabindex ="0">
+          <ng-icon name="bootstrapChevronLeft" style="--ng-icon__size: 1em;">
             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16" style="width:var(--ng-icon__size, 1em);height:var(--ng-icon__size, 1em)">…</svg>
             </ng-icon>
-            <span _ngcontent-ng-c186958913 class="hidden md:block">Back to App</span>
+            <span class="hidden md:block">Back to App</span>
         </button>
+        </div>
     </app-header>
+ </div>
+
+
     <main>
       <main class="flex-2">
         <div class="w-full">
-          <div id="documentation-scroll" class="overflow-y-auto p-2">
-            <div class="prose p-2 scroll-section">
+          <div  class="grid grid-cols-5 gap-3">
+            <div  class="hidden md:block">
+              <ul  id="scroll-links" class="sticky top-0 menu bg-base-200 rounded-box">
+                <li >
+                <a  data-container="section1" class="active">Introduction</a>
+                <a  data-container="section2" class>Background</a>
+                <a  data-container="section3">Ecological Site Summary</a>
+                <a  data-container="section4">Using the ESS Tool</a>
+                <a  data-container="section5">Glossary of Terms and Acronyms</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-span-5 md:col-span-4"></div>
+            <div id="documentation-scroll" class="overflow-y-auto p-2">
+            <div id = section1 class="prose p-2 scroll-section">
               <h2 style="font-weight: bold">Introduction</h2>
 
               <h2 style="font-weight: bold">How to use this guide</h2>
@@ -35,7 +57,9 @@
                   2. Learn the science behind the ESS Tool after this introduction. 
                   3. Reference the “Glossary of Terms and Acronyms” at the end of the guide.
                 </p>
+            </div>
 
+              <div id="section2" class="prose p-2 scroll-section">
               <h2 style="font-weight: bold">Background</h2>
                 <p> The U.S. Department of Agriculture Natural Resources Conservation Service (NRCS) defines ecological sites as 
                   “a distinctive kind of land with specific physical characteristics that differs from other kinds of land in its ability 
@@ -47,8 +71,10 @@
                   the underlying factors associated with a specific ecological site, as well as different ecological states within a given site based 
                   on factors such as grazing, fire, drought, and other management actions. For an example of an ESD, see EDIT Jornada.
                 </p>
+              </div>
               
-              <h2 style="font-weight: bold">Ecological Site Summary</h2>
+              <div id="section3" class="prose p-2 scroll-section">
+                <h2 style="font-weight: bold">Ecological Site Summary</h2>
               <p>Using ecological monitoring data, the overall status of an Ecological Site can be summarized into an Ecological Site Summary (ESS). 
                 At the site level, ecological site summaries generated from monitoring data can tell us about the condition and health of ecological 
                 sites based on indicators such as cover by structure and functional group, species dominance, species occurrences, canopy gap 
@@ -61,6 +87,7 @@
                  in the Terrestrial AIM Database (TerrADat). Data garnered from AIM and LMF plots is both generalizable and scalable and thus applicable
                   to management decisions across multiple disciplines at both local and national levels.
                 </p>
+
               <h2 style="font-weight: bold">ESS Tool</h2>
                 <p>An Ecological Site Summary (ESS) tool has been developed to help users visualize the overall status of their region of interest 
                   within a specific ecological site, or across an ecological site group. This information can be summarized within a given administrative
@@ -71,6 +98,9 @@
                     land use plans, grazing permit renewals, shrub or invasive species treatments, and/or seed menu development for ecological restoration
                     and reclamation. As new data become available or lines of inquiry shift, the summary tables and report can be easily updated. 
                 </p>
+              </div>
+
+              <div id="section4" class="prose p-2 scroll-section">
               <h2 style="font-weight: bold">Using the ESS Tool</h2>
                 <p>This tool generates many tables and figures that can be queried, filtered, and downloaded to meet your management and reporting needs. 
                   Multiple output types are used to meet multiple needs, so select the most relevant and useful output. In cases where ESDs are not 
@@ -131,7 +161,8 @@
 
                   PDF: report with visualizations 
                 </p>
-
+              
+                <div id = section5 class="prose p-2 scroll-section">
               <h2 style="font-weight: bold">  Glossary of Terms and Acronyms </h2>
               <h3 style="font-weight: bold">Acronyms</h3>
 
@@ -161,8 +192,8 @@
   (and the type, quality, and quantity of environmental resources) are generally similar. Designed to serve as a spatial framework for the research, 
   assessment, and monitoring of ecosystems and ecosystem components, ecoregions denote areas of similarity in the mosaic of biotic, abiotic, terrestrial, 
   and aquatic ecosystem components with humans being considered as part of the biota. Ecoregions are identified by analyzing the patterns and composition
-   of biotic and abiotic phenomena that affect or reflect differences in ecosystem quality and integrity (Omernik 1987, 1995). These phenomena include
-    geology, landforms, soils, vegetation, climate, land use, wildlife, and hydrology.  (More details here: https://www.epa.gov/eco-research/ecoregions)
+  of biotic and abiotic phenomena that affect or reflect differences in ecosystem quality and integrity (Omernik 1987, 1995). These phenomena include
+  geology, landforms, soils, vegetation, climate, land use, wildlife, and hydrology.  (More details here: https://www.epa.gov/eco-research/ecoregions)
       
   Natural Disturbance: Disturbances are events, like tornados, wildfires or floods that cause marked changes to the impacted area. Examples of ecological 
   disturbances include fires, landslides, flooding, windstorms and insect and pest outbreaks. Disturbances often come in the form of short-term or 
@@ -198,20 +229,19 @@
   Resources 
   
   Reference URLs from the introduction
-</p>
- <p>
-Tool URL 
+  Tool URL 
 
 Other useful URLs 
 
-Contact or other help info 
-                </p>
+Contact or other help info
+                </div>
               </div>
             </div>
-            <div class="h-o md:h-[300px]"></div>
           </div>
         </div>
       </main>
     </main>
+    </app-root>
   </body>
-</html>
+  </html>
+
