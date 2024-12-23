@@ -215,6 +215,10 @@ text-xs {
   color: revert;
 }
 
+.underline {
+  text-decoration: underline;
+}
+
 /* *:active {
   scrollbar-color: color-mix(in oklch, currentColor 60%, transparent) transparent;
 } */
