@@ -37,15 +37,16 @@
       <div class="navbar bg-neutral text-neutral-content">
         <div class="flex-1">
           <img src="Screenshots/logo.png" alt = "image" class = "mr-1">
-          <h4 class="hidden md:block">Ecological Site Summary Tool</h4>
+          <h4 class="hidden md:block" style="padding-left: 0.5em;">Ecological Site Summary Tool</h4>
         </div>
         <div class="flex-none">
 
       <button class="btn" tabindex ="0">
-          <ng-icon name="bootstrapChevronLeft" style="--ng-icon__size: 1em;">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16" style="width:var(--ng-icon__size, 1em);height:var(--ng-icon__size, 1em)">…</svg>
-            </ng-icon>
-            <span class="hidden md:block"> <a href = "https://www.stone-env.net/esst">Back to App</a></span>
+          <!--Button icon: commenting out until we can get it to display -->
+        <!-- <ng-icon name="bootstrapChevronLeft" style="--ng-icon__size: 1em;">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16" style="width:var(--ng-icon__size, 1em);height:var(--ng-icon__size, 1em);" >…</svg>
+            </ng-icon> -->
+            <span class="hidden md:block"> <a href = "https://www.stone-env.net/esst" style="text-decoration:none;"">Back to App</a></span>
         </button>
         </div>
     </app-header>
@@ -56,11 +57,11 @@
           <div  class="grid grid-cols-5 gap-3">
             <div  class="hidden md:block">
               <ul  id="scroll-links" class="sticky top-0 menu bg-base-200 rounded-box">
-                <li >
+                <li>
                 <a href="#section1" >Introduction</a>
                 </li>
                 <li>
-                <a href="#section2" class>Background</a>
+                <a href="#section2">Background</a>
                 </li>
                 <li>
                 <a href="#section3">Ecological Site Summary</a>
@@ -70,17 +71,19 @@
                 </li>
                 <li><a href="#section5">Glossary of Terms and Acronyms</a>
                 </li>
+                <li><a href="#section6">Resources</a></li>
               </ul>
             </div>
             <div class="col-span-5 md:col-span-4">
             <div id="documentation-scroll" class="overflow-y-auto p-2" style="height: 892px;">
             <div id="section1" class="prose p-2 scroll-section">
               <h3>Introduction</h3>
+              <p>How to use this guide:</p>
               <ul class = "list-decimal pl-14">
                 <li>The section <a href="#section4">"Using the ESS Tool"</a> later in this guide has instructions for creating an ecological site summary (ESS).</li> 
                 <li>Learn the science behind the ESS Tool after this introduction.</li> 
-                <li>Reference the <a href="#section5">"Glossary of Terms and Acronyms" </a> at the end of the guide and look for more helpful resources.</li>
-              </ul> 
+                <li>At the end of this guide, reference the <a href="#section5">"Glossary of Terms and Acronyms"</a> and look for more helpful resources.</li>
+              </ul>
             </div>
 
             <div id="section2" class="prose p-2 scroll-section">
@@ -248,19 +251,19 @@
 
                 </p>
             </div>
-            <div id = section5 class="prose p-2 scroll-section">
+            <div id = "section5" class="prose p-2 scroll-section">
               <h3>  Glossary of Terms and Acronyms </h3>
-              <h4>Acronyms</h4>
-              <ul class = "list-disc pl-10">
-                <li><b>AIM: </b>Assessment, Inventory, and Monitoring Program</li>
-                <li><b>BLM: </b>Bureau of Land Management</li>  
-                <li><b>ESD: </b>Ecological Site Description </li>
-              <li><b>ESS: </b>Ecological Site Summary </li>
-              <li><b>LMF: </b>Landscape Modeling Framework</li>
-              <li><b>MLRA: </b>Major Land Resource Area</li> 
-              <li><b>STM: </b>State and Transition Model</li> 
-              <li><b>TerrADat: </b>Terrestrial AIM Database</li>  
-              </ul>
+              <div class="scroll-section"><h4>Acronyms</h4>
+                <ul class = "list-disc pl-10">
+                  <li><b>AIM: </b>Assessment, Inventory, and Monitoring Program</li>
+                  <li><b>BLM: </b>Bureau of Land Management</li>  
+                  <li><b>ESD: </b>Ecological Site Description </li>
+                <li><b>ESS: </b>Ecological Site Summary </li>
+                <li><b>LMF: </b>Landscape Modeling Framework</li>
+                <li><b>MLRA: </b>Major Land Resource Area</li> 
+                <li><b>STM: </b>State and Transition Model</li> 
+                <li><b>TerrADat: </b>Terrestrial AIM Database</li>  
+                </ul></div>
               <h4>Terms</h4>
               <ul class = "list-disc pl-10">
                 <li><b>Annual biomass production: </b>The amount of organic plant matter produced in a given area over the course of a year.</li>
@@ -308,15 +311,29 @@
                   and transitions between communities and states. Transitions contain information about mechanisms, triggers, thresholds, 
                   and indicators of threshold development. More details can be found on the <a href = "https://jornada.nmsu.edu/knowledge-systems/esd"; class = "underline"> Jornada website.</a></li>
               </ul>
-              <h3>Resources</h3>
+              <div class="scroll-section">
+              <h3 id = "section6" class="prose p-2 scroll-section">Resources</h3>
               <ul class = "list-disc pl-10">
               <li><a href = "https://www.stone-env.net/esst/"; class = "underline">ESS Tool</a></li>
               <li><a href = "https://www.nrcs.usda.gov/"; class = "underline"> Natural Resources Conservation Service</a></li>
               <li><a href = "https://jornada.nmsu.edu/"; class = "underline">Jornada Rangeland Research</a></li>
-              <li><a href = "https://www.blm.gov/"; class = "underline">Bureau of Land Management</a></li> 
-              <li>Contact info here for more help</li>
-              </ul>
-
+              <li><a href = "https://www.blm.gov/"; class = "underline">Bureau of Land Management</a></li></ul>
+              <div class="scroll-section">
+              <h4>FAQ and Troubleshooting</h4>
+              <!-- Language for 'Why is my shapefile not working?' taken from https://rangelands.app/support/18-shapefile-help -->
+              <h5>Why is my shapefile not working?</h5>
+              <p>Although a very common format for storing spatial vector information (polygons, lines, points), shapefiles can contain geometry errors or other misinformation that prevents them from functioning properly. If you are using a zipped shapefile and are not returned results, please consider the following:<br>
+                <ul class = "list-disc pl-10"><li>The shapefile must be saved as a .zip file and contain the .shp, .shx, and .prj files of the shapefile. Only include one shapefile per .zip file.</li>
+                <li>Shapefiles may not work with all web browsers. Please use Google Chrome for best results.</li>
+                <li>3D shapefiles are not supported, please convert to 2D.</li>
+                <li>Shapefiles can contain geometry errors. Please check and fix the geometries of the shapefile and try again.</li>
+                <li>Shapefiles with complex geometries (i.e., polygons with many vertices) or many features will result in an error. Please reduce the number of features or simplify them.</li>
+                <li>You may only analyze one feature at a time: after loading the shapefile, click on the feature to be analyzed; a popup will appear above the feature with the ability calculate time series for that feature only.</li>
+                <li>Sliver polygons (really, really small polygons that are likely mistakes) will result in an error. Please check and fix the geometries of the shapefile.</li>
+                <li>Although multipart polygons are compatible with the ESST, singlepart polygons are recommended. Convert to singlepart polygons.</li>
+                <li>Only the first 50 features of the shapefile will be loaded; the remaining features will be discarded.</li></ul></p></div>
+              <h4>Need more help? <a href = "mailto:sarah.mccord@usda.gov">Email us.</a></h4></div></div>
+              <br><br><br>
             </div>
             </div>
             </div>
