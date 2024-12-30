@@ -32,8 +32,7 @@
   
   <body>
     <app-root ng-version="18.0.3">
-    <div id="resize-div" class="flex flex-col h-screen overflow-hidden">
-      <app-header>
+    <div id="resize-div" class="flex flex-col h-screen overflow-hidden ">
       <div class="navbar bg-neutral text-neutral-content">
         <div class="flex-1">
           <img src="Screenshots/logo.png" alt = "image" class = "mr-1">
@@ -49,9 +48,7 @@
             <span class="hidden md:block"> <a href = "https://www.stone-env.net/esst" style="text-decoration:none;"">Back to App</a></span>
         </button>
         </div>
-    </app-header>
     </div>
-    <app-documentation>
       <main class="flex-2">
         <div class="w-full">
           <div  class="grid grid-cols-5 gap-3">
@@ -75,7 +72,7 @@
               </ul>
             </div>
             <div class="col-span-5 md:col-span-4">
-            <div id="documentation-scroll" class="overflow-y-auto p-2" style="height: 892px;">
+            <div id="documentation-scroll" class="overflow-y-auto p-2" style="height: calc(100vh - 4rem);">
             <div id="section1" class="prose p-2 scroll-section">
               <h3>Introduction</h3>
               <p>How to use this guide:</p>
@@ -311,26 +308,30 @@
                   and transitions between communities and states. Transitions contain information about mechanisms, triggers, thresholds, 
                   and indicators of threshold development. More details can be found on the <a href = "https://jornada.nmsu.edu/knowledge-systems/esd"; class = "underline"> Jornada website.</a></li>
               </ul>
-              <div class="scroll-section">
-              <h3 id = "section6" class="prose p-2 scroll-section">Resources</h3>
+
+              <div id = "section6" class="prose p-2 scroll-section">
+              <h3>Resources</h3>
               <ul class = "list-disc pl-10">
               <li><a href = "https://www.stone-env.net/esst/"; class = "underline">ESS Tool</a></li>
               <li><a href = "https://www.nrcs.usda.gov/"; class = "underline"> Natural Resources Conservation Service</a></li>
               <li><a href = "https://jornada.nmsu.edu/"; class = "underline">Jornada Rangeland Research</a></li>
               <li><a href = "https://www.blm.gov/"; class = "underline">Bureau of Land Management</a></li></ul>
               <div class="scroll-section">
-              <h4>FAQ and Troubleshooting</h4>
               <!-- Language for 'Why is my shapefile not working?' taken from https://rangelands.app/support/18-shapefile-help -->
               <h5>Why is my shapefile not working?</h5>
-              <p>Although a very common format for storing spatial vector information (polygons, lines, points), shapefiles can contain geometry errors or other misinformation that prevents them from functioning properly. If you are using a zipped shapefile and are not returned results, please consider the following:<br>
+              <p>Although a very common format for storing spatial vector information (polygons, lines, points), shapefiles can contain
+                 geometry errors or other misinformation that prevents them from functioning properly. If you are using a zipped shapefile and are not 
+                 returned results, please consider the following:<br>
                 <ul class = "list-disc pl-10"><li>The shapefile must be saved as a .zip file and contain the .shp, .shx, and .prj files of the shapefile. Only include one shapefile per .zip file.</li>
                 <li>Shapefiles may not work with all web browsers. Please use Google Chrome for best results.</li>
-                <li>3D shapefiles are not supported, please convert to 2D.</li>
-                <li>Shapefiles can contain geometry errors. Please check and fix the geometries of the shapefile and try again.</li>
-                <li>Shapefiles with complex geometries (i.e., polygons with many vertices) or many features will result in an error. Please reduce the number of features or simplify them.</li>
-                <li>You may only analyze one feature at a time: after loading the shapefile, click on the feature to be analyzed; a popup will appear above the feature with the ability calculate time series for that feature only.</li>
-                <li>Sliver polygons (really, really small polygons that are likely mistakes) will result in an error. Please check and fix the geometries of the shapefile.</li>
-                <li>Although multipart polygons are compatible with the ESST, singlepart polygons are recommended. Convert to singlepart polygons.</li>
+                <li>3D shapefiles are not supported, please <a href="https://support.esri.com/en-us/knowledge-base/how-to-convert-3d-shapefiles-to-2d-shapefiles-000008433">convert to 2D</a>.</li>
+                <li>Shapefiles can contain geometry errors. Please <a href= "https://desktop.arcgis.com/en/arcmap/latest/tools/data-management-toolbox/checking-and-repairing-geometries.htm">check and fix the geometries</a> of the shapefile and try again.</li>
+                <li>Shapefiles with complex geometries (i.e., polygons with many vertices) or many features will result in an error. Please reduce the number of features or <a href= "https://desktop.arcgis.com/en/arcmap/latest/manage-data/editing-existing-features/simplifying-a-feature-generalize-.htm">simplify them</a>.</li>
+                <li>You may only analyze one feature at a time: after loading the shapefile, click on the feature to be analyzed; a popup will appear above the feature with the ability 
+                  calculate time series for that feature only.</li>
+                <li><a href= "https://desktop.arcgis.com/en/arcmap/latest/manage-data/editing-fundamentals/removing-slivers-or-gaps-between-polygons.htm">Sliver polygons</a> (really, really small polygons that are likely mistakes) 
+                  will result in an error. Please <a href = "https://desktop.arcgis.com/en/arcmap/latest/tools/data-management-toolbox/checking-and-repairing-geometries.htm">check and fix the geometries</a> of the shapefile.</li>
+                <li>Although multipart polygons are compatible with the ESST, singlepart polygons are recommended. <a href= "https://desktop.arcgis.com/en/arcmap/latest/tools/data-management-toolbox/multipart-to-singlepart.htm">Convert to singlepart polygons</a>.</li>
                 <li>Only the first 50 features of the shapefile will be loaded; the remaining features will be discarded.</li></ul></p></div>
               <h4>Need more help? <a href = "mailto:sarah.mccord@usda.gov">Email us.</a></h4></div></div>
               <br><br><br>
@@ -341,7 +342,6 @@
           </div>        
         </main>
       </main>
-    </app-documentation>
     </app-root>
   </body>
 </html>

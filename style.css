@@ -157,6 +157,7 @@ h5 {
   font-weight: 500;
   height: 20px;
   line-height: 30px;
+  margin-bottom: 1em; 
 }
 
 h6 {
@@ -224,14 +225,14 @@ a {
   color: var(--tw-primary)
 }
 
-.scroll-section {
-  padding: 1em;
-}
+.scroll-section { 
+  margin: 1em;
+ }
+
 
 .navbar {
   padding: 0 1em 0 1em;
 }
-
 
 
 /* Adding space between scroll links */
