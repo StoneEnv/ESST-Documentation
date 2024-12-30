@@ -219,15 +219,55 @@ text-xs {
   text-decoration: underline;
 }
 
+a {
+  text-decoration: underline;
+  color: var(--tw-primary)
+}
+
+.scroll-section {
+  padding: 1em;
+}
+
+.navbar {
+  padding: 0 1em 0 1em;
+}
+
+
+
+/* Adding space between scroll links */
+#scroll-links {
+  display: flex;
+  justify-content: space-between;
+}
+
+
 /* *:active {
   scrollbar-color: color-mix(in oklch, currentColor 60%, transparent) transparent;
+  color:#ffffff;
 } */
 
-/* #scroll-links li a:hover,
+#scroll-links li a {
+  text-decoration: none;
+}
+
 #scroll-links li a:active {
-  background-color: #2a323c; 
-} */
-/* 
-.scroll-section:target {
-  background-color: #2a323c; 
-} */
+  background-color: #2a323c;
+  color:#ffffff;
+  text-decoration: none;
+  --tw-bg-opacity: 1;
+  background-color: var(--fallback-n, oklch(var(--n) / var(--tw-bg-opacity)));
+  --tw-text-opacity: 1;
+  color: var(--fallback-nc, oklch(var(--nc) / var(--tw-text-opacity)));
+  text-decoration: none;
+}
+
+#scroll-links li a:hover {
+  background-color: oklch(var(--bc) / .1);
+  text-decoration: none;
+}
+
+/* .scroll-section:target {
+  background-color: #2a323c;
+  text-decoration: none;
+}
+
