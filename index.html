@@ -42,10 +42,12 @@
 
       <button class="btn" tabindex ="0">
           <!--Button icon: commenting out until we can get it to display -->
-        <!-- <ng-icon name="bootstrapChevronLeft" style="--ng-icon__size: 1em;">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16" style="width:var(--ng-icon__size, 1em);height:var(--ng-icon__size, 1em);" >…</svg>
-            </ng-icon> -->
-            <span class="hidden md:block"> <a href = "https://www.stone-env.net/esst" style="text-decoration:none;"">Back to App</a></span>
+        <ng-icon name="bootstrapChevronLeft" style="--ng-icon__size: 1em;">
+            <svg width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"/>
+            </svg>  
+          </ng-icon>
+            <span class="hidden md:block"> <a href = "https://www.stone-env.net/esst" style="text-decoration:none;">Back to App</a></span>
         </button>
         </div>
     </div>
@@ -327,8 +329,6 @@
                 <li>3D shapefiles are not supported, please <a href="https://support.esri.com/en-us/knowledge-base/how-to-convert-3d-shapefiles-to-2d-shapefiles-000008433">convert to 2D</a>.</li>
                 <li>Shapefiles can contain geometry errors. Please <a href= "https://desktop.arcgis.com/en/arcmap/latest/tools/data-management-toolbox/checking-and-repairing-geometries.htm">check and fix the geometries</a> of the shapefile and try again.</li>
                 <li>Shapefiles with complex geometries (i.e., polygons with many vertices) or many features will result in an error. Please reduce the number of features or <a href= "https://desktop.arcgis.com/en/arcmap/latest/manage-data/editing-existing-features/simplifying-a-feature-generalize-.htm">simplify them</a>.</li>
-                <li>You may only analyze one feature at a time: after loading the shapefile, click on the feature to be analyzed; a popup will appear above the feature with the ability 
-                  calculate time series for that feature only.</li>
                 <li><a href= "https://desktop.arcgis.com/en/arcmap/latest/manage-data/editing-fundamentals/removing-slivers-or-gaps-between-polygons.htm">Sliver polygons</a> (really, really small polygons that are likely mistakes) 
                   will result in an error. Please <a href = "https://desktop.arcgis.com/en/arcmap/latest/tools/data-management-toolbox/checking-and-repairing-geometries.htm">check and fix the geometries</a> of the shapefile.</li>
                 <li>Although multipart polygons are compatible with the ESST, singlepart polygons are recommended. <a href= "https://desktop.arcgis.com/en/arcmap/latest/tools/data-management-toolbox/multipart-to-singlepart.htm">Convert to singlepart polygons</a>.</li>
