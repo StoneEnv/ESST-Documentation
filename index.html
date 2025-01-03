@@ -17,9 +17,8 @@
   <link rel="icon" href="./favicon.ico" type="image/x-icon" />
 </head>
 
-<script type="text/javascript" src="functions.js"></script>
-
 <body>
+  <script type="text/javascript" src="functions.js"></script>
   <div class="flex flex-col h-screen overflow-hidden ">
     <div class="navbar bg-neutral text-neutral-content">
       <div class="flex-1">
@@ -28,16 +27,16 @@
       </div>
       <div class="flex-none">
 
-        <button class="btn" tabindex="0">
+        <a class="btn" href="https://www.stone-env.net/esst" tabindex="0">
           <ng-icon name="bootstrapChevronLeft" style="--ng-icon__size: 1em;">
             <svg width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
               <path fill-rule="evenodd"
                 d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
             </svg>
           </ng-icon>
-          <span class="hidden md:block"> <a href="https://www.stone-env.net/esst" style="text-decoration:none;">Back
-              to App</a></span>
-        </button>
+          <span class="hidden md:block">Back
+            to App</span>
+        </a>
       </div>
     </div>
     <main class="flex-2">
@@ -81,13 +80,13 @@
               <div id="background" class="prose p-2 scroll-section">
                 <h3>Background</h3>
                 <p> The U.S. Department of Agriculture Natural Resources Conservation Service <a
-                    href="https://www.nrcs.usda.gov/" ; class="underline"><abbr>(NRCS)</abbr></a> defines ecological
+                    href="https://www.nrcs.usda.gov/" class="underline"><abbr>(NRCS)</abbr></a> defines ecological
                   sites as
                   "a distinctive kind of land with specific physical characteristics that differs from other kinds of
                   land in its ability
                   to produce a distinctive kind and amount of vegetation" <a
                     href="https://www.ars.usda.gov/plains-area/las-cruces-nm/range-management-research/docs/ecological-site-descriptions-introduction/"
-                    ; class="underline"><abbr>(USDA-NRCS)</abbr></a>.
+                    class="underline"><abbr>(USDA-NRCS)</abbr></a>.
                   Ecological sites determine not only the
                   ecological potential of a site, but also how a site can respond to natural disturbance and
                   management actions. Ecological sites
@@ -101,7 +100,7 @@
                   states within a given site based
                   on factors such as grazing, fire, drought, and other management actions. For an example of an ESD,
                   see
-                  <a href="https://edit.jornada.nmsu.edu/" ; class="underline">EDIT Jornada.</a>
+                  <a href="https://edit.jornada.nmsu.edu/" class="underline">EDIT Jornada.</a>
                 </p>
               </div>
 
@@ -123,17 +122,17 @@
                   with a State and Transition Model <abbr>(STM)</abbr>.
                   For more information on state and transition models, see
                   <a href="https://library.oapen.org/bitstream/handle/20.500.12657/27988/1002009.pdf?sequence=1#page=313"
-                    ; class="underline">Bestelmeyer et al., 2017.</a>
+                    class="underline">Bestelmeyer et al., 2017.</a>
                 </p>
                 <p>A major data source for developing these summaries is the
-                  <a href="https://www.blm.gov/aim" ; class="underline">Assessment, Inventory, and Monitoring
+                  <a href="https://www.blm.gov/aim" class="underline">Assessment, Inventory, and Monitoring
                     <abbr>(AIM)</abbr> Program</a> along with the Landscape
                   Monitoring Framework <a
                     href="https://gbp-blm-egis.hub.arcgis.com/datasets/BLM-EGIS::blm-natl-aim-lmf-hub/about"><abbr>(LMF)</abbr></a>.
                   AIM and LMF include almost 25,000 plots throughout the western United States (see AIM Data Portal)
                   stored
                   in the <a
-                    href="https://gbp-blm-egis.hub.arcgis.com/datasets/BLM-EGIS::blm-natl-aim-terradat-hub/about" ;
+                    href="https://gbp-blm-egis.hub.arcgis.com/datasets/BLM-EGIS::blm-natl-aim-terradat-hub/about"
                     class="underline">Terrestrial AIM Database <abbr>(TerrADat)</abbr></a>.
                   Data garnered from AIM and LMF plots is both generalizable and scalable and thus applicable
                   to management decisions across multiple disciplines at both local and national levels.
@@ -147,7 +146,7 @@
                   tables to view in Excel, explore interactive figures, and download static figures for their own use.
                 </p>
                 <p>
-                  This ESS information can be included in decision making processes for <a href="https://www.blm.gov/" ;
+                  This ESS information can be included in decision making processes for <a href="https://www.blm.gov/"
                     class="underline">Bureau of Land Management <abbr>(BLM)</abbr></a> managers, as it can help
                   inform
                   land use plans, grazing permit renewals, shrub or invasive species treatments, and/or seed menu
@@ -159,7 +158,7 @@
 
               <div id="using_the_ess_tool" class="prose p-2 scroll-section">
                 <h3>Using the ESS Tool</h3>
-                <p margin-bottom: 1em>This tool generates many tables and figures that can be queried, filtered, and
+                <p class="mb-1">This tool generates many tables and figures that can be queried, filtered, and
                   downloaded to meet your management and reporting needs.
                   Multiple output types are used to meet multiple needs, so select the most relevant and useful
                   output. In cases where ESDs are not
@@ -174,26 +173,21 @@
                   by both spatial and non-spatial groupings.
                 </p>
                 <h4>Step 1: Access the tool</h4>
-                <p>To use the ESS Tool, navigate to <a href="https://www.stone-env.net/esst/" ;
+                <p>To use the ESS Tool, navigate to <a href="https://www.stone-env.net/esst/"
                     class="underline">https://www.stone-env.net/esst/.</a>
                 </p>
                 <div class="flex justify-center items-center">
-                  <img id="myImg" class="object-scale-down h-96 w-192" src="Screenshots/task1part1.png">
+                  <img class="object-scale-down h-96 w-192" src="Screenshots/task1part1.png" alt="task1part1">
                   <div class="modal">
                     <span class="close">&times;</span>
-                    <img class="modal-content" id="img01">
+                    <!-- <img class="modal-content" id="img01" src="Screenshots/task1part1.png"> -->
                   </div>
                 </div>
-
 
                 <p> Click "Get Started" to pull up a map and query the data.
                   Use the tab to expand and collapse the form and map in the application. </p>
                 <div class="flex justify-center items-center">
-                  <img id="myImg" class="object-scale-down h-96 w-192" src="Screenshots/task1part2.png">
-                  <div class="modal">
-                    <span class="close">&times;</span>
-                    <img class="modal-content" id="img01">
-                  </div>
+                  <img class="object-scale-down h-96 w-192" src="Screenshots/task1part2.png" alt="task1part2">
                 </div>
                 <h4>Step 2: Select attributes and indicators</h4>
                 <p> Use the attribute buttons at the top of the form to filter the data by "Soil Attributes", "Plant
@@ -203,11 +197,7 @@
                   data by indicator and set benchmarks in a later step.
                 </p>
                 <div class="flex justify-center items-center">
-                  <img id="myImg" class="object-scale-down h-96 w-192" ; src="Screenshots/task2part1.png">
-                  <div class="modal">
-                    <span class="close">&times;</span>
-                    <img class="modal-content" id="img01">
-                  </div>
+                  <img class="object-scale-down h-96 w-192" src="Screenshots/task2part1.png" alt="task2part1">
                 </div>
                 <p>The ESS tool is organized by query group, where a query group contains indicators and an area of
                   interest designed to answer a specific
@@ -220,11 +210,7 @@
                   If you want to remove a query statment, you can click the yellow "X" button to the right of the row.
                 </p>
                 <div class="flex justify-center items-center">
-                  <img id="myImg" class="object-scale-down h-96 w-192" ; src="Screenshots/task2part2.png">
-                  <div class="modal">
-                    <span class="close">&times;</span>
-                    <img class="modal-content" id="img01">
-                  </div>
+                  <img class="object-scale-down h-96 w-192" src="Screenshots/task2part2.png" alt="task2part2">
                 </div>
 
 
@@ -234,11 +220,7 @@
                   select one or all of the following choices.
                 </p>
                 <div class="flex justify-center items-center">
-                  <img id="myImg" class="object-scale-down h-96 w-192" ; src="Screenshots/task3part1.png">
-                  <div class="modal">
-                    <span class="close">&times;</span>
-                    <img class="modal-content" id="img01">
-                  </div>
+                  <img class="object-scale-down h-96 w-192" src="Screenshots/task3part1.png" alt="task3part1">
                 </div>
                 <p><b>Draw Polygon:</b> Use the Zoom In and Zoom Out buttons on the map. After selecting "Add AOI" >
                   "Draw Polygon", click on the map to start drawing.
@@ -246,25 +228,17 @@
                   polygons to the same query group. You
                   will be able to manage overlapping polygons and exclude features in a later step. </p>
                 <div class="flex justify-center items-center">
-                  <img id="myImg" class="object-scale-down h-96 w-192" ; src="Screenshots/task3part2.png">
-                  <div class="modal">
-                    <span class="close">&times;</span>
-                    <img class="modal-content" id="img01">
-                  </div>
+                  <img class="object-scale-down h-96 w-192" src="Screenshots/task3part2.png" alt="task3part2">
                 </div>
                 <p><b>Project:</b> Use this option to select one or more projects using a Project Key, ESD, MLRA, or
                   Ecoregion Level #3. ESDs and MLRAs are described in
-                  more detail in <a href="https://edit.jornada.nmsu.edu/" ; class="underline">EDIT Jornada.</a>
+                  more detail in <a href="https://edit.jornada.nmsu.edu/" class="underline">EDIT Jornada.</a>
                   Ecoregions can be found on the
-                  <a href="https://www.nrcs.usda.gov/resources/data-and-reports/major-land-resource-area-mlra" ;
+                  <a href="https://www.nrcs.usda.gov/resources/data-and-reports/major-land-resource-area-mlra"
                     class="underline">EPA's website.</a>
                 </p>
                 <div class="flex justify-center items-center">
-                  <img id="myImg" class="object-scale-down h-96 w-192" ; src="Screenshots/task3part3.png">
-                  <div class="modal">
-                    <span class="close">&times;</span>
-                    <img class="modal-content" id="img01">
-                  </div>
+                  <img class="object-scale-down h-96 w-192" src="Screenshots/task3part3.png" alt="task3part3">
                 </div>
                 <p><b>Upload Shapefile:</b> This option allows you to upload a shapefile from your device into the
                   tool.
@@ -273,11 +247,7 @@
                   shapefile, and a hand-drawn polygon and they will be combined into a single area of interest.
                 </p>
                 <div class="flex justify-center items-center">
-                  <img id="myImg" class="object-scale-down h-96 w-192" ; src="Screenshots/task3part4.png">
-                  <div class="modal">
-                    <span class="close">&times;</span>
-                    <img class="modal-content" id="img01">
-                  </div>
+                  <img class="object-scale-down h-96 w-192" src="Screenshots/task3part4.png" alt="task3part4">
                 </div>
                 <h4>Step 4: Manage query group and geodata</h4>
                 <p>If you would like to begin a new query, click the "Add New Group" button to add a query group. Then
@@ -285,11 +255,7 @@
                   You may also choose an operator and a value. Alternatively, you may add multiple properties to the
                   original query group by clicking the "Add New Row" button. </p>
                 <div class="flex justify-center items-center">
-                  <img id="myImg" class="object-scale-down h-96 w-192" ; src="Screenshots/task4part1.png">
-                  <div class="modal">
-                    <span class="close">&times;</span>
-                    <img class="modal-content" id="img01">
-                  </div>
+                  <img class="object-scale-down h-96 w-192" src="Screenshots/task4part1.png" alt="task4part1">
                 </div>
                 <p>You may also create a duplicate of your existing query group by selecting "Clone Group". This clone
                   can then be modified and renamed.
@@ -297,11 +263,7 @@
                   queries within a group by clicking the X at the
                   end of the line. You may name your groups using the filter button and selecting "Rename Group".</p>
                 <div class="flex justify-center items-center">
-                  <img id="myImg" class="object-scale-down h-96 w-192" ; src="Screenshots/task4part2.png">
-                  <div class="modal">
-                    <span class="close">&times;</span>
-                    <img class="modal-content" id="img01">
-                  </div>
+                  <img class="object-scale-down h-96 w-192" src="Screenshots/task4part2.png" alt="task4part2">
                 </div>
                 <p>If you wish to manage the geodata, and exclude or select AOIs, click the "Query Group Settings"
                   button and choose "Manage Geodata". Then click the "Select AOIs" button. Use the GeoData
@@ -314,11 +276,7 @@
                   return to the Query Form.
                 </p>
                 <div class="flex justify-center items-center">
-                  <img id="myImg" class="object-scale-down h-96 w-192" ; src="Screenshots/task4part3.png">
-                  <div class="modal">
-                    <span class="close">&times;</span>
-                    <img class="modal-content" id="img01">
-                  </div>
+                  <img class="object-scale-down h-96 w-192" src="Screenshots/task4part3.png" alt="task4part3">
                 </div>
                 <h4>Step 5: View and interact with query results</h4>
                 <p>Once you have set your query group properties and areas of interest, click "Submit Query" to run
@@ -327,22 +285,14 @@
                   error.
                 </p>
                 <div class="flex justify-center items-center">
-                  <img id="myImg" class="object-scale-down h-96 w-192" ; src="Screenshots/task5part1.png">
-                  <div class="modal">
-                    <span class="close">&times;</span>
-                    <img class="modal-content" id="img01">
-                  </div>
+                  <img class="object-scale-down h-96 w-192" src="Screenshots/task5part1.png" alt="task5part1">
                 </div>
                 <p>
                   Afer the query is done, click the "Results" tab and use the "Graph" and "Table" tabs to view
                   the data.
                 </p>
                 <div class="flex justify-center items-center">
-                  <img id="myImg" class="object-scale-down h-96 w-192" ; src="Screenshots/task5part2.png">
-                  <div class="modal">
-                    <span class="close">&times;</span>
-                    <img class="modal-content" id="img01">
-                  </div>
+                  <img class="object-scale-down h-96 w-192" src="Screenshots/task5part2.png" alt="task5part2">
                 </div>
 
                 <h4>Step 6: Compare data from multiple query groups</h4>
@@ -352,11 +302,7 @@
                   can also click on the column name to sort by a property.
                 </p>
                 <div class="flex justify-center items-center">
-                  <img id="myImg" class="object-scale-down h-96 w-192" ; src="Screenshots/task6part1.png">
-                  <div class="modal">
-                    <span class="close">&times;</span>
-                    <img class="modal-content" id="img01">
-                  </div>
+                  <img class="object-scale-down h-96 w-192" src="Screenshots/task6part1.png" alt="task6part1">
                 </div>
 
                 <h4>Step 7: Export data</h4>
@@ -366,17 +312,11 @@
                   You may also change which table you are viewing.
                 </p>
                 <div class="flex justify-center items-center">
-                  <img id="myImg" class="object-scale-down h-96 w-192" ; src="Screenshots/task7part1.png">
-                  <div class="modal">
-                    <span class="close">&times;</span>
-                    <img class="modal-content" id="img01">
-                  </div>
+                  <img class="object-scale-down h-96 w-192" src="Screenshots/task7part1.png" alt="task7part1">
                 </div>
 
                 <p>If you want to export a document with the graphs included, go to the "Graph" tab and click the
                   download button and a .pdf file will be generated. </p>
-
-                </p>
               </div>
               <div id="glossary_of_terms_and_acronyms" class="prose p-2 scroll-section">
                 <h3> Glossary of Terms and Acronyms </h3>
@@ -407,7 +347,7 @@
                     native biota through the establishment of habitats, populations, communities, or ecosystems that
                     are similar, but not
                     necessarily identical to surrounding and naturally occurring ecosystems.
-                    <a href="https://onlinelibrary.wiley.com/doi/10.1111/rec.13461" ; class="underline">(Gerwing et
+                    <a href="https://onlinelibrary.wiley.com/doi/10.1111/rec.13461" class="underline">(Gerwing et
                       al., 2021)</a>.
                   </li>
                   <li><b>Ecological site: </b> A distinctive kind of land with specific soil and physical
@@ -416,7 +356,7 @@
                     to respond similarly to
                     management actions and natural disturbances <a
                       href="https://www.ars.usda.gov/plains-area/las-cruces-nm/range-management-research/docs/ecological-site-descriptions-introduction/"
-                      ; class="underline">(USDA-NRCS).</a></li>
+                      class="underline">(USDA-NRCS).</a></li>
                   <li><b>Ecoregion: </b> A major ecosystem defined by distinctive geography and receiving uniform
                     solar radiation and moisture. They are
                     areas where ecosystems (and the type, quality, and quantity of environmental resources) are
@@ -429,17 +369,17 @@
                     composition of biotic and
                     abiotic phenomena that affect or reflect differences in ecosystem quality and integrity <a
                       href="https://onlinelibrary.wiley.com/doi/10.1111/j.1467-8306.1987.tb00149.x?msockid=3bbb36d8128064c72e53220c1370655f"
-                      ; class="underline">(Omernik 1987).</a>
+                      class="underline">(Omernik 1987).</a>
                     These phenomena include geology, landforms, soils, vegetation, climate, land use, wildlife, and
                     hydrology. More details can
-                    be found on the <a href="https://www.epa.gov/eco-research/ecoregions" ; class="underline">EPA's
+                    be found on the <a href="https://www.epa.gov/eco-research/ecoregions" class="underline">EPA's
                       website</a>.
                   </li>
                   <li><b>Management actions:</b> Decisions and actions made under an approach to maintaining the
                     health and productivity of an ecosystem while sustaining appropriate
                     human uses. More details can be found in <a
-                      href="https://www.sciencedirect.com/science/article/abs/pii/S0169204697000947" ;
-                      class="underline"> Brussard et al., 1998.</a></li>
+                      href="https://www.sciencedirect.com/science/article/abs/pii/S0169204697000947" class="underline">
+                      Brussard et al., 1998.</a></li>
                   <li><b>Natural Disturbance: </b>Disturbances are events, like tornados, wildfires or floods that
                     cause marked changes to the impacted
                     area. Examples of ecological disturbances include fires, landslides, flooding, windstorms and
@@ -454,7 +394,7 @@
                     longer, persistent timeframes that also can promote changes to the biodiversity or health of the
                     system.
                     More details can be found on the <a
-                      href="https://www.climatehubs.usda.gov/disturbances-and-stressors" ; class="underline">USDA's
+                      href="https://www.climatehubs.usda.gov/disturbances-and-stressors" class="underline">USDA's
                       website.</a></li>
                   <li><b>Physiographic features: </b>The physical features and processes of landforms and their
                     relation to geologic structures,
@@ -463,7 +403,7 @@
                     composition of plant communities.</li>
                   <li> <b>Plant community composition: </b>A description of vegetation in a fixed area by the species
                     present and their abundance.
-                    <a href="https://climexhandbook.w.uib.no/2019/11/04/plant-community-composition/" ;
+                    <a href="https://climexhandbook.w.uib.no/2019/11/04/plant-community-composition/"
                       class="underline">(Jaroszynska et al.)</a>.
                   </li>
                   <li><b>Plant-wildlife interactions:</b> Relationships between the plants and animals in a given
@@ -482,18 +422,18 @@
                     and transitions between communities and states. Transitions contain information about mechanisms,
                     triggers, thresholds,
                     and indicators of threshold development. More details can be found on the <a
-                      href="https://jornada.nmsu.edu/knowledge-systems/esd" ; class="underline"> Jornada website.</a>
+                      href="https://jornada.nmsu.edu/knowledge-systems/esd" class="underline"> Jornada website.</a>
                   </li>
                 </ul>
               </div>
               <div id="resources" class="prose p-2 scroll-section">
                 <h3>Resources</h3>
                 <ul class="list-disc pl-10">
-                  <li><a href="https://www.stone-env.net/esst/" ; class="underline">ESS Tool</a></li>
-                  <li><a href="https://www.nrcs.usda.gov/" ; class="underline"> Natural Resources Conservation
+                  <li><a href="https://www.stone-env.net/esst/" class="underline">ESS Tool</a></li>
+                  <li><a href="https://www.nrcs.usda.gov/" class="underline"> Natural Resources Conservation
                       Service</a></li>
-                  <li><a href="https://jornada.nmsu.edu/" ; class="underline">Jornada Rangeland Research</a></li>
-                  <li><a href="https://www.blm.gov/" ; class="underline">Bureau of Land Management</a></li>
+                  <li><a href="https://jornada.nmsu.edu/" class="underline">Jornada Rangeland Research</a></li>
+                  <li><a href="https://www.blm.gov/" class="underline">Bureau of Land Management</a></li>
                 </ul>
                 <div class="scroll-section">
                   <!-- Language for 'Why is my shapefile not working?' taken from https://rangelands.app/support/18-shapefile-help -->
@@ -531,7 +471,6 @@
                     <li>Only the first 50 features of the shapefile will be loaded; the remaining features will be
                       discarded.</li>
                   </ul>
-                  </p>
                 </div>
                 <h4>Need more help? <a href="mailto:sarah.mccord@usda.gov">Email us.</a></h4>
               </div>
