@@ -239,8 +239,14 @@ a {
 
 .navbar {
   padding: 0 1em 0 1em;
+  position: absolute;
 }
 
+.flex-2 {
+  height: calc(100vh - 4rem);
+  top:4rem;
+  position: absolute;
+}
 
 /* Adding space between scroll links */
 #scroll-links {
@@ -256,6 +262,15 @@ a {
 
 #scroll-links li a {
   text-decoration: none;
+}
+
+.w-full {
+  height: 100%;
+}
+
+#main-grid {
+  overflow-y: hidden;
+  height: 100%;
 }
 
 #scroll-links li a:active {
