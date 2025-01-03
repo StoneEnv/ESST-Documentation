@@ -272,6 +272,7 @@ a {
 #scroll-links li a:hover {
   background-color: oklch(var(--bc) / .1);
   text-decoration: none;
+  color:black
 }
 
 /* .scroll-section:target {
