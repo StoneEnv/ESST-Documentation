@@ -1,7 +1,13 @@
 {
+  "name": "esst-documentation",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "nodemon --watch ./index.html --exec 'npx postcss-cli tailwind.css -o base.css'"
+  },
   "devDependencies": {
     "autoprefixer": "^10.4.20",
     "daisyui": "^4.12.23",
+    "nodemon": "^3.1.9",
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.16"
   }
