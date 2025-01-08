@@ -239,6 +239,7 @@ a {
   height: calc(100vh - 4rem);
   top: 4rem;
   position: absolute;
+  overflow: hidden;
 }
 
 /* Adding space between scroll links */
