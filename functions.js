@@ -9,8 +9,11 @@ document.addEventListener("DOMContentLoaded", function () {
         ? event.target.alt
         : "";
 
+      const lightbox_modal_img = document.getElementById("lightbox_modal_img");
+
       // set the modal img src
-      document.getElementById("lightbox_modal_img").src = event.target.src;
+      lightbox_modal_img.setAttribute("alt", event.target.alt);
+      lightbox_modal_img.src = event.target.src;
 
       // open the modal
       lightbox_modal.showModal();
