@@ -1,5 +1,8 @@
-#documentation-scroll {
+.col-span-5{  
   overflow-y: auto;
+}
+
+#documentation-scroll {
   height: calc(100vh - 4rem);
 }
 
