@@ -2164,11 +2164,17 @@ details.collapse summary::-webkit-details-marker {
 .mb-1 {
   margin-bottom: 0.25rem;
 }
+.mb-8 {
+  margin-bottom: 2rem;
+}
 .mr-1 {
   margin-right: 0.25rem;
 }
 .mt-0 {
   margin-top: 0px;
+}
+.mt-8 {
+  margin-top: 2rem;
 }
 .flex {
   display: flex;
@@ -2230,8 +2236,21 @@ details.collapse summary::-webkit-details-marker {
 .overflow-hidden {
   overflow: hidden;
 }
+.overflow-x-auto {
+  overflow-x: auto;
+}
 .rounded-box {
   border-radius: var(--rounded-box, 1rem);
+}
+.border {
+  border-width: 1px;
+}
+.border-base-content\/5 {
+  border-color: var(--fallback-bc,oklch(var(--bc)/0.05));
+}
+.bg-base-100 {
+  --tw-bg-opacity: 1;
+  background-color: var(--fallback-b1,oklch(var(--b1)/var(--tw-bg-opacity, 1)));
 }
 .bg-base-200 {
   --tw-bg-opacity: 1;
