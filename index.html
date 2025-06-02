@@ -1,578 +1,62 @@
-<!DOCTYPE html>
+<h1 style="text-align: center">
+  Ecological Indicators Summary Tool (EIST) Report
+</h1>
 
-<html lang="en">
+<p style="text-align: center">
+  This report summarizes ecological site data by selected attribute, indicator,
+  and time period from the <a href="stone-env.net/eist">EIST</a>. You can also
+  compare data for multiple attributes, indicators, and time periods. Full
+  instructions available in the
+  <a href="https://www.stone-env.net/eist/documentation/">Documentation</a>.
+  Data are made available from the
+  <a href="https://landscapedatacommons.org/">Landscape Data Commons</a>.
+</p>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>EIST Documentation</title>
+<h2 style="text-align: left">Data Query</h2>
+<h3 style="text-align: left">Area of Interest (AOI)</h3>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="./base.css" />
-  <link rel="stylesheet" href="./style.css" />
-  <link rel="icon" href="./favicon.ico" type="image/x-icon" />
-</head>
+Put Table Here
 
-<body>
-  <!-- <button class="btn" onclick="lightbox_modal.showModal()">open modal</button> -->
-  <dialog id="lightbox_modal" class="modal">
-    <div class="modal-box w-[95%] max-w-[1600px]">
-      <!-- <form method="dialog">
-        <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
-      </form> -->
+<h3 style="text-align: left">Indicators and time periods</h3>
 
-      <h3 id="lightbox_modal_title" class="text-lg font-bold mb-1">Modal</h3>
-      <img id="lightbox_modal_img" class="w-full" src="Screenshots/logo.png" alt="Default modal image">
-      <div class="divider"></div>
-      <div class="modal-action mt-0">
-        <form method="dialog">
-          <button class="btn">Close</button>
-        </form>
-      </div>
-    </div>
-    <form method="dialog" class="modal-backdrop">
-      <button>close</button>
-    </form>
-  </dialog>
+Put Table Here
 
-  <script type="text/javascript" src="functions.js"></script>
-  <div class="flex flex-col h-screen overflow-hidden ">
-    <div class="navbar bg-neutral text-neutral-content">
-      <div class="flex-1">
-        <img src="Screenshots/logo.png" alt="image" class="mr-1">
-        <h4 class="hidden md:block" style="padding-left: 0.5em;">Ecological Indicators Summary Tool</h4>
-      </div>
-      <div class="flex-none">
+<h3 style="text-align: left">Comparison Groups</h3>
 
-        <a class="btn" href="https://www.stone-env.net/esst" tabindex="0">
-          <ng-icon name="bootstrapChevronLeft" style="--ng-icon__size: 1em;">
-            <svg width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
-              <path fill-rule="evenodd"
-                d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
-            </svg>
-          </ng-icon>
-          <span class="hidden md:block">Back
-            to App</span>
-        </a>
-      </div>
-    </div>
-    <main class="flex-2">
-      <h1 class="hidden">Documentation for Ecological Indicators Summary Tool</h1>
-      <div class="w-full">
-        <div id="main-grid" class="grid grid-cols-5 gap-3">
-          <div class="hidden md:block">
-            <ul id="scroll-links" class="sticky top-0 menu bg-base-200 rounded-box">
-              <li>
-                <a href="#introduction" aria-label="About the Ecological Indicator Summary Tool">Introduction</a>
-              </li>
-              <li>
-                <a href="#background" aria-label="Ecological indicators summary">Background</a>
-              </li>
-              <li>
-                <a href="#ecological_sites" aria-label="About ecological sites">Ecological Sites</a>
-              </li>
-              <li>
-                <a href="#using_the_eis_tool" aria-label="How to use the Ecological Indicator Summary Tool">Using the
-                  EIS Tool</a>
-              </li>
-              <li><a href="#glossary_of_terms_and_acronyms" aria-label="Glossary of Terms and Acronyms">Glossary of
-                  Terms and Acronyms</a>
-              </li>
-              <li><a href="#resources" aria-label="Extra Resources">Resources</a></li>
-            </ul>
-          </div>
-          <div class="col-span-5 md:col-span-4">
-            <div id="documentation-scroll" class="p-2">
-              <div id="introduction" class="prose p-2 scroll-section">
-                <h3>Introduction</h3>
-                <p>How to use this guide:</p>
-                <ul class="list-decimal pl-14">
-                  <li>The section <a href="#using_the_eis_tool">"Using the EIS Tool"</a> later in this guide has
-                    instructions for creating an ecological indicators summary <abbr title="Ecological Indicators Summary Tool">&#40;EIS&#41;</abbr>.</li>
-                  <li>Learn the science behind the EIS Tool after this introduction.</li>
-                  <li>At the end of this guide, reference the <a href="#glossary_of_terms_and_acronyms">"Glossary of
-                      Terms and Acronyms"</a>
-                    and look for more helpful resources.</li>
-                </ul>
-              </div>
+Put Table Here
 
-              <div id="background" class="prose p-2 scroll-section">
-                <h3>Background</h3>
-                <p> The U.S. Department of Agriculture Natural Resources Conservation Service <a
-                    href="https://www.nrcs.usda.gov/" class="underline"><abbr title="Natural Resources Conservation Service">&#40;NRCS&#41;</abbr></a> defines ecological
-                  sites as
-                  "a distinctive kind of land with specific physical characteristics that differs from other kinds of
-                  land in its ability
-                  to produce a distinctive kind and amount of vegetation" <a
-                    href="https://www.ars.usda.gov/plains-area/las-cruces-nm/range-management-research/docs/ecological-site-descriptions-introduction/"
-                    class="underline"><abbr title="United States Department of Agriculture Natural Resources Conservation Service">&#40;USDA-NRCS&#41;</abbr></a>.
-                  Ecological sites determine not only the
-                  ecological potential of a site, but also how a site can respond to natural disturbance and
-                  management actions. Ecological sites
-                  have been delineated for many areas using physical and biotic features and are linked to soil map
-                  units. Soils, climate, hydrology, geology, physiographic features, plant species occurrences, plant community composition,
-                  annual biomass production, and plant-wildlife interactions all contribute to the properties of ecological sites. Ecological
-                  Site Descriptions <abbr title="Ecological Site Descriptions">&#40;ESDs&#41;</abbr> describe
-                  the underlying factors associated with a specific ecological site, as well as different ecological
-                  states within a given site based
-                  on factors such as grazing, fire, drought, and other management actions. For an example of an ESD,
-                  see
-                  <a href="https://edit.jornada.nmsu.edu/" class="underline">EDIT Jornada.</a>
-                </p>
-              </div>
+<h3 style="text-align: left">Maps</h3>
 
-              <div id="ecological_sites" class="prose p-2 scroll-section">
-                <h3>Ecological Sites</h3>
-                <p>Using ecological monitoring data, the overall status of an ecological site can be summarized into
-                  an Ecological Site Summary <abbr title="Ecological Site Summary">&#40;ESS&#41;</abbr>.
-                  At the site level, ecological site summaries generated from monitoring data can tell us about the
-                  condition and health of ecological sites based on indicators such as structure and functional group, species dominance, species
-                  occurrences, canopy gap
-                  measurements, and soil stability measurements. These indicators can help inform the user of the
-                  ecological state of a given plot or
-                  study site &#40;i.e. shrubland state vs. grassland state&#41;. Identifying the ecological state allows users
-                  to not only determine the degree of
-                  departure from the corresponding reference ecological states, but also to inform management and
-                  restoration actions by
-                  determining the best pathway to a less degraded state. These shifts between states can be modeled
-                  with a State and Transition Model <abbr title="State and Transition Model">&#40;STM&#41;</abbr>.
-                  For more information on state and transition models, see
-                  <a href="https://library.oapen.org/bitstream/handle/20.500.12657/27988/1002009.pdf?sequence=1#page=313"
-                    class="underline">Bestelmeyer et al., 2017.</a>
-                </p>
-                <p>A major data source for developing these summaries is the
-                  <a href="https://www.blm.gov/aim" class="underline">Assessment, Inventory, and Monitoring
-                    <abbr title="Assessment, Inventory, and Monitoring">&#40;AIM&#41;</abbr> Program</a> along with the Landscape
-                  Monitoring Framework <a
-                    href="https://gbp-blm-egis.hub.arcgis.com/datasets/BLM-EGIS::blm-natl-aim-lmf-hub/about"><abbr title="Landscape Monitoring Framework">&#40;LMF&#41;</abbr></a>.
-                  AIM and LMF include almost 25,000 plots throughout the western United States &#40;see AIM Data Portal&#41;
-                  stored
-                  in the <a
-                    href="https://gbp-blm-egis.hub.arcgis.com/datasets/BLM-EGIS::blm-natl-aim-terradat-hub/about"
-                    class="underline">Terrestrial AIM Database <abbr title="Terrestrial AIM Database">&#40;TerrADat&#41;</abbr></a>.
-                  Data garnered from AIM and LMF plots is both generalizable and scalable and thus applicable
-                  to management decisions across multiple disciplines at both local and national levels.
-                </p>
-                <p>The Ecological Indicators Summary <abbr title="Ecological indicators Summary">&#40;EIS&#41;</abbr> tool has been developed to help users visualize the
-                  overall status of their region of interest
-                  within a specific ecological site, or across an ecological site group. This information can be
-                  summarized within a given administrative
-                  state or across political boundaries for landscape scale analysis. Users can query summary tables,
-                  download full or filtered summary
-                  tables to view in Excel, explore interactive figures, and download static figures for their own use.
-                </p>
-                <p>
-                  This EIS information can be included in decision making processes for <a href="https://www.blm.gov/"
-                    class="underline">Bureau of Land Management <abbr title="Bureau of Land Management">&#40;BLM&#41;</abbr></a> managers, as it can help
-                  inform
-                  land use plans, grazing permit renewals, shrub or invasive species treatments, and/or seed menu
-                  development for ecological restoration
-                  and reclamation. As new data become available or lines of inquiry shift, the summary tables and
-                  report can be easily updated.
-                </p>
-              </div>
+<div style="text-align: center">
+  <img src="Screenshots/Sample_Map.png" />
+</div>
 
-              <div id="using_the_eis_tool" class="prose p-2 scroll-section">
-                <h3>Using the EIS Tool</h3>
-                <p class="mb-8">This tool generates many tables and figures that can be queried, filtered, and
-                  downloaded to meet your management and reporting needs.
-                  Multiple output types are used to meet multiple needs, so select the most relevant and useful
-                  output. In cases where ESDs are not
-                  developed, grouping AIM data by other features can provide similar information, and potentially lead
-                  to the development of new ESDs.
-                  For this purpose, it may be informative to group data by features such as biophysical indicators,
-                  location, or project. Spatial
-                  groupings may also be beneficial if you want to compare data in the same ecological site across
-                  multiple management units such as
-                  grazing allotments, pastures, prescribed burn areas, etc. The report you generate can be customized
-                  to select and compare indicators
-                  by both spatial and non-spatial groupings.
-                </p>
-                <h4 class="mt-8">Step 1: Access the tool</h4>
-                <p>To use the EIS Tool, navigate to <a href="https://www.stone-env.net/esst/"
-                    class="underline">https://www.stone-env.net/esst/.</a>
-                </p>
-                <div class="flex justify-center items-center">
-                  <img class="lightbox-image object-scale-down h-96 w-192" src="Screenshots/task1part1.png"
-                    alt="Access the EIS Tool">
-                </div>
+<h3 style="text-align: left">Graphs</h3>
 
-                <p> Click "Get Started" to pull up a map and query the data.
-                  Use the tab to expand and collapse the form and map in the application. </p>
-                <div class="flex justify-center items-center">
-                  <img class="lightbox-image object-scale-down h-96 w-192" src="Screenshots/task1part2.png"
-                    alt="Pull up the map and query data">
-                </div>
-                <h4 class="mt-8">Step 2: Select attributes and indicators</h4>
-                <p> Use the attribute buttons at the top of the form to filter the data by "Soil Attributes", "Plant
-                  Attributes", "Erosion Indicators",
-                  or "Indicators of Rangeland Health". Select properties under one or more of these 4 categories to
-                  use in your query. You will be able to sort your
-                  data by indicator and set benchmarks in a later step.
-                </p>
-                <div class="flex justify-center items-center">
-                  <img class="lightbox-image object-scale-down h-96 w-192" src="Screenshots/task2part1.png"
-                    alt="Select attributes and indicators">
-                </div>
-                <p>The EIS tool is organized by query group, where a query group contains indicators and an area of
-                  interest designed to answer a specific
-                  ecological question.
-                  Click "Add New Row" to start customizing your query group. Use the dropdown menu under "Property" to
-                  add one of the indicators that you selected
-                  above to your query statement. Choose an operator, then input a value to complete the statement.
-                  Add additional rows to your group to complete your query statements. You can come back and edit
-                  these statements later too, if need be.
-                  If you want to remove a query statement, you can click the yellow "X" button to the right of the row.
-                </p>
-                <div class="flex justify-center items-center">
-                  <img class="lightbox-image object-scale-down h-96 w-192" src="Screenshots/task2part2.png"
-                    alt="Choose a property to build a query">
-                </div>
-                <p class="mb-8"><b>Include time period</b><br>
-                  This optional step queries the data over a specific time period. In the query group, click the "Add New Row" button. Use the new row's "Property" dropdown to select "Date Visited" under "All Indicators". Then select one of the "Operator" dropdown options:
-                <div class="overflow-x-auto rounded-box border border-base-content/5 bg-base-100 mb-8">
-                  <table class="table">
-                  <thead>
-                    <tr>
-                      <th>Operator</th>
-                      <th>Description</th>
-                    </tr>
-                    </thead>
-                    <!--   table row 1 -->
-                    <tbody>
-                    <tr>
-                      <td>=</td>
-                      <td>Query the data for a specific date entered in the "Value" input using <code>mm/dd/yyyy</code> format</td>
-                    </tr>
-                    <!--  table row 2 -->
-                    <tr>
-                      <td>!=</td>
-                      <td>Query the data for all time EXCEPT a specific date entered in the "Value" input using <code>mm/dd/yyyy</code> format</td>
-                    </tr>
-                    <!--  table row 3 -->
-                    <tr>
-                      <td>&lt;</td>
-                      <td>Query the data for all dates BEFORE a specific date entered in the "Value" input using <code>mm/dd/yyyy</code> format</td>
-                    </tr>
-                    <!--  table row 4 -->
-                    <tr>
-                      <td>&le;</td>
-                      <td>Query the data for all dates BEFORE AND INCLUDING a specific date entered in the "Value" input using <code>mm/dd/yyyy</code> format</td>
-                    </tr>
-                    <!--  table row 5 -->
-                    <tr>
-                      <td>&gt;</td>
-                      <td>Query the data for all dates AFTER a specific date entered in the "Value" input using <code>mm/dd/yyyy</code> format</td>
-                    </tr>
-                    <!--  table row 6 -->
-                    <tr>
-                      <td>&ge;</td>
-                      <td>Query the data for all dates AFTER AND INCLUDING a specific date entered in the "Value" input using <code>mm/dd/yyyy</code> format</td>
-                    </tr>
-                    <!--  table row 7 -->
-                    <tr>
-                      <td>&gt;=&nbsp;&amp;&nbsp;&lt;=</td>
-                      <td>Query the data for all dates BETWEEN AND INCLUDING two specific dates entered in the inputs using <code>mm/dd/yyyy</code> format</td>
-                    </tr>
-                    <!--  table row 8 -->
-                    <tr>
-                      <td>&gt;&nbsp;&amp;&nbsp;&lt;</td>
-                      <td>Query the data for all dates BETWEEN two specific dates entered in the inputs using <code>mm/dd/yyyy</code> format</td>
-                    </tr>
-                    <!--  table row 9 -->
-                    <tr>
-                      <td>Year</td>
-                      <td>Choose a specific year in the "Value" dropdown to query data by year.
-                      </td>
-                    </tr>
-                    </tbody>
-                  </table>
-                  </div>
-                </p>
+<div style="text-align: center">
+  <img src="Screenshots/Sample_Plot.png" />
+</div>
 
-                <h4 class="mt-8">Step 3: Select an area of interest <abbr title="Area of Interest">&#40;AOI&#41;</abbr></h4>
-                <p>Click "Add AOI" to select the area of interest that you want to include in your query. You may
-                  select one or all of the following choices.
-                </p>
-                <div class="flex justify-center items-center">
-                  <img class="lightbox-image object-scale-down h-96 w-192" src="Screenshots/task3part1.png"
-                    alt="Add an AOI">
-                </div>
-                <p><b>Draw Polygon:</b> Use the Zoom In and Zoom Out buttons on the map. After selecting "Add AOI" >
-                  "Draw Polygon", click on the map to start drawing.
-                  Continue clicking until the polygon is your intended size and shape. You may add additional separate
-                  polygons to the same query group. You
-                  will be able to manage overlapping polygons and exclude features in a later step. </p>
-                <div class="flex justify-center items-center">
-                  <img class="lightbox-image object-scale-down h-96 w-192" src="Screenshots/task3part2.png"
-                    alt="Draw a polygon on the map">
-                </div>
-                <p><b>Project:</b> Use this option to select one or more projects using a Project Key, ESD, MLRA, or
-                  Ecoregion Level #3. ESDs and MLRAs are described in
-                  more detail in <a href="https://edit.jornada.nmsu.edu/" class="underline">EDIT Jornada.</a>
-                  Ecoregions can be found on the
-                  <a href="https://www.nrcs.usda.gov/resources/data-and-reports/major-land-resource-area-mlra"
-                    class="underline">EPA's website.</a>
-                </p>
-                <div class="flex justify-center items-center">
-                  <img class="lightbox-image object-scale-down h-96 w-192" src="Screenshots/task3part3.png"
-                    alt="Select a project">
-                </div>
-                <p><b>Upload Shapefile:</b> This option allows you to upload a shapefile from your device into the
-                  tool.
-                  <b>Note:</b> you may combine any of these AOI options in one query. For example, you can select both
-                  an MLRA and a shapefile or you can select an ESD, a
-                  shapefile, and a hand-drawn polygon and they will be combined into a single area of interest. For
-                  problems with the shapefile upload, see "Why is my shapefile not working?" in the <a
-                    href="#resources">Resources section</a>.
-                </p>
-                <div class="flex justify-center items-center">
-                  <img class="lightbox-image object-scale-down h-96 w-192" src="Screenshots/task3part4.png"
-                    alt="Upload a shapefile">
-                </div>
-                <h4 class="mt-8">Step 4: Manage query group and geodata</h4>
-                <p>If you would like to begin a new query, click the "Add New Group" button to add a query group. Then
-                  add a new row with the "Add New Row" button. Choose a property from the Property dropdown menu.
-                  You may also choose an operator and a value. Alternatively, you may add multiple properties to the
-                  original query group by clicking the "Add New Row" button. </p>
-                <div class="flex justify-center items-center">
-                  <img class="lightbox-image object-scale-down h-96 w-192" src="Screenshots/task4part1.png"
-                    alt="Add a new group">
-                </div>
-                <p>You may also create a duplicate of your existing query group by selecting "Clone Group". This clone
-                  can then be modified and renamed.
-                  You may delete groups by using the filter button and selecting "Delete Group." You may delete
-                  queries within a group by clicking the X at the
-                  end of the line. You may name your groups using the filter button and selecting "Rename Group".</p>
-                <div class="flex justify-center items-center">
-                  <img class="lightbox-image object-scale-down h-96 w-192" src="Screenshots/task4part2.png"
-                    alt="Manage query groups">
-                </div>
-                <p>If you wish to manage the geodata, and exclude or select AOIs, click the "Query Group Settings"
-                  button and choose "Manage Geodata". Then click the "Select AOIs" button. Use the GeoData
-                  Manager to inspect your AOI selections and the number of unique sites they each contain. Click a
-                  table row to zoom the map to that selection's
-                  extent. By default, unique sites in each selection are added together in the query. To subtract a
-                  selection's sites from the query, click "Exclude". You may
-                  add it back to the selection by clicking "Select". To remove a selection, click the "Remove AOIs"
-                  button. Press the "Cancel" button and then the "Close" button to
-                  return to the Query Form.
-                </p>
-                <div class="flex justify-center items-center">
-                  <img class="lightbox-image object-scale-down h-96 w-192" src="Screenshots/task4part3.png"
-                    alt="Manage the geodata">
-                </div>
-                <h4 class="mt-8">Step 5: View and interact with query results</h4>
-                <p>Once you have set your query group properties and areas of interest, click "Submit Query" to run
-                  the query. You may need to wait
-                  a moment for the data to load. If there are errors, follow the instructions provided to fix the
-                  error.
-                </p>
-                <div class="flex justify-center items-center">
-                  <img class="lightbox-image object-scale-down h-96 w-192" src="Screenshots/task5part1.png"
-                    alt="Submit the query">
-                </div>
-                <p>
-                  After the query is done, click the "Results" tab and use the "Graph" and "Table" tabs to view
-                  the data.
-                </p>
-                <div class="flex justify-center items-center">
-                  <img class="lightbox-image object-scale-down h-96 w-192" src="Screenshots/task5part2.png"
-                    alt="View the results">
-                </div>
-
-                <h4 class="mt-8">Step 6: Compare data from multiple query groups</h4>
-                <p> Click the button "Select Results from Query Group" and select the query groups you want to compare
-                  then click "Compare". You may also
-                  choose to look at a single query group. You can filter by typing a search into the "Filter" bar. You
-                  can also click on the column name to sort by a property.
-                </p>
-                <div class="flex justify-center items-center">
-                  <img class="lightbox-image object-scale-down h-96 w-192" src="Screenshots/task6part1.png"
-                    alt="Compare query groups">
-                </div>
-
-                <h4 class="mt-8">Step 7: Export data</h4>
-
-                <p>If you want to export the current table, go to the "Table" tab and click the download button and an
-                  Excel &#40;.xlsx&#41; file will be generated.
-                  You may also change which table you are viewing.
-                </p>
-                <div class="flex justify-center items-center">
-                  <img class="lightbox-image object-scale-down h-96 w-192" src="Screenshots/task7part1.png"
-                    alt="Download the table">
-                </div>
-
-                <p>If you want to export a document with the graphs included, go to the "Graph" tab and click the
-                  download button and a .pdf file will be generated. </p>
-              </div>
-              <div id="glossary_of_terms_and_acronyms" class="prose p-2 scroll-section">
-                <h3> Glossary of Terms and Acronyms </h3>
-                <div class="scroll-section">
-                  <h4>Acronyms</h4>
-                  <ul class="list-disc pl-10">
-                    <li><b>AIM: </b>Assessment, Inventory, and Monitoring Program</li>
-                    <li><b>BLM: </b>Bureau of Land Management</li>
-                    <li><b>ESD: </b>Ecological Site Description </li>
-                    <li><b>ESS: </b>Ecological Site Summary </li>
-                    <li><b>LMF: </b>Landscape Modeling Framework</li>
-                    <li><b>MLRA: </b>Major Land Resource Area</li>
-                    <li><b>STM: </b>State and Transition Model</li>
-                    <li><b>TerrADat: </b>Terrestrial AIM Database</li>
-                  </ul>
-                </div>
-                <h4>Terms</h4>
-                <ul class="list-disc pl-10">
-                  <li><b>Annual biomass production: </b>The amount of organic plant matter produced in a given area
-                    over the course of a year.</li>
-                  <li><b>Ecological potential: </b>The greatest potential fractional cover &#40;bare ground, herbaceous,
-                    litter, shrub, and sagebrush&#41; represented in
-                    the least disturbed areas and most productive years of the record for a given plot of land. It is
-                    a measurement of how much
-                    biomass could grow in a region given perfect conditions.</li>
-                  <li><b>Ecological restoration and reclamation: </b>The process of assisting the recovery of severely
-                    degraded ecosystems to benefit
-                    native biota through the establishment of habitats, populations, communities, or ecosystems that
-                    are similar, but not
-                    necessarily identical to surrounding and naturally occurring ecosystems.
-                    <a href="https://onlinelibrary.wiley.com/doi/10.1111/rec.13461" class="underline">&#40;Gerwing et
-                      al., 2021&#41;</a>.
-                  </li>
-                  <li><b>Ecological site: </b> A distinctive kind of land with specific soil and physical
-                    characteristics that differ from other kinds
-                    of land in its ability to produce distinctive kinds and amounts of vegetation, and in its ability
-                    to respond similarly to
-                    management actions and natural disturbances <a
-                      href="https://www.ars.usda.gov/plains-area/las-cruces-nm/range-management-research/docs/ecological-site-descriptions-introduction/"
-                      class="underline">&#40;USDA-NRCS&#41;.</a></li>
-                  <li><b>Ecoregion: </b> A major ecosystem defined by distinctive geography and receiving uniform
-                    solar radiation and moisture. They are
-                    areas where ecosystems &#40;and the type, quality, and quantity of environmental resources&#41; are
-                    generally similar. Designed to serve
-                    as a spatial framework for the research, assessment, and monitoring of ecosystems and ecosystem
-                    components, ecoregions
-                    denote areas of similarity in the mosaic of biotic, abiotic, terrestrial, and aquatic ecosystem
-                    components with humans
-                    being considered as part of the biota. Ecoregions are identified by analyzing the patterns and
-                    composition of biotic and
-                    abiotic phenomena that affect or reflect differences in ecosystem quality and integrity <a
-                      href="https://onlinelibrary.wiley.com/doi/10.1111/j.1467-8306.1987.tb00149.x?msockid=3bbb36d8128064c72e53220c1370655f"
-                      class="underline">&#40;Omernik 1987&#41;.</a>
-                    These phenomena include geology, landforms, soils, vegetation, climate, land use, wildlife, and
-                    hydrology. More details can
-                    be found on the <a href="https://www.epa.gov/eco-research/ecoregions" class="underline">EPA's
-                      website</a>.
-                  </li>
-                  <li><b>Management actions:</b> Decisions and actions made under an approach to maintaining the
-                    health and productivity of an ecosystem while sustaining appropriate
-                    human uses. More details can be found in <a
-                      href="https://www.sciencedirect.com/science/article/abs/pii/S0169204697000947" class="underline">
-                      Brussard et al., 1998.</a></li>
-                  <li><b>Natural Disturbance: </b>Disturbances are events, like tornados, wildfires or floods that
-                    cause marked changes to the impacted
-                    area. Examples of ecological disturbances include fires, landslides, flooding, windstorms and
-                    insect and pest outbreaks.
-                    Disturbances often come in the form of short-term or temporary changes to the landscape but can
-                    have very significant
-                    ecosystem impacts. These events often act quickly but with great impact and thereby
-                    are able to promote changes to the physical structure of the system. For example, a fire burning
-                    over a mature forest
-                    results in a different composition of species after the disturbance event. Other types of
-                    disturbances may occur over
-                    longer, persistent timeframes that also can promote changes to the biodiversity or health of the
-                    system.
-                    More details can be found on the <a
-                      href="https://www.climatehubs.usda.gov/disturbances-and-stressors" class="underline">USDA's
-                      website.</a></li>
-                  <li><b>Physiographic features: </b>The physical features and processes of landforms and their
-                    relation to geologic structures,
-                    including the soils, topography, land slope and aspect, and local climate, that influence the form
-                    and species
-                    composition of plant communities.</li>
-                  <li> <b>Plant community composition: </b>A description of vegetation in a fixed area by the species
-                    present and their abundance.
-                    <a href="https://climexhandbook.w.uib.no/2019/11/04/plant-community-composition/"
-                      class="underline">&#40;Jaroszynska et al.&#41;</a>.
-                  </li>
-                  <li><b>Plant-wildlife interactions:</b> Relationships between the plants and animals in a given
-                    ecosystem. These relationships include
-                    predation, parasitism, commensalism, or mutualism and do not require direct physical contact.
-                    Important plant-wildlife
-                    interactions are pollination, seed dispersal, and herbivory. The plants and animals have
-                    co-evolved these adaptive mechanisms
-                    to maximize the chance of survival.</li>
-                  <li><b>State-and-Transition model: </b>These models synthesize literature and informal knowledge
-                    tied to particular ecological sites
-                    to distinguish changes in vegetation and soils that are easily reversible versus changes that are
-                    subject to thresholds beyond which reversal is
-                    costly or impossible. The models describe all possible states, community phases &#40;i.e.,
-                    easily-reversible variants of states&#41;,
-                    and transitions between communities and states. Transitions contain information about mechanisms,
-                    triggers, thresholds,
-                    and indicators of threshold development. More details can be found on the <a
-                      href="https://jornada.nmsu.edu/knowledge-systems/esd" class="underline"> Jornada website.</a>
-                  </li>
-                </ul>
-              </div>
-              <div id="resources" class="prose p-2 scroll-section">
-                <h3>Resources</h3>
-                <ul class="list-disc pl-10">
-                  <li><a href="https://www.stone-env.net/esst/" class="underline">EIS Tool</a></li>
-                  <li><a href="https://www.nrcs.usda.gov/" class="underline"> Natural Resources Conservation
-                      Service</a></li>
-                  <li><a href="https://jornada.nmsu.edu/" class="underline">Jornada Rangeland Research</a></li>
-                  <li><a href="https://www.blm.gov/" class="underline">Bureau of Land Management</a></li>
-                </ul>
-                <div class="scroll-section">
-                  <!-- Language for 'Why is my shapefile not working?' taken from https://rangelands.app/support/18-shapefile-help -->
-                  <h4>Why is my shapefile not working?</h4>
-                  <p>Although a very common format for storing spatial vector information &#40;polygons, lines, points&#41;,
-                    shapefiles can contain
-                    geometry errors or other misinformation that prevents them from functioning properly. If you are
-                    using a zipped shapefile and are not
-                    returned results, please consider the following:<br>
-                  <ul class="list-disc pl-10">
-                    <li>The shapefile must be saved as a .zip file and contain the .shp, .shx, and .prj files of the
-                      shapefile. Only include one shapefile per .zip file.</li>
-                    <li>Shapefiles may not work with all web browsers. Please use Google Chrome for best results.</li>
-                    <li>3D shapefiles are not supported, please <a
-                        href="https://support.esri.com/en-us/knowledge-base/how-to-convert-3d-shapefiles-to-2d-shapefiles-000008433">convert
-                        to 2D</a>.</li>
-                    <li>Shapefiles can contain geometry errors. Please <a
-                        href="https://desktop.arcgis.com/en/arcmap/latest/tools/data-management-toolbox/checking-and-repairing-geometries.htm">check
-                        and fix the geometries</a> of the shapefile and try again.</li>
-                    <li>Shapefiles with complex geometries &#40;i.e., polygons with many vertices&#41; or many features will
-                      result in an error. Please reduce the number of features or <a
-                        href="https://desktop.arcgis.com/en/arcmap/latest/manage-data/editing-existing-features/simplifying-a-feature-generalize-.htm">simplify
-                        them</a>.</li>
-                    <li><a
-                        href="https://desktop.arcgis.com/en/arcmap/latest/manage-data/editing-fundamentals/removing-slivers-or-gaps-between-polygons.htm">Sliver
-                        polygons</a> &#40;really, really small polygons that are likely mistakes&#41;
-                      will result in an error. Please <a
-                        href="https://desktop.arcgis.com/en/arcmap/latest/tools/data-management-toolbox/checking-and-repairing-geometries.htm">check
-                        and fix the geometries</a> of the shapefile.</li>
-                    <li>Although multipart polygons are compatible with the EIST, singlepart polygons are recommended.
-                      <a
-                        href="https://desktop.arcgis.com/en/arcmap/latest/tools/data-management-toolbox/multipart-to-singlepart.htm">Convert
-                        to singlepart polygons</a>.
-                    </li>
-                    <li>Only the first 50 features of the shapefile will be loaded; the remaining features will be
-                      discarded.</li>
-                  </ul>
-                </div>
-                <h4>Need more help? <a href="mailto:sarah.mccord@usda.gov">Email us.</a></h4>
-              </div>
-            </div>
-            <br><br><br>
-          </div>
-        </div>
-      </div>
-    </main>
+<div
+  id="footer"
+  style="display: flex; justify-content: space-between; padding: 10px 0"
+>
+  <div>
+    <b>Ecological Indicators Summary Tool</b><br />
+    <a href="stone-env.net/eist">stone-env.net/eist</a>
   </div>
-</body>
+  <div><b>Page #</b><br /></div>
+  <div>
+    <b>Date Created</b><br />
+    <p id="datetime"></p>
 
-</html>
+    <script>
+      // Get current date and time
+      var now = new Date();
+      var datetime = now.toLocaleString();
+
+      // Insert date and time into HTML
+      document.getElementById("datetime").innerHTML = datetime;
+    </script>
+  </div>
+</div>

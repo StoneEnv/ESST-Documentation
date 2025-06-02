@@ -335,3 +335,11 @@ a {
 .lightbox-image {
   cursor: pointer;
 }
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
+}
