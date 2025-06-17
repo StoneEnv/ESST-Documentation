@@ -329,6 +329,24 @@
     display: block;
   }
 }
+
+@media print {
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    /* Optional: style your footer */
+    background: #fff;
+    border-top: 1px solid #ccc;
+    padding: 10px;
+    font-size: 12px;
+  }
+  body {
+    margin-bottom: 60px; /* Adjust if your footer is taller */
+  }
+}
+
 @layer base {
   :where(:root),:root:has(input.theme-controller[value=light]:checked),[data-theme=light] {
     color-scheme: light;

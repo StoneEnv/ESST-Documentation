@@ -1,5 +1,7 @@
 <head>
   <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="styles/print.css" media="print">.
+
   <style>
     body {
       margin: 1in;
@@ -35,22 +37,16 @@
         <!-- head -->
         <thead>
           <tr>
-            <th>Group Name</th>
-            <th>AOI Sites</th>
-            <th>Indicators</th>
-            <th>Group Type</th>
+            <th>Selection Type</th>
+            <th>Creation Type</th>
+            <th>Number of Sites</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <th>Group index</th>
-            <td>Group title</td>
-            <td>total sites</td>
-            <td>
-              <ul>
-                form row
-              </ul>
-            </td>
+            <th>AOI Selection</th>
+            <td>Drawn Poylgon</td>
+            <td>2967</td>
           </tr>
         </tbody>
       </table>
@@ -61,27 +57,125 @@
 <br/>
 <h3 style="text-align: left"><b>Indicators and time periods</b></h3>
 
+<div class="card w-full bg-base-100 card-xs border-gray-200 border mb-2">
+  <div class="card-body p-4">
+    <div class="grey_container overflow-x-auto">
+      <table class="table">
+        <!-- head -->
+        <thead>
+          <tr>
+            <th>Selection Type</th>
+            <th>Creation Type</th>
+            <th>Number of Sites</th>
+       </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>Indicator</th>
+            <td>Bare Soil % < 10</td>
+            <td>2967</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
 
 <br/>
 <h3 style="text-align: left"><b>Comparison Groups</b></h3>
 
+<div class="card w-full bg-base-100 card-xs border-gray-200 border mb-2 break-after-auto">
+  <div class="card-body p-4">
+    <div class="grey_container overflow-x-auto">
+      <table class="table">
+        <!-- head -->
+        <thead>
+          <tr>
+            <th>Selection Type</th>
+            <th>Creation Type</th>
+            <th>Number of Sites</th>
+       </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>AOI Selection</th>
+            <td>Bare Soil % < 10</td>
+            <td>2967</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
 
 <br/>
 <h3 style="text-align: left; font-size: 1.5em"><b>Maps</b></h3>
 
-<div style="text-align: center">
+<div class="card w-full bg-base-100 card-xs border-gray-200 border mb-2 break-before-auto">
+  <div class="card-body p-4">
+    <div class="grey_container overflow-x-auto">
+      <table class="table">
+        <!-- head -->
+        <thead>
+          <tr>
+            <th>Selection Type</th>
+            <th>Creation Type</th>
+            <th>Number of Sites</th>
+       </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>AOI Selection</th>
+            <td>Drawn Polygon</td>
+            <td>2967</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div class="break-after-auto" style="text-align: center">
   <img src="Screenshots/Sample_Map.png" />
 </div>
 
 <br/>
 <h3 style="text-align: left; font-size: 1.5em"><b>Graphs</b></h3>
 
-<div style="text-align: center">
+<h4>Variable 1</h4>
+<p><b>Query Group:</b> Data query 1</p>
+<p><b>Graph type:</b> Box plot</p>
+<br/>
+
+<div class="card w-full bg-base-100 card-xs border-gray-200 border mb-2 break-before-auto">
+  <div class="card-body p-4">
+    <div class="grey_container overflow-x-auto">
+      <table class="table">
+        <!-- head -->
+        <thead>
+          <tr>
+            <th>Selection Type</th>
+            <th>Creation Type</th>
+       </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>Graph Type</th>
+            <td>Box Plot</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div class="break-inside-avoid" style="text-align: center">
   <img src="Screenshots/Sample_Plot.png" />
 </div>
 
-<div
-  id="footer"
+<div 
+  class="footer"
   style="display: flex; justify-content: space-between; padding: 10px 0"
 >
   <div>
