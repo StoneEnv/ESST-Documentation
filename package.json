@@ -2,7 +2,8 @@
   "name": "esst-documentation",
   "version": "0.0.1",
   "scripts": {
-    "dev": "nodemon --watch ./index.html --exec 'npx postcss-cli tailwind.css -o base.css'"
+    "dev": "nodemon --watch ./index.html --exec 'npx postcss-cli tailwind.css -o base.css'",
+    "map": "nodemon --watch ./map.html --exec 'npx postcss-cli tailwind.css -o map_base.css'"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.20",

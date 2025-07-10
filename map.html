@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>EIST MAP</title>
+    <link rel="stylesheet" href="./map_base.css">
+    <link rel="stylesheet" href="https://js.arcgis.com/4.33/esri/themes/light/main.css" />
+
+    <script type="module" src="https://js.arcgis.com/calcite-components/3.2.1/calcite.esm.js"></script>
+    <script src="https://js.arcgis.com/4.33/"></script>
+    <script type="module" src="https://js.arcgis.com/4.33/map-components/"></script>
+</head>
+
+<body class="h-[1754px] w-[1240px] m-0 p-0 bg-white font-sans">
+    <div class="text-black w-full h-full relative flex flex-col">
+        <div id="viewDiv" class="w-full h-full relative">
+            <arcgis-scale-bar class="absolute right-[10px] bottom-[10px]" unit="dual"></arcgis-scale-bar>
+        </div>
+        <div class="flex-none border-t-1 border-gray-500">
+            <div class="flex">
+                <div class="grow p-2 pl-4">
+                    <h1 class="font-bold text-lg">Lorem Ipsum</h1>
+                    <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin convallis lorem
+                        erat, nec dapibus erat ultrices at. Mauris gravida volutpat suscipit. Vivamus consequat sem dui,
+                        vel euismod lacus
+                        vulputate id. Proin porta, mi in porta posuere, magna tellus hendrerit turpis, tristique
+                        dignissim libero massa a massa. Aenean interdum neque sem, vitae egestas orci ultricies nec.
+                        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Cras vel
+                        lectus ut libero sagittis euismod. Nunc venenatis in justo in ullamcorper. Morbi fermentum
+                        semper tincidunt. Aenean ut interdum lectus. Pellentesque volutpat nec nulla a suscipit. Cras
+                        vitae nunc mi. Sed sit amet molestie purus.</p>
+                </div>
+                <div class="flex-none p-2">
+                    <arcgis-legend></arcgis-legend>
+                </div>
+            </div>
+            <p class="text-center my-2 text-sm font-bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 2025
+            </p>
+        </div>
+    </div>
+    <script type="module">
+        const [Map, GeoJSONLayer, MapView] = await $arcgis.import([
+            "@arcgis/core/Map.js",
+            "@arcgis/core/layers/GeoJSONLayer.js",
+            "@arcgis/core/views/MapView.js",
+        ]);
+
+        const geojson = {
+            "type": "FeatureCollection",
+            "name": "esst_aoi_sample",
+            "features": [
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "tessellate": -1,
+                        "extrude": 0,
+                        "visibility": -1,
+                        "Id": 0
+                    },
+                    "geometry": {
+                        "type": "MultiPolygon",
+                        "coordinates": [
+                            [
+                                [
+                                    [
+                                        -114.535462142721,
+                                        33.5812506005906
+                                    ],
+                                    [
+                                        -114.521061675305,
+                                        33.8710904603416
+                                    ],
+                                    [
+                                        -114.420709137574,
+                                        34.0817386244438
+                                    ],
+                                    [
+                                        -114.207126175322,
+                                        34.2117702454255
+                                    ],
+                                    [
+                                        -114.054026929372,
+                                        34.2170454025415
+                                    ],
+                                    [
+                                        -113.926495305765,
+                                        34.1752251253077
+                                    ],
+                                    [
+                                        -114.140613795978,
+                                        33.6234942436317
+                                    ],
+                                    [
+                                        -114.535462142721,
+                                        33.5812506005906
+                                    ]
+                                ]
+                            ]
+                        ]
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "tessellate": -1,
+                        "extrude": 0,
+                        "visibility": -1,
+                        "Id": 0
+                    },
+                    "geometry": {
+                        "type": "MultiPolygon",
+                        "coordinates": [
+                            [
+                                [
+                                    [
+                                        -114.225889723997,
+                                        34.4055640902581
+                                    ],
+                                    [
+                                        -114.698331363481,
+                                        33.9184641014233
+                                    ],
+                                    [
+                                        -115.444489190919,
+                                        34.1856313207172
+                                    ],
+                                    [
+                                        -114.979546625078,
+                                        34.7790493838068
+                                    ],
+                                    [
+                                        -114.225889723997,
+                                        34.4055640902581
+                                    ]
+                                ]
+                            ]
+                        ]
+                    }
+                }
+            ]
+        };
+
+        const blob = new Blob([JSON.stringify(geojson)], {
+            type: "application/json"
+        });
+
+        const url = URL.createObjectURL(blob);
+
+        const geojsonLayer = new GeoJSONLayer({
+            url,
+            title: "AOI",
+            renderer: {
+                type: "simple",
+                symbol: {
+                    type: "simple-fill",
+                    color: [51, 51, 204, 0.5],
+                    style: "solid",
+                    outline: {
+                        color: "white",
+                        width: 1
+                    },
+                }
+            },
+        });
+
+        // Wait for the layer to load
+        await geojsonLayer.load();
+
+        const map = new Map({
+            basemap: "topo-vector",
+            layers: [geojsonLayer],
+        });
+
+        const view = new MapView({
+            container: "viewDiv",
+            map: map,
+            constraints: {
+                animationDuration: 0 // Disables programmatic animations
+            },
+            extent: geojsonLayer.fullExtent,
+            ui: {
+                components: []
+            }
+        });
+
+        view.when(async () =>
+        {
+            const scaleBarElement = document.querySelector("arcgis-scale-bar");
+            scaleBarElement.view = view;
+            const legendElement = document.querySelector("arcgis-legend");
+            legendElement.view = view;
+            setTimeout(() =>
+            {
+                window.map_loaded = true;
+                console.log("Loaded");
+            }, 10000);
+        });
+    </script>
+</body>
+
+</html>
