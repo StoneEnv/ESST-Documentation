@@ -1,3 +1,27 @@
+/* Color palette */
+:root {
+  --color-primary: #164e63;
+  --color-primary-content:#E2E8F0;
+  --color-secondary:#EAB308;
+  --color-secondary-content:#713F12;
+  --color-accent:#9A3412;
+  --color-accent-content:#FFEDD5;
+  --color-neutral:#0F172A;
+  --color-neutral-content:#CBD5E1;
+  --color-base-100:#ffffff;
+  --color-base-200:#F5F5F5;
+  --color-base-300:#E5E5E5;
+  --color-base-content:#1E293B;
+  --color-info:#22D3EE;
+  --color-success:#A3E635;
+  --color-warning:#FDE047;
+  --color-error:#EF4444;
+  --color-info-content:#111827;
+  --color-success-content:#365314;
+  --color-warning-content:#854D0E;
+  --color-error-content:#1F2937;
+}
+
 .col-span-5{  
   overflow-y: auto;
 }
@@ -126,72 +150,107 @@ body {
 }
 
 p {
-  margin-bottom: 1em;
+  margin-top: 0.25rem;
+  margin-bottom: 1.25rem;
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 500;
-  line-height: 72px;
+  line-height: 2.75rem;
+  margin: 1rem 0 1rem 0;
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 500;
-  line-height: 60px;
+  line-height: 2.25rem;
+  margin: 1rem 0 1rem 0;
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 500;
-  line-height: 48px;
+  line-height: 2rem;
+  margin: 1rem 0 1rem 0;
 }
 
 h4 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 500;
-  line-height: 36px;
+  line-height: 1.5rem;
+  margin: 1rem 0 1rem 0;
 }
 
 h5 {
-  font-size: 1.25rem;
-  font-weight: 500;
-  height: 20px;
-  line-height: 30px;
-  margin-bottom: 1em;
-}
-
-h6 {
   font-size: 1.125rem;
   font-weight: 600;
   line-height: 1.75rem;
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+  margin: 1rem 0 1rem 0;
+}
+
+h6 {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5rem;
   text-transform: uppercase;
+  margin: 1rem 0 1rem 0;
 }
 
 p {
   font-size: 1.125rem;
   font-weight: 400;
   line-height: 1.75rem;
+  margin: 1rem 0 2rem 0;
 }
 
 text-sm {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.75rem;
+  margin: 1rem 0 1rem 0;
 }
 
 text-xs {
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 1.5rem;
+  margin: 1rem 0 1rem 0;
 }
+
 .list-decimal {
   list-style-type: decimal;
   font-size: 1.125rem;
 }
-/* COLORS */
-.btn-primary {
-  color: #ffffff;
+
+
+/* Jump button at introduction */
+/* .btn-primary {
+  color: var(--color-primary-content);
+  background-color: var(--color-primary);
+  white-space: normal;
+  word-wrap: break-word;
+} */
+
+table {
+  background-color: var(--color-base-100);
+  border-radius: 0.5rem;
+  border-color: var(--color-base-300);
+}
+
+/* .table :where(thead tr,tbody tr:not(:last-child)) {
+        border-bottom: var(--border) solid var(--color-base-content) 5%, #0000);
+}
+
+.table :where(thead,tfoot) {
+        color: 
+ color-mix(in oklab, var(--color-base-content) 60%, transparent); */
+
+th, td {
+  font-size:0.875rem;
+  line-height: 1.5;
 }
 
 .hover {
@@ -199,7 +258,7 @@ text-xs {
 }
 
 .esri-widget__heading {
-  line-height: 1.3em !important;
+  line-height: 1.3rem !important;
 }
 
 /* Tooltip */
@@ -227,14 +286,15 @@ text-xs {
 a {
   text-decoration: underline;
   color: var(--tw-primary);
+  font-weight:600;
 }
 
 .scroll-section {
-  margin: 1em;
+  margin: 1.5rem;
 }
 
 .navbar {
-  padding: 0 1em 0 1em;
+  padding: 0 1rem 0 1rem;
   position: absolute;
 }
 
@@ -334,4 +394,26 @@ a {
 
 .lightbox-image {
   cursor: pointer;
+}
+
+.p-2 {
+  padding: 0.5rem;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.p-8 {
+  padding: 2rem;
+}
+
+figure {
+  margin: 1rem;
+  padding-bottom: 1.5rem;
+}
+
+figcaption {
+  text-align: center;
+  font-weight: 600;
 }
