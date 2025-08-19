@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>EIST MAP</title>
+    <link rel="stylesheet" href="./map_base.css">
+    <link rel="stylesheet" href="https://js.arcgis.com/4.33/esri/themes/light/main.css" />
+
+    <script type="module" src="https://js.arcgis.com/calcite-components/3.2.1/calcite.esm.js"></script>
+    <script src="https://js.arcgis.com/4.33/"></script>
+    <script type="module" src="https://js.arcgis.com/4.33/map-components/"></script>
+</head>
+
+<body class="h-[1754px] w-[1240px] m-0 p-0 bg-white font-sans">
+    <div class="text-black w-full h-full relative flex flex-col">
+        <div id="viewDiv" class="w-full h-full relative">
+            <arcgis-scale-bar class="absolute right-[10px] bottom-[10px]" unit="dual"></arcgis-scale-bar>
+        </div>
+        <div class="flex-none border-t-1 border-gray-500">
+            <div class="flex">
+                <div class="grow p-2 pl-4">
+                    <h1 class="font-bold text-lg">Lorem Ipsum</h1>
+                    <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin convallis lorem
+                        erat, nec dapibus erat ultrices at. Mauris gravida volutpat suscipit. Vivamus consequat sem dui,
+                        vel euismod lacus
+                        vulputate id. Proin porta, mi in porta posuere, magna tellus hendrerit turpis, tristique
+                        dignissim libero massa a massa. Aenean interdum neque sem, vitae egestas orci ultricies nec.
+                        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Cras vel
+                        lectus ut libero sagittis euismod. Nunc venenatis in justo in ullamcorper. Morbi fermentum
+                        semper tincidunt. Aenean ut interdum lectus. Pellentesque volutpat nec nulla a suscipit. Cras
+                        vitae nunc mi. Sed sit amet molestie purus.</p>
+                </div>
+                <div class="flex-none p-2">
+                    <arcgis-legend></arcgis-legend>
+                </div>
+            </div>
+            <p class="text-center my-2 text-sm font-bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 2025
+            </p>
+        </div>
+    </div>
+    <script type="module">
+        const [Map, GeoJSONLayer, MapView] = await $arcgis.import([
+            "@arcgis/core/Map.js",
+            "@arcgis/core/layers/GeoJSONLayer.js",
+            "@arcgis/core/views/MapView.js",
+        ]);
+
+        const selected_geojson = {
+            "type": "FeatureCollection",
+            "features": [
+                {
+                    "type": "Feature",
+                    "properties": {},
+                    "geometry": {
+                        "type": "Polygon",
+                        "coordinates": [
+                            [
+                                [
+                                    -116.64438407898025,
+                                    41.39642352085673
+                                ],
+                                [
+                                    -116.22690361023035,
+                                    40.65046844042703
+                                ],
+                                [
+                                    -115.58969657898052,
+                                    41.379938591268804
+                                ],
+                                [
+                                    -116.64438407898025,
+                                    41.39642352085673
+                                ]
+                            ]
+                        ]
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "properties": {},
+                    "geometry": {
+                        "type": "Polygon",
+                        "coordinates": [
+                            [
+                                [
+                                    -116.64438407898025,
+                                    41.39642352085673
+                                ],
+                                [
+                                    -116.22690361023035,
+                                    40.65046844042703
+                                ],
+                                [
+                                    -115.58969657898052,
+                                    41.379938591268804
+                                ],
+                                [
+                                    -116.64438407898025,
+                                    41.39642352085673
+                                ]
+                            ]
+                        ]
+                    }
+                }
+            ]
+        };
+        const exclued_geojson = {
+            "type": "FeatureCollection",
+            "features": [
+                {
+                    "type": "Feature",
+                    "properties": {},
+                    "geometry": {
+                        "type": "Polygon",
+                        "coordinates": [
+                            [
+                                [
+                                    -116.12528007507409,
+                                    41.13009452594356
+                                ],
+                                [
+                                    -115.90006034851162,
+                                    40.825280147519116
+                                ],
+                                [
+                                    -115.51279228210537,
+                                    41.16525427501053
+                                ],
+                                [
+                                    -116.12528007507409,
+                                    41.13009452594356
+                                ]
+                            ]
+                        ]
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "properties": {},
+                    "geometry": {
+                        "type": "Polygon",
+                        "coordinates": [
+                            [
+                                [
+                                    -116.12528007507409,
+                                    41.13009452594356
+                                ],
+                                [
+                                    -115.90006034851162,
+                                    40.825280147519116
+                                ],
+                                [
+                                    -115.51279228210537,
+                                    41.16525427501053
+                                ],
+                                [
+                                    -116.12528007507409,
+                                    41.13009452594356
+                                ]
+                            ]
+                        ]
+                    }
+                }
+            ]
+        };
+        const sites_geojson = {
+            "type": "FeatureCollection",
+            "features": [
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            "-115.74065047", "41.35736342"
+                        ]
+                    },
+                    "properties": {}
+                },
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            "-116.24356034", "41.30388542"
+                        ]
+                    },
+                    "properties": {}
+                },
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            "-116.23607881", "41.2674889"
+                        ]
+                    },
+                    "properties": {}
+                }
+            ]
+        };
+
+        console.log({
+            selected_geojson, exclued_geojson, sites_geojson
+        });
+
+        const selected_blob = new Blob([JSON.stringify(selected_geojson)], {
+            type: "application/json"
+        });
+        const excluded_blob = new Blob([JSON.stringify(exclued_geojson)], {
+            type: "application/json"
+        });
+        const sites_blob = new Blob([JSON.stringify(sites_geojson)], {
+            type: "application/json"
+        });
+
+        const selected_url = URL.createObjectURL(selected_blob);
+        const excluded_url = URL.createObjectURL(excluded_blob);
+        const sites_url = URL.createObjectURL(sites_blob);
+
+        const selected_aoi = new GeoJSONLayer({
+            url: selected_url,
+            title: "AOI Selection",
+            visible: false,
+            renderer: {
+                type: "simple",
+                symbol: {
+                    type: "simple-fill",
+                    color: [51, 51, 204, 0.5],
+                    style: "solid",
+                    outline: {
+                        color: "white",
+                        width: 1
+                    },
+                }
+            },
+        });
+        const excluded_aoi = new GeoJSONLayer({
+            url: excluded_url,
+            title: "AOI Exclusion",
+            visible: false,
+            renderer: {
+                type: "simple",
+                symbol: {
+                    type: "simple-fill",
+                    color: [170, 0, 0, 0.7],
+                    style: "solid",
+                    outline: {
+                        color: "white",
+                        width: 1
+                    },
+                }
+            },
+        });
+        const sites = new GeoJSONLayer({
+            url: sites_url,
+            title: "Sites",
+            renderer: {
+                type: "simple",
+                symbol: {
+                    type: "simple-marker",
+                    style: "circle",
+                    color: [238, 186, 43, 1],
+                    size: 12,
+                    outline: {
+                        color: [255, 255, 255, 1],
+                        width: 1
+                    }
+                }
+                // type: "simple-marker",  // autocasts as new SimpleMarkerSymbol()
+                // style: "square",
+                // color: "blue",
+                // size: "8px",  // pixels
+                // outline: {  // autocasts as new SimpleLineSymbol()
+                //     color: [255, 255, 0],
+                //     width: 3  // points
+                // }
+            },
+
+        });
+
+        // Wait for the layer to load
+        await selected_aoi.load();
+        await excluded_aoi.load();
+        await sites.load();
+
+        const map = new Map({
+            basemap: "topo-vector",
+            layers: [selected_aoi, excluded_aoi, sites],
+        });
+
+        let extent = null;
+        if (selected_aoi.fullExtent && excluded_aoi.fullExtent)
+        {
+            extent = selected_aoi.fullExtent.union(excluded_aoi.fullExtent);
+        } else if (selected_aoi.fullExtent)
+        {
+            extent = selected_aoi.fullExtent;
+        } else if (excluded_aoi.fullExtent)
+        {
+            extent = excluded_aoi.fullExtent;
+        }
+
+        const view = new MapView({
+            container: "viewDiv",
+            map: map,
+            constraints: {
+                animationDuration: 0 // Disables programmatic animations
+            },
+            extent: selected_aoi.fullExtent.union(excluded_aoi.fullExtent),
+            ui: {
+                components: []
+            }
+        });
+
+        sites.when(() =>
+        {
+            // Get the extent
+            const extent = sites.fullExtent;
+
+            // Log the extent coordinates
+            console.log("Extent:", {
+                xmin: extent.xmin,
+                ymin: extent.ymin,
+                xmax: extent.xmax,
+                ymax: extent.ymax
+            });
+
+            view.extent = extent;
+        });
+
+        view.when(async () =>
+        {
+            const scaleBarElement = document.querySelector("arcgis-scale-bar");
+            scaleBarElement.view = view;
+            const legendElement = document.querySelector("arcgis-legend");
+            legendElement.view = view;
+            setTimeout(() =>
+            {
+                window.map_loaded = true;
+                console.log("Loaded");
+            }, 10000);
+        });
+    </script>
+</body>
+
+</html>

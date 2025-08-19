@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "nodemon --watch ./index.html --exec 'npx postcss-cli tailwind.css -o base.css'",
-    "map": "nodemon --watch ./map.html --exec 'npx postcss-cli tailwind.css -o map_base.css'"
+    "map": "nodemon --watch ./map/map.html --exec 'npx postcss-cli tailwind.css -o ./map/map_base.css'",
+    "report": "nodemon --watch ./report/report.html --exec 'npx postcss-cli tailwind.css -o ./report/reportbase.css'"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.20",
