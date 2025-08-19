@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-theme="mytheme">
 
 <head>
   <meta charset="UTF-8" />
@@ -42,13 +42,16 @@
   <script type="text/javascript" src="functions.js"></script>
   <div class="flex flex-col h-screen overflow-hidden ">
     <div class="navbar bg-neutral text-neutral-content">
-      <div class="flex-1">
+
+      <div class="flex-none">
         <img src="Screenshots/logo.png" alt="image" class="mr-1">
+      </div>
+      <div class="flex-1">
         <h4 class="hidden md:block" style="padding-left: 0.5em;">Ecological Indicators Summary Tool</h4>
       </div>
       <div class="flex-none">
-
-        <a class="btn" href="https://www.stone-env.net/esst" tabindex="0">
+        <a id="doc_btn" class="btn btn-outline !no-underline !hover:text-black transition-colors duration-200"
+          href="https://www.stone-env.net/esst" tabindex="0">
           <ng-icon name="bootstrapChevronLeft" style="--ng-icon__size: 1em;">
             <svg width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
               <path fill-rule="evenodd"
@@ -69,15 +72,19 @@
               <li><a href="#introduction" aria-label="About the Ecological Indicator Summary Tool">Introduction</a></li>
               <li><a href="#background" aria-label="Ecological indicators summary">Background</a></li>
               <li><a href="#ecological_sites" aria-label="About ecological sites">Ecological Sites</a></li>
-              <li><a href="#using_the_eis_tool" aria-label="How to use the Ecological Indicator Summary Tool">Using the EIS Tool</a></li>
+              <li><a href="#using_the_eis_tool" aria-label="How to use the Ecological Indicator Summary Tool">Using the
+                  EIS Tool</a></li>
               <li>
                 <ul>
-                <li><a href="#step_0" aria-label="Get started by accessing the tool">Get Started: Access the tool</a></li>
-                <li><a href="#step_1" aria-label="Step 1: add your area of interest">Step 1: Area of Interest</a></li>
-                <li><a href="#step_2" aria-label="Step 2: Refine your query with indicators">Step 2: Refine by Indicator</a></li>
-                <li><a href="#step_3" aria-label="Step 3: Compare your query with other areas or indicators">Step 3: Comparison</a></li>
-                <li><a href="#step_4" aria-label="Step 4: Review your query before you submit">Step 4: Review</a></li>
-                <li><a href="#step_results" aria-label="View and download your results">Results</a></li>
+                  <li><a href="#step_0" aria-label="Get started by accessing the tool">Get Started: Access the tool</a>
+                  </li>
+                  <li><a href="#step_1" aria-label="Step 1: add your area of interest">Step 1: Area of Interest</a></li>
+                  <li><a href="#step_2" aria-label="Step 2: Refine your query with indicators">Step 2: Refine by
+                      Indicator</a></li>
+                  <li><a href="#step_3" aria-label="Step 3: Compare your query with other areas or indicators">Step 3:
+                      Comparison</a></li>
+                  <li><a href="#step_4" aria-label="Step 4: Review your query before you submit">Step 4: Review</a></li>
+                  <li><a href="#step_results" aria-label="View and download your results">Results</a></li>
                 </ul>
               </li>
               <li><a href="#resources" aria-label="Extra Resources">Resources</a></li>
@@ -86,39 +93,46 @@
           <div class="col-span-5 md:col-span-4">
             <div id="documentation-scroll" class="p-2">
               <div id="introduction" class="prose p-2 scroll-section">
-                  <h2>Introduction</h2>
-                  
-                  <!-- Button to jump down to instructions -->
-                  <!-- <button class="btn btn-primary" width="100px" style="white-space: normal;"><ng-icon name="bootstrapChevronDown" style="--ng-icon__size: 1em;">
+                <h2>Introduction</h2>
+
+                <!-- Button to jump down to instructions -->
+                <!-- <button class="btn btn-primary" width="100px" style="white-space: normal;"><ng-icon name="bootstrapChevronDown" style="--ng-icon__size: 1em;">
                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/></svg>
                     </ng-icon><a a href="#using_the_eis_tool" aria-label="How to use the Ecological Indicator Summary Tool">Jump to "Using the EIS Tool"</a>
                     </button> -->
-                
+
                 <p>How to use this guide:
                 <ul class="list-decimal pl-14">
                   <li>The section <a href="#using_the_eis_tool">"Using the EIS Tool"</a> later in this guide has
-                    instructions for creating an ecological indicators summary <abbr title="Ecological Indicators Summary Tool">&#40;EIS&#41;</abbr>.</li>
+                    instructions for creating an ecological indicators summary <abbr
+                      title="Ecological Indicators Summary Tool">&#40;EIS&#41;</abbr>.</li>
                   <li>Learn the science behind the EIS Tool after this introduction.</li>
                   <li>At the end of this guide, reference the <a href="#glossary_of_terms_and_acronyms">"Glossary of
                       Terms and Acronyms"</a>
                     and look for more helpful resources.</li>
                 </ul>
                 </p>
-              <!-- </div>
+                <!-- </div>
 
               <div id="background" class="prose p-2 scroll-section"> -->
                 <h3>Background</h3>
                 <p> The U.S. Department of Agriculture Natural Resources Conservation Service <a
-                    href="https://www.nrcs.usda.gov/" class="underline"><abbr title="Natural Resources Conservation Service">&#40;NRCS&#41;</abbr></a> defines ecological
-                  sites as "a distinctive kind of land with specific physical characteristics that differs from other kinds of land in its ability to produce a distinctive kind and amount of vegetation" <a
+                    href="https://www.nrcs.usda.gov/" class="underline"><abbr
+                      title="Natural Resources Conservation Service">&#40;NRCS&#41;</abbr></a> defines ecological
+                  sites as "a distinctive kind of land with specific physical characteristics that differs from other
+                  kinds of land in its ability to produce a distinctive kind and amount of vegetation" <a
                     href="https://www.ars.usda.gov/plains-area/las-cruces-nm/range-management-research/docs/ecological-site-descriptions-introduction/"
-                    class="underline"><abbr title="United States Department of Agriculture Natural Resources Conservation Service">&#40;USDA-NRCS&#41;</abbr></a>.
+                    class="underline"><abbr
+                      title="United States Department of Agriculture Natural Resources Conservation Service">&#40;USDA-NRCS&#41;</abbr></a>.
                   Ecological sites determine not only the
                   ecological potential of a site, but also how a site can respond to natural disturbance and
-                  management actions.</p><p>Ecological sites
+                  management actions.</p>
+                <p>Ecological sites
                   have been delineated for many areas using physical and biotic features and are linked to soil map
-                  units. Soils, climate, hydrology, geology, physiographic features, plant species occurrences, plant community composition,
-                  annual biomass production, and plant-wildlife interactions all contribute to the properties of ecological sites. Ecological
+                  units. Soils, climate, hydrology, geology, physiographic features, plant species occurrences, plant
+                  community composition,
+                  annual biomass production, and plant-wildlife interactions all contribute to the properties of
+                  ecological sites. Ecological
                   Site Descriptions <abbr title="Ecological Site Descriptions">&#40;ESDs&#41;</abbr> describe
                   the underlying factors associated with a specific ecological site, as well as different ecological
                   states within a given site based
@@ -126,18 +140,20 @@
                   see
                   <a href="https://edit.jornada.nmsu.edu/" class="underline">EDIT Jornada.</a>
                 </p>
-              <!-- </div>
+                <!-- </div>
 
               <div id="ecological_sites" class="prose p-2 scroll-section"> -->
                 <h3>Ecological Sites</h3>
                 <p>Using ecological monitoring data, the overall status of an ecological site can be summarized into
                   an Ecological Site Summary <abbr title="Ecological Site Summary">&#40;ESS&#41;</abbr>.
                   At the site level, ecological site summaries generated from monitoring data can tell us about the
-                  condition and health of ecological sites based on indicators such as structure and functional group, species dominance, species
+                  condition and health of ecological sites based on indicators such as structure and functional group,
+                  species dominance, species
                   occurrences, canopy gap
                   measurements, and soil stability measurements. These indicators can help inform the user of the
                   ecological state of a given plot or
-                  study site &#40;i.e. shrubland state vs. grassland state&#41;. Identifying the ecological state allows users
+                  study site &#40;i.e. shrubland state vs. grassland state&#41;. Identifying the ecological state allows
+                  users
                   to not only determine the degree of
                   departure from the corresponding reference ecological states, but also to inform management and
                   restoration actions by
@@ -149,18 +165,23 @@
                 </p>
                 <p>A major data source for developing these summaries is the
                   <a href="https://www.blm.gov/aim" class="underline">Assessment, Inventory, and Monitoring
-                    <abbr title="Assessment, Inventory, and Monitoring">&#40;AIM&#41;</abbr> Program</a> along with the Landscape
+                    <abbr title="Assessment, Inventory, and Monitoring">&#40;AIM&#41;</abbr> Program</a> along with the
+                  Landscape
                   Monitoring Framework <a
-                    href="https://gbp-blm-egis.hub.arcgis.com/datasets/BLM-EGIS::blm-natl-aim-lmf-hub/about"><abbr title="Landscape Monitoring Framework">&#40;LMF&#41;</abbr></a>.
-                  AIM and LMF include almost 25,000 plots throughout the western United States &#40;see AIM Data Portal&#41;
+                    href="https://gbp-blm-egis.hub.arcgis.com/datasets/BLM-EGIS::blm-natl-aim-lmf-hub/about"><abbr
+                      title="Landscape Monitoring Framework">&#40;LMF&#41;</abbr></a>.
+                  AIM and LMF include almost 25,000 plots throughout the western United States &#40;see AIM Data
+                  Portal&#41;
                   stored
                   in the <a
                     href="https://gbp-blm-egis.hub.arcgis.com/datasets/BLM-EGIS::blm-natl-aim-terradat-hub/about"
-                    class="underline">Terrestrial AIM Database <abbr title="Terrestrial AIM Database">&#40;TerrADat&#41;</abbr></a>.
+                    class="underline">Terrestrial AIM Database <abbr
+                      title="Terrestrial AIM Database">&#40;TerrADat&#41;</abbr></a>.
                   Data garnered from AIM and LMF plots is both generalizable and scalable and thus applicable
                   to management decisions across multiple disciplines at both local and national levels.
                 </p>
-                <p>The Ecological Indicators Summary <abbr title="Ecological indicators Summary">&#40;EIS&#41;</abbr> tool has been developed to help users visualize the
+                <p>The Ecological Indicators Summary <abbr title="Ecological indicators Summary">&#40;EIS&#41;</abbr>
+                  tool has been developed to help users visualize the
                   overall status of their region of interest
                   within a specific ecological site, or across an ecological site group. This information can be
                   summarized within a given administrative
@@ -170,169 +191,343 @@
                 </p>
                 <p>
                   This EIS information can be included in decision making processes for <a href="https://www.blm.gov/"
-                    class="underline">Bureau of Land Management <abbr title="Bureau of Land Management">&#40;BLM&#41;</abbr></a> managers, as it can help
-                  inform land use plans, grazing permit renewals, shrub or invasive species treatments, and/or seed menu development for ecological restoration
-                  and reclamation. As new data become available or lines of inquiry shift, the summary tables and report can be easily updated.
+                    class="underline">Bureau of Land Management <abbr
+                      title="Bureau of Land Management">&#40;BLM&#41;</abbr></a> managers, as it can help
+                  inform land use plans, grazing permit renewals, shrub or invasive species treatments, and/or seed menu
+                  development for ecological restoration
+                  and reclamation. As new data become available or lines of inquiry shift, the summary tables and report
+                  can be easily updated.
                 </p>
               </div>
 
               <div id="using_the_eis_tool" class="prose p-2 scroll-section">
                 <h2>Using the EIS Tool</h2>
-                <p>This tool generates many tables and figures that can be queried, filtered, and downloaded to meet your management and reporting needs. Multiple output types are used to meet multiple needs, so select the most relevant and useful output. In cases where ESDs are not developed, grouping AIM data by other features can provide similar information, and potentially lead to the development of new ESDs. For this purpose, it may be informative to group data by features such as biophysical indicators, location, or project. Spatial groupings may also be beneficial if you want to compare data in the same ecological site across multiple management units such as grazing allotments, pastures, prescribed burn areas, etc. The report you generate can be customized to select and compare indicators by both spatial and non-spatial groupings.</p>
+                <p>This tool generates many tables and figures that can be queried, filtered, and downloaded to meet
+                  your management and reporting needs. Multiple output types are used to meet multiple needs, so select
+                  the most relevant and useful output. In cases where ESDs are not developed, grouping AIM data by other
+                  features can provide similar information, and potentially lead to the development of new ESDs. For
+                  this purpose, it may be informative to group data by features such as biophysical indicators,
+                  location, or project. Spatial groupings may also be beneficial if you want to compare data in the same
+                  ecological site across multiple management units such as grazing allotments, pastures, prescribed burn
+                  areas, etc. The report you generate can be customized to select and compare indicators by both spatial
+                  and non-spatial groupings.</p>
                 <h3 id="step_0">Get Started: Access the tool</h3>
-                <p>To use the EIS Tool, navigate to <a href="https://www.stone-env.net/esst/" class="underline">https://www.stone-env.net/esst/</a>.</p>
-                  <div class="flex-col justify-center items-center">
-                  <figure><img class="lightbox-image object-scale-down h-96 w-192" src="Screenshots/placeholder.png" alt="Screenshot of EIS Tool home page" style="width:100%"><figcaption class="p-0 m-0" style="text-align: center;">Screenshot of EIS Tool home page.</figcaption></figure>
-                </div>                
+                <p>To use the EIS Tool, navigate to <a href="https://www.stone-env.net/esst/"
+                    class="underline">https://www.stone-env.net/esst/</a>.</p>
+                <div class="flex-col justify-center items-center">
+                  <figure><img class="lightbox-image object-scale-down h-96 w-192" src="Screenshots/placeholder.png"
+                      alt="Screenshot of EIS Tool home page" style="width:100%">
+                    <figcaption class="p-0 m-0" style="text-align: center;">Screenshot of EIS Tool home page.
+                    </figcaption>
+                  </figure>
+                </div>
                 <!-- <div class="flex justify-center items-center">
                   <img class="lightbox-image object-scale-down h-96 w-192" src="Screenshots/task1part1.png"
                     alt="Access the EIS Tool">
                 </div> -->
-                
-                <p>Click "Get Started" to pull up a map and query the data. Use the tab to expand and collapse the form and map in the application.</p>
-                
+
+                <p>Click "Get Started" to pull up a map and query the data. Use the tab to expand and collapse the form
+                  and map in the application.</p>
+
                 <h3 id="step_1">Step 1: Area of Interest</h3>
-                <p>The EIS tool is organized by query group, where a query group contains at least one area of interest designed to answer a specific ecological question. Select your area of interest <abbr title="Area of Interest">&#40;AOI&#41;</abbr> using at least one of the following methods, to filter data geographically.</p>
-                <div class="alert alert-warning"><span><strong>Note: There is a limit of 10,000 sites that can be queried.</strong> In the next step, you will need to validate the number of sites are under the threshold of 10,000 before submitting your query.</span></div>
-                <p>You may combine any of these AOI options in one query. For example, you can select both an MLRA and a shapefile or you can select an ESD, a shapefile, and a hand-drawn polygon and they will be combined into a single area of interest.</p>
+                <p>The EIS tool is organized by query group, where a query group contains at least one area of interest
+                  designed to answer a specific ecological question. Select your area of interest <abbr
+                    title="Area of Interest">&#40;AOI&#41;</abbr> using at least one of the following methods, to filter
+                  data geographically.</p>
+                <div role="alert" class="alert alert-warning"><span><strong>Note: There is a limit of 10,000 sites that
+                      can be
+                      queried.</strong> In the next step, you will need to validate the number of sites are under the
+                    threshold of 10,000 before submitting your query.</span></div>
+                <p>You may combine any of these AOI options in one query. For example, you can select both an MLRA and a
+                  shapefile or you can select an ESD, a shapefile, and a hand-drawn polygon and they will be combined
+                  into a single area of interest.</p>
                 <div class="flex-col justify-center items-center">
-                  <figure><img class="lightbox-image object-scale-down h-96 w-192" src="Screenshots/placeholder.png" alt="Add area of interest" style="width:100%"><figcaption class="p-0 m-0" style="text-align: center;">Add an area of interest.</figcaption></figure>
+                  <figure><img class="lightbox-image object-scale-down h-96 w-192" src="Screenshots/placeholder.png"
+                      alt="Add area of interest" style="width:100%">
+                    <figcaption class="p-0 m-0" style="text-align: center;">Add an area of interest.</figcaption>
+                  </figure>
                 </div>
                 <h5 class="mt-">Draw Polygon</h5>
-                <p>Use the Zoom In and Zoom Out buttons on the map. Select "Draw", then click on the map to start drawing a polygon. Continue clicking until the polygon is your intended size and shape. You may add additional separate polygons to the same query group. You will be able to manage overlapping polygons and exclude features in a later step.</p>
+                <p>Use the Zoom In and Zoom Out buttons on the map. Select "Draw", then click on the map to start
+                  drawing a polygon. Continue clicking until the polygon is your intended size and shape. You may add
+                  additional separate polygons to the same query group. You will be able to manage overlapping polygons
+                  and exclude features in a later step.</p>
                 <h5 class="mt-">Upload Shapefile</h5>
-                <p>Select "Upload" to upload a shapefile from your device into the tool. For problems with the shapefile upload, see "Why is my shapefile not working?" in the <a href="#resources">Resources section</a>.</p>
+                <p>Select "Upload" to upload a shapefile from your device into the tool. For problems with the shapefile
+                  upload, see "Why is my shapefile not working?" in the <a href="#resources">Resources section</a>.</p>
                 <h5>Selectors</h5>
-                Use this option to select one or more projects or other land classifications. Click "Selectors", then click "Open Selectors List". A new window opens allowing you to choose at least one selector type: "ESD", "MLRA", "Ecoregion Level #3", or "States" (US state boundaries). ESDs and MLRAs are described in more detail in <a href="https://edit.jornada.nmsu.edu/" class="underline">EDIT Jornada.</a> Ecoregions can be found on the <a href="https://www.nrcs.usda.gov/resources/data-and-reports/major-land-resource-area-mlra" class="underline">EPA's website.</a></p>
+                Use this option to select one or more projects or other land classifications. Click "Selectors", then
+                click "Open Selectors List". A new window opens allowing you to choose at least one selector type:
+                "ESD", "MLRA", "Ecoregion Level #3", or "States" (US state boundaries). ESDs and MLRAs are described in
+                more detail in <a href="https://edit.jornada.nmsu.edu/" class="underline">EDIT Jornada.</a> Ecoregions
+                can be found on the <a
+                  href="https://www.nrcs.usda.gov/resources/data-and-reports/major-land-resource-area-mlra"
+                  class="underline">EPA's website.</a></p>
                 <h5>Manage Geodata</h5>
-                <p>After selecting your AOI(s), the "Manage Geodata" table appears with a summary of your selections. Click "Modify AOIs", then click the checkbox next to the AOI you wish to modify. Update the selection type, either the default "Select" to include sites or "Exclude" to subtract the sites from your query. Click "Remove AOIs" to delete the checked AOIs.</p>
+                <p>After selecting your AOI(s), the "Manage Geodata" table appears with a summary of your selections.
+                  Click "Modify AOIs", then click the checkbox next to the AOI you wish to modify. Update the selection
+                  type, either the default "Select" to include sites or "Exclude" to subtract the sites from your query.
+                  Click "Remove AOIs" to delete the checked AOIs.</p>
                 <div class="flex-col justify-center items-center">
-                  <figure><img class="lightbox-image object-scale-down h-96 w-192" src="Screenshots/placeholder.png" alt="Geodata manager table" style="width:100%"><figcaption class="p-0 m-0" style="text-align: center;">Geodata manager table.</figcaption></figure>
+                  <figure><img class="lightbox-image object-scale-down h-96 w-192" src="Screenshots/placeholder.png"
+                      alt="Geodata manager table" style="width:100%">
+                    <figcaption class="p-0 m-0" style="text-align: center;">Geodata manager table.</figcaption>
+                  </figure>
                 </div>
                 <h3 id="step_2" class="mt-8">Step 2: Refine by Indicator</h3>
-                <p>This step is optional, however the validation is required (see "Validate Form" below).</p><p>Refine your query by attribute using "Select Indicators" under the "Indicators" tab. Click the "Time" tab to set a time period filter.</p>
+                <p>This step is optional, however the validation is required (see "Validate Form" below).</p>
+                <p>Refine your query by attribute using "Select Indicators" under the "Indicators" tab. Click the "Time"
+                  tab to set a time period filter.</p>
                 <div class="flex-col justify-center items-center">
-                  <figure><img class="lightbox-image object-scale-down h-96 w-192" src="Screenshots/placeholder.png" alt="Location of options to refine by indicators and time periods" style="width:100%"><figcaption class="p-0 m-0" style="text-align: center;">Location of options to refine by indicators and time periods.</figcaption></figure>
+                  <figure><img class="lightbox-image object-scale-down h-96 w-192" src="Screenshots/placeholder.png"
+                      alt="Location of options to refine by indicators and time periods" style="width:100%">
+                    <figcaption class="p-0 m-0" style="text-align: center;">Location of options to refine by indicators
+                      and time periods.</figcaption>
+                  </figure>
                 </div>
                 <h5 class="mt-8">Select Indicators</h5>
-                <p>Under the "Indicators" tab, click "Select Indicators" to open a new window. In this window's left sidebar, click the dropdown to filter the indicator options by category: "Soil Attributes", "Plant Attributes", "Erosion Indicators", or "Indicators of Rangeland Health". Use the checkboxes next to the indicator names to include in your query. In the table of selected indicators, use the question mark icons
-  <!-- <ng-icon name="bootstrapQuestionCircle" style="--ng-icon__size: 0.1em;"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"></path><path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286m1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94"></path></svg></ng-icon> -->
-                to learn more about each indicator. Click submit to update your query.</p>
-                <figure><img class="lightbox-image object-scale-down h-96 w-192" src="Screenshots/placeholder.png" alt="'Select indicators' window with dropdown  indicators menu open" style="width:100%"><figcaption class="p-0 m-0" style="text-align: center;">'Select indicators' window with dropdown indicators menu open.</figcaption></figure>
-                <p>Use the dropdown menu under "Indicator" to add one of the indicators that you selected above to your query statement. Choose an operator, then input a value to complete the statement. Add additional rows to your group to complete your query statements. You can come back and edit these statements later too, if need be. If you want to remove a query statement, you can click the yellow "X" button to the right of the row.
-                  <div class="overflow-x-auto rounded-box border border-base-content/5 bg-base-100 mb-8 p-4">
-                      <table class="table">
-                        <thead><tr><th>Indicator operator</th><th>Description</th></tr></thead>
-                        <tbody>
+                <p>Under the "Indicators" tab, click "Select Indicators" to open a new window. In this window's left
+                  sidebar, click the dropdown to filter the indicator options by category: "Soil Attributes", "Plant
+                  Attributes", "Erosion Indicators", or "Indicators of Rangeland Health". Use the checkboxes next to the
+                  indicator names to include in your query. In the table of selected indicators, use the question mark
+                  icons
+                  <!-- <ng-icon name="bootstrapQuestionCircle" style="--ng-icon__size: 0.1em;"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"></path><path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286m1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94"></path></svg></ng-icon> -->
+                  to learn more about each indicator. Click submit to update your query.
+                </p>
+                <figure><img class="lightbox-image object-scale-down h-96 w-192" src="Screenshots/placeholder.png"
+                    alt="'Select indicators' window with dropdown  indicators menu open" style="width:100%">
+                  <figcaption class="p-0 m-0" style="text-align: center;">'Select indicators' window with dropdown
+                    indicators menu open.</figcaption>
+                </figure>
+                <p>Use the dropdown menu under "Indicator" to add one of the indicators that you selected above to your
+                  query statement. Choose an operator, then input a value to complete the statement. Add additional rows
+                  to your group to complete your query statements. You can come back and edit these statements later
+                  too, if need be. If you want to remove a query statement, you can click the yellow "X" button to the
+                  right of the row.
+                <div class="overflow-x-auto rounded-box border border-base-content/5 bg-base-100 mb-8 p-4">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>Indicator operator</th>
+                        <th>Description</th>
+                      </tr>
+                    </thead>
+                    <tbody>
 
-                <!--   table row 1 -->
-                            <tr><td>=</td><td>Query the data for only a specific indicator value entered in the "Value" input</td></tr>
+                      <!--   table row 1 -->
+                      <tr>
+                        <td>=</td>
+                        <td>Query the data for only a specific indicator value entered in the "Value" input</td>
+                      </tr>
 
-                <!--  table row 2 -->
-                            <tr><td>!=</td><td>Query the data for all EXCEPT a specific indicator value entered in the "Value" input</td></tr>
+                      <!--  table row 2 -->
+                      <tr>
+                        <td>!=</td>
+                        <td>Query the data for all EXCEPT a specific indicator value entered in the "Value" input</td>
+                      </tr>
 
-                <!--  table row 3 -->
-                            <tr><td>&lt;</td><td>Query the data for all indicator values LESS THAN a specific value entered in the "Value" input</td></tr>
+                      <!--  table row 3 -->
+                      <tr>
+                        <td>&lt;</td>
+                        <td>Query the data for all indicator values LESS THAN a specific value entered in the "Value"
+                          input</td>
+                      </tr>
 
-                <!--  table row 4 -->
-                            <tr><td>&le;</td><td>Query the data for all indicator values LESS THAN OR EQUAL TO a specific value entered in the "Value" input</td></tr>
+                      <!--  table row 4 -->
+                      <tr>
+                        <td>&le;</td>
+                        <td>Query the data for all indicator values LESS THAN OR EQUAL TO a specific value entered in
+                          the "Value" input</td>
+                      </tr>
 
-                <!--  table row 5 -->
-                            <tr><td>&gt;</td><td>Query the data for all indicator values GREATER THAN a specific value entered in the "Value" input</td></tr>
+                      <!--  table row 5 -->
+                      <tr>
+                        <td>&gt;</td>
+                        <td>Query the data for all indicator values GREATER THAN a specific value entered in the "Value"
+                          input</td>
+                      </tr>
 
-                <!--  table row 6 -->
-                            <tr><td>&ge;</td><td>Query the data for all indicator values LESS THAN OR EQUAL TO a specific value entered in the "Value" input</td></tr>
+                      <!--  table row 6 -->
+                      <tr>
+                        <td>&ge;</td>
+                        <td>Query the data for all indicator values LESS THAN OR EQUAL TO a specific value entered in
+                          the "Value" input</td>
+                      </tr>
 
-                <!--  table row 7 -->
-                            <tr><td>&gt;=&nbsp;&amp;&nbsp;&lt;=</td><td>Query the data for all indicator values BETWEEN AND INCLUDING specific values entered in the "Minimum" and "Maximum" inputs</td></tr>
+                      <!--  table row 7 -->
+                      <tr>
+                        <td>&gt;=&nbsp;&amp;&nbsp;&lt;=</td>
+                        <td>Query the data for all indicator values BETWEEN AND INCLUDING specific values entered in the
+                          "Minimum" and "Maximum" inputs</td>
+                      </tr>
 
-                <!--  table row 8 -->
-                            <tr><td>&gt;&nbsp;&amp;&nbsp;&lt;</td><td>Query the data for all Query the data for all indicator values BETWEEN specific values entered in the "Minimum" and "Maximum" inputs</td></tr>
+                      <!--  table row 8 -->
+                      <tr>
+                        <td>&gt;&nbsp;&amp;&nbsp;&lt;</td>
+                        <td>Query the data for all Query the data for all indicator values BETWEEN specific values
+                          entered in the "Minimum" and "Maximum" inputs</td>
+                      </tr>
 
-                </tbody></table></div></p>
+                    </tbody>
+                  </table>
+                </div>
+                </p>
 
                 <h5 class="mt-8">Time Period</h5>
                 <p>Click the "Time" tab, then select an option from the list to specify how to filter your data:
                 <div class="overflow-x-auto rounded-box border border-base-content/5 bg-base-100 mb-8 p-4">
                   <table class="table">
-                        <thead><tr><th>Time operator</th><th>Description</th></tr></thead>
-                        <tbody>
+                    <thead>
+                      <tr>
+                        <th>Time operator</th>
+                        <th>Description</th>
+                      </tr>
+                    </thead>
+                    <tbody>
 
-                <!--   table row 1 -->
-                            <tr><td>Specific Date</td><td>Filters for data ONLY from the date indicated</td></tr>
+                      <!--   table row 1 -->
+                      <tr>
+                        <td>Specific Date</td>
+                        <td>Filters for data ONLY from the date indicated</td>
+                      </tr>
 
-                <!--  table row 2 -->
-                            <tr><td>Excluding Date</td><td>Filters for all data EXCEPT from the date indicated</td></tr>
+                      <!--  table row 2 -->
+                      <tr>
+                        <td>Excluding Date</td>
+                        <td>Filters for all data EXCEPT from the date indicated</td>
+                      </tr>
 
-                <!--  table row 3 -->
-                            <tr><td>Before</td><td>Filters for all data from before and NOT including the date indicated</td></tr>
+                      <!--  table row 3 -->
+                      <tr>
+                        <td>Before</td>
+                        <td>Filters for all data from before and NOT including the date indicated</td>
+                      </tr>
 
-                <!--  table row 4 -->
-                            <tr><td>After</td><td>Filters for all data after and NOT including the date indicated</td></tr>
+                      <!--  table row 4 -->
+                      <tr>
+                        <td>After</td>
+                        <td>Filters for all data after and NOT including the date indicated</td>
+                      </tr>
 
-                <!--  table row 5 -->
-                            <tr><td>Between</td><td>Filters for all data from the period between the indicated start date and the indicated emd date, NOT including the indicated dates</td></tr>
+                      <!--  table row 5 -->
+                      <tr>
+                        <td>Between</td>
+                        <td>Filters for all data from the period between the indicated start date and the indicated emd
+                          date, NOT including the indicated dates</td>
+                      </tr>
 
-                <!--  table row 6 -->
-                            <tr><td>Year</td><td>Filters for data ONLY from the year indicated</td></tr>
+                      <!--  table row 6 -->
+                      <tr>
+                        <td>Year</td>
+                        <td>Filters for data ONLY from the year indicated</td>
+                      </tr>
 
-                </tbody></table></div>
+                    </tbody>
+                  </table>
+                </div>
                 </p>
-                  <p>Click "Add Time Period" to add your time filter to your data summary. The filter now appears in a table at the bottom called "Selected Time Periods". To remove a time period from your data summary, click the yellow "X" button at the end of that time period filter's row.</p> 
+                <p>Click "Add Time Period" to add your time filter to your data summary. The filter now appears in a
+                  table at the bottom called "Selected Time Periods". To remove a time period from your data summary,
+                  click the yellow "X" button at the end of that time period filter's row.</p>
                 <h5 class="mt-8">Validate Form</h5>
-                <p>In order to proceed past Step 2, you must validate the number of sites your query contains falls under the threshold of 10,000. If your query includes more than 10,000 sites, you will see an error message in the form. To correct this, adjust at least one selection here in Step 2 or back in Step 1 (AOI) until the number of sites is lower than 10,000. Click the "Back" button to return to Step 1 to adjust your area of interest.</p>
-                <div class="alert alert-warning"><span><strong>Note: Do not use your browser's "Back" or "Reload" buttons while using the EIS Tool, otherwise your query selections will erase. </strong>Use the tool's "Back" and "Next" buttons at the bottom of the form to go back and forward.</span></div>
-                  <p>You have successfully validated your form when the "Validate Form" button becomes the "Next" button, and a message says the form is successfully validated.</p>
-                <figure><img class="lightbox-image object-scale-down h-96 w-192" src="Screenshots/placeholder.png" alt="Query form validation step" style="width:100%"><figcaption class="p-0 m-0" style="text-align: center;">Query form validation step.</figcaption></figure>
+                <p>In order to proceed past Step 2, you must validate the number of sites your query contains falls
+                  under the threshold of 10,000. If your query includes more than 10,000 sites, you will see an error
+                  message in the form. To correct this, adjust at least one selection here in Step 2 or back in Step 1
+                  (AOI) until the number of sites is lower than 10,000. Click the "Back" button to return to Step 1 to
+                  adjust your area of interest.</p>
+                <div role="alert" class="alert alert-warning"><span><strong>Note: Do not use your browser's "Back" or
+                      "Reload"
+                      buttons while using the EIS Tool, otherwise your query selections will erase. </strong>Use the
+                    tool's "Back" and "Next" buttons at the bottom of the form to go back and forward.</span></div>
+                <p>You have successfully validated your form when the "Validate Form" button becomes the "Next" button,
+                  and a message says the form is successfully validated.</p>
+                <figure><img class="lightbox-image object-scale-down h-96 w-192" src="Screenshots/placeholder.png"
+                    alt="Query form validation step" style="width:100%">
+                  <figcaption class="p-0 m-0" style="text-align: center;">Query form validation step.</figcaption>
+                </figure>
                 <h3 id="step_3" class="mt-8">Step 3: Comparison</h3>
-                <p>This step is optional. Choose a time period or region to compare with your query. If you only choose a time period, the AOI will remain the same for both datasets in the comparison. If you choose an AOI, the original dataset will be compared to the data defined by the new AOI.</p>
-                <p>Click "Add Comparison" to get started. A new window opens, where you can create a comparison group with AOI or attributes to compare with your data query.</p>
-                <p>To create a comparison group, you are required to give it a name. After entering the comparison's name, use the toggle to select whether to "Clone Existing" with the same AOI and attribute settings in your data query, then edit for comparison. Or choose to create a "New Group" without AOI or attribute filters set.</p>
+                <p>This step is optional. Choose a time period or region to compare with your query. If you only choose
+                  a time period, the AOI will remain the same for both datasets in the comparison. If you choose an AOI,
+                  the original dataset will be compared to the data defined by the new AOI.</p>
+                <p>Click "Add Comparison" to get started. A new window opens, where you can create a comparison group
+                  with AOI or attributes to compare with your data query.</p>
+                <p>To create a comparison group, you are required to give it a name. After entering the comparison's
+                  name, use the toggle to select whether to "Clone Existing" with the same AOI and attribute settings in
+                  your data query, then edit for comparison. Or choose to create a "New Group" without AOI or attribute
+                  filters set.</p>
                 <p>Edit the comparison group's AOI and attribute filters as in previous steps for your data query.</p>
-                <figure><img class="lightbox-image object-scale-down h-96 w-192" src="Screenshots/placeholder.png" alt="'Add Comparison' window with options." style="width:100%"><figcaption class="p-0 m-0" style="text-align: center;">'Add Comparison' window with options.</figcaption></figure>
-                
+                <figure><img class="lightbox-image object-scale-down h-96 w-192" src="Screenshots/placeholder.png"
+                    alt="'Add Comparison' window with options." style="width:100%">
+                  <figcaption class="p-0 m-0" style="text-align: center;">'Add Comparison' window with options.
+                  </figcaption>
+                </figure>
+
                 <h3 id="step_4" class="mt-8">Step 4: Review</h3>
-                <p>Review the summary of your query details in the table. If you did not add a comparison group, you should see only one group listed, named "Default", which is your data summary query.</p>
-                <p>Use the Back button to edit your selections. Press Submit Query to run the query and view your results.</p>
-                <div class="alert alert-warning"><span><strong>Note: Do not use your browser's "Back" or "Reload" buttons while using the EIS Tool, otherwise your query selections will erase. </strong>Use the tool's "Back" and "Next" buttons at the bottom of the form to go back and forward.</span></div>
-                <p>Once you have reviewed your query, click "Submit Query" to run the query. You may need to wait a moment for the data to load. If there are errors, follow the instructions provided to fix the error.</p>
-                <h3  id="step_results" class="mt-8">Results</h3>
-                <p>Review your query data summary, graph indicators, and generate reports.</p>
-                <p>Click the button "Select Results from Query Group" and select the group for which you want to view results. If you created a comparison query, click "Select Groups to Compare" to select the query results to compare using the checkboxes.</p>
-                <p>After selecting the query group(s) results to view, the graph appears in the sidebar. Use the "Box"-"Histogram" toggle to switch between a box plot and histogram format.
+                <p>Review the summary of your query details in the table. If you did not add a comparison group, you
+                  should see only one group listed, named "Default", which is your data summary query.</p>
+                <p>Use the Back button to edit your selections. Press Submit Query to run the query and view your
+                  results.</p>
+                <div role="alert" class="alert alert-warning"><span><strong>Note: Do not use your browser's "Back" or
+                      "Reload"
+                      buttons while using the EIS Tool, otherwise your query selections will erase. </strong>Use the
+                    tool's "Back" and "Next" buttons at the bottom of the form to go back and forward.</span></div>
+                <p>Once you have reviewed your query, click "Submit Query" to run the query. You may need to wait a
+                  moment for the data to load. If there are errors, follow the instructions provided to fix the error.
                 </p>
-                <figure><img class="lightbox-image object-scale-down h-96 w-192" src="Screenshots/placeholder.png" alt="Select results from query group" style="width:100%"><figcaption class="p-0 m-0" style="text-align: center;">Select results from query group.</figcaption></figure>
+                <h3 id="step_results" class="mt-8">Results</h3>
+                <p>Review your query data summary, graph indicators, and generate reports.</p>
+                <p>Click the button "Select Results from Query Group" and select the group for which you want to view
+                  results. If you created a comparison query, click "Select Groups to Compare" to select the query
+                  results to compare using the checkboxes.</p>
+                <p>After selecting the query group(s) results to view, the graph appears in the sidebar. Use the
+                  "Box"-"Histogram" toggle to switch between a box plot and histogram format.
+                </p>
+                <figure><img class="lightbox-image object-scale-down h-96 w-192" src="Screenshots/placeholder.png"
+                    alt="Select results from query group" style="width:100%">
+                  <figcaption class="p-0 m-0" style="text-align: center;">Select results from query group.</figcaption>
+                </figure>
                 <h5 class="mt-8">Interact with graphs</h5>
-                <p>With the graph toggle switched to either "Box" or "Histogram", use the hover tools to customize your results:
-                  <ul class="list-disc pl-10">
-                     <li>Download plot as a PNG</li>
-                     <li>Zoom</li>
-                     <li>Pan</li>
-                     <li>Box select</li>
-                     <li>Lasso select</li>
-                     <li>Zoom in</li>
-                     <li>Zoom out</li>
-                     <li>Autoscale</li>
-                     <li>Reset axes</li>
-                  </ul>
+                <p>With the graph toggle switched to either "Box" or "Histogram", use the hover tools to customize your
+                  results:
+                <ul class="list-disc pl-10">
+                  <li>Download plot as a PNG</li>
+                  <li>Zoom</li>
+                  <li>Pan</li>
+                  <li>Box select</li>
+                  <li>Lasso select</li>
+                  <li>Zoom in</li>
+                  <li>Zoom out</li>
+                  <li>Autoscale</li>
+                  <li>Reset axes</li>
+                </ul>
                 </p>
                 <h5 class="mt-8">Create New Graph</h5>
-                <p>Click "Create New Graph" button in the footer at the bottom of the results. A new window called "Select Fields to Graph" opens.</p>
-                <p>Like the "Select Indicators" window you used to create your data summary, use this window's left sidebar to filter the indicator options by category: "Soil Attributes", "Plant Attributes", "Erosion Indicators", or "Indicators of Rangeland Health". Use the checkboxes next to the indicator names to include in your graph.</p>
+                <p>Click "Create New Graph" button in the footer at the bottom of the results. A new window called
+                  "Select Fields to Graph" opens.</p>
+                <p>Like the "Select Indicators" window you used to create your data summary, use this window's left
+                  sidebar to filter the indicator options by category: "Soil Attributes", "Plant Attributes", "Erosion
+                  Indicators", or "Indicators of Rangeland Health". Use the checkboxes next to the indicator names to
+                  include in your graph.</p>
                 <p>Click the "Delete All Graphs" button to delete all graphs you created.</p>
-                  
-                  <div class="alert alert-warning"><span><strong>Note: You cannot undo "Delete All Graphs".</strong></span></div>
-                  <p>Your data summary will still be available to create new graphs.</p>
+
+                <div role="alert" class="alert alert-warning"><span><strong>Note: You cannot undo "Delete All
+                      Graphs".</strong></span></div>
+                <p>Your data summary will still be available to create new graphs.</p>
 
                 <h5 class="mt-8">Export Results</h5>
 
                 <p>Click the "Export Results" button in the sidebar footer. A menu of options appears:
-                  <ul class="list-disc pl-10">
-                     <li>Report: Click this option to generate a PDF report of your data summary, including customized content.</li>
-                     <li>Graphs &#40;.zip&#41;: Click to export all graphs as a zipped folder of image files.</li>
-                     <li>Shapefile: Click to export your data summary results as a shapefile.</li>
-                  </ul></p>
-                <figure><img class="lightbox-image object-scale-down h-96 w-192" src="Screenshots/placeholder.png" alt="Options for exporting results" style="width:100%"><figcaption class="p-0 m-0" style="text-align: center;">Options for exporting results.</figcaption></figure>
+                <ul class="list-disc pl-10">
+                  <li>Report: Click this option to generate a PDF report of your data summary, including customized
+                    content.</li>
+                  <li>Graphs &#40;.zip&#41;: Click to export all graphs as a zipped folder of image files.</li>
+                  <li>Shapefile: Click to export your data summary results as a shapefile.</li>
+                </ul>
+                </p>
+                <figure><img class="lightbox-image object-scale-down h-96 w-192" src="Screenshots/placeholder.png"
+                    alt="Options for exporting results" style="width:100%">
+                  <figcaption class="p-0 m-0" style="text-align: center;">Options for exporting results.</figcaption>
+                </figure>
               </div>
               <div id="glossary_of_terms_and_acronyms" class="prose p-2 scroll-section">
                 <h2>Glossary of Terms and Acronyms</h2>
@@ -454,7 +649,8 @@
                 <div class="scroll-section">
                   <!-- Language for 'Why is my shapefile not working?' taken from https://rangelands.app/support/18-shapefile-help -->
                   <h3>Why is my shapefile not working?</h3>
-                  <p>Although a very common format for storing spatial vector information &#40;polygons, lines, points&#41;,
+                  <p>Although a very common format for storing spatial vector information &#40;polygons, lines,
+                    points&#41;,
                     shapefiles can contain
                     geometry errors or other misinformation that prevents them from functioning properly. If you are
                     using a zipped shapefile and are not
@@ -469,7 +665,8 @@
                     <li>Shapefiles can contain geometry errors. Please <a
                         href="https://desktop.arcgis.com/en/arcmap/latest/tools/data-management-toolbox/checking-and-repairing-geometries.htm">check
                         and fix the geometries</a> of the shapefile and try again.</li>
-                    <li>Shapefiles with complex geometries &#40;i.e., polygons with many vertices&#41; or many features will
+                    <li>Shapefiles with complex geometries &#40;i.e., polygons with many vertices&#41; or many features
+                      will
                       result in an error. Please reduce the number of features or <a
                         href="https://desktop.arcgis.com/en/arcmap/latest/manage-data/editing-existing-features/simplifying-a-feature-generalize-.htm">simplify
                         them</a>.</li>

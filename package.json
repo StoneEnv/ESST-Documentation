@@ -2,13 +2,14 @@
   "name": "esst-documentation",
   "version": "0.0.1",
   "scripts": {
-    "dev": "nodemon --watch ./index.html --exec 'npx postcss-cli tailwind.css -o base.css'"
+    "dev": "npx @tailwindcss/cli -i ./tailwind.css -o ./base.css --watch"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.20",
-    "daisyui": "^4.12.23",
+    "daisyui": "^5.0.50",
     "nodemon": "^3.1.9",
-    "postcss": "^8.4.49",
-    "tailwindcss": "^3.4.16"
+    "tailwindcss": "^4.1.12"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.12"
   }
 }
