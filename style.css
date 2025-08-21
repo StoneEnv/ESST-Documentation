@@ -225,15 +225,6 @@ text-xs {
   font-size: 1.125rem;
 }
 
-
-/* Jump button at introduction */
-/* .btn-primary {
-  color: var(--color-primary-content);
-  background-color: var(--color-primary);
-  white-space: normal;
-  word-wrap: break-word;
-} */
-
 table {
   background-color: var(--color-base-100);
   border-radius: 0.5rem;
