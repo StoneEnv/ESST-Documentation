@@ -2,9 +2,9 @@
   "name": "esst-documentation",
   "version": "0.0.1",
   "scripts": {
-    "dev": "nodemon --watch ./index.html --exec 'npx postcss-cli tailwind.css -o base.css'",
-    "map": "nodemon --watch ./map/map.html --exec 'npx postcss-cli tailwind.css -o ./map/map_base.css'",
-    "report": "nodemon --watch ./report/report.html --exec 'npx postcss-cli tailwind.css -o ./report/reportbase.css'"
+    "dev": "nodemon --watch ./index.html --exec 'npx postcss-cli tailwind.css -o base.css --env production'",
+    "map": "nodemon --watch ./map/map.html --exec 'npx postcss-cli tailwind.css -o ./map/map_base.css --env production'",
+    "report": "nodemon --watch ./report/report.html --exec 'npx postcss-cli tailwind.css -o ./report/report_base.css --env production'"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.20",
