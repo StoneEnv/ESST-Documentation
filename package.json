@@ -2,7 +2,7 @@
   "name": "esst-documentation",
   "version": "0.0.1",
   "scripts": {
-    "dev": "npx @tailwindcss/cli -i ./tailwind.css -o ./base.css --watch"
+    "dev": "npx @tailwindcss/cli -i ./tailwind.css -o ./base.css --watch --minify"
   },
   "devDependencies": {
     "daisyui": "^5.0.50",
