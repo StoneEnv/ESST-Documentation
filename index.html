@@ -368,8 +368,8 @@
                   <a href="#Splash_Screen" style="text-decoration: none;" class="link link-hover flex items-center gap-3" aria-label="Start using the EIS tool"><h3 id="Splash_Screen">Get Started: Access the tool</h3><ng-icon name="bootstrapClipboard" style="--ng-icon__size: 1em"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16"><path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/><path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/></svg></ng-icon></a>
                   <p>
                     To use the EIS Tool, navigate to
-                    <a href="https://www.stone-env.net/esst/" class="underline"
-                      >https://www.stone-env.net/esst/</a
+                    <a href="https://www.stone-env.net/eist/" class="underline"
+                      >https://www.stone-env.net/eist/</a
                     >.
                   </p>
                   <div class="flex-col justify-center items-center">
@@ -427,7 +427,7 @@
                         style="width: 100%"
                       />
                       <figcaption class="p-0 m-0" style="text-align: center">
-                        Add an area of interest.
+                        Step 1: Add area of interest, showing the three options ("Draw Polygon", "Upload Shapefile", and "Selectors")
                       </figcaption>
                     </figure>
                   </div>
@@ -465,6 +465,19 @@
                       >EPA's website.</a
                     >
                   </p>
+                  <div class="flex-col justify-center items-center">
+                    <figure>
+                      <img
+                        class="lightbox-image object-scale-down h-96 w-192"
+                        src="Screenshots/placeholder.png"
+                        alt="Add area of interest"
+                        style="width: 100%"
+                      />
+                      <figcaption class="p-0 m-0" style="text-align: center">
+                        "Selectors" modal, showing the types of selectors ("ESD", "MLRA", "Ecoregion Level #3", or "States")
+                      </figcaption>
+                    </figure>
+                  </div>
                   <h5>Manage Geodata</h5>
                   <p>
                     After selecting your AOI(s), the "Manage Geodata" table
@@ -484,7 +497,7 @@
                         style="width: 100%"
                       />
                       <figcaption class="p-0 m-0" style="text-align: center">
-                        Geodata manager table.
+                        Geodata manager table after clicking "Modify AOIs" button.
                       </figcaption>
                     </figure>
                   </div>
@@ -508,8 +521,7 @@
                         style="width: 100%"
                       />
                       <figcaption class="p-0 m-0" style="text-align: center">
-                        Location of options to refine by indicators and time
-                        periods.
+                        Step 2: Refine by Indicator, showing options under the "Indicators" tab.
                       </figcaption>
                     </figure>
                   </div>
@@ -525,6 +537,7 @@
                     more about each indicator. Click submit to update your
                     query.
                   </p>
+                  <div class="flex-col justify-center items-center">
                   <figure>
                     <img
                       class="lightbox-image object-scale-down h-96 w-192"
@@ -533,10 +546,11 @@
                       style="width: 100%"
                     />
                     <figcaption class="p-0 m-0" style="text-align: center">
-                      'Select indicators' window with dropdown indicators menu
+                      'Select indicators' modal with dropdown indicator category menu
                       open.
                     </figcaption>
                   </figure>
+                  </div>
                   <p>
                     Use the dropdown menu under "Indicator" to add one of the
                     indicators that you selected above to your query statement.
@@ -636,11 +650,22 @@
                       </tbody>
                     </table>
                   </div>
+                  <div class="flex-col justify-center items-center">
+                  <figure>
+                    <img
+                      class="lightbox-image object-scale-down h-96 w-192"
+                      src="Screenshots/placeholder.png"
+                      alt="'Select indicators' modal with dropdown  indicators menu open"
+                      style="width: 100%"
+                    />
+                    <figcaption class="p-0 m-0" style="text-align: center">
+                      Step 2: Refine by Indicator, showing options under the "Indicators" tab.
+                    </figcaption>
+                  </figure>
 
                   <h5 class="mt-8">Time Period</h5>
                   <p>
-                    Click the "Time" tab, then select an option from the list to
-                    specify how to filter your data:
+                    Click the "Time" tab, then select an option from the list to specify how to filter your data:
                   </p>
                   <div
                     class="overflow-x-auto rounded-box border border-base-content/5 bg-base-100 mb-8 p-4"
@@ -705,12 +730,21 @@
                   </div>
 
                   <p>
-                    Click "Add Time Period" to add your time filter to your data
-                    summary. The filter now appears in a table at the bottom
-                    called "Selected Time Periods". To remove a time period from
-                    your data summary, click the yellow "X" button at the end of
-                    that time period filter's row.
+                    Click "Add Time Period" to add your time filter to your data summary. The filter now appears in a table at the bottom called "Selected Time Periods". To remove a time period from your data summary, click the yellow "X" button at the end of that time period filter's row.
                   </p>
+                  <div class="flex-col justify-center items-center">
+                  <figure>
+                    <img
+                      class="lightbox-image object-scale-down h-96 w-192"
+                      src="Screenshots/placeholder.png"
+                      alt=""
+                      style="width: 100%"
+                    />
+                    <figcaption class="p-0 m-0" style="text-align: center">
+                      Step 2: Refine by Indicator, showing options under the "Time" tab.
+                    </figcaption>
+                  </figure>
+                  </div>
                   <h5 class="mt-8">Validate Form</h5>
                   <p>
                     In order to proceed past Step 2, you must validate the
