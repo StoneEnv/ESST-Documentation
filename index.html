@@ -440,7 +440,7 @@
                           style="width: 100%"
                         />
                         <figcaption class="p-0 m-0" style="text-align: center">
-                          Screenshot of EIS Tool home page.
+                          EIS Tool home page.
                         </figcaption>
                       </figure>
                     </div>
@@ -519,9 +519,7 @@
                           style="width: 100%"
                         />
                         <figcaption class="p-0 m-0" style="text-align: center">
-                          Step 1: Add area of interest, showing the three
-                          options ("Draw Polygon", "Upload Shapefile", and
-                          "Selectors")
+                          Step 1: Add your area of interest using "Draw Polygon", "Upload Shapefile", or "Selectors"
                         </figcaption>
                       </figure>
                     </div>
@@ -592,11 +590,14 @@
                           style="width: 100%"
                         />
                         <figcaption class="p-0 m-0" style="text-align: center">
-                          Geodata manager table after clicking "Modify AOIs"
+                          Step 1: "Geodata manager" table after clicking "Modify AOIs"
                           button.
                         </figcaption>
                       </figure>
                     </div>
+                    <p>
+                      When your AOI selections are complete, click “Next”.
+                    </p>
                   </div>
 
                   <div id="Refine_by_Indicator">
@@ -630,10 +631,11 @@
                       </svg>
                     </div>
 
-                    <p>
-                      This step is optional, however validation is required
-                      (see "Validate Form" below).
-                    </p>
+                    <div role="alert" class="alert alert-warning">
+                      <span><strong>
+                          Note: This step is optional, however validation is required (see "Validate Form" below).
+                      </strong></span>
+                    </div>
                     <p>
                       Refine your query by attribute using "Select Indicators"
                       under the "Indicators" tab. Click the "Time" tab to set a
@@ -648,7 +650,7 @@
                           style="width: 100%"
                         />
                         <figcaption class="p-0 m-0" style="text-align: center">
-                          Step 2: Refine by Indicator, showing options under the
+                          Step 2: "Refine by Indicator", showing options under the
                           "Indicators" tab.
                         </figcaption>
                       </figure>
@@ -674,8 +676,7 @@
                           style="width: 100%"
                         />
                         <figcaption class="p-0 m-0" style="text-align: center">
-                          'Select indicators' modal with dropdown indicator
-                          category menu open.
+                          Step 2: "Select indicators" modal with dropdown indicator category menu open.
                         </figcaption>
                       </figure>
                     </div>
@@ -890,7 +891,7 @@
                       </div>
                       <h5 class="mt-8">Validate Form</h5>
                       <p>
-                        In order to proceed past Step 2, you must validate the
+                        To proceed past Step 2, you must validate the
                         number of plots your query contains falls under the
                         threshold of 10,000. If your query includes more than
                         10,000 plots, you will see an error message in the form.
@@ -910,9 +911,7 @@
                         >
                       </div>
                       <p>
-                        You have successfully validated your form when the
-                        "Validate Form" button becomes the "Next" button, and a
-                        message says the form is successfully validated.
+                        Click the "Validate Form" button. You have successfully validated your form when the "Validate Form" button becomes the "Next" button, and a message says the form is successfully validated.
                       </p>
                       <figure>
                         <img
@@ -922,9 +921,12 @@
                           style="width: 100%"
                         />
                         <figcaption class="p-0 m-0" style="text-align: center">
-                          Query form validation step.
+                          Step 2: Query form validation.
                         </figcaption>
                       </figure>
+                      <p>
+                      When your indicator selections are complete, and your form is validated, click “Next”.
+                    </p>
                     </div>
 
                     <div id="Comparison">
@@ -967,10 +969,21 @@
                         AOI.
                       </p>
                       <p>
-                        Click "Add Comparison" to get started. A new window
+                        Click the "Add Comparison" button to get started. A new window
                         opens, where you can create a comparison group with AOI
                         or attributes to compare with your data query.
                       </p>
+                      <figure>
+                        <img
+                          class="lightbox-image object-scale-down h-96 w-192"
+                          src="Screenshots/placeholder.png"
+                          alt="Query form validation step"
+                          style="width: 100%"
+                        />
+                        <figcaption class="p-0 m-0" style="text-align: center">
+                          Step 3: "Create New Comparison Group" window seen after clicking the "Add Comparison" button.
+                        </figcaption>
+                      </figure>                      
                       <p>
                         To create a comparison group, you are required to give
                         it a name. After entering the comparison's name, use the
@@ -991,9 +1004,12 @@
                           style="width: 100%"
                         />
                         <figcaption class="p-0 m-0" style="text-align: center">
-                          'Add Comparison' window with options.
+                          Step 3: View after creating a comparison group.
                         </figcaption>
                       </figure>
+                      <p>
+                        When your comparison selections are complete, click the "Validate Form" button. You have successfully validated your form when the "Validate Form" button becomes the "Next" button, and a message says the form is successfully validated.
+                      </p>
                     </div>
 
                     <div id="Review">
@@ -1026,16 +1042,25 @@
                           />
                         </svg>
                       </div>
-
                       <p>
                         Review the summary of your query details in the table.
                         If you did not add a comparison group, you should see
                         only one group listed, named "Default", which is your
                         data summary query.
                       </p>
+                      <figure>
+                        <img
+                          class="lightbox-image object-scale-down h-96 w-192"
+                          src="Screenshots/placeholder.png"
+                          alt="'Add Comparison' window with options."
+                          style="width: 100%"
+                        />
+                        <figcaption class="p-0 m-0" style="text-align: center">
+                          Step 4: Review the summary table of your query.
+                        </figcaption>
+                      </figure>
                       <p>
-                        Use the Back button to edit your selections. Press
-                        Submit Query to run the query and view your results.
+                        Use the "Back" button in the tool to edit your selections.
                       </p>
                       <div role="alert" class="alert alert-warning">
                         <span
@@ -1048,8 +1073,7 @@
                         >
                       </div>
                       <p>
-                        Once you have reviewed your query, click "Submit Query"
-                        to run the query. You may need to wait a moment for the
+                        You may need to wait a moment for the
                         data to load. If there are errors, follow the
                         instructions provided to fix the error.
                       </p>
@@ -1088,16 +1112,34 @@
 
                       <!-- <h3 id="Results" class="mt-8">Results</h3> -->
                       <p>
-                        Review your query data summary, graph indicators, and
+                        In the Results section, review your query data summary, graph indicators, and
                         generate reports.
                       </p>
+                      <figure>
+                        <img
+                          class="lightbox-image object-scale-down h-96 w-192"
+                          src="Screenshots/placeholder.png"
+                          alt="'Add Comparison' window with options."
+                          style="width: 100%"
+                        />
+                        <figcaption class="p-0 m-0" style="text-align: center">
+                          Results: Review the summary table of your query results.
+                        </figcaption>
+                      </figure>
                       <p>
-                        Click the button "Select Results from Query Group" and
-                        select the group for which you want to view results. If
-                        you created a comparison query, click "Select Groups to
-                        Compare" to select the query results to compare using
-                        the checkboxes.
+                        View the summary table of the results of your query. Click "Select" to create a graph.
                       </p>
+                      <figure>
+                        <img
+                          class="lightbox-image object-scale-down h-96 w-192"
+                          src="Screenshots/placeholder.png"
+                          alt="'Add Comparison' window with options."
+                          style="width: 100%"
+                        />
+                        <figcaption class="p-0 m-0" style="text-align: center">
+                          Results: Graph produced after clicking "Select" under the results to graph.
+                        </figcaption>
+                      </figure>
                       <p>
                         After selecting the query group(s) results to view, the
                         graph appears in the sidebar. Use the "Box"-"Histogram"
@@ -1252,20 +1294,58 @@
                         Click the "Export Results" button in the sidebar footer.
                         A menu of options appears:
                       </p>
-                      <ul class="list-disc pl-10">
-                        <li>
-                          Report: Click this option to generate a PDF report of
-                          your data summary, including customized content.
-                        </li>
-                        <li>
-                          Graphs &#40;.zip&#41;: Click to export all graphs as a
-                          zipped folder of image files.
-                        </li>
-                        <li>
-                          Shapefile: Click to export your data summary results
+                      <h6>
+                        Report
+                      </h6>
+                      <p>
+                        Click "Report" to generate a PDF report of your data summary.
+                      </p>
+                      <p>
+                        Add customized content to your report:
+                      </p>
+                      <div>
+                        <ul>
+                          <li>
+                            "Title/Description"
+                          </li>
+                          <li>
+                            "Map"
+                          </li>
+                          <li>
+                            "Graphs"
+                          </li>
+                          <li>
+                            "Links"
+                          </li>
+                        </ul>
+                      </div>
+                      <p>
+                        Click "Submit" to generate your PDF file.
+                      </p>
+                      <figure>
+                        <img
+                          class="lightbox-image object-scale-down h-96 w-192"
+                          src="Screenshots/placeholder.png"
+                          alt="'Add Comparison' window with options."
+                          style="width: 100%"
+                        />
+                        <figcaption class="p-0 m-0" style="text-align: center">
+                          Results: "Report Generator" window options.
+                        </figcaption>
+                      </figure>
+                      <h6>
+                        Graphs &#40;.zip&#41;
+                      </h6> 
+                      <p>
+                        Click "Graphs &#40;.zip&#41;" to export all graphs as a zipped folder of image files. The files will download automatically.
+                      </p>
+                      <h6>
+                        Shapefile
+                      </h6> 
+                      <p>
+                        Click "Shapefile" to export your data summary results
                           as a shapefile.
-                        </li>
-                      </ul>
+                      </p>
                       <figure>
                         <img
                           class="lightbox-image object-scale-down h-96 w-192"
