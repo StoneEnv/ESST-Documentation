@@ -408,3 +408,13 @@ figcaption {
   text-align: center;
   font-weight: 600;
 }
+
+.alert-outline {
+  border: 4px solid;
+  color: var(--color-neutral);
+  background-color: var(--color-base-200);
+}
+
+.alert-warning {
+  border-color: var(--color-warning);
+}
