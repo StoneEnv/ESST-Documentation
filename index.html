@@ -19,6 +19,86 @@
   </head>
 
   <body>
+
+    <script>
+      
+      document.addEventListener("DOMContentLoaded", () => {
+
+        // String values in ESST-Documentation: external URLs, email
+        const variables = {
+          app_url: "https://www.stone-env.net/eist",
+          ldc_url: "https://landscapedatacommons.org/",
+          aim_url: "https://www.blm.gov/aim",
+          landscape_monitoring_framework_url: "https://gbp-blm-egis.hub.arcgis.com/datasets/BLM-EGIS::blm-natl-aim-lmf-hub/about",
+          long_term_agroecosystem_research_url: "https://ltar.ars.usda.gov/",
+          wind_erosion_url: "https://winderosionnetwork.org/",
+          monitoring_manual_url: "https://www.landscapetoolbox.org/methods-manuals/monitoring-manual-2nd-edition/",
+          iirh_url: "https://landscapetoolbox.org/methods-manuals/iirhv5/",
+          jornada_url: "https://edit.jornada.nmsu.edu/",
+          mlra_url: "https://www.nrcs.usda.gov/resources/data-and-reports/major-land-resource-area-mlra",
+          ecological_restoration_and_reclamation_url: "https://onlinelibrary.wiley.com/doi/10.1111/rec.13461",
+          usda_nrcs_url: "https://www.ars.usda.gov/plains-area/las-cruces-nm/range-management-research/docs/ecological-site-descriptions-introduction/",
+          omernik_1987: "https://onlinelibrary.wiley.com/doi/10.1111/j.1467-8306.1987.tb00149.x?msockid=3bbb36d8128064c72e53220c1370655f",
+          epa_url: "https://www.epa.gov/eco-research/ecoregions",
+          brussard_1998: "https://www.sciencedirect.com/science/article/abs/pii/S0169204697000947",
+          natural_disturbance_url: "https://www.climatehubs.usda.gov/disturbances-and-stressors",
+          plant_community_composition: "https://climexhandbook.w.uib.no/2019/11/04/plant-community-composition/",
+          esd_url: "https://jornada.nmsu.edu/knowledge-systems/esd",
+          natural_resources_conservation_service_url: "https://www.nrcs.usda.gov/",
+          jornada_experimental_range_url: "https://jornada.nmsu.edu/",
+          blm_url: "https://www.blm.gov/",
+          esri_shapefile_conversion_url: "https://support.esri.com/en-us/knowledge-base/how-to-convert-3d-shapefiles-to-2d-shapefiles-000008433",
+          esri_repair_geom_url: "https://desktop.arcgis.com/en/arcmap/latest/tools/data-management-toolbox/checking-and-repairing-geometries.htm",
+          esri_simplify_url: "https://desktop.arcgis.com/en/arcmap/latest/manage-data/editing-existing-features/simplifying-a-feature-generalize-.htm",
+          esri_removing_slivers_url: "https://desktop.arcgis.com/en/arcmap/latest/manage-data/editing-fundamentals/removing-slivers-or-gaps-between-polygons.htm",
+          esri_singlepart_url: "https://desktop.arcgis.com/en/arcmap/latest/tools/data-management-toolbox/multipart-to-singlepart.htm",
+          contact_email: "mailto:sarah.mccord@usda.gov",
+          ssurgo_date: 2024
+        }
+
+
+        // update the text of an achnor link
+        const app_url_text = document.getElementById("app_url_text");
+        app_url_text.innerText = variables.app_url
+
+
+        for (const key in variables) {
+          console.log(key, variables[key]);
+
+          const newUrl = variables[key];
+
+          // Attempt ID first
+          const anchorById = document.getElementById(key);
+
+          if (anchorById) {
+            if (anchorById.tagName.toLowerCase() === "a") {
+              // console.log(" - ID Match");
+              anchorById.href = newUrl;
+              continue; // Skip class fallback
+            }
+          } else {
+            // console.log(" - No ID Match");
+          }
+
+          // Try class if no valid ID anchor
+          const anchorsByClass = document.querySelectorAll(`a.${key}`);
+
+          if (anchorsByClass.length > 0) {
+            // console.log(" - Class Match");
+            anchorsByClass.forEach(anchor => {
+              anchor.href = newUrl;
+            });
+            continue
+          } else {
+            // console.log(" - No Class Match");
+          }
+
+          console.error(" - No ID or Class Match")
+
+        }
+
+      });
+    </script>
     <dialog id="lightbox_modal" class="modal">
       <div class="modal-box w-[95%] max-w-[1600px]">
         <h3 id="lightbox_modal_title" class="text-lg font-bold mb-1">Modal</h3>
@@ -55,8 +135,8 @@
         <div class="flex-none">
           <a
             id="doc_btn"
-            class="btn btn-outline !no-underline !hover:text-black transition-colors duration-200"
-            href="https://www.stone-env.net/esst"
+            class="app_url btn btn-outline !no-underline !hover:text-black transition-colors duration-200"
+            
             tabindex="0"
           >
             <ng-icon name="bootstrapChevronLeft" style="--ng-icon__size: 1em">
@@ -272,7 +352,8 @@
                     >&#40;EIST&#41;</abbr>
                     has been developed to help users explore, visualize, and interpret the status, condition, and trend of standardized indicators of ecosystem structure and function. The EIST queries data from the
                     <a
-                      href="https://landscapedatacommons.org/"
+                      id="ldc_url"
+                      
                       target="_blank"
                     >
                       Landscape Data Commons
@@ -285,7 +366,7 @@
                   <p>
                     Data powering the EIST are from multiple sources that have been aggregated in the Landscape Data Commons. These include data collected by the Bureau of Land Management (BLM)
                     <a 
-                      href="https://www.blm.gov/aim"
+                      id="aim_url"
                       class="underline"
                       target="_blank"
                     >
@@ -299,7 +380,7 @@
                     </a>
                     , including the
                     <a
-                      href="https://gbp-blm-egis.hub.arcgis.com/datasets/BLM-EGIS::blm-natl-aim-lmf-hub/about"
+                      id="landscape_monitoring_framework_url"
                       target="_blank"
                     >Landscape Monitoring Framework
                       <abbr 
@@ -310,7 +391,7 @@
                     </a>
                     , USDA Agricultural Research Service
                     <a
-                      href="https://ltar.ars.usda.gov/"
+                      id="long_term_agroecosystem_research_url"
                       target="_blank"
                     >
                       Long-Term Agroecosystem Research
@@ -322,7 +403,7 @@
                     </a>
                     network,
                     <a
-                      href="https://winderosionnetwork.org/"
+                      id="wind_erosion_url"
                       target="_blank"
                     >National Wind Erosion Research Network
                       <abbr
@@ -335,14 +416,14 @@
                   </p>
                   <p>Indicators available through the EIST were derived from data collected following the
                     <a
-                      href="https://www.landscapetoolbox.org/methods-manuals/monitoring-manual-2nd-edition/"
+                      id="monitoring_manual_url"
                       target="_blank"
                     >
                       Monitoring Manual for Grassland, Shrubland, and Savanna Ecosystems
                     </a>
                     , the 
                     <a
-                      href="https://www.landscapetoolbox.org/methods-manuals/monitoring-manual-2nd-edition/"
+                      id="iirh_url"
                       target="_blank"
                     >
                       Interpreting Indicators of Rangeland Health
@@ -433,10 +514,11 @@
                     <p>
                       To use the EIS Tool, navigate to
                       <a
-                        href="https://www.stone-env.net/eist/"
-                        class="underline"
+                        id="app_url_text"
+                        
+                        class="app_url underline"
                         target="_blank"
-                        >https://www.stone-env.net/eist/</a
+                        ></a
                       >.
                     </p>
                     <div class="flex-col justify-center items-center">
@@ -500,7 +582,7 @@
                       at least one of the following methods, to filter data
                       geographically.
                     </p>
-                    <div role="alert" class="alert alert-warning alert-outline">
+                    <div role="alert" class="alert alert-warning">
                       <span>Note: There is a limit of <b>10,000 sites</b> that can be queried. In the next step, you will need to validate that the number of plots is under the threshold of 10,000 before submitting your query.</span>
                     </div>
                     <p>
@@ -542,12 +624,12 @@
                     <p>
                       Use this option to select one or more projects or other
                       land classifications. Click <b>Selectors</b>, then click <b>Open Selectors List</b>. A new window opens allowing you to choose at least one selector type: "ESD" (Ecological Site Description), "MLRA" (Major Land Resource Area), "Ecoregion Level #3", or "States" (US state boundaries). ESDs and MLRAs are described in more detail in
-                      <a href="https://edit.jornada.nmsu.edu/" class="underline" target="_blank"
+                      <a id="jornada_url" class="underline" target="_blank"
                         >Ecological Dynamics Interpretive Tool (EDIT).</a
                       >
                       Ecoregions can be found on the
                       <a
-                        href="https://www.nrcs.usda.gov/resources/data-and-reports/major-land-resource-area-mlra"
+                        id="mlra_url"
                         class="underline"
                         target="_blank"
                         >EPA's website.</a
@@ -622,7 +704,7 @@
                       </svg>
                     </div>
 
-                    <div role="alert" class="alert alert-warning alert-outline">
+                    <div role="alert" class="alert alert-warning">
                       <span>
                           Note: This step is optional, however validation is required. See <b>Validate Form</b> below.
                       </span>
@@ -874,7 +956,7 @@
                         Step 2 or back in Step 1 (AOI) until the number of plots
                         is lower than 10,000. Click the <b>Back</b> button to return to Step 1 to adjust your area of interest.
                       </p>
-                      <div role="alert" class="alert alert-warning alert-outline">
+                      <div role="alert" class="alert alert-warning">
                         <span>Note: Do <b>not</b> use your browser's Back or Reload buttons while using the EIS Tool, otherwise your query selections will erase. Use the tool's <b>Back</b> and <b>Next</b> buttons at the bottom of the form to go back and forward.</span>
                       </div>
                       <p>
@@ -1028,7 +1110,7 @@
                       <p>
                         Use the <b>Back</b> button in the tool to edit your selections.
                       </p>
-                      <div role="alert" class="alert alert-warning alert-outline">
+                      <div role="alert" class="alert alert-warning">
                         <span>Note: Do <b>not</b> use your browser's Back or Reload buttons while using the EIS Tool, otherwise your query selections will erase. Use the tool's <b>Back</b> and <b>Next</b> buttons at the bottom of the form to go back and forward.</span>
                       </div>
                       <p>
@@ -1228,7 +1310,7 @@
                         graphs you created.
                       </p>
 
-                      <div role="alert" class="alert alert-warning alert-outline">
+                      <div role="alert" class="alert alert-warning">
                         <span>Note: You cannot undo <b>Delete All Graphs</b>.</span>
                       </div>
                       <p>
@@ -1452,7 +1534,7 @@
                               similar, but not necessarily identical to
                               surrounding and naturally occurring ecosystems
                               <a
-                                href="https://onlinelibrary.wiley.com/doi/10.1111/rec.13461"
+                                id="ecological_restoration_and_reclamation_url"
                                 class="underline"
                                 target="_blank"
                                 >&#40;Gerwing et al., 2021&#41;</a
@@ -1471,7 +1553,7 @@
                               in its ability to respond similarly to management
                               actions and natural disturbances
                               <a
-                                href="https://www.ars.usda.gov/plains-area/las-cruces-nm/range-management-research/docs/ecological-site-descriptions-introduction/"
+                                id="usda_nrcs_url"
                                 class="underline"
                                 target="_blank"
                                 >&#40;USDA-NRCS&#41;</a
@@ -1499,7 +1581,7 @@
                               phenomena that affect or reflect differences in
                               ecosystem quality and integrity
                               <a
-                                href="https://onlinelibrary.wiley.com/doi/10.1111/j.1467-8306.1987.tb00149.x?msockid=3bbb36d8128064c72e53220c1370655f"
+                                id="omernik_1987"
                                 class="underline"
                                 target="_blank"
                                 >&#40;Omernik 1987&#41;</a
@@ -1508,7 +1590,7 @@
                               vegetation, climate, land use, wildlife, and
                               hydrology. More details can be found on the
                               <a
-                                href="https://www.epa.gov/eco-research/ecoregions"
+                                id="epa_url"
                                 class="underline"
                                 target="_blank"
                                 >EPA's website</a
@@ -1525,7 +1607,7 @@
                               ecosystem while sustaining appropriate human uses.
                               More details can be found in
                               <a
-                                href="https://www.sciencedirect.com/science/article/abs/pii/S0169204697000947"
+                                id="brussard_1998"
                                 class="underline"
                                 target="_blank"
                               >
@@ -1556,7 +1638,7 @@
                               changes to the biodiversity or health of the
                               system. More details can be found on the
                               <a
-                                href="https://www.climatehubs.usda.gov/disturbances-and-stressors"
+                                id="natural_disturbance_url"
                                 class="underline"
                                 target="_blank"
                                 >USDA's website</a
@@ -1582,7 +1664,7 @@
                               A description of vegetation in a fixed area by the
                               species present and their abundance.
                               <a
-                                href="https://climexhandbook.w.uib.no/2019/11/04/plant-community-composition/"
+                                id="plant_community_composition"
                                 class="underline"
                                 target="_blank"
                                 >&#40;Jaroszynska et al.&#41;</a
@@ -1620,7 +1702,7 @@
                               triggers, thresholds, and indicators of threshold
                               development. More details can be found on the
                               <a
-                                href="https://jornada.nmsu.edu/knowledge-systems/esd"
+                                id="esd_url"
                                 class="underline"
                                 target="_blank"
                                 >Jornada website</a
@@ -1665,28 +1747,27 @@
                     <ul class="list-disc pl-14 mb-8">
                       <li>
                         <a
-                          href="https://www.stone-env.net/eist/"
-                          class="underline"
+                          class="app_url underline"
                           target="_blank"
                           >EIS Tool</a
                         >
                       </li>
                       <li>
-                        <a href="https://www.nrcs.usda.gov/" class="underline"
+                        <a id="natural_resources_conservation_service_url" class="underline"
                         target="_blank"
                         >
                           Natural Resources Conservation Service</a
                         >
                       </li>
                       <li>
-                        <a href="https://jornada.nmsu.edu/" class="underline"
+                        <a id="jornada_experimental_range_url" class="underline"
                         target="_blank"
                         >
                           Jornada Experimental Range</a
                         >
                       </li>
                       <li>
-                        <a href="https://www.blm.gov/" class="underline"
+                        <a id="blm_url" class="underline"
                         target="_blank"
                         >
                           Bureau of Land Management</a
@@ -1717,15 +1798,14 @@
                         <li>
                           3D shapefiles are not supported, please
                           <a
-                            href="https://support.esri.com/en-us/knowledge-base/how-to-convert-3d-shapefiles-to-2d-shapefiles-000008433"
+                            id="esri_shapefile_conversion_url"
                             target="_blank"
                             >convert to 2D</a
                           >.
                         </li>
                         <li>
                           Shapefiles can contain geometry errors. Please
-                          <a
-                            href="https://desktop.arcgis.com/en/arcmap/latest/tools/data-management-toolbox/checking-and-repairing-geometries.htm"
+                          <aclass="esri_repair_geom_url"
                             target="_blank"
                             >check and fix the geometries</a
                           >of the shapefile and try again.
@@ -1735,21 +1815,21 @@
                           with many vertices&#41; or many features will result
                           in an error. Please reduce the number of features or
                           <a
-                            href="https://desktop.arcgis.com/en/arcmap/latest/manage-data/editing-existing-features/simplifying-a-feature-generalize-.htm"
+                            id="esri_simplify_url"
                             target="_blank"
                             >simplify them</a
                           >.
                         </li>
                         <li>
                           <a
-                            href="https://desktop.arcgis.com/en/arcmap/latest/manage-data/editing-fundamentals/removing-slivers-or-gaps-between-polygons.htm"
+                            id="esri_removing_slivers_url"
                             target="_blank"
                             >Sliver polygons</a
                           >
                           &#40;really, really small polygons that are likely
                           mistakes&#41; will result in an error. Please
                           <a
-                            href="https://desktop.arcgis.com/en/arcmap/latest/tools/data-management-toolbox/checking-and-repairing-geometries.htm"
+                            class="esri_repair_geom_url"
                             target="_blank"
                             >check and fix the geometries</a
                           >
@@ -1759,7 +1839,7 @@
                           Although multipart polygons are compatible with the
                           EIST, singlepart polygons are recommended.
                           <a
-                            href="https://desktop.arcgis.com/en/arcmap/latest/tools/data-management-toolbox/multipart-to-singlepart.htm"
+                            id="esri_singlepart_url"
                             target="_blank"
                             >Convert to singlepart polygons</a
                           >.
@@ -1772,7 +1852,7 @@
                     </div>
                     <h5>
                       Need more help?
-                      <a href="mailto:sarah.mccord@usda.gov"
+                      <a id="contact_email"
                       >Email us.</a>
                     </h5>
                   </div>
@@ -1804,7 +1884,7 @@
           // Use Clipboard API
           navigator.clipboard
             .writeText(
-              `https://www.stone-env.net/eist/documentation/${textToCopy}`
+              `${variables.app_url}/documentation/${textToCopy}`
             )
             .catch((err) => {
               console.error("Failed to copy: ", err);
