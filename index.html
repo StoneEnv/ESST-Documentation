@@ -356,7 +356,6 @@
                   </p>
                 </div>
                     
-
                 <div id="Using_the_EIS_Tool" class="prose p-2 scroll-section">
                   <a
                     href="#Using_the_EIS_Tool"
@@ -458,6 +457,43 @@
                       Use the tab to expand and collapse the form and map in the
                       application.
                     </p>
+                    <h4>SSURGO Query Tool</h4>
+                    <p>
+                      Query the <a href="https://www.nrcs.usda.gov/resources/data-and-reports/soil-survey-geographic-database-ssurgo">Soil Survey Geographic Database <abbr title="Soil Survey Geographic Database">&#40;SSURGO&#41;</abbr></a> by using the <b>SSURGO Query Tool</b> on the map.
+                    </p>
+                    <div role="alert" class="alert mb-2"><span><a target="_blank" href="https://www.nrcs.usda.gov/resources/data-and-reports/soil-survey-geographic-database-ssurgo" class="text-blue-600 underline hover:text-blue-800">SSURGO database</a> last updated 2024</span></div>
+                    <div class="flex-col justify-center items-center">
+                      <figure>
+                        <img
+                          class="lightbox-image object-scale-down h-96 w-192"
+                          src="Screenshots/placeholder.png"
+                          alt="Screenshot of EIS Tool home page"
+                          style="width: 100%"
+                        />
+                        <figcaption class="p-0 m-0" style="text-align: center">
+                          The SSURGO Query Tool button location on the map.
+                        </figcaption>
+                      </figure>
+                    </div>
+                    <p>
+                      Click the <b>SSURGO Query Tool</b> button to activate the tool. Then click a map location to query the <a href="https://www.nrcs.usda.gov/resources/data-and-reports/soil-survey-geographic-database-ssurgo">SSURGO database</a> for the selected location. After querying, a window named the <b>SSURGO Query Tool Report</b> opens, showing the SSURGO database query results for the selected location.
+                    </p>
+                    <p>
+                      Deactivate the SSURGO Query Tool without querying a location by clicking the <b>X</b> button in the <b>SSURGO Query Tool</b> button's location on the map.
+                    </p>
+                    <div class="flex-col justify-center items-center">
+                      <figure>
+                        <img
+                          class="lightbox-image object-scale-down h-96 w-192"
+                          src="Screenshots/placeholder.png"
+                          alt="Screenshot of EIS Tool with SSURGO Query Tool Report window showing SSURGO query results"
+                          style="width: 100%"
+                        />
+                        <figcaption class="p-0 m-0" style="text-align: center">
+                          The SSURGO Query Tool Report window showing query results.
+                        </figcaption>
+                      </figure>
+                    </div>
                   </div>
 
                   <div id="AOI">
@@ -621,53 +657,162 @@
                         />
                       </svg>
                     </div>
+                  </div>
 
-                    <div role="alert" class="alert alert-warning alert-outline">
+                  <div role="alert" class="alert alert-warning alert-outline">
                       <span>
                           Note: This step is optional, however validation is required. See <b>Validate Form</b> below.
                       </span>
-                    </div>
-                    <p>
+                  </div>
+                  <p>
                       Refine your query by attribute using <b>Select Indicators</b> under the <b>Indicators</b> tab. Click the <b>Time</b> tab to set a time period filter.
-                    </p>
-                    <div class="flex-col justify-center items-center">
-                      <figure>
-                        <img
-                          class="lightbox-image object-scale-down h-96 w-192"
-                          src="Screenshots/placeholder.png"
-                          alt="Location of options to refine by indicators and time periods"
-                          style="width: 100%"
-                        />
-                        <figcaption class="p-0 m-0" style="text-align: center">
-                          Step 2: Refine by Indicator, showing options under the
-                          <b>Indicators</b> tab.
-                        </figcaption>
-                      </figure>
-                    </div>
-                    <h5 class="mt-8">Select Indicators</h5>
+                  </p>
+                  <div class="flex-col justify-center items-center">
+                    <figure>
+                      <img
+                        class="lightbox-image object-scale-down h-96 w-192"
+                        src="Screenshots/placeholder.png"
+                        alt="Location of options to refine by indicators and time periods"
+                        style="width: 100%"
+                      />
+                      <figcaption class="p-0 m-0" style="text-align: center">
+                        Step 2: Refine by Indicator, showing options under the
+                        <b>Indicators</b> tab.
+                      </figcaption>
+                    </figure>
+                  </div>
+                  <h5 class="mt-8">Select Indicators</h5>
+                  <p>
+                    Under the <b>Indicators</b> tab, click <b>Select Indicators</b> to open a new window. In this window's left sidebar, click the dropdown to filter the indicator options by category: <b>Soil Attributes</b>, <b>Plant Attributes</b>, <b>Erosion Indicators</b>, or <b>Indicators of Rangeland Health</b>. Use the checkboxes next to the indicator names to include in your query. In the table of selected indicators, use the question mark icons to learn more about each indicator. Click <b>Submit</b> to update your query.
+                  </p>
+                  <div class="flex-col justify-center items-center">
+                    <figure>
+                      <img
+                        class="lightbox-image object-scale-down h-96 w-192"
+                        src="Screenshots/placeholder.png"
+                        alt="'Select indicators' window with dropdown  indicators menu open"
+                        style="width: 100%"
+                      />
+                      <figcaption class="p-0 m-0" style="text-align: center">
+                        Step 2: <b>Select indicators</b> window with the dropdown indicator category menu open.
+                      </figcaption>
+                    </figure>
+                  </div>
+                  <p>
+                    Use the dropdown menu under <b>Indicator</b> to add one of the indicators that you selected above to your query
+                    statement. Choose an operator, then input a value to
+                    complete the statement. Add additional rows to your group
+                    to complete your query statements. You can come back and
+                    edit these statements later too, if need be. If you want
+                    to remove a query statement, click the yellow <b>X</b> button to the right of the row.
+                  </p>
+                  <div
+                    class="overflow-x-auto rounded-box border border-base-content/5 bg-base-100 mb-8 p-4"
+                  >
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th>Indicator operator</th>
+                          <th>Description</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <!--   table row 1 -->
+                        <tr>
+                          <td>=</td>
+                          <td>
+                            Query the data for only a specific indicator value
+                            entered in the <b>Value</b> input
+                          </td>
+                        </tr>
+
+                        <!--  table row 2 -->
+                        <tr>
+                          <td>!=</td>
+                          <td>
+                            Query the data for all EXCEPT a specific indicator
+                            value entered in the <b>Value</b> input
+                          </td>
+                        </tr>
+
+                        <!--  table row 3 -->
+                        <tr>
+                          <td>&lt;</td>
+                          <td>
+                            Query the data for all indicator values LESS THAN
+                            a specific value entered in the <b>Value</b> input
+                          </td>
+                        </tr>
+
+                        <!--  table row 4 -->
+                        <tr>
+                          <td>&le;</td>
+                          <td>
+                            Query the data for all indicator values LESS THAN
+                            OR EQUAL TO a specific value entered in the
+                            <b>Value</b> input
+                          </td>
+                        </tr>
+
+                        <!--  table row 5 -->
+                        <tr>
+                          <td>&gt;</td>
+                          <td>
+                            Query the data for all indicator values GREATER
+                            THAN a specific value entered in the <b>Value</b> input
+                          </td>
+                        </tr>
+
+                        <!--  table row 6 -->
+                        <tr>
+                          <td>&ge;</td>
+                          <td>
+                            Query the data for all indicator values LESS THAN
+                            OR EQUAL TO a specific value entered in the
+                            <b>Value</b> input
+                          </td>
+                        </tr>
+
+                        <!--  table row 7 -->
+                        <tr>
+                          <td>&gt;=&nbsp;&amp;&nbsp;&lt;=</td>
+                          <td>
+                            Query the data for all indicator values BETWEEN
+                            AND INCLUDING specific values entered in the
+                            <b>Minimum</b> and <b>Maximum</b> inputs
+                          </td>
+                        </tr>
+
+                        <!--  table row 8 -->
+                        <tr>
+                          <td>&gt;&nbsp;&amp;&nbsp;&lt;</td>
+                          <td>
+                            Query the data for all Query the data for all
+                            indicator values BETWEEN specific values entered
+                            in the <b>Minimum</b> and <b>Maximum</b> inputs
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="flex-col justify-center items-center">
+                    <figure>
+                      <img
+                        class="lightbox-image object-scale-down h-96 w-192"
+                        src="Screenshots/placeholder.png"
+                        alt="'Select indicators' modal with dropdown  indicators menu open"
+                        style="width: 100%"
+                      />
+                      <figcaption class="p-0 m-0" style="text-align: center">
+                        Step 2: Refine by Indicator, showing options under the
+                        <b>Indicators</b> tab.
+                      </figcaption>
+                    </figure>
+
+                    <h5 class="mt-8">Time Period</h5>
                     <p>
-                      Under the <b>Indicators</b> tab, click <b>Select Indicators</b> to open a new window. In this window's left sidebar, click the dropdown to filter the indicator options by category: <b>Soil Attributes</b>, <b>Plant Attributes</b>, <b>Erosion Indicators</b>, or <b>Indicators of Rangeland Health</b>. Use the checkboxes next to the indicator names to include in your query. In the table of selected indicators, use the question mark icons to learn more about each indicator. Click <b>Submit</b> to update your query.
-                    </p>
-                    <div class="flex-col justify-center items-center">
-                      <figure>
-                        <img
-                          class="lightbox-image object-scale-down h-96 w-192"
-                          src="Screenshots/placeholder.png"
-                          alt="'Select indicators' window with dropdown  indicators menu open"
-                          style="width: 100%"
-                        />
-                        <figcaption class="p-0 m-0" style="text-align: center">
-                          Step 2: <b>Select indicators</b> window with the dropdown indicator category menu open.
-                        </figcaption>
-                      </figure>
-                    </div>
-                    <p>
-                      Use the dropdown menu under <b>Indicator</b> to add one of the indicators that you selected above to your query
-                      statement. Choose an operator, then input a value to
-                      complete the statement. Add additional rows to your group
-                      to complete your query statements. You can come back and
-                      edit these statements later too, if need be. If you want
-                      to remove a query statement, click the yellow <b>X</b> button to the right of the row.
+                      Click the <b>Time</b> tab, then select an option from the
+                      list to specify how to filter your data:
                     </p>
                     <div
                       class="overflow-x-auto rounded-box border border-base-content/5 bg-base-100 mb-8 p-4"
@@ -675,228 +820,119 @@
                       <table class="table">
                         <thead>
                           <tr>
-                            <th>Indicator operator</th>
+                            <th>Time operator</th>
                             <th>Description</th>
                           </tr>
                         </thead>
                         <tbody>
                           <!--   table row 1 -->
                           <tr>
-                            <td>=</td>
+                            <td>Specific Date</td>
                             <td>
-                              Query the data for only a specific indicator value
-                              entered in the <b>Value</b> input
+                              Filters for data ONLY from the date indicated
                             </td>
                           </tr>
 
                           <!--  table row 2 -->
                           <tr>
-                            <td>!=</td>
+                            <td>Excluding Date</td>
                             <td>
-                              Query the data for all EXCEPT a specific indicator
-                              value entered in the <b>Value</b> input
+                              Filters for all data EXCEPT from the date
+                              indicated
                             </td>
                           </tr>
 
                           <!--  table row 3 -->
                           <tr>
-                            <td>&lt;</td>
+                            <td>Before</td>
                             <td>
-                              Query the data for all indicator values LESS THAN
-                              a specific value entered in the <b>Value</b> input
+                              Filters for all data from before and NOT
+                              including the date indicated
                             </td>
                           </tr>
 
                           <!--  table row 4 -->
                           <tr>
-                            <td>&le;</td>
+                            <td>After</td>
                             <td>
-                              Query the data for all indicator values LESS THAN
-                              OR EQUAL TO a specific value entered in the
-                              <b>Value</b> input
+                              Filters for all data after and NOT including the
+                              date indicated
                             </td>
                           </tr>
 
                           <!--  table row 5 -->
                           <tr>
-                            <td>&gt;</td>
+                            <td>Between</td>
                             <td>
-                              Query the data for all indicator values GREATER
-                              THAN a specific value entered in the <b>Value</b> input
+                              Filters for all data from the period between the
+                              indicated start date and the indicated emd date,
+                              NOT including the indicated dates
                             </td>
                           </tr>
 
                           <!--  table row 6 -->
                           <tr>
-                            <td>&ge;</td>
+                            <td>Year</td>
                             <td>
-                              Query the data for all indicator values LESS THAN
-                              OR EQUAL TO a specific value entered in the
-                              <b>Value</b> input
-                            </td>
-                          </tr>
-
-                          <!--  table row 7 -->
-                          <tr>
-                            <td>&gt;=&nbsp;&amp;&nbsp;&lt;=</td>
-                            <td>
-                              Query the data for all indicator values BETWEEN
-                              AND INCLUDING specific values entered in the
-                              <b>Minimum</b> and <b>Maximum</b> inputs
-                            </td>
-                          </tr>
-
-                          <!--  table row 8 -->
-                          <tr>
-                            <td>&gt;&nbsp;&amp;&nbsp;&lt;</td>
-                            <td>
-                              Query the data for all Query the data for all
-                              indicator values BETWEEN specific values entered
-                              in the <b>Minimum</b> and <b>Maximum</b> inputs
+                              Filters for data ONLY from the year indicated
                             </td>
                           </tr>
                         </tbody>
                       </table>
                     </div>
+
+                    <p>
+                      Click <b>Add Time Period</b> to add your time filter to your data summary. The filter now appears in a table at the bottom called "Selected Time Periods". To remove a time period from your data summary, click the yellow <b>X</b> button at the end of that time period filter's row.
+                    </p>
                     <div class="flex-col justify-center items-center">
                       <figure>
                         <img
                           class="lightbox-image object-scale-down h-96 w-192"
                           src="Screenshots/placeholder.png"
-                          alt="'Select indicators' modal with dropdown  indicators menu open"
+                          alt=""
                           style="width: 100%"
                         />
-                        <figcaption class="p-0 m-0" style="text-align: center">
-                          Step 2: Refine by Indicator, showing options under the
-                          <b>Indicators</b> tab.
+                        <figcaption
+                          class="p-0 m-0"
+                          style="text-align: center"
+                        >
+                          Step 2: Refine by Indicator, showing options under
+                          the <b>Time</b> tab.
                         </figcaption>
                       </figure>
-
-                      <h5 class="mt-8">Time Period</h5>
-                      <p>
-                        Click the <b>Time</b> tab, then select an option from the
-                        list to specify how to filter your data:
-                      </p>
-                      <div
-                        class="overflow-x-auto rounded-box border border-base-content/5 bg-base-100 mb-8 p-4"
-                      >
-                        <table class="table">
-                          <thead>
-                            <tr>
-                              <th>Time operator</th>
-                              <th>Description</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <!--   table row 1 -->
-                            <tr>
-                              <td>Specific Date</td>
-                              <td>
-                                Filters for data ONLY from the date indicated
-                              </td>
-                            </tr>
-
-                            <!--  table row 2 -->
-                            <tr>
-                              <td>Excluding Date</td>
-                              <td>
-                                Filters for all data EXCEPT from the date
-                                indicated
-                              </td>
-                            </tr>
-
-                            <!--  table row 3 -->
-                            <tr>
-                              <td>Before</td>
-                              <td>
-                                Filters for all data from before and NOT
-                                including the date indicated
-                              </td>
-                            </tr>
-
-                            <!--  table row 4 -->
-                            <tr>
-                              <td>After</td>
-                              <td>
-                                Filters for all data after and NOT including the
-                                date indicated
-                              </td>
-                            </tr>
-
-                            <!--  table row 5 -->
-                            <tr>
-                              <td>Between</td>
-                              <td>
-                                Filters for all data from the period between the
-                                indicated start date and the indicated emd date,
-                                NOT including the indicated dates
-                              </td>
-                            </tr>
-
-                            <!--  table row 6 -->
-                            <tr>
-                              <td>Year</td>
-                              <td>
-                                Filters for data ONLY from the year indicated
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-
-                      <p>
-                        Click <b>Add Time Period</b> to add your time filter to your data summary. The filter now appears in a table at the bottom called "Selected Time Periods". To remove a time period from your data summary, click the yellow <b>X</b> button at the end of that time period filter's row.
-                      </p>
-                      <div class="flex-col justify-center items-center">
-                        <figure>
-                          <img
-                            class="lightbox-image object-scale-down h-96 w-192"
-                            src="Screenshots/placeholder.png"
-                            alt=""
-                            style="width: 100%"
-                          />
-                          <figcaption
-                            class="p-0 m-0"
-                            style="text-align: center"
-                          >
-                            Step 2: Refine by Indicator, showing options under
-                            the <b>Time</b> tab.
-                          </figcaption>
-                        </figure>
-                      </div>
-                      <h5 class="mt-8">Validate Form</h5>
-                      <p>
-                        To proceed past Step 2, you must validate the
-                        number of plots your query contains falls under the
-                        threshold of 10,000. If your query includes more than
-                        10,000 plots, you will see an error message in the form.
-                        To correct this, adjust at least one selection here in
-                        Step 2 or back in Step 1 (AOI) until the number of plots
-                        is lower than 10,000. Click the <b>Back</b> button to return to Step 1 to adjust your area of interest.
-                      </p>
-                      <div role="alert" class="alert alert-warning alert-outline">
-                        <span>Note: Do <b>not</b> use your browser's Back or Reload buttons while using the EIS Tool, otherwise your query selections will erase. Use the tool's <b>Back</b> and <b>Next</b> buttons at the bottom of the form to go back and forward.</span>
-                      </div>
-                      <p>
-                        Click the "Validate Form" button. You have successfully validated your form when the "Validate Form" button becomes the "Next" button, and a message says the form is successfully validated.
-                      </p>
-                      <figure>
-                        <img
-                          class="lightbox-image object-scale-down h-96 w-192"
-                          src="Screenshots/placeholder.png"
-                          alt="Query form validation step"
-                          style="width: 100%"
-                        />
-                        <figcaption class="p-0 m-0" style="text-align: center">
-                          Step 2: Query form validation.
-                        </figcaption>
-                      </figure>
-                      <p>
+                    </div>
+                    <h5 class="mt-8">Validate Form</h5>
+                    <p>
+                      To proceed past Step 2, you must validate the
+                      number of plots your query contains falls under the
+                      threshold of 10,000. If your query includes more than
+                      10,000 plots, you will see an error message in the form.
+                      To correct this, adjust at least one selection here in
+                      Step 2 or back in Step 1 (AOI) until the number of plots
+                      is lower than 10,000. Click the <b>Back</b> button to return to Step 1 to adjust your area of interest.
+                    </p>
+                    <div role="alert" class="alert alert-warning alert-outline">
+                      <span>Note: Do <b>not</b> use your browser's Back or Reload buttons while using the EIS Tool, otherwise your query selections will erase. Use the tool's <b>Back</b> and <b>Next</b> buttons at the bottom of the form to go back and forward.</span>
+                    </div>
+                    <p>
+                      Click the "Validate Form" button. You have successfully validated your form when the "Validate Form" button becomes the "Next" button, and a message says the form is successfully validated.
+                    </p>
+                    <figure>
+                      <img
+                        class="lightbox-image object-scale-down h-96 w-192"
+                        src="Screenshots/placeholder.png"
+                        alt="Query form validation step"
+                        style="width: 100%"
+                      />
+                      <figcaption class="p-0 m-0" style="text-align: center">
+                        Step 2: Query form validation.
+                      </figcaption>
+                    </figure>
+                    <p>
                       When your indicator selections are complete, and your form is validated, click <b>Next</b>.
                     </p>
-                    </div>
-
-                    <div id="Comparison">
+                  </div>
+                  <div id="Comparison">
                       <a
                         href="#Comparison"
                         class="inline-block"
@@ -976,151 +1012,192 @@
                       <p>
                         When your comparison selections are complete, click the <b>Validate Form</b> button. You have successfully validated your form when the <b>Validate Form</b> button becomes the <b>Next</b> button, and a message says the form is successfully validated.
                       </p>
-                    </div>
-
-                    <div id="Review">
-                      <a
-                        href="#Review"
-                        class="inline-block"
-                        style="text-decoration: none"
-                        aria-label="Review your data query"
+                  </div>
+                  <div id="Review">
+                    <a
+                      href="#Review"
+                      class="inline-block"
+                      style="text-decoration: none"
+                      aria-label="Review your data query"
+                    >
+                      <h3>Step 4: Review</h3>
+                    </a>
+                    <div
+                      class="tooltip ml-1 tooltip-right"
+                      data-tip="Click to Copy Link"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="25"
+                        height="25"
+                        fill="currentColor"
+                        class="bi bi-link-45deg copy-btn align-sub cursor-pointer inline-block opacity-50 hover:opacity-100 transition-opacity duration-300 ease-in-out"
+                        viewBox="0 0 16 16"
+                        data-copy="#Review"
                       >
-                        <h3>Step 4: Review</h3>
-                      </a>
-                      <div
-                        class="tooltip ml-1 tooltip-right"
-                        data-tip="Click to Copy Link"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="25"
-                          height="25"
-                          fill="currentColor"
-                          class="bi bi-link-45deg copy-btn align-sub cursor-pointer inline-block opacity-50 hover:opacity-100 transition-opacity duration-300 ease-in-out"
-                          viewBox="0 0 16 16"
-                          data-copy="#Review"
-                        >
-                          <path
-                            d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1 1 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4 4 0 0 1-.128-1.287z"
-                          />
-                          <path
-                            d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243z"
-                          />
-                        </svg>
-                      </div>
-                      <p>
-                        Review the summary of your query details in the table.
-                        If you did not add a comparison group, you should see
-                        only one group listed, named "Default", which is your
-                        data summary query.
-                      </p>
-                      <figure>
-                        <img
-                          class="lightbox-image object-scale-down h-96 w-192"
-                          src="Screenshots/placeholder.png"
-                          alt="'Add Comparison' window with options."
-                          style="width: 100%"
+                        <path
+                          d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1 1 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4 4 0 0 1-.128-1.287z"
                         />
-                        <figcaption class="p-0 m-0" style="text-align: center">
-                          Step 4: Review the summary table of your query.
-                        </figcaption>
-                      </figure>
-                      <p>
-                        Use the <b>Back</b> button in the tool to edit your selections.
-                      </p>
-                      <div role="alert" class="alert alert-warning alert-outline">
-                        <span>Note: Do <b>not</b> use your browser's Back or Reload buttons while using the EIS Tool, otherwise your query selections will erase. Use the tool's <b>Back</b> and <b>Next</b> buttons at the bottom of the form to go back and forward.</span>
-                      </div>
-                      <p>
-                        You may need to wait a moment for the
-                        data to load. If there are errors, follow the
-                        instructions provided to fix the error.
-                      </p>
+                        <path
+                          d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243z"
+                        />
+                      </svg>
                     </div>
-
-                    <div id="Results">
+                    <p>
+                      Review the summary of your query details in the table.
+                      If you did not add a comparison group, you should see
+                      only one group listed, named "Default", which is your
+                      data summary query.
+                    </p>
+                    <figure>
+                      <img
+                        class="lightbox-image object-scale-down h-96 w-192"
+                        src="Screenshots/placeholder.png"
+                        alt="'Add Comparison' window with options."
+                        style="width: 100%"
+                      />
+                      <figcaption class="p-0 m-0" style="text-align: center">
+                        Step 4: Review the summary table of your query.
+                      </figcaption>
+                    </figure>
+                    <p>
+                      Use the <b>Back</b> button in the tool to edit your selections.
+                    </p>
+                    <div role="alert" class="alert alert-warning alert-outline">
+                      <span>Note: Do <b>not</b> use your browser's Back or Reload buttons while using the EIS Tool, otherwise your query selections will erase. Use the tool's <b>Back</b> and <b>Next</b> buttons at the bottom of the form to go back and forward.</span>
+                    </div>
+                    <p>
+                      You may need to wait a moment for the
+                      data to load. If there are errors, follow the
+                      instructions provided to fix the error.
+                    </p>
+                  </div>
+                  <div id="Results">
+                    <a
+                      href="#Results"
+                      class="inline-block"
+                      style="text-decoration: none"
+                      aria-label="View data in graphs, tables, and reports"
+                    >
+                      <h3>Results</h3>
+                    </a>
+                    <div
+                      class="tooltip ml-1 tooltip-right"
+                      data-tip="Click to Copy Link"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="25"
+                        height="25"
+                        fill="currentColor"
+                        class="bi bi-link-45deg copy-btn align-sub cursor-pointer inline-block opacity-50 hover:opacity-100 transition-opacity duration-300 ease-in-out"
+                        viewBox="0 0 16 16"
+                        data-copy="#Results"
+                      >
+                        <path
+                          d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1 1 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4 4 0 0 1-.128-1.287z"
+                        />
+                        <path
+                          d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243z"
+                        />
+                      </svg>
+                    </div>
+                    <p>
+                      In the Results section, review your query data summary, graph indicators, interact with the table, and
+                      generate reports.
+                    </p>
+                    <p>
+                      First, view the summary of your query results.
+                    </p>
+                    <figure>
+                      <img
+                        class="lightbox-image object-scale-down h-96 w-192"
+                        src="Screenshots/placeholder.png"
+                        alt="'Results' section showing a summary of query results."
+                        style="width: 100%"
+                      />
+                      <figcaption class="p-0 m-0" style="text-align: center">
+                        Results: Review the summary of your query results.
+                      </figcaption>
+                    </figure>
+                    <div id="Graph">
                       <a
-                        href="#Results"
+                        href="#Graph"
                         class="inline-block"
                         style="text-decoration: none"
                         aria-label="View data in graphs, tables, and reports"
                       >
-                        <h3>Results</h3>
+                        <h4>Graph</h4>
                       </a>
-                      <div
-                        class="tooltip ml-1 tooltip-right"
-                        data-tip="Click to Copy Link"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="25"
-                          height="25"
-                          fill="currentColor"
-                          class="bi bi-link-45deg copy-btn align-sub cursor-pointer inline-block opacity-50 hover:opacity-100 transition-opacity duration-300 ease-in-out"
-                          viewBox="0 0 16 16"
-                          data-copy="#Results"
-                        >
-                          <path
-                            d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1 1 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4 4 0 0 1-.128-1.287z"
-                          />
-                          <path
-                            d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243z"
-                          />
-                        </svg>
-                      </div>
-
-                      <!-- <h3 id="Results" class="mt-8">Results</h3> -->
                       <p>
-                        In the Results section, review your query data summary, graph indicators, and
-                        generate reports.
+                        Click <b>Select</b> to create a graph.
+                      </p>
+                      <h5>1. Select indicators to Graph</h5>
+                      <p>
+                        Click the <b>Select Indicators to Graph</b> button to launch a modal to select Indicators from based on category that exist within the Results Group.
                       </p>
                       <figure>
                         <img
                           class="lightbox-image object-scale-down h-96 w-192"
                           src="Screenshots/placeholder.png"
-                          alt="'Add Comparison' window with options."
+                          alt="'Select Fields to Graph' window with options."
                           style="width: 100%"
                         />
                         <figcaption class="p-0 m-0" style="text-align: center">
-                          Results: Review the summary table of your query results.
+                          Results: <b>Select fields to graph</b> window
                         </figcaption>
                       </figure>
                       <p>
-                        View the summary table of the results of your query. Click <b>Select</b> to create a graph.
+                        Here you can add new fields to graph from the side menu and remove selections from below
+                        <ol>
+                        <li>
+                          Select a field from the menu on the left.
+                        </li>
+                        <li>
+                          (Optional) Remove unnecessary fields with the red X buttons. 
+                        </li>
+                        <li>
+                          Click <b>Submit</b>.
+                        </li>
+                        </ol>
+                      </p>
+                      <h5>2. Graphs</h5>
+                      <p>
+                        This section allows the user to visualize each Indicator selected on the previous step.
+                      </p>
+                      <figure>
+                      <img
+                        class="lightbox-image object-scale-down h-96 w-192"
+                        src="Screenshots/placeholder.png"
+                        alt="Graph produced after using 'Select Indicators to Graph' window"
+                        style="width: 100%"
+                      />
+                      <figcaption class="p-0 m-0" style="text-align: center">
+                        Results: Graph produced after selecting indicators to graph, then clicking <b>Next</b> 
+                      </figcaption>
+                      </figure>
+                      <p>
+                        After selecting the Indicators to graph, click the <b>Next</b> button at the bottom, and the
+                        graph appears.
+                      </p>
+                      <p>
+                        Use the <b>Box</b> and <b>Histogram</b> toggle to switch between a box plot and histogram format.
                       </p>
                       <figure>
                         <img
                           class="lightbox-image object-scale-down h-96 w-192"
                           src="Screenshots/placeholder.png"
-                          alt="'Add Comparison' window with options."
+                          alt="Graph with box-histogram toggle and 'Edit' button"
                           style="width: 100%"
                         />
                         <figcaption class="p-0 m-0" style="text-align: center">
-                          Results: Graph produced after clicking <b>Select</b> under the results to graph.
+                          Results: Graph showing <b>Box</b> and <b>Histogram</b> format toggle, <b>Edit</b> button, and hover tools.
                         </figcaption>
                       </figure>
                       <p>
-                        After selecting the query group(s) results to view, the
-                        graph appears in the sidebar. Use the <b>Box</b> and <b>Histogram</b> toggle to switch between a box plot and histogram format.
-                      </p>
-                      <figure>
-                        <img
-                          class="lightbox-image object-scale-down h-96 w-192"
-                          src="Screenshots/placeholder.png"
-                          alt="Select results from query group"
-                          style="width: 100%"
-                        />
-                        <figcaption class="p-0 m-0" style="text-align: center">
-                          Select results from query group.
-                        </figcaption>
-                      </figure>
-                      <h5 class="mt-8">Interact with graphs</h5>
-                      <p>
-                        With the graph toggle switched to either <b>Box</b> or
-                        <b>Histogram</b>, use the hover tools to customize your
+                        Use the graph's hover tools to customize your
                         results:
                       </p>
-
                       <table class="table">
                         <thead>
                           <tr>
@@ -1213,40 +1290,81 @@
                           </tr>
                         </tbody>
                       </table>
-
-                      <h5 class="mt-8">Create New Graph</h5>
-                      <p>
+                      <!-- <h5 class="mt-8">Create New Graph</h5> -->
+                      <!-- <p>
                         Click the <b>New Graph</b> button in the footer at the
                         bottom of the results. A new window called <b>Select
                         Fields to Graph</b> opens.
-                      </p>
-                      <p>
+                      </p> -->
+                      <!-- <p>
                         Like the <b>Select Indicators</b> window you used to create your data summary, use this window's left sidebar to filter the indicator options by category: <b>Soil Attributes</b>, <b>Plant Attributes</b>, <b>Erosion Indicators</b>, or <b>Indicators of Rangeland Health</b>. Use the checkboxes next to the indicator names to include in your graph.
-                      </p>
-                      <p>
+                      </p> -->
+                      <!-- <p>
                         Click the <b>Delete All Graphs</b> button to delete all
                         graphs you created.
+                      </p> -->
+                      <p>
+                        Use the <b>Edit</b> button above your graph to change that graph's Title and Description. Click <b>Edit</b> and the <b>Edit Graph</b> window opens.
                       </p>
-
+                      <figure>
+                        <img
+                          class="lightbox-image object-scale-down h-96 w-192"
+                          src="Screenshots/placeholder.png"
+                          alt="'Edit Graph' window with options."
+                          style="width: 100%"
+                        />
+                        <figcaption class="p-0 m-0" style="text-align: center">
+                          Results: <b>Edit Graph</b> window
+                        </figcaption>
+                      </figure>
+                      <p>
+                        In the <b>Edit Graph</b> window, change the title and description text. Click <b>Settings</b> to <b>Reset Form</b> and <b>Erase Graphs</b>.
+                      </p>
                       <div role="alert" class="alert alert-warning alert-outline">
-                        <span>Note: You cannot undo <b>Delete All Graphs</b>.</span>
+                        <span>Note: You cannot undo <b>Reset Form</b> or <b>Erase Graphs</b>.</span>
                       </div>
                       <p>
-                        Your data summary will still be available to create new
+                        If you accidentally erase your graphs, your data summary will still be available to create new
                         graphs.
                       </p>
-
-                      <h5 class="mt-8">Export Results</h5>
-
                       <p>
-                        Click the "Export Results" button in the sidebar footer.
-                        A menu of options appears:
+                        Click <b>Save Graph</b> to save your changes, or <b>Close</b> to return without saving.
                       </p>
+                    </div>                   
+                    <div id="Export">
+                      <a
+                        href="#Export"
+                        class="inline-block"
+                        style="text-decoration: none"
+                        aria-label="View data in reports and files"
+                      >
+                        <h5 class="mt-8">
+                          3. Export
+                        </h5>
+                      </a>
+                      <p>
+                        This section allows exporting data
+                      <ul>
+                        <li>
+                          Report: Launches a step through modal that allows the user to configure the PDF.
+                        </li>
+                        <li>
+                          Graphs (.zip): Exports all the created graphs to images that are in a compressed folder
+                        </li>
+                        <li>
+                          Shapefile: Exports any AOIs that were created during this process that can be imported into the app in future queries.
+                        </li>
+                      </ul>
+                      </p>
+                      <!-- <p>
+                        Click the <b>Export Results</b> button in the sidebar footer.
+                        A menu of options appears:
+                      </p> -->
                       <h6>
                         Report
                       </h6>
                       <p>
-                        Click "Report" to generate a PDF report of your data summary.
+                        Click <b>Report</b>" to generate a PDF report of your data summary.
                       </p>
                       <p>
                         Add customized content to your report:
@@ -1268,7 +1386,7 @@
                         </ul>
                       </div>
                       <p>
-                        Click "Submit" to generate your PDF file.
+                        Click <b>Submit</b> to generate your PDF file.
                       </p>
                       <figure>
                         <img
@@ -1278,20 +1396,20 @@
                           style="width: 100%"
                         />
                         <figcaption class="p-0 m-0" style="text-align: center">
-                          Results: "Report Generator" window options.
+                          Results: <b>Report Generator</b> window options.
                         </figcaption>
                       </figure>
                       <h6>
                         Graphs &#40;.zip&#41;
                       </h6> 
                       <p>
-                        Click "Graphs &#40;.zip&#41;" to export all graphs as a zipped folder of image files. The files will download automatically.
+                        Click <b>Graphs &#40;.zip&#41;</b> to export all graphs as a zipped folder of image files. The files will download automatically.
                       </p>
                       <h6>
                         Shapefile
                       </h6> 
                       <p>
-                        Click "Shapefile" to export your data summary results
+                        Click <b>Shapefile</b> to export your data summary results
                           as a shapefile.
                       </p>
                       <figure>
@@ -1306,12 +1424,35 @@
                         </figcaption>
                       </figure>
                     </div>
+                    <div id="Table">
+                      <a
+                        href="#Table"
+                        class="inline-block"
+                        style="text-decoration: none"
+                        aria-label="View data in tables"
+                      >
+                        <h4 class="mt-8">
+                          Table
+                        </h4>
+                      </a>
+                      <p>
+                        
+                      </p>
+                      <figure>
+                        <img
+                          class="lightbox-image object-scale-down h-96 w-192"
+                          src="Screenshots/placeholder.png"
+                          alt="Options for interacting with table results"
+                          style="width: 100%"
+                        />
+                        <figcaption class="p-0 m-0" style="text-align: center">
+                          Options for interacting with table results.
+                        </figcaption>
+                      </figure>
                   </div>
+                </div>
 
-                  <div
-                    id="Glossary_of_Terms_and_Acronyms"
-                    class="prose p-2 scroll-section"
-                  >
+                <div id="Glossary_of_Terms_and_Acronyms" class="prose p-2 scroll-section">
                     <a
                       href="#Glossary_of_Terms_and_Acronyms"
                       class="inline-block"
@@ -1342,7 +1483,7 @@
                       </svg>
                     </div>
 
-                    <h5>Acronyms</h5>
+                    <h4>Acronyms</h4>
                     <div
                       class="overflow-x-auto rounded-box border border-base-content/5 bg-base-100 mb-8 p-4"
                     >
@@ -1406,7 +1547,7 @@
                         </tbody>
                       </table>
                     </div>
-                    <h5>Terms</h5>
+                    <h4>Terms</h4>
                     <div
                       class="overflow-x-auto rounded-box border border-base-content/5 bg-base-100 mb-8 p-4"
                     >
@@ -1630,156 +1771,155 @@
                         </tbody>
                       </table>
                     </div>
+                </div>
+                <div id="Resources" class="prose p-2 scroll-section">
+                  <a
+                    href="#Resources"
+                    class="inline-block"
+                    style="text-decoration: none"
+                    aria-label="Extra Resources"
+                  >
+                    <h3>Resources</h3>
+                  </a>
+                  <div
+                    class="tooltip ml-1 tooltip-right"
+                    data-tip="Click to Copy Link"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="25"
+                      height="25"
+                      fill="currentColor"
+                      class="bi bi-link-45deg copy-btn align-sub cursor-pointer inline-block opacity-50 hover:opacity-100 transition-opacity duration-300 ease-in-out"
+                      viewBox="0 0 16 16"
+                      data-copy="#Resources"
+                    >
+                      <path
+                        d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1 1 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4 4 0 0 1-.128-1.287z"
+                      />
+                      <path
+                        d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243z"
+                      />
+                    </svg>
                   </div>
-                  <div id="Resources" class="prose p-2 scroll-section">
-                    <a
-                      href="#Resources"
-                      class="inline-block"
-                      style="text-decoration: none"
-                      aria-label="Extra Resources"
-                    >
-                      <h3>Resources</h3>
-                    </a>
-                    <div
-                      class="tooltip ml-1 tooltip-right"
-                      data-tip="Click to Copy Link"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="25"
-                        height="25"
-                        fill="currentColor"
-                        class="bi bi-link-45deg copy-btn align-sub cursor-pointer inline-block opacity-50 hover:opacity-100 transition-opacity duration-300 ease-in-out"
-                        viewBox="0 0 16 16"
-                        data-copy="#Resources"
-                      >
-                        <path
-                          d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1 1 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4 4 0 0 1-.128-1.287z"
-                        />
-                        <path
-                          d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243z"
-                        />
-                      </svg>
-                    </div>
 
-                    <ul class="list-disc pl-14 mb-8">
+                  <ul class="list-disc pl-14 mb-8">
+                    <li>
+                      <a
+                        href="https://www.stone-env.net/eist/"
+                        class="underline"
+                        target="_blank"
+                        >EIS Tool</a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://www.nrcs.usda.gov/" class="underline"
+                      target="_blank"
+                      >
+                        Natural Resources Conservation Service</a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://jornada.nmsu.edu/" class="underline"
+                      target="_blank"
+                      >
+                        Jornada Experimental Range</a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://www.blm.gov/" class="underline"
+                      target="_blank"
+                      >
+                        Bureau of Land Management</a
+                      >
+                    </li>
+                  </ul>
+                  <div>
+                    <!-- Language for 'Why is my shapefile not working?' taken from https://rangelands.app/support/18-shapefile-help -->
+                    <h5>Why is my shapefile not working?</h5>
+                    <p>
+                      Although a very common format for storing spatial vector
+                      information &#40;polygons, lines, points&#41;,
+                      shapefiles can contain geometry errors or other
+                      misinformation that prevents them from functioning
+                      properly. If you are using a zipped shapefile and are
+                      not returned results, please consider the following:
+                    </p>
+                    <ul class="list-disc pl-14">
+                      <li>
+                        The shapefile must be saved as a .zip file and contain
+                        the .shp, .shx, and .prj files of the shapefile. Only
+                        include one shapefile per .zip file.
+                      </li>
+                      <li>
+                        Shapefiles may not work with all web browsers. Please
+                        use Google Chrome for best results.
+                      </li>
+                      <li>
+                        3D shapefiles are not supported, please
+                        <a
+                          href="https://support.esri.com/en-us/knowledge-base/how-to-convert-3d-shapefiles-to-2d-shapefiles-000008433"
+                          target="_blank"
+                          >convert to 2D</a
+                        >.
+                      </li>
+                      <li>
+                        Shapefiles can contain geometry errors. Please
+                        <a
+                          href="https://desktop.arcgis.com/en/arcmap/latest/tools/data-management-toolbox/checking-and-repairing-geometries.htm"
+                          target="_blank"
+                          >check and fix the geometries</a
+                        >of the shapefile and try again.
+                      </li>
+                      <li>
+                        Shapefiles with complex geometries &#40;i.e., polygons
+                        with many vertices&#41; or many features will result
+                        in an error. Please reduce the number of features or
+                        <a
+                          href="https://desktop.arcgis.com/en/arcmap/latest/manage-data/editing-existing-features/simplifying-a-feature-generalize-.htm"
+                          target="_blank"
+                          >simplify them</a
+                        >.
+                      </li>
                       <li>
                         <a
-                          href="https://www.stone-env.net/eist/"
-                          class="underline"
+                          href="https://desktop.arcgis.com/en/arcmap/latest/manage-data/editing-fundamentals/removing-slivers-or-gaps-between-polygons.htm"
                           target="_blank"
-                          >EIS Tool</a
+                          >Sliver polygons</a
                         >
+                        &#40;really, really small polygons that are likely
+                        mistakes&#41; will result in an error. Please
+                        <a
+                          href="https://desktop.arcgis.com/en/arcmap/latest/tools/data-management-toolbox/checking-and-repairing-geometries.htm"
+                          target="_blank"
+                          >check and fix the geometries</a
+                        >
+                        of the shapefile.
                       </li>
                       <li>
-                        <a href="https://www.nrcs.usda.gov/" class="underline"
-                        target="_blank"
-                        >
-                          Natural Resources Conservation Service</a
-                        >
+                        Although multipart polygons are compatible with the
+                        EIST, singlepart polygons are recommended.
+                        <a
+                          href="https://desktop.arcgis.com/en/arcmap/latest/tools/data-management-toolbox/multipart-to-singlepart.htm"
+                          target="_blank"
+                          >Convert to singlepart polygons</a
+                        >.
                       </li>
                       <li>
-                        <a href="https://jornada.nmsu.edu/" class="underline"
-                        target="_blank"
-                        >
-                          Jornada Experimental Range</a
-                        >
-                      </li>
-                      <li>
-                        <a href="https://www.blm.gov/" class="underline"
-                        target="_blank"
-                        >
-                          Bureau of Land Management</a
-                        >
+                        Only the first 50 features of the shapefile will be
+                        loaded; the remaining features will be discarded.
                       </li>
                     </ul>
-                    <div>
-                      <!-- Language for 'Why is my shapefile not working?' taken from https://rangelands.app/support/18-shapefile-help -->
-                      <h5>Why is my shapefile not working?</h5>
-                      <p>
-                        Although a very common format for storing spatial vector
-                        information &#40;polygons, lines, points&#41;,
-                        shapefiles can contain geometry errors or other
-                        misinformation that prevents them from functioning
-                        properly. If you are using a zipped shapefile and are
-                        not returned results, please consider the following:
-                      </p>
-                      <ul class="list-disc pl-14">
-                        <li>
-                          The shapefile must be saved as a .zip file and contain
-                          the .shp, .shx, and .prj files of the shapefile. Only
-                          include one shapefile per .zip file.
-                        </li>
-                        <li>
-                          Shapefiles may not work with all web browsers. Please
-                          use Google Chrome for best results.
-                        </li>
-                        <li>
-                          3D shapefiles are not supported, please
-                          <a
-                            href="https://support.esri.com/en-us/knowledge-base/how-to-convert-3d-shapefiles-to-2d-shapefiles-000008433"
-                            target="_blank"
-                            >convert to 2D</a
-                          >.
-                        </li>
-                        <li>
-                          Shapefiles can contain geometry errors. Please
-                          <a
-                            href="https://desktop.arcgis.com/en/arcmap/latest/tools/data-management-toolbox/checking-and-repairing-geometries.htm"
-                            target="_blank"
-                            >check and fix the geometries</a
-                          >of the shapefile and try again.
-                        </li>
-                        <li>
-                          Shapefiles with complex geometries &#40;i.e., polygons
-                          with many vertices&#41; or many features will result
-                          in an error. Please reduce the number of features or
-                          <a
-                            href="https://desktop.arcgis.com/en/arcmap/latest/manage-data/editing-existing-features/simplifying-a-feature-generalize-.htm"
-                            target="_blank"
-                            >simplify them</a
-                          >.
-                        </li>
-                        <li>
-                          <a
-                            href="https://desktop.arcgis.com/en/arcmap/latest/manage-data/editing-fundamentals/removing-slivers-or-gaps-between-polygons.htm"
-                            target="_blank"
-                            >Sliver polygons</a
-                          >
-                          &#40;really, really small polygons that are likely
-                          mistakes&#41; will result in an error. Please
-                          <a
-                            href="https://desktop.arcgis.com/en/arcmap/latest/tools/data-management-toolbox/checking-and-repairing-geometries.htm"
-                            target="_blank"
-                            >check and fix the geometries</a
-                          >
-                          of the shapefile.
-                        </li>
-                        <li>
-                          Although multipart polygons are compatible with the
-                          EIST, singlepart polygons are recommended.
-                          <a
-                            href="https://desktop.arcgis.com/en/arcmap/latest/tools/data-management-toolbox/multipart-to-singlepart.htm"
-                            target="_blank"
-                            >Convert to singlepart polygons</a
-                          >.
-                        </li>
-                        <li>
-                          Only the first 50 features of the shapefile will be
-                          loaded; the remaining features will be discarded.
-                        </li>
-                      </ul>
-                    </div>
-                    <h5>
-                      Need more help?
-                      <a href="mailto:sarah.mccord@usda.gov"
-                      >Email us.</a>
-                    </h5>
                   </div>
+                  <h5>
+                    Need more help?
+                    <a href="mailto:sarah.mccord@usda.gov"
+                    >Email us.</a>
+                  </h5>
                 </div>
-                <br /><br /><br />
               </div>
             </div>
+            <br /><br /><br />
           </div>
         </div>
       </main>
