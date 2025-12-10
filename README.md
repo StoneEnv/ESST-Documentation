@@ -11,5 +11,4 @@ The style.css has already been generated with tailwind and shouldn't need any sc
     - NVM: https://github.com/nvm-sh/nvm
     - NVM-Windows: https://github.com/coreybutler/nvm-windows
 2. Run `npm install` to install all the existing dependencies
-3. To manually generate the Daisy UI and Tailwind styles use `npx postcss-cli tailwind.css -o base.css`.
-4. To run with Nodemon use `npm run dev` that will watch for changes.
+4. Start the Tailwind CLI with `npm run dev` that will watch for changes and build the base.css file.
