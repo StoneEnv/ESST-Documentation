@@ -60,6 +60,9 @@
         // update the text of an achnor link
         const app_url_text = document.getElementById("app_url_text");
         app_url_text.innerText = variables.app_url
+        
+        const ssurgo_date_text = document.getElementById("ssurgo_date_text");
+        ssurgo_date_text.innerText = variables.ssurgo_date
 
 
         for (const key in variables) {
@@ -543,7 +546,7 @@
                     <p>
                       Query the <a href="https://www.nrcs.usda.gov/resources/data-and-reports/soil-survey-geographic-database-ssurgo">Soil Survey Geographic Database <abbr title="Soil Survey Geographic Database">&#40;SSURGO&#41;</abbr></a> by using the <b>SSURGO Query Tool</b> on the map.
                     </p>
-                    <div role="alert" class="alert mb-2"><span><a target="_blank" href="https://www.nrcs.usda.gov/resources/data-and-reports/soil-survey-geographic-database-ssurgo" class="text-blue-600 underline hover:text-blue-800">SSURGO database</a> last updated 2024</span></div>
+                    <div role="alert" class="alert mb-2"><span><a target="_blank" href="https://www.nrcs.usda.gov/resources/data-and-reports/soil-survey-geographic-database-ssurgo" class="text-blue-600 underline hover:text-blue-800">SSURGO database</a> last updated <span id="ssurgo_date_text"></span></span></div>
                     <div class="flex-col justify-center items-center">
                       <figure>
                         <img
