@@ -214,8 +214,8 @@
                       <a
                         class="!font-medium"
                         href="#Refine_by_Indicator"
-                        aria-label="Step 2: Refine your query with indicators"
-                        >Step 2: Refine by Indicator</a
+                        aria-label="Step 2: Refine your query with timeindicators"
+                        >Step 2: Refine by Time or Indicator</a
                       >
                     </li>
                     <li>
@@ -526,7 +526,7 @@
                     <div class="flex-col justify-center items-center">
                       <figure>
                         <img
-                          class="lightbox-image object-scale-down h-96 w-192"
+                          class="lightbox-image object-scale-down h-144 w-192"
                           src="Screenshots/splash.png"
                           alt="Screenshot of EIS Tool home page"
                           style="width: 100%"
@@ -550,7 +550,7 @@
                     <div class="flex-col justify-center items-center">
                       <figure>
                         <img
-                          class="lightbox-image object-scale-down h-96 w-192"
+                          class="lightbox-image object-scale-down h-144 w-192"
                           src="Screenshots/map-ssurgo-active.png"
                           alt="Screenshot of EIS Tool home page with the SSURGO Query Tool activated"
                           style="width: 100%"
@@ -569,7 +569,7 @@
                     <div class="flex-col justify-center items-center">
                       <figure>
                         <img
-                          class="lightbox-image object-scale-down h-96 w-192"
+                          class="lightbox-image object-scale-down h-144 w-192"
                           src="Screenshots/map-ssurgo-report.png"
                           alt="Screenshot of EIS Tool with SSURGO Query Tool Report window showing SSURGO query results"
                           style="width: 100%"
@@ -634,8 +634,8 @@
                     <div class="flex-col justify-center items-center">
                       <figure>
                         <img
-                          class="lightbox-image object-scale-down h-96 w-192"
-                          src="Screenshots/placeholder.png"
+                          class="lightbox-image object-scale-down h-144 w-192"
+                          src="Screenshots/form-step1-aoi.png"
                           alt="Add area of interest"
                           style="width: 100%"
                         />
@@ -677,13 +677,13 @@
                     <div class="flex-col justify-center items-center">
                       <figure>
                         <img
-                          class="lightbox-image object-scale-down h-96 w-192"
-                          src="Screenshots/placeholder.png"
+                          class="lightbox-image object-scale-down h-144 w-192"
+                          src="Screenshots/form-step1-aoi-selectors.png"
                           alt="Add area of interest"
                           style="width: 100%"
                         />
                         <figcaption class="p-0 m-0" style="text-align: center">
-                          <b>Selectors</b> window, showing the types of selectors available: <b>ESD</b>, <b>MLRA</b>, <b>Ecoregion Level #3</b>, and <b>States</b>.
+                          Step 1: <b>Selectors</b> window, showing the types of selectors available: <b>ESD</b>, <b>MLRA</b>, <b>Ecoregion Level #3</b>, and <b>States</b>.
                         </figcaption>
                       </figure>
                     </div>
@@ -697,8 +697,8 @@
                     <div class="flex-col justify-center items-center">
                       <figure>
                         <img
-                          class="lightbox-image object-scale-down h-96 w-192"
-                          src="Screenshots/placeholder.png"
+                          class="lightbox-image object-scale-down h-144 w-192"
+                          src="Screenshots/form-step1-aoi-geodata.png"
                           alt="Geodata manager table"
                           style="width: 100%"
                         />
@@ -719,7 +719,7 @@
                       style="text-decoration: none"
                       aria-label="Filter data by indicator and time period"
                     >
-                      <h3>Step 2: Refine by Indicator</h3>
+                      <h3>Step 2: Refine by Time or Indicator</h3>
                     </a>
                     <div
                       class="tooltip ml-1 tooltip-right"
@@ -742,29 +742,102 @@
                         />
                       </svg>
                     </div>
-                  </div>
-                  <div role="alert" class="alert alert-warning">
+                    <div role="alert" class="alert alert-warning">
                       <span>
                           Note: This step is optional, however validation is required. See <b>Validate Form</b> below.
                       </span>
+                    </div>
+                    <p>
+                        Refine your query by attribute using <b>Select Indicators</b> under the <b>Indicators</b> tab. Click the <b>Time</b> tab to set a time period filter.
+                    </p>
                   </div>
-                  <p>
-                      Refine your query by attribute using <b>Select Indicators</b> under the <b>Indicators</b> tab. Click the <b>Time</b> tab to set a time period filter.
-                  </p>
-                  <div class="flex-col justify-center items-center">
-                    <figure>
+                    <h5 class="mt-8">Time Period</h5>
+                    <p>
+                      Click the <b>Time</b> tab, then select an option from the
+                      list to specify how to filter your data:
+                    </p><figure>
                       <img
-                        class="lightbox-image object-scale-down h-96 w-192"
-                        src="Screenshots/placeholder.png"
+                        class="lightbox-image object-scale-down h-144 w-192"
+                        src="Screenshots/form-step2-time.png"
                         alt="Location of options to refine by indicators and time periods"
                         style="width: 100%"
                       />
                       <figcaption class="p-0 m-0" style="text-align: center">
-                        Step 2: Refine by Indicator, showing options under the
-                        <b>Indicators</b> tab.
+                        Step 2: Refine by Time or Indicator, showing options under the
+                        <b>Time</b> tab.
                       </figcaption>
                     </figure>
-                  </div>
+                    
+                    <div
+                      class="overflow-x-auto rounded-box border border-base-content/5 bg-base-100 mb-8 p-4"
+                    >
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th>Time operator</th>
+                            <th>Description</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <!--   table row 1 -->
+                          <tr>
+                            <td>Specific Date</td>
+                            <td>
+                              Filters for data ONLY from the date indicated
+                            </td>
+                          </tr>
+
+                          <!--  table row 2 -->
+                          <tr>
+                            <td>Excluding Date</td>
+                            <td>
+                              Filters for all data EXCEPT from the date
+                              indicated
+                            </td>
+                          </tr>
+
+                          <!--  table row 3 -->
+                          <tr>
+                            <td>Before</td>
+                            <td>
+                              Filters for all data from before and NOT
+                              including the date indicated
+                            </td>
+                          </tr>
+
+                          <!--  table row 4 -->
+                          <tr>
+                            <td>After</td>
+                            <td>
+                              Filters for all data after and NOT including the
+                              date indicated
+                            </td>
+                          </tr>
+
+                          <!--  table row 5 -->
+                          <tr>
+                            <td>Between</td>
+                            <td>
+                              Filters for all data from the period between the
+                              indicated start date and the indicated emd date,
+                              NOT including the indicated dates
+                            </td>
+                          </tr>
+
+                          <!--  table row 6 -->
+                          <tr>
+                            <td>Year</td>
+                            <td>
+                              Filters for data ONLY from the year indicated
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <p>
+                      Click <b>Add Time Period</b> to add your time filter to your data summary. The filter now appears in a table at the bottom called "Selected Time Periods". To remove a time period from your data summary, click the yellow <b>X</b> button at the end of that time period filter's row.
+                    </p>
                   <h5 class="mt-8">Select Indicators</h5>
                   <p>
                     Under the <b>Indicators</b> tab, click <b>Select Indicators</b> to open a new window. In this window's left sidebar, click the dropdown to filter the indicator options by category: <b>Soil Attributes</b>, <b>Plant Attributes</b>, <b>Erosion Indicators</b>, or <b>Indicators of Rangeland Health</b>. Use the checkboxes next to the indicator names to include in your query. In the table of selected indicators, use the question mark icons to learn more about each indicator. Click <b>Submit</b> to update your query.
@@ -772,8 +845,8 @@
                   <div class="flex-col justify-center items-center">
                     <figure>
                       <img
-                        class="lightbox-image object-scale-down h-96 w-192"
-                        src="Screenshots/placeholder.png"
+                        class="lightbox-image object-scale-down h-144 w-192"
+                        src="Screenshots/form-step2-indicators-window.png"
                         alt="'Select indicators' window with dropdown  indicators menu open"
                         style="width: 100%"
                       />
@@ -879,113 +952,7 @@
                       </tbody>
                     </table>
                   </div>
-                  <div class="flex-col justify-center items-center">
-                    <figure>
-                      <img
-                        class="lightbox-image object-scale-down h-96 w-192"
-                        src="Screenshots/placeholder.png"
-                        alt="'Select indicators' modal with dropdown  indicators menu open"
-                        style="width: 100%"
-                      />
-                      <figcaption class="p-0 m-0" style="text-align: center">
-                        Step 2: Refine by Indicator, showing options under the
-                        <b>Indicators</b> tab.
-                      </figcaption>
-                    </figure>
-
-                    <h5 class="mt-8">Time Period</h5>
-                    <p>
-                      Click the <b>Time</b> tab, then select an option from the
-                      list to specify how to filter your data:
-                    </p>
-                    <div
-                      class="overflow-x-auto rounded-box border border-base-content/5 bg-base-100 mb-8 p-4"
-                    >
-                      <table class="table">
-                        <thead>
-                          <tr>
-                            <th>Time operator</th>
-                            <th>Description</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <!--   table row 1 -->
-                          <tr>
-                            <td>Specific Date</td>
-                            <td>
-                              Filters for data ONLY from the date indicated
-                            </td>
-                          </tr>
-
-                          <!--  table row 2 -->
-                          <tr>
-                            <td>Excluding Date</td>
-                            <td>
-                              Filters for all data EXCEPT from the date
-                              indicated
-                            </td>
-                          </tr>
-
-                          <!--  table row 3 -->
-                          <tr>
-                            <td>Before</td>
-                            <td>
-                              Filters for all data from before and NOT
-                              including the date indicated
-                            </td>
-                          </tr>
-
-                          <!--  table row 4 -->
-                          <tr>
-                            <td>After</td>
-                            <td>
-                              Filters for all data after and NOT including the
-                              date indicated
-                            </td>
-                          </tr>
-
-                          <!--  table row 5 -->
-                          <tr>
-                            <td>Between</td>
-                            <td>
-                              Filters for all data from the period between the
-                              indicated start date and the indicated emd date,
-                              NOT including the indicated dates
-                            </td>
-                          </tr>
-
-                          <!--  table row 6 -->
-                          <tr>
-                            <td>Year</td>
-                            <td>
-                              Filters for data ONLY from the year indicated
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-
-                    <p>
-                      Click <b>Add Time Period</b> to add your time filter to your data summary. The filter now appears in a table at the bottom called "Selected Time Periods". To remove a time period from your data summary, click the yellow <b>X</b> button at the end of that time period filter's row.
-                    </p>
-                    <div class="flex-col justify-center items-center">
-                      <figure>
-                        <img
-                          class="lightbox-image object-scale-down h-96 w-192"
-                          src="Screenshots/placeholder.png"
-                          alt=""
-                          style="width: 100%"
-                        />
-                        <figcaption
-                          class="p-0 m-0"
-                          style="text-align: center"
-                        >
-                          Step 2: Refine by Indicator, showing options under
-                          the <b>Time</b> tab.
-                        </figcaption>
-                      </figure>
-                    </div>
-                    <h5 class="mt-8">Validate Form</h5>
+                    <!-- <h5 class="mt-8">Validate Form</h5>
                     <p>
                       To proceed past Step 2, you must validate the
                       number of plots your query contains falls under the
@@ -994,16 +961,16 @@
                       To correct this, adjust at least one selection here in
                       Step 2 or back in Step 1 (AOI) until the number of plots
                       is lower than 10,000. Click the <b>Back</b> button to return to Step 1 to adjust your area of interest.
-                    </p>
+                    </p> -->
                     <div role="alert" class="alert alert-warning">
                       <span>Note: Do <b>not</b> use your browser's Back or Reload buttons while using the EIS Tool, otherwise your query selections will erase. Use the tool's <b>Back</b> and <b>Next</b> buttons at the bottom of the form to go back and forward.</span>
                     </div>
-                    <p>
+                    <!-- <p>
                       Click the <b>Validate Form</b> button. You have successfully validated your form when the <b>Validate Form</b> button becomes the <b>Next</b> button, and a message says the form is successfully validated.
                     </p>
                     <figure>
                       <img
-                        class="lightbox-image object-scale-down h-96 w-192"
+                        class="lightbox-image object-scale-down h-144 w-192"
                         src="Screenshots/placeholder.png"
                         alt="Query form validation step"
                         style="width: 100%"
@@ -1012,99 +979,6 @@
                         Step 2: Query form validation.
                       </figcaption>
                     </figure>
-                    <p>
-                      <h5 class="mt-8">Time Period</h5>
-                      <p>
-                        Click the <b>Time</b> tab, then select an option from the
-                        list to specify how to filter your data:
-                      </p>
-                      <div
-                        class="overflow-x-auto rounded-box border border-base-content/5 bg-base-100 mb-8 p-4"
-                      >
-                        <table class="table">
-                          <thead>
-                            <tr>
-                              <th>Time operator</th>
-                              <th>Description</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <!--   table row 1 -->
-                            <tr>
-                              <td>Specific Date</td>
-                              <td>
-                                Filters for data ONLY from the date indicated
-                              </td>
-                            </tr>
-
-                            <!--  table row 2 -->
-                            <tr>
-                              <td>Excluding Date</td>
-                              <td>
-                                Filters for all data EXCEPT from the date
-                                indicated
-                              </td>
-                            </tr>
-
-                            <!--  table row 3 -->
-                            <tr>
-                              <td>Before</td>
-                              <td>
-                                Filters for all data from before and NOT
-                                including the date indicated
-                              </td>
-                            </tr>
-
-                            <!--  table row 4 -->
-                            <tr>
-                              <td>After</td>
-                              <td>
-                                Filters for all data after and NOT including the
-                                date indicated
-                              </td>
-                            </tr>
-
-                            <!--  table row 5 -->
-                            <tr>
-                              <td>Between</td>
-                              <td>
-                                Filters for all data from the period between the
-                                indicated start date and the indicated emd date,
-                                NOT including the indicated dates
-                              </td>
-                            </tr>
-
-                            <!--  table row 6 -->
-                            <tr>
-                              <td>Year</td>
-                              <td>
-                                Filters for data ONLY from the year indicated
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-
-                      <p>
-                        Click <b>Add Time Period</b> to add your time filter to your data summary. The filter now appears in a table at the bottom called "Selected Time Periods". To remove a time period from your data summary, click the yellow <b>X</b> button at the end of that time period filter's row.
-                      </p>
-                      <div class="flex-col justify-center items-center">
-                        <figure>
-                          <img
-                            class="lightbox-image object-scale-down h-96 w-192"
-                            src="Screenshots/placeholder.png"
-                            alt=""
-                            style="width: 100%"
-                          />
-                          <figcaption
-                            class="p-0 m-0"
-                            style="text-align: center"
-                          >
-                            Step 2: Refine by Indicator, showing options under
-                            the <b>Time</b> tab.
-                          </figcaption>
-                        </figure>
-                      </div>
                       <h5 class="mt-8">Validate Form</h5>
                       <p>
                         To proceed past Step 2, you must validate the
@@ -1123,7 +997,7 @@
                       </p>
                       <figure>
                         <img
-                          class="lightbox-image object-scale-down h-96 w-192"
+                          class="lightbox-image object-scale-down h-144 w-192"
                           src="Screenshots/placeholder.png"
                           alt="Query form validation step"
                           style="width: 100%"
@@ -1134,7 +1008,7 @@
                       </figure>
                       <p>
                       When your indicator selections are complete, and your form is validated, click <b>Next</b>.
-                      </p>
+                      </p> -->
                   </div>
                   <div id="Comparison">
                       <a
@@ -1182,7 +1056,7 @@
                       </p>
                       <figure>
                         <img
-                          class="lightbox-image object-scale-down h-96 w-192"
+                          class="lightbox-image object-scale-down h-144 w-192"
                           src="Screenshots/placeholder.png"
                           alt="Query form validation step"
                           style="width: 100%"
@@ -1204,7 +1078,7 @@
                       </p>
                       <figure>
                         <img
-                          class="lightbox-image object-scale-down h-96 w-192"
+                          class="lightbox-image object-scale-down h-144 w-192"
                           src="Screenshots/placeholder.png"
                           alt="'Add Comparison' window with options."
                           style="width: 100%"
@@ -1270,7 +1144,7 @@
                     </p>
                     <figure>
                       <img
-                        class="lightbox-image object-scale-down h-96 w-192"
+                        class="lightbox-image object-scale-down h-144 w-192"
                         src="Screenshots/placeholder.png"
                         alt="'Add Comparison' window with options."
                         style="width: 100%"
@@ -1330,7 +1204,7 @@
                     </p>
                     <figure>
                       <img
-                        class="lightbox-image object-scale-down h-96 w-192"
+                        class="lightbox-image object-scale-down h-144 w-192"
                         src="Screenshots/placeholder.png"
                         alt="'Results' section showing a summary of query results."
                         style="width: 100%"
@@ -1357,7 +1231,7 @@
                       </p>
                       <figure>
                         <img
-                          class="lightbox-image object-scale-down h-96 w-192"
+                          class="lightbox-image object-scale-down h-144 w-192"
                           src="Screenshots/placeholder.png"
                           alt="'Select Fields to Graph' window with options."
                           style="width: 100%"
@@ -1386,7 +1260,7 @@
                       </p>
                       <figure>
                       <img
-                        class="lightbox-image object-scale-down h-96 w-192"
+                        class="lightbox-image object-scale-down h-144 w-192"
                         src="Screenshots/placeholder.png"
                         alt="Graph produced after using 'Select Indicators to Graph' window"
                         style="width: 100%"
@@ -1404,7 +1278,7 @@
                       </p>
                       <figure>
                         <img
-                          class="lightbox-image object-scale-down h-96 w-192"
+                          class="lightbox-image object-scale-down h-144 w-192"
                           src="Screenshots/placeholder.png"
                           alt="Graph with box-histogram toggle and 'Edit' button"
                           style="width: 100%"
@@ -1526,7 +1400,7 @@
                       </p>
                       <figure>
                         <img
-                          class="lightbox-image object-scale-down h-96 w-192"
+                          class="lightbox-image object-scale-down h-144 w-192"
                           src="Screenshots/placeholder.png"
                           alt="'Edit Graph' window with options."
                           style="width: 100%"
@@ -1608,7 +1482,7 @@
                       </p>
                       <figure>
                         <img
-                          class="lightbox-image object-scale-down h-96 w-192"
+                          class="lightbox-image object-scale-down h-144 w-192"
                           src="Screenshots/placeholder.png"
                           alt="'Add Comparison' window with options."
                           style="width: 100%"
@@ -1632,7 +1506,7 @@
                       </p>
                       <figure>
                         <img
-                          class="lightbox-image object-scale-down h-96 w-192"
+                          class="lightbox-image object-scale-down h-144 w-192"
                           src="Screenshots/placeholder.png"
                           alt="Options for exporting results"
                           style="width: 100%"
@@ -1658,7 +1532,7 @@
                       </p>
                       <figure>
                         <img
-                          class="lightbox-image object-scale-down h-96 w-192"
+                          class="lightbox-image object-scale-down h-144 w-192"
                           src="Screenshots/placeholder.png"
                           alt="Options for interacting with table results"
                           style="width: 100%"
