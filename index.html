@@ -196,7 +196,7 @@
                   <a
                     href="#Using_the_EIS_Tool"
                     aria-label="How to use the Environmental Indicator Summary Tool"
-                    >Using the EIS Tool</a
+                    >Using the EIST</a
                   >
                 </li>
                 <li>
@@ -299,10 +299,10 @@
                   </div>
 
                   <h5>How to use this guide:</h5>
-                  <ul class="list-decimal pl-14">
+                  <ol class="list-decimal pl-14 mb-8">
                     <li>
                       The section
-                      <a href="#Using_the_EIS_Tool">Using the EIS Tool</a>
+                      <a href="#Using_the_EIS_Tool">Using the EIST</a>
                       later in this guide has instructions for creating an
                       environmental indicator summary
                       <abbr title="Environmental Indicators Summary"
@@ -310,8 +310,7 @@
                       >.
                     </li>
                     <li>
-                      Learn the science behind the EIS Tool after this
-                      introduction.
+                      Learn the science behind the EIST after this introduction.
                     </li>
                     <li>
                       At the end of this guide, reference the
@@ -320,7 +319,7 @@
                       </a>
                       and look for more helpful resources.
                     </li>
-                  </ul>
+                  </ol>
                 </div>
 
                 <div id="Background" class="prose p-2 scroll-section">
@@ -449,7 +448,7 @@
                     style="text-decoration: none"
                     aria-label="How to use the Environmental Indicator Summary Tool"
                   >
-                    <h3>Using the EIS Tool</h3>
+                    <h3>Using the EIST</h3>
                   </a>
                   <div
                     class="tooltip ml-1 tooltip-right"
@@ -517,7 +516,7 @@
                     </div>
 
                     <p>
-                      To use the EIS Tool, navigate to
+                      To use the EIST, navigate to
                       <a
                         id="app_url_text"
                         class="app_url underline"
@@ -530,11 +529,11 @@
                         <img
                           class="lightbox-image object-scale-down h-144 w-192"
                           src="Screenshots/splash.png"
-                          alt="Screenshot of EIS Tool home page"
+                          alt="Screenshot of EIST home page"
                           style="width: 100%"
                         />
                         <figcaption class="p-0 m-0" style="text-align: center">
-                          The EIS Tool home page.
+                          The EIST home page.
                         </figcaption>
                       </figure>
                     </div>
@@ -572,7 +571,7 @@
                         <img
                           class="lightbox-image object-scale-down h-144 w-192"
                           src="Screenshots/map-ssurgo-active.png"
-                          alt="Screenshot of EIS Tool home page with the SSURGO Query Tool activated"
+                          alt="Screenshot of EIST home page with the SSURGO Query Tool activated"
                           style="width: 100%"
                         />
                         <figcaption class="p-0 m-0" style="text-align: center">
@@ -601,7 +600,7 @@
                         <img
                           class="lightbox-image object-scale-down h-144 w-192"
                           src="Screenshots/map-ssurgo-report.png"
-                          alt="Screenshot of EIS Tool with SSURGO Query Tool Report window showing SSURGO query results"
+                          alt="Screenshot of EIST with SSURGO Query Tool Report window showing SSURGO query results"
                           style="width: 100%"
                         />
                         <figcaption class="p-0 m-0" style="text-align: center">
@@ -644,20 +643,20 @@
                     </div>
 
                     <p>
-                      The EIS tool is organized by query group, where a query
-                      group contains at least one area of interest designed to
-                      answer a specific ecological/management question. Select
-                      your area of interest
+                      The EIST is organized by query group, where a query group
+                      contains at least one area of interest designed to answer
+                      a specific ecological/management question. Select your
+                      area of interest
                       <abbr title="Area of Interest">&#40;AOI&#41;</abbr> using
                       at least one of the following methods, to filter data
                       geographically.
                     </p>
                     <div role="alert" class="alert alert-warning">
                       <span
-                        >Note: There is a limit of <b>10,000 sites</b> that can
+                        >Note: There is a limit of <b>100,000 sites</b> that can
                         be queried. In the next step, you will need to validate
                         that the number of plots is under the threshold of
-                        10,000 before submitting your query.</span
+                        100,000 before submitting your query.</span
                       >
                     </div>
                     <p>
@@ -910,19 +909,35 @@
                       next to the indicator names to include in your query. In
                       the table of selected indicators, use the question mark
                       icons to learn more about each indicator. Click
-                      <b>Submit</b> to update your query.
+                      <b>Submit</b> to update your query. Click <b>Close</b> to
+                      cancel changes.
                     </p>
                     <div class="flex-col justify-center items-center">
                       <figure>
                         <img
                           class="lightbox-image object-scale-down h-144 w-192"
                           src="Screenshots/form-step2-indicators-window.png"
-                          alt="'Select indicators' window with dropdown  indicators menu open"
+                          alt="'Select indicators' window with dropdown indicators menu open"
                           style="width: 100%"
                         />
                         <figcaption class="p-0 m-0" style="text-align: center">
                           Step 2: <b>Select indicators</b> window with the
                           dropdown indicator category menu open.
+                        </figcaption>
+                      </figure>
+                    </div>
+                    <p>After selecting Indicators, Click <b>Add New Row</b>.</p>
+                    <div class="flex-col justify-center items-center">
+                      <figure>
+                        <img
+                          class="lightbox-image object-scale-down h-144 w-192"
+                          src="Screenshots/form-step2-indicators-row.png"
+                          alt="Screenshot of Step 2 'Indicators' tab after selecting indicators and creating a new row"
+                          style="width: 100%"
+                        />
+                        <figcaption class="p-0 m-0" style="text-align: center">
+                          Step 2: <b>Indicators</b> tab with a row containing an
+                          indicator query statement.
                         </figcaption>
                       </figure>
                     </div>
@@ -1026,32 +1041,38 @@
                         </tbody>
                       </table>
                     </div>
-                    <!-- <h5 class="mt-8">Validate Form</h5>
+                    <h5 class="mt-8">Validate Form</h5>
                     <p>
-                      To proceed past Step 2, you must validate the
-                      number of plots your query contains falls under the
-                      threshold of 10,000. If your query includes more than
-                      10,000 plots, you will see an error message in the form.
-                      To correct this, adjust at least one selection here in
-                      Step 2 or back in Step 1 (AOI) until the number of plots
-                      is lower than 10,000. Click the <b>Back</b> button to return to Step 1 to adjust your area of interest.
-                    </p> -->
+                      After adding time and indicator query statements, you must
+                      validate the number of plots your query contains falls
+                      under the threshold of 100,000 to proceed to the next
+                      step. If your query includes more than 100,000 plots, you
+                      will see an error message in the form. To correct this,
+                      adjust at least one selection here in Step 2 or back in
+                      Step 1 (AOI) until the number of plots is lower than
+                      100,000. Click the <b>Back</b> button below to return to
+                      Step 1 to adjust your area of interest.
+                    </p>
                     <div role="alert" class="alert alert-warning">
                       <span
                         >Note: Do <b>not</b> use your browser's Back or Reload
-                        buttons while using the EIS Tool, otherwise your query
+                        buttons while using the EIST, otherwise your query
                         selections will erase. Use the tool's <b>Back</b> and
                         <b>Next</b> buttons at the bottom of the form to go back
                         and forward.</span
                       >
                     </div>
-                    <!-- <p>
-                      Click the <b>Validate Form</b> button. You have successfully validated your form when the <b>Validate Form</b> button becomes the <b>Next</b> button, and a message says the form is successfully validated.
+                    <p>
+                      Click the <b>Validate Form</b> button. You have
+                      successfully validated your form when the
+                      <b>Validate Form</b> button becomes the
+                      <b>Next</b> button, and a message says the form is
+                      successfully validated.
                     </p>
                     <figure>
                       <img
                         class="lightbox-image object-scale-down h-144 w-192"
-                        src="Screenshots/placeholder.png"
+                        src="Screenshots/form-step2-indicators-validated.png"
                         alt="Query form validation step"
                         style="width: 100%"
                       />
@@ -1059,36 +1080,10 @@
                         Step 2: Query form validation.
                       </figcaption>
                     </figure>
-                      <h5 class="mt-8">Validate Form</h5>
-                      <p>
-                        To proceed past Step 2, you must validate the
-                        number of plots your query contains falls under the
-                        threshold of 10,000. If your query includes more than
-                        10,000 plots, you will see an error message in the form.
-                        To correct this, adjust at least one selection here in
-                        Step 2 or back in Step 1 (AOI) until the number of plots
-                        is lower than 10,000. Click the <b>Back</b> button to return to Step 1 to adjust your area of interest.
-                      </p>
-                      <div role="alert" class="alert alert-warning">
-                        <span>Note: Do <b>not</b> use your browser's Back or Reload buttons while using the EIS Tool, otherwise your query selections will erase. Use the tool's <b>Back</b> and <b>Next</b> buttons at the bottom of the form to go back and forward.</span>
-                      </div>
-                      <p>
-                        Click the <b>Validate Form</b> button. You have successfully validated your form when the <b>Validate Form</b> button becomes the <b>Next</b> button, and a message says the form is successfully validated.
-                      </p>
-                      <figure>
-                        <img
-                          class="lightbox-image object-scale-down h-144 w-192"
-                          src="Screenshots/placeholder.png"
-                          alt="Query form validation step"
-                          style="width: 100%"
-                        />
-                        <figcaption class="p-0 m-0" style="text-align: center">
-                          Step 2: Query form validation.
-                        </figcaption>
-                      </figure>
-                      <p>
-                      When your indicator selections are complete, and your form is validated, click <b>Next</b>.
-                      </p> -->
+                    <p>
+                      When your indicator selections are complete, and your form
+                      is validated, click <b>Next</b>.
+                    </p>
                   </div>
 
                   <div id="Comparison">
@@ -1129,6 +1124,18 @@
                       comparison. If you choose an AOI, the original dataset
                       will be compared to the data defined by the new AOI.
                     </p>
+                    <figure>
+                      <img
+                        class="lightbox-image object-scale-down h-144 w-192"
+                        src="Screenshots/form-step3-comparison.png"
+                        alt="Screenshot of Step 3 'Comparison' with the 'Add Comparison' button"
+                        style="width: 100%"
+                      />
+                      <figcaption class="p-0 m-0" style="text-align: center">
+                        Step 3: Comparison with the <b>Add Comparison</b> button
+                        visible.
+                      </figcaption>
+                    </figure>
                     <p>
                       Click the <b>Add Comparison</b> button to get started. A
                       new window opens, where you can create a comparison group
@@ -1137,8 +1144,8 @@
                     <figure>
                       <img
                         class="lightbox-image object-scale-down h-144 w-192"
-                        src="Screenshots/placeholder.png"
-                        alt="Query form validation step"
+                        src="Screenshots/form-step3-comparison-modal.png"
+                        alt="Screenshot of the Step 3 'Create New Comparison Group' window"
                         style="width: 100%"
                       />
                       <figcaption class="p-0 m-0" style="text-align: center">
@@ -1161,20 +1168,20 @@
                     <figure>
                       <img
                         class="lightbox-image object-scale-down h-144 w-192"
-                        src="Screenshots/placeholder.png"
-                        alt="'Add Comparison' window with options."
+                        src="Screenshots/form-step3-comparison-group.png"
+                        alt="Screenshot of Step 3 after creating a comparison group"
                         style="width: 100%"
                       />
                       <figcaption class="p-0 m-0" style="text-align: center">
                         Step 3: View after creating a comparison group.
                       </figcaption>
                     </figure>
-                    <!-- Keeping the following content commented out; remove after approval -->
-                    <!-- <p>
-                        When your comparison selections are complete, click the <b>Validate Form</b> button. You have successfully validated your form when the <b>Validate Form</b> button becomes the <b>Next</b> button, and a message says the form is successfully validated.
-                      </p> -->
                     <p>
                       When your comparison selections are complete, click the
+                      <b>Validate Form</b> button. You have successfully
+                      validated your form when the <b>Validate Form</b> button
+                      becomes the <b>Next</b> button, and a message says the
+                      form is successfully validated. Click the
                       <b>Next</b> button to continue.
                     </p>
                   </div>
@@ -1215,7 +1222,7 @@
                       <div role="alert" class="alert alert-warning">
                         <span
                           >Note: Do <b>not</b> use your browser's Back or Reload
-                          buttons while using the EIS Tool, otherwise your query
+                          buttons while using the EIST, otherwise your query
                           selections will erase. Use the tool's <b>Back</b> and
                           <b>Next</b> buttons at the bottom of the form to go
                           back and forward.</span
@@ -1236,12 +1243,12 @@
                     <figure>
                       <img
                         class="lightbox-image object-scale-down h-144 w-192"
-                        src="Screenshots/placeholder.png"
-                        alt="'Add Comparison' window with options."
+                        src="Screenshots/form-step4-review.png"
+                        alt="Screenshot of the 'Review' step with a summary of the query"
                         style="width: 100%"
                       />
                       <figcaption class="p-0 m-0" style="text-align: center">
-                        Step 4: Review the summary table of your query.
+                        Step 4: Review the summary of your query.
                       </figcaption>
                     </figure>
                     <p>
@@ -1251,7 +1258,7 @@
                     <div role="alert" class="alert alert-warning">
                       <span
                         >Note: Do <b>not</b> use your browser's Back or Reload
-                        buttons while using the EIS Tool, otherwise your query
+                        buttons while using the EIST, otherwise your query
                         selections will erase. Use the tool's <b>Back</b> and
                         <b>Next</b> buttons at the bottom of the form to go back
                         and forward.</span
@@ -1261,6 +1268,10 @@
                       You may need to wait a moment for the data to load. If
                       there are errors, follow the instructions provided to fix
                       the error.
+                    </p>
+                    <p>
+                      After reviewing and finalizing your query, click
+                      <b>Submit Query</b> to run.
                     </p>
                   </div>
 
@@ -1299,11 +1310,14 @@
                       graph indicators, interact with the table, and generate
                       reports.
                     </p>
-                    <p>First, view the summary of your query results.</p>
+                    <p>
+                      After the tool runs your query, view the summary of your
+                      query results.
+                    </p>
                     <figure>
                       <img
                         class="lightbox-image object-scale-down h-144 w-192"
-                        src="Screenshots/placeholder.png"
+                        src="Screenshots/results-summary.png"
                         alt="'Results' section showing a summary of query results."
                         style="width: 100%"
                       />
@@ -1320,17 +1334,23 @@
                       >
                         <h4>Graph</h4>
                       </a>
-                      <p>Click <b>Select</b> to create a graph.</p>
+                      <p>
+                        In the results summary, click the checkbox next to the
+                        query group you wish to use as comparison in the graphs.
+                        Click <b>Select</b> in the query group you wish to
+                        graph.
+                      </p>
                       <h5>1. Select indicators to Graph</h5>
                       <p>
                         Click the <b>Select Indicators to Graph</b> button to
-                        launch a modal to select Indicators from based on
-                        category that exist within the Results Group.
+                        launch a window. Use the dropdown selection and filters
+                        to select Indicators that meet those criteria that exist
+                        within the query group results.
                       </p>
                       <figure>
                         <img
                           class="lightbox-image object-scale-down h-144 w-192"
-                          src="Screenshots/placeholder.png"
+                          src="Screenshots/results-1-graph-select-modal.png"
                           alt="'Select Fields to Graph' window with options."
                           style="width: 100%"
                         />
@@ -1339,17 +1359,16 @@
                         </figcaption>
                       </figure>
                       <p>
-                        Here you can add new fields to graph from the side menu
-                        and remove selections from below the graph.
+                        Here you can add new fields to graph by clicking the
+                        checkboxes in the window's left sidebar.
                       </p>
-                      <ol>
-                        <li>Select a field from the menu on the left.</li>
-                        <li>
-                          (Optional) Remove unnecessary fields with the red
-                          <b>X</b> buttons.
-                        </li>
-                        <li>Click <b>Submit</b>.</li>
-                      </ol>
+                      <p>
+                        After making field selections, you can remove fields
+                        with the red <b>X</b> button next to the field you want
+                        to remove. When your field selections are complete,
+                        click <b>Submit</b> to graph. Click <b>Close</b> to
+                        close the window without saving.
+                      </p>
 
                       <h5>2. Graphs</h5>
                       <p>
@@ -1359,7 +1378,7 @@
                       <figure>
                         <img
                           class="lightbox-image object-scale-down h-144 w-192"
-                          src="Screenshots/placeholder.png"
+                          src="Screenshots/results-2-graph.png"
                           alt="Graph produced after using 'Select Indicators to Graph' window"
                           style="width: 100%"
                         />
@@ -1376,21 +1395,9 @@
                         Use the <b>Box</b> and <b>Histogram</b> toggle to switch
                         between a box plot and histogram format.
                       </p>
-                      <figure>
-                        <img
-                          class="lightbox-image object-scale-down h-144 w-192"
-                          src="Screenshots/placeholder.png"
-                          alt="Graph with box-histogram toggle and 'Edit' button"
-                          style="width: 100%"
-                        />
-                        <figcaption class="p-0 m-0" style="text-align: center">
-                          Results: Graph showing <b>Box</b> and
-                          <b>Histogram</b> format toggle, <b>Edit</b> button,
-                          and hover tools.
-                        </figcaption>
-                      </figure>
                       <p>
-                        Use the graph's hover tools to customize your results:
+                        Use the hover tools at the top of the graph to customize
+                        your results:
                       </p>
                       <table class="table">
                         <thead>
@@ -1629,7 +1636,7 @@
                       <figure>
                         <img
                           class="lightbox-image object-scale-down h-144 w-192"
-                          src="Screenshots/placeholder.png"
+                          src="Screenshots/results-2-graph-edit.png"
                           alt="'Edit Graph' window with options."
                           style="width: 100%"
                         />
@@ -1639,7 +1646,9 @@
                       </figure>
                       <p>
                         With the <b>Edit Graph</b> window open, change the title
-                        and description in the text boxes. Click
+                        and description in the text boxes. Use the
+                        <b>Theme</b> dropdown to use preset color types. Click
+                        on the graph color to open the color editor. Click
                         <b>Settings</b> to <b>Reset Form</b> and
                         <b>Erase Graphs</b>.
                       </p>
@@ -1667,8 +1676,10 @@
                       >
                         <h5 class="mt-8">3. Export</h5>
                       </a>
-                      <p>This section allows exporting data</p>
-                      <ul>
+                      <p>
+                        This section allows exporting data in multiple formats:
+                      </p>
+                      <ul class="list-disc pl-14 mb-8">
                         <li>
                           <b>Report</b>: Launches a step through modal that
                           allows the user to configure the PDF.
@@ -1683,36 +1694,58 @@
                           in future queries.
                         </li>
                       </ul>
-                      <!-- <p>
-                        Click the <b>Export Results</b> button in the sidebar footer.
-                        A menu of options appears:
-                      </p> -->
-                      <h6>Report</h6>
-                      <p>
-                        Click <b>Report</b> to generate a PDF report of your
-                        data summary.
-                      </p>
-                      <p>Add customized content to your report:</p>
-                      <div>
-                        <ul>
-                          <li>"Title/Description"</li>
-                          <li>"Map"</li>
-                          <li>"Graphs"</li>
-                          <li>"Links"</li>
-                        </ul>
-                      </div>
-                      <p>Click <b>Submit</b> to generate your PDF file.</p>
                       <figure>
                         <img
                           class="lightbox-image object-scale-down h-144 w-192"
-                          src="Screenshots/placeholder.png"
-                          alt="'Add Comparison' window with options."
+                          src="Screenshots\results-3-export.png"
+                          alt="Screenshot of the 'Results' section at the 'Export' step with buttons named 'Report', 'Graphs (.zip)', and 'Shapefile'."
+                          style="width: 100%"
+                        />
+                        <figcaption class="p-0 m-0" style="text-align: center">
+                          Results: <b>Export</b> step with buttons named
+                          <b>Report</b>, <b>Graphs (.zip)</b>, and
+                          <b>Shapefile</b>.
+                        </figcaption>
+                      </figure>
+                      <h6>Report</h6>
+                      <p>
+                        Click <b>Report</b> to generate a PDF report of your
+                        data summary. The <b>Report Generator</b> window opens,
+                        where you can add customized content to your report:
+                      </p>
+                      <div>
+                        <ul class="list-disc pl-14 mb-8">
+                          <li>
+                            <b>Title/Description</b>: Change the report title.
+                            Use the rich text editor to add a report
+                            description.
+                          </li>
+                          <li>
+                            <b>Map</b>: Use the checkbox to render a map in your
+                            report. Include a description in the text box.
+                          </li>
+                          <li><b>Graphs</b>:</li>
+                          <li>
+                            <b>Links</b>: Add URLs for references to include.
+                          </li>
+                        </ul>
+                      </div>
+                      <figure>
+                        <img
+                          class="lightbox-image object-scale-down h-144 w-192"
+                          src="Screenshots\results-3-export-report.png"
+                          alt="'Report Generator' window with options visible."
                           style="width: 100%"
                         />
                         <figcaption class="p-0 m-0" style="text-align: center">
                           Results: <b>Report Generator</b> window options.
                         </figcaption>
                       </figure>
+                      <p>
+                        Click <b>Submit</b> to generate your PDF file. The file
+                        will download automatically.
+                      </p>
+
                       <h6>Graphs &#40;.zip&#41;</h6>
                       <p>
                         Click <b>Graphs &#40;.zip&#41;</b> to export all graphs
@@ -1724,17 +1757,6 @@
                         Click <b>Shapefile</b> to export your data summary
                         results as a shapefile.
                       </p>
-                      <figure>
-                        <img
-                          class="lightbox-image object-scale-down h-144 w-192"
-                          src="Screenshots/placeholder.png"
-                          alt="Options for exporting results"
-                          style="width: 100%"
-                        />
-                        <figcaption class="p-0 m-0" style="text-align: center">
-                          Options for exporting results.
-                        </figcaption>
-                      </figure>
                     </div>
                     <div id="Table">
                       <a
@@ -1756,7 +1778,7 @@
                       <figure>
                         <img
                           class="lightbox-image object-scale-down h-144 w-192"
-                          src="Screenshots/placeholder.png"
+                          src="Screenshots/results-table.png"
                           alt="Options for interacting with table results"
                           style="width: 100%"
                         />
@@ -2120,7 +2142,7 @@
                         href="https://www.stone-env.net/eist/"
                         class="underline"
                         target="_blank"
-                        >EIS Tool</a
+                        >EIST</a
                       >
                     </li>
                     <li>
@@ -2241,7 +2263,7 @@
                         properly. If you are using a zipped shapefile and are
                         not returned results, please consider the following:
                       </p>
-                      <ul class="list-disc pl-14">
+                      <ul class="list-disc pl-14 mb-8">
                         <li>
                           The shapefile must be saved as a .zip file and contain
                           the .shp, .shx, and .prj files of the shapefile. Only
