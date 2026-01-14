@@ -19,51 +19,61 @@
   </head>
 
   <body>
-
     <script>
-      
       document.addEventListener("DOMContentLoaded", () => {
-
         // String values in ESST-Documentation: external URLs, email
         const variables = {
           app_url: "https://www.stone-env.net/eist",
           ldc_url: "https://landscapedatacommons.org/",
           aim_url: "https://www.blm.gov/aim",
-          landscape_monitoring_framework_url: "https://gbp-blm-egis.hub.arcgis.com/datasets/BLM-EGIS::blm-natl-aim-lmf-hub/about",
+          landscape_monitoring_framework_url:
+            "https://gbp-blm-egis.hub.arcgis.com/datasets/BLM-EGIS::blm-natl-aim-lmf-hub/about",
           long_term_agroecosystem_research_url: "https://ltar.ars.usda.gov/",
           wind_erosion_url: "https://winderosionnetwork.org/",
-          monitoring_manual_url: "https://www.landscapetoolbox.org/methods-manuals/monitoring-manual-2nd-edition/",
+          monitoring_manual_url:
+            "https://www.landscapetoolbox.org/methods-manuals/monitoring-manual-2nd-edition/",
           iirh_url: "https://landscapetoolbox.org/methods-manuals/iirhv5/",
           jornada_url: "https://edit.jornada.nmsu.edu/",
-          mlra_url: "https://www.nrcs.usda.gov/resources/data-and-reports/major-land-resource-area-mlra",
-          ecological_restoration_and_reclamation_url: "https://onlinelibrary.wiley.com/doi/10.1111/rec.13461",
-          usda_nrcs_url: "https://www.ars.usda.gov/plains-area/las-cruces-nm/range-management-research/docs/ecological-site-descriptions-introduction/",
-          omernik_1987: "https://onlinelibrary.wiley.com/doi/10.1111/j.1467-8306.1987.tb00149.x?msockid=3bbb36d8128064c72e53220c1370655f",
+          mlra_url:
+            "https://www.nrcs.usda.gov/resources/data-and-reports/major-land-resource-area-mlra",
+          ecological_restoration_and_reclamation_url:
+            "https://onlinelibrary.wiley.com/doi/10.1111/rec.13461",
+          usda_nrcs_url:
+            "https://www.ars.usda.gov/plains-area/las-cruces-nm/range-management-research/docs/ecological-site-descriptions-introduction/",
+          omernik_1987:
+            "https://onlinelibrary.wiley.com/doi/10.1111/j.1467-8306.1987.tb00149.x?msockid=3bbb36d8128064c72e53220c1370655f",
           epa_url: "https://www.epa.gov/eco-research/ecoregions",
-          brussard_1998: "https://www.sciencedirect.com/science/article/abs/pii/S0169204697000947",
-          natural_disturbance_url: "https://www.climatehubs.usda.gov/disturbances-and-stressors",
-          plant_community_composition: "https://climexhandbook.w.uib.no/2019/11/04/plant-community-composition/",
+          brussard_1998:
+            "https://www.sciencedirect.com/science/article/abs/pii/S0169204697000947",
+          natural_disturbance_url:
+            "https://www.climatehubs.usda.gov/disturbances-and-stressors",
+          plant_community_composition:
+            "https://climexhandbook.w.uib.no/2019/11/04/plant-community-composition/",
           esd_url: "https://jornada.nmsu.edu/knowledge-systems/esd",
-          natural_resources_conservation_service_url: "https://www.nrcs.usda.gov/",
+          natural_resources_conservation_service_url:
+            "https://www.nrcs.usda.gov/",
           jornada_experimental_range_url: "https://jornada.nmsu.edu/",
           blm_url: "https://www.blm.gov/",
-          esri_shapefile_conversion_url: "https://support.esri.com/en-us/knowledge-base/how-to-convert-3d-shapefiles-to-2d-shapefiles-000008433",
-          esri_repair_geom_url: "https://desktop.arcgis.com/en/arcmap/latest/tools/data-management-toolbox/checking-and-repairing-geometries.htm",
-          esri_simplify_url: "https://desktop.arcgis.com/en/arcmap/latest/manage-data/editing-existing-features/simplifying-a-feature-generalize-.htm",
-          esri_removing_slivers_url: "https://desktop.arcgis.com/en/arcmap/latest/manage-data/editing-fundamentals/removing-slivers-or-gaps-between-polygons.htm",
-          esri_singlepart_url: "https://desktop.arcgis.com/en/arcmap/latest/tools/data-management-toolbox/multipart-to-singlepart.htm",
+          esri_shapefile_conversion_url:
+            "https://support.esri.com/en-us/knowledge-base/how-to-convert-3d-shapefiles-to-2d-shapefiles-000008433",
+          esri_repair_geom_url:
+            "https://desktop.arcgis.com/en/arcmap/latest/tools/data-management-toolbox/checking-and-repairing-geometries.htm",
+          esri_simplify_url:
+            "https://desktop.arcgis.com/en/arcmap/latest/manage-data/editing-existing-features/simplifying-a-feature-generalize-.htm",
+          esri_removing_slivers_url:
+            "https://desktop.arcgis.com/en/arcmap/latest/manage-data/editing-fundamentals/removing-slivers-or-gaps-between-polygons.htm",
+          esri_singlepart_url:
+            "https://desktop.arcgis.com/en/arcmap/latest/tools/data-management-toolbox/multipart-to-singlepart.htm",
           contact_email: "mailto:sarah.mccord@usda.gov",
-          ssurgo_date: 2024
-        }
-
+          ssurgo_date: 2024,
+        };
 
         // update the text of an achnor link
         const app_url_text = document.getElementById("app_url_text");
-        app_url_text.innerText = variables.app_url
-        
-        const ssurgo_date_text = document.getElementById("ssurgo_date_text");
-        ssurgo_date_text.innerText = variables.ssurgo_date
+        app_url_text.innerText = variables.app_url;
 
+        const ssurgo_date_text = document.getElementById("ssurgo_date_text");
+        ssurgo_date_text.innerText = variables.ssurgo_date;
 
         for (const key in variables) {
           console.log(key, variables[key]);
@@ -88,18 +98,16 @@
 
           if (anchorsByClass.length > 0) {
             // console.log(" - Class Match");
-            anchorsByClass.forEach(anchor => {
+            anchorsByClass.forEach((anchor) => {
               anchor.href = newUrl;
             });
-            continue
+            continue;
           } else {
             // console.log(" - No Class Match");
           }
 
-          console.error(" - No ID or Class Match")
-
+          console.error(" - No ID or Class Match");
         }
-
       });
     </script>
     <dialog id="lightbox_modal" class="modal">
@@ -139,7 +147,6 @@
           <a
             id="doc_btn"
             class="app_url btn btn-outline !no-underline !hover:text-black transition-colors duration-200"
-            
             tabindex="0"
           >
             <ng-icon name="bootstrapChevronLeft" style="--ng-icon__size: 1em">
@@ -298,18 +305,17 @@
                       <a href="#Using_the_EIS_Tool">Using the EIS Tool</a>
                       later in this guide has instructions for creating an
                       environmental indicator summary
-                      <abbr
-                        title="Environmental Indicators Summary"
-                      >&#40;EIS&#41;</abbr>.
+                      <abbr title="Environmental Indicators Summary"
+                        >&#40;EIS&#41;</abbr
+                      >.
                     </li>
                     <li>
-                      Learn the science behind the EIS Tool after this introduction.
+                      Learn the science behind the EIS Tool after this
+                      introduction.
                     </li>
                     <li>
                       At the end of this guide, reference the
-                      <a
-                        href="#Glossary_of_Terms_and_Acronyms"
-                      >
+                      <a href="#Glossary_of_Terms_and_Acronyms">
                         Glossary of Terms and Acronyms
                       </a>
                       and look for more helpful resources.
@@ -350,45 +356,49 @@
 
                   <p>
                     The Environmental Indicator Summary tool
-                    <abbr
-                      title="Environmental Indicator Summary tool"
-                    >&#40;EIST&#41;</abbr>
-                    has been developed to help users explore, visualize, and interpret the status, condition, and trend of standardized indicators of ecosystem structure and function. The EIST queries data from the
-                    <a
-                      id="ldc_url"
-                      
-                      target="_blank"
+                    <abbr title="Environmental Indicator Summary tool"
+                      >&#40;EIST&#41;</abbr
                     >
-                      Landscape Data Commons
-                    </a>
-                    , which harmonizes and aggregates core monitoring datasets and links them to wind and water erosion and remote sensing models. Data can be accessed and summarized for user-defined projects, across different land cover types, across environmental sites and regions representing differences in land potential, and across administrative units. Users can query summary tables, download full or filtered summary tables to view in Excel, explore interactive figures, and download static figures for their own use.
+                    has been developed to help users explore, visualize, and
+                    interpret the status, condition, and trend of standardized
+                    indicators of ecosystem structure and function. The EIST
+                    queries data from the
+                    <a id="ldc_url" target="_blank"> Landscape Data Commons </a>
+                    , which harmonizes and aggregates core monitoring datasets
+                    and links them to wind and water erosion and remote sensing
+                    models. Data can be accessed and summarized for user-defined
+                    projects, across different land cover types, across
+                    environmental sites and regions representing differences in
+                    land potential, and across administrative units. Users can
+                    query summary tables, download full or filtered summary
+                    tables to view in Excel, explore interactive figures, and
+                    download static figures for their own use.
                   </p>
                   <p>
-                    The EIST can be used to support research projects and decision-making processes for land managers. It can help inform conservation planning, land use plans, grazing permit renewals, shrub or invasive species treatments, seed menu development for environmental restoration and reclamation, as well as assessments of management/treatment outcomes. As new data become available, or lines of inquiry shift, the summary tables and report can be easily updated.
+                    The EIST can be used to support research projects and
+                    decision-making processes for land managers. It can help
+                    inform conservation planning, land use plans, grazing permit
+                    renewals, shrub or invasive species treatments, seed menu
+                    development for environmental restoration and reclamation,
+                    as well as assessments of management/treatment outcomes. As
+                    new data become available, or lines of inquiry shift, the
+                    summary tables and report can be easily updated.
                   </p>
                   <p>
-                    Data powering the EIST are from multiple sources that have been aggregated in the Landscape Data Commons. These include data collected by the Bureau of Land Management (BLM)
-                    <a 
-                      id="aim_url"
-                      class="underline"
-                      target="_blank"
-                    >
+                    Data powering the EIST are from multiple sources that have
+                    been aggregated in the Landscape Data Commons. These include
+                    data collected by the Bureau of Land Management (BLM)
+                    <a id="aim_url" class="underline" target="_blank">
                       Assessment, Inventory, and Monitoring
-                        <abbr
-                          title="Assessment, Inventory, and Monitoring"
-                        >
-                          &#40;AIM&#41;
-                        </abbr>
+                      <abbr title="Assessment, Inventory, and Monitoring">
+                        &#40;AIM&#41;
+                      </abbr>
                       Program
                     </a>
                     , including the
-                    <a
-                      id="landscape_monitoring_framework_url"
-                      target="_blank"
-                    >Landscape Monitoring Framework
-                      <abbr 
-                        title="Landscape Monitoring Framework"
-                      >
+                    <a id="landscape_monitoring_framework_url" target="_blank"
+                      >Landscape Monitoring Framework
+                      <abbr title="Landscape Monitoring Framework">
                         &#40;LMF&#41;
                       </abbr>
                     </a>
@@ -398,48 +408,40 @@
                       target="_blank"
                     >
                       Long-Term Agroecosystem Research
-                      <abbr 
-                        title="Long-Term Agroecosystem Research"
-                      >
+                      <abbr title="Long-Term Agroecosystem Research">
                         &#40;LTAR&#41;
                       </abbr>
                     </a>
                     network,
-                    <a
-                      id="wind_erosion_url"
-                      target="_blank"
-                    >National Wind Erosion Research Network
-                      <abbr
-                        title="National Wind Erosion Research Network"
-                      >
+                    <a id="wind_erosion_url" target="_blank"
+                      >National Wind Erosion Research Network
+                      <abbr title="National Wind Erosion Research Network">
                         &#40;NWERN&#41;
                       </abbr>
                     </a>
-                    , US Geological Survey (USGS), National Park Service (NPS), and others.
+                    , US Geological Survey (USGS), National Park Service (NPS),
+                    and others.
                   </p>
-                  <p>Indicators available through the EIST were derived from data collected following the
-                    <a
-                      id="monitoring_manual_url"
-                      target="_blank"
-                    >
-                      Monitoring Manual for Grassland, Shrubland, and Savanna Ecosystems
+                  <p>
+                    Indicators available through the EIST were derived from data
+                    collected following the
+                    <a id="monitoring_manual_url" target="_blank">
+                      Monitoring Manual for Grassland, Shrubland, and Savanna
+                      Ecosystems
                     </a>
-                    , the 
-                    <a
-                      id="iirh_url"
-                      target="_blank"
-                    >
+                    , the
+                    <a id="iirh_url" target="_blank">
                       Interpreting Indicators of Rangeland Health
-                      <abbr
-                        title="Interpreting Indicators of Rangeland Health"
-                      >
+                      <abbr title="Interpreting Indicators of Rangeland Health">
                         &#40;IIRH&#41;
                       </abbr>
                     </a>
-                    assessment protocol, and models including the Aeolian Erosion (AERO) model and Rangeland Hydrology and Erosion Model (RHEM).
+                    assessment protocol, and models including the Aeolian
+                    Erosion (AERO) model and Rangeland Hydrology and Erosion
+                    Model (RHEM).
                   </p>
                 </div>
-                    
+
                 <div id="Using_the_EIS_Tool" class="prose p-2 scroll-section">
                   <a
                     href="#Using_the_EIS_Tool"
@@ -471,17 +473,18 @@
                     </svg>
                   </div>
                   <p>
-                    The EIST generates tables and figures that can be
-                    queried, filtered, and downloaded to meet your research, management
-                    and reporting needs. Data can be grouped by features
-                    such as biophysical indicators, location, or project.
-                    Spatial groupings may be beneficial if you want to
-                    compare data in, e.g., the same ecological site across multiple
-                    management units such as grazing allotments, pastures,
-                    prescribed burn areas, etc. The report you generate can be
-                    customized to select and compare indicators by both spatial
-                    and non-spatial groupings.
+                    The EIST generates tables and figures that can be queried,
+                    filtered, and downloaded to meet your research, management
+                    and reporting needs. Data can be grouped by features such as
+                    biophysical indicators, location, or project. Spatial
+                    groupings may be beneficial if you want to compare data in,
+                    e.g., the same ecological site across multiple management
+                    units such as grazing allotments, pastures, prescribed burn
+                    areas, etc. The report you generate can be customized to
+                    select and compare indicators by both spatial and
+                    non-spatial groupings.
                   </p>
+
                   <div id="Splash_Screen">
                     <a
                       href="#Splash_Screen"
@@ -517,10 +520,9 @@
                       To use the EIS Tool, navigate to
                       <a
                         id="app_url_text"
-                        
                         class="app_url underline"
                         target="_blank"
-                        ></a
+                      ></a
                       >.
                     </p>
                     <div class="flex-col justify-center items-center">
@@ -538,15 +540,33 @@
                     </div>
 
                     <p>
-                      Click <b>Get Started</b> to pull up a map and query the data.
-                      Use the tab to expand and collapse the form and map in the
-                      application.
+                      Click <b>Get Started</b> to pull up a map and query the
+                      data. Use the tab to expand and collapse the form and map
+                      in the application.
                     </p>
                     <h4>SSURGO Query Tool</h4>
                     <p>
-                      Query the <a href="https://www.nrcs.usda.gov/resources/data-and-reports/soil-survey-geographic-database-ssurgo">Soil Survey Geographic Database <abbr title="Soil Survey Geographic Database">&#40;SSURGO&#41;</abbr></a> by using the <b>SSURGO Query Tool</b> on the map.
+                      Query the
+                      <a
+                        href="https://www.nrcs.usda.gov/resources/data-and-reports/soil-survey-geographic-database-ssurgo"
+                        >Soil Survey Geographic Database
+                        <abbr title="Soil Survey Geographic Database"
+                          >&#40;SSURGO&#41;</abbr
+                        ></a
+                      >
+                      by using the <b>SSURGO Query Tool</b> on the map.
                     </p>
-                    <div role="alert" class="alert mb-2"><span><a target="_blank" href="https://www.nrcs.usda.gov/resources/data-and-reports/soil-survey-geographic-database-ssurgo" class="text-blue-600 underline hover:text-blue-800">SSURGO database</a> last updated <span id="ssurgo_date_text"></span></span></div>
+                    <div role="alert" class="alert mb-2">
+                      <span
+                        ><a
+                          target="_blank"
+                          href="https://www.nrcs.usda.gov/resources/data-and-reports/soil-survey-geographic-database-ssurgo"
+                          class="text-blue-600 underline hover:text-blue-800"
+                          >SSURGO database</a
+                        >
+                        last updated <span id="ssurgo_date_text"></span
+                      ></span>
+                    </div>
                     <div class="flex-col justify-center items-center">
                       <figure>
                         <img
@@ -561,10 +581,20 @@
                       </figure>
                     </div>
                     <p>
-                      Click the <b>SSURGO Query Tool</b> button to activate the tool. Then click a map location to query the <a href="https://www.nrcs.usda.gov/resources/data-and-reports/soil-survey-geographic-database-ssurgo">SSURGO database</a> for the selected location. After querying, a window named the <b>SSURGO Query Tool Report</b> opens, showing the SSURGO database query results for the selected location.
+                      Click the <b>SSURGO Query Tool</b> button to activate the
+                      tool. Then click a map location to query the
+                      <a
+                        href="https://www.nrcs.usda.gov/resources/data-and-reports/soil-survey-geographic-database-ssurgo"
+                        >SSURGO database</a
+                      >
+                      for the selected location. After querying, a window named
+                      the <b>SSURGO Query Tool Report</b> opens, showing the
+                      SSURGO database query results for the selected location.
                     </p>
                     <p>
-                      Deactivate the SSURGO Query Tool without querying a location by clicking the <b>X</b> button in the <b>SSURGO Query Tool</b> button's location on the map.
+                      Deactivate the SSURGO Query Tool without querying a
+                      location by clicking the <b>X</b> button in the
+                      <b>SSURGO Query Tool</b> button's location on the map.
                     </p>
                     <div class="flex-col justify-center items-center">
                       <figure>
@@ -575,7 +605,8 @@
                           style="width: 100%"
                         />
                         <figcaption class="p-0 m-0" style="text-align: center">
-                          The SSURGO Query Tool Report window showing query results.
+                          The SSURGO Query Tool Report window showing query
+                          results.
                         </figcaption>
                       </figure>
                     </div>
@@ -615,14 +646,19 @@
                     <p>
                       The EIS tool is organized by query group, where a query
                       group contains at least one area of interest designed to
-                      answer a specific ecological/management question. Select your area of
-                      interest
+                      answer a specific ecological/management question. Select
+                      your area of interest
                       <abbr title="Area of Interest">&#40;AOI&#41;</abbr> using
                       at least one of the following methods, to filter data
                       geographically.
                     </p>
                     <div role="alert" class="alert alert-warning">
-                      <span>Note: There is a limit of <b>10,000 sites</b> that can be queried. In the next step, you will need to validate that the number of plots is under the threshold of 10,000 before submitting your query.</span>
+                      <span
+                        >Note: There is a limit of <b>10,000 sites</b> that can
+                        be queried. In the next step, you will need to validate
+                        that the number of plots is under the threshold of
+                        10,000 before submitting your query.</span
+                      >
                     </div>
                     <p>
                       You may combine any of these AOI options in one query. For
@@ -640,37 +676,46 @@
                           style="width: 100%"
                         />
                         <figcaption class="p-0 m-0" style="text-align: center">
-                          Step 1: Add your area of interest using <b>Draw Polygon</b>, <b>Upload Shapefile</b>, or <b>Selectors</b>.
+                          Step 1: Add your area of interest using
+                          <b>Draw Polygon</b>, <b>Upload Shapefile</b>, or
+                          <b>Selectors</b>.
                         </figcaption>
                       </figure>
                     </div>
                     <h5 class="mt-">Draw Polygon</h5>
                     <p>
-                      Use the <b>Zoom In</b> and <b>Zoom Out</b> buttons on the map. Select <b>Draw</b>, then click on the map to start drawing a polygon.
-                      Continue clicking until the polygon is your intended size
-                      and shape. You may add additional separate polygons to the
-                      same query group. You will be able to manage overlapping
-                      polygons and exclude features in a later step.
+                      Use the <b>Zoom In</b> and <b>Zoom Out</b> buttons on the
+                      map. Select <b>Draw</b>, then click on the map to start
+                      drawing a polygon. Continue clicking until the polygon is
+                      your intended size and shape. You may add additional
+                      separate polygons to the same query group. You will be
+                      able to manage overlapping polygons and exclude features
+                      in a later step.
                     </p>
                     <h5 class="mt-">Upload Shapefile</h5>
                     <p>
-                      Select <b>Upload</b> to upload a shapefile from your device
-                      into the tool. For problems with the shapefile upload, see
-                      "Why is my shapefile not working?" in the
+                      Select <b>Upload</b> to upload a shapefile from your
+                      device into the tool. For problems with the shapefile
+                      upload, see "Why is my shapefile not working?" in the
                       <a href="#Resources">Resources section</a>.
                     </p>
                     <h5>Selectors</h5>
                     <p>
                       Use this option to select one or more projects or other
-                      land classifications. Click <b>Selectors</b>, then click <b>Open Selectors List</b>. A new window opens allowing you to choose at least one selector type: "ESD" (Ecological Site Description), "MLRA" (Major Land Resource Area), "Ecoregion Level #3", or "States" (US state boundaries). ESDs and MLRAs are described in more detail in
+                      land classifications. Click <b>Selectors</b>, then click
+                      <b>Open Selectors List</b>. A new window opens allowing
+                      you to choose at least one selector type:
+                      <abbr title="Ecological Site Description"><b>ESD</b></abbr
+                      >,
+                      <abbr title="Major Land Resource Area"><b>MLRA</b></abbr
+                      >, <b>Ecoregion Level #3</b>, or <b>States</b> (US state
+                      boundaries). ESDs and MLRAs are described in more detail
+                      in
                       <a id="jornada_url" class="underline" target="_blank"
                         >Ecological Dynamics Interpretive Tool (EDIT).</a
                       >
                       Ecoregions can be found on the
-                      <a
-                        id="mlra_url"
-                        class="underline"
-                        target="_blank"
+                      <a id="mlra_url" class="underline" target="_blank"
                         >EPA's website.</a
                       >
                     </p>
@@ -683,16 +728,22 @@
                           style="width: 100%"
                         />
                         <figcaption class="p-0 m-0" style="text-align: center">
-                          Step 1: <b>Selectors</b> window, showing the types of selectors available: <b>ESD</b>, <b>MLRA</b>, <b>Ecoregion Level #3</b>, and <b>States</b>.
+                          Step 1: <b>Selectors</b> window, showing the types of
+                          selectors available: <b>ESD</b>, <b>MLRA</b>,
+                          <b>Ecoregion Level #3</b>, and <b>States</b>.
                         </figcaption>
                       </figure>
                     </div>
                     <h5>Manage Geodata</h5>
                     <p>
-                      After selecting your AOI(s), the <b>Manage Geodata</b> table
-                      appears with a summary of your selections. Click <b>Modify
-                      AOIs</b>, then click the checkbox next to the AOI you wish to modify. Update the selection type, either the default
-                      <b>Select</b> to include sites or <b>Exclude</b> to subtract the sites from your query. Click <b>Remove AOIs</b> to delete the checked AOIs.
+                      After selecting your AOI(s), the
+                      <b>Manage Geodata</b> table appears with a summary of your
+                      selections. Click <b>Modify AOIs</b>, then click the
+                      checkbox next to the AOI you wish to modify. Update the
+                      selection type, either the default <b>Select</b> to
+                      include sites or <b>Exclude</b> to subtract the sites from
+                      your query. Click <b>Remove AOIs</b> to delete the checked
+                      AOIs.
                     </p>
                     <div class="flex-col justify-center items-center">
                       <figure>
@@ -703,7 +754,8 @@
                           style="width: 100%"
                         />
                         <figcaption class="p-0 m-0" style="text-align: center">
-                          Step 1: <b>Manage Geodata</b> table after clicking the <b>Modify AOIs</b> button.
+                          Step 1: <b>Manage Geodata</b> table after clicking the
+                          <b>Modify AOIs</b> button.
                         </figcaption>
                       </figure>
                     </div>
@@ -744,18 +796,21 @@
                     </div>
                     <div role="alert" class="alert alert-warning">
                       <span>
-                          Note: This step is optional, however validation is required. See <b>Validate Form</b> below.
+                        Note: This step is optional, however validation is
+                        required. See <b>Validate Form</b> below.
                       </span>
                     </div>
                     <p>
-                        Refine your query by attribute using <b>Select Indicators</b> under the <b>Indicators</b> tab. Click the <b>Time</b> tab to set a time period filter.
+                      Refine your query by attribute using
+                      <b>Select Indicators</b> under the <b>Indicators</b> tab.
+                      Click the <b>Time</b> tab to set a time period filter.
                     </p>
-                  </div>
                     <h5 class="mt-8">Time Period</h5>
                     <p>
                       Click the <b>Time</b> tab, then select an option from the
                       list to specify how to filter your data:
-                    </p><figure>
+                    </p>
+                    <figure>
                       <img
                         class="lightbox-image object-scale-down h-144 w-192"
                         src="Screenshots/form-step2-time.png"
@@ -763,11 +818,12 @@
                         style="width: 100%"
                       />
                       <figcaption class="p-0 m-0" style="text-align: center">
-                        Step 2: Refine by Time or Indicator, showing options under the
+                        Step 2: Refine by Time or Indicator, showing options
+                        under the
                         <b>Time</b> tab.
                       </figcaption>
                     </figure>
-                    
+
                     <div
                       class="overflow-x-auto rounded-box border border-base-content/5 bg-base-100 mb-8 p-4"
                     >
@@ -800,8 +856,8 @@
                           <tr>
                             <td>Before</td>
                             <td>
-                              Filters for all data from before and NOT
-                              including the date indicated
+                              Filters for all data from before and NOT including
+                              the date indicated
                             </td>
                           </tr>
 
@@ -836,122 +892,140 @@
                     </div>
 
                     <p>
-                      Click <b>Add Time Period</b> to add your time filter to your data summary. The filter now appears in a table at the bottom called "Selected Time Periods". To remove a time period from your data summary, click the yellow <b>X</b> button at the end of that time period filter's row.
+                      Click <b>Add Time Period</b> to add your time filter to
+                      your data summary. The filter now appears in a table at
+                      the bottom called "Selected Time Periods". To remove a
+                      time period from your data summary, click the yellow
+                      <b>X</b> button at the end of that time period filter's
+                      row.
                     </p>
-                  <h5 class="mt-8">Select Indicators</h5>
-                  <p>
-                    Under the <b>Indicators</b> tab, click <b>Select Indicators</b> to open a new window. In this window's left sidebar, click the dropdown to filter the indicator options by category: <b>Soil Attributes</b>, <b>Plant Attributes</b>, <b>Erosion Indicators</b>, or <b>Indicators of Rangeland Health</b>. Use the checkboxes next to the indicator names to include in your query. In the table of selected indicators, use the question mark icons to learn more about each indicator. Click <b>Submit</b> to update your query.
-                  </p>
-                  <div class="flex-col justify-center items-center">
-                    <figure>
-                      <img
-                        class="lightbox-image object-scale-down h-144 w-192"
-                        src="Screenshots/form-step2-indicators-window.png"
-                        alt="'Select indicators' window with dropdown  indicators menu open"
-                        style="width: 100%"
-                      />
-                      <figcaption class="p-0 m-0" style="text-align: center">
-                        Step 2: <b>Select indicators</b> window with the dropdown indicator category menu open.
-                      </figcaption>
-                    </figure>
-                  </div>
-                  <p>
-                    Use the dropdown menu under <b>Indicator</b> to add one of the indicators that you selected above to your query
-                    statement. Choose an operator, then input a value to
-                    complete the statement. Add additional rows to your group
-                    to complete your query statements. You can come back and
-                    edit these statements later too, if need be. If you want
-                    to remove a query statement, click the yellow <b>X</b> button to the right of the row.
-                  </p>
-                  <div
-                    class="overflow-x-auto rounded-box border border-base-content/5 bg-base-100 mb-8 p-4"
-                  >
-                    <table class="table">
-                      <thead>
-                        <tr>
-                          <th>Indicator operator</th>
-                          <th>Description</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <!--   table row 1 -->
-                        <tr>
-                          <td>=</td>
-                          <td>
-                            Query the data for only a specific indicator value
-                            entered in the <b>Value</b> input
-                          </td>
-                        </tr>
+                    <h5 class="mt-8">Select Indicators</h5>
+                    <p>
+                      Under the <b>Indicators</b> tab, click
+                      <b>Select Indicators</b> to open a new window. In this
+                      window's left sidebar, click the dropdown to filter the
+                      indicator options by category: <b>Soil Attributes</b>,
+                      <b>Plant Attributes</b>, <b>Erosion Indicators</b>, or
+                      <b>Indicators of Rangeland Health</b>. Use the checkboxes
+                      next to the indicator names to include in your query. In
+                      the table of selected indicators, use the question mark
+                      icons to learn more about each indicator. Click
+                      <b>Submit</b> to update your query.
+                    </p>
+                    <div class="flex-col justify-center items-center">
+                      <figure>
+                        <img
+                          class="lightbox-image object-scale-down h-144 w-192"
+                          src="Screenshots/form-step2-indicators-window.png"
+                          alt="'Select indicators' window with dropdown  indicators menu open"
+                          style="width: 100%"
+                        />
+                        <figcaption class="p-0 m-0" style="text-align: center">
+                          Step 2: <b>Select indicators</b> window with the
+                          dropdown indicator category menu open.
+                        </figcaption>
+                      </figure>
+                    </div>
+                    <p>
+                      Use the dropdown menu under <b>Indicator</b> to add one of
+                      the indicators that you selected above to your query
+                      statement. Choose an operator, then input a value to
+                      complete the statement. Add additional rows to your group
+                      to complete your query statements. You can come back and
+                      edit these statements later too, if need be. If you want
+                      to remove a query statement, click the yellow
+                      <b>X</b> button to the right of the row.
+                    </p>
+                    <div
+                      class="overflow-x-auto rounded-box border border-base-content/5 bg-base-100 mb-8 p-4"
+                    >
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th>Indicator operator</th>
+                            <th>Description</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <!--   table row 1 -->
+                          <tr>
+                            <td>=</td>
+                            <td>
+                              Query the data for only a specific indicator value
+                              entered in the <b>Value</b> input
+                            </td>
+                          </tr>
 
-                        <!--  table row 2 -->
-                        <tr>
-                          <td>!=</td>
-                          <td>
-                            Query the data for all EXCEPT a specific indicator
-                            value entered in the <b>Value</b> input
-                          </td>
-                        </tr>
+                          <!--  table row 2 -->
+                          <tr>
+                            <td>!=</td>
+                            <td>
+                              Query the data for all EXCEPT a specific indicator
+                              value entered in the <b>Value</b> input
+                            </td>
+                          </tr>
 
-                        <!--  table row 3 -->
-                        <tr>
-                          <td>&lt;</td>
-                          <td>
-                            Query the data for all indicator values LESS THAN
-                            a specific value entered in the <b>Value</b> input
-                          </td>
-                        </tr>
+                          <!--  table row 3 -->
+                          <tr>
+                            <td>&lt;</td>
+                            <td>
+                              Query the data for all indicator values LESS THAN
+                              a specific value entered in the <b>Value</b> input
+                            </td>
+                          </tr>
 
-                        <!--  table row 4 -->
-                        <tr>
-                          <td>&le;</td>
-                          <td>
-                            Query the data for all indicator values LESS THAN
-                            OR EQUAL TO a specific value entered in the
-                            <b>Value</b> input
-                          </td>
-                        </tr>
+                          <!--  table row 4 -->
+                          <tr>
+                            <td>&le;</td>
+                            <td>
+                              Query the data for all indicator values LESS THAN
+                              OR EQUAL TO a specific value entered in the
+                              <b>Value</b> input
+                            </td>
+                          </tr>
 
-                        <!--  table row 5 -->
-                        <tr>
-                          <td>&gt;</td>
-                          <td>
-                            Query the data for all indicator values GREATER
-                            THAN a specific value entered in the <b>Value</b> input
-                          </td>
-                        </tr>
+                          <!--  table row 5 -->
+                          <tr>
+                            <td>&gt;</td>
+                            <td>
+                              Query the data for all indicator values GREATER
+                              THAN a specific value entered in the
+                              <b>Value</b> input
+                            </td>
+                          </tr>
 
-                        <!--  table row 6 -->
-                        <tr>
-                          <td>&ge;</td>
-                          <td>
-                            Query the data for all indicator values LESS THAN
-                            OR EQUAL TO a specific value entered in the
-                            <b>Value</b> input
-                          </td>
-                        </tr>
+                          <!--  table row 6 -->
+                          <tr>
+                            <td>&ge;</td>
+                            <td>
+                              Query the data for all indicator values LESS THAN
+                              OR EQUAL TO a specific value entered in the
+                              <b>Value</b> input
+                            </td>
+                          </tr>
 
-                        <!--  table row 7 -->
-                        <tr>
-                          <td>&gt;=&nbsp;&amp;&nbsp;&lt;=</td>
-                          <td>
-                            Query the data for all indicator values BETWEEN
-                            AND INCLUDING specific values entered in the
-                            <b>Minimum</b> and <b>Maximum</b> inputs
-                          </td>
-                        </tr>
+                          <!--  table row 7 -->
+                          <tr>
+                            <td>&gt;=&nbsp;&amp;&nbsp;&lt;=</td>
+                            <td>
+                              Query the data for all indicator values BETWEEN
+                              AND INCLUDING specific values entered in the
+                              <b>Minimum</b> and <b>Maximum</b> inputs
+                            </td>
+                          </tr>
 
-                        <!--  table row 8 -->
-                        <tr>
-                          <td>&gt;&nbsp;&amp;&nbsp;&lt;</td>
-                          <td>
-                            Query the data for all Query the data for all
-                            indicator values BETWEEN specific values entered
-                            in the <b>Minimum</b> and <b>Maximum</b> inputs
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
+                          <!--  table row 8 -->
+                          <tr>
+                            <td>&gt;&nbsp;&amp;&nbsp;&lt;</td>
+                            <td>
+                              Query the data for all Query the data for all
+                              indicator values BETWEEN specific values entered
+                              in the <b>Minimum</b> and <b>Maximum</b> inputs
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
                     <!-- <h5 class="mt-8">Validate Form</h5>
                     <p>
                       To proceed past Step 2, you must validate the
@@ -963,7 +1037,13 @@
                       is lower than 10,000. Click the <b>Back</b> button to return to Step 1 to adjust your area of interest.
                     </p> -->
                     <div role="alert" class="alert alert-warning">
-                      <span>Note: Do <b>not</b> use your browser's Back or Reload buttons while using the EIS Tool, otherwise your query selections will erase. Use the tool's <b>Back</b> and <b>Next</b> buttons at the bottom of the form to go back and forward.</span>
+                      <span
+                        >Note: Do <b>not</b> use your browser's Back or Reload
+                        buttons while using the EIS Tool, otherwise your query
+                        selections will erase. Use the tool's <b>Back</b> and
+                        <b>Next</b> buttons at the bottom of the form to go back
+                        and forward.</span
+                      >
                     </div>
                     <!-- <p>
                       Click the <b>Validate Form</b> button. You have successfully validated your form when the <b>Validate Form</b> button becomes the <b>Next</b> button, and a message says the form is successfully validated.
@@ -1010,87 +1090,95 @@
                       When your indicator selections are complete, and your form is validated, click <b>Next</b>.
                       </p> -->
                   </div>
-                  <div id="Comparison">
-                      <a
-                        href="#Comparison"
-                        class="inline-block"
-                        style="text-decoration: none"
-                        aria-label="Create another query to compare with your data query"
-                      >
-                        <h3>Step 3: Comparison</h3>
-                      </a>
-                      <div
-                        class="tooltip ml-1 tooltip-right"
-                        data-tip="Click to Copy Link"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="25"
-                          height="25"
-                          fill="currentColor"
-                          class="bi bi-link-45deg copy-btn align-sub cursor-pointer inline-block opacity-50 hover:opacity-100 transition-opacity duration-300 ease-in-out"
-                          viewBox="0 0 16 16"
-                          data-copy="#Comparison"
-                        >
-                          <path
-                            d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1 1 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4 4 0 0 1-.128-1.287z"
-                          />
-                          <path
-                            d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243z"
-                          />
-                        </svg>
-                      </div>
 
-                      <p>
-                        This step is optional. Choose a time period or region to
-                        compare with your query. If you only choose a time
-                        period, the AOI will remain the same for both datasets
-                        in the comparison. If you choose an AOI, the original
-                        dataset will be compared to the data defined by the new
-                        AOI.
-                      </p>
-                      <p>
-                        Click the <b>Add Comparison</b> button to get started. A new window
-                        opens, where you can create a comparison group with AOI
-                        or attributes to compare with your data query.
-                      </p>
-                      <figure>
-                        <img
-                          class="lightbox-image object-scale-down h-144 w-192"
-                          src="Screenshots/placeholder.png"
-                          alt="Query form validation step"
-                          style="width: 100%"
+                  <div id="Comparison">
+                    <a
+                      href="#Comparison"
+                      class="inline-block"
+                      style="text-decoration: none"
+                      aria-label="Create another query to compare with your data query"
+                    >
+                      <h3>Step 3: Comparison</h3>
+                    </a>
+                    <div
+                      class="tooltip ml-1 tooltip-right"
+                      data-tip="Click to Copy Link"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="25"
+                        height="25"
+                        fill="currentColor"
+                        class="bi bi-link-45deg copy-btn align-sub cursor-pointer inline-block opacity-50 hover:opacity-100 transition-opacity duration-300 ease-in-out"
+                        viewBox="0 0 16 16"
+                        data-copy="#Comparison"
+                      >
+                        <path
+                          d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1 1 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4 4 0 0 1-.128-1.287z"
                         />
-                        <figcaption class="p-0 m-0" style="text-align: center">
-                          Step 3: <b>Create New Comparison Group</b> window seen after clicking the <b>Add Comparison</b> button.
-                        </figcaption>
-                      </figure>                      
-                      <p>
-                        To create a comparison group, you are required to give
-                        it a name. After entering the comparison's name, use the
-                        toggle to select whether to <b>Clone Existing</b> with the
-                        same AOI and attribute settings in your data query, then
-                        edit for comparison. Or choose to create a <b>New Group</b> without AOI or attribute filters set.
-                      </p>
-                      <p>
-                        Edit the comparison group's AOI and attribute filters as
-                        in previous steps for your data query.
-                      </p>
-                      <figure>
-                        <img
-                          class="lightbox-image object-scale-down h-144 w-192"
-                          src="Screenshots/placeholder.png"
-                          alt="'Add Comparison' window with options."
-                          style="width: 100%"
+                        <path
+                          d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243z"
                         />
-                        <figcaption class="p-0 m-0" style="text-align: center">
-                          Step 3: View after creating a comparison group.
-                        </figcaption>
-                      </figure>
-                      <p>
+                      </svg>
+                    </div>
+
+                    <p>
+                      This step is optional. Choose a time period or region to
+                      compare with your query. If you only choose a time period,
+                      the AOI will remain the same for both datasets in the
+                      comparison. If you choose an AOI, the original dataset
+                      will be compared to the data defined by the new AOI.
+                    </p>
+                    <p>
+                      Click the <b>Add Comparison</b> button to get started. A
+                      new window opens, where you can create a comparison group
+                      with AOI or attributes to compare with your data query.
+                    </p>
+                    <figure>
+                      <img
+                        class="lightbox-image object-scale-down h-144 w-192"
+                        src="Screenshots/placeholder.png"
+                        alt="Query form validation step"
+                        style="width: 100%"
+                      />
+                      <figcaption class="p-0 m-0" style="text-align: center">
+                        Step 3: <b>Create New Comparison Group</b> window seen
+                        after clicking the <b>Add Comparison</b> button.
+                      </figcaption>
+                    </figure>
+                    <p>
+                      To create a comparison group, you are required to give it
+                      a name. After entering the comparison's name, use the
+                      toggle to select whether to <b>Clone Existing</b> with the
+                      same AOI and attribute settings in your data query, then
+                      edit for comparison. Or choose to create a
+                      <b>New Group</b> without AOI or attribute filters set.
+                    </p>
+                    <p>
+                      Edit the comparison group's AOI and attribute filters as
+                      in previous steps for your data query.
+                    </p>
+                    <figure>
+                      <img
+                        class="lightbox-image object-scale-down h-144 w-192"
+                        src="Screenshots/placeholder.png"
+                        alt="'Add Comparison' window with options."
+                        style="width: 100%"
+                      />
+                      <figcaption class="p-0 m-0" style="text-align: center">
+                        Step 3: View after creating a comparison group.
+                      </figcaption>
+                    </figure>
+                    <!-- Keeping the following content commented out; remove after approval -->
+                    <!-- <p>
                         When your comparison selections are complete, click the <b>Validate Form</b> button. You have successfully validated your form when the <b>Validate Form</b> button becomes the <b>Next</b> button, and a message says the form is successfully validated.
-                      </p>
+                      </p> -->
+                    <p>
+                      When your comparison selections are complete, click the
+                      <b>Next</b> button to continue.
+                    </p>
                   </div>
+
                   <div id="Review">
                     <a
                       href="#Review"
@@ -1120,27 +1208,30 @@
                           d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243z"
                         />
                       </svg>
-                        <figcaption class="p-0 m-0" style="text-align: center">
-                          Step 4: Review the summary table of your query.
-                        </figcaption>
-                      </figure>
                       <p>
-                        Use the <b>Back</b> button in the tool to edit your selections.
+                        Use the <b>Back</b> button in the tool to edit your
+                        selections.
                       </p>
                       <div role="alert" class="alert alert-warning">
-                        <span>Note: Do <b>not</b> use your browser's Back or Reload buttons while using the EIS Tool, otherwise your query selections will erase. Use the tool's <b>Back</b> and <b>Next</b> buttons at the bottom of the form to go back and forward.</span>
+                        <span
+                          >Note: Do <b>not</b> use your browser's Back or Reload
+                          buttons while using the EIS Tool, otherwise your query
+                          selections will erase. Use the tool's <b>Back</b> and
+                          <b>Next</b> buttons at the bottom of the form to go
+                          back and forward.</span
+                        >
                       </div>
                       <p>
-                        You may need to wait a moment for the
-                        data to load. If there are errors, follow the
-                        instructions provided to fix the error.
+                        You may need to wait a moment for the data to load. If
+                        there are errors, follow the instructions provided to
+                        fix the error.
                       </p>
                     </div>
                     <p>
-                      Review the summary of your query details in the table.
-                      If you did not add a comparison group, you should see
-                      only one group listed, named "Default", which is your
-                      data summary query.
+                      Review the summary of your query details in the table. If
+                      you did not add a comparison group, you should see only
+                      one group listed, named "Default", which is your data
+                      summary query.
                     </p>
                     <figure>
                       <img
@@ -1154,17 +1245,25 @@
                       </figcaption>
                     </figure>
                     <p>
-                      Use the <b>Back</b> button in the tool to edit your selections.
+                      Use the <b>Back</b> button in the tool to edit your
+                      selections.
                     </p>
                     <div role="alert" class="alert alert-warning">
-                      <span>Note: Do <b>not</b> use your browser's Back or Reload buttons while using the EIS Tool, otherwise your query selections will erase. Use the tool's <b>Back</b> and <b>Next</b> buttons at the bottom of the form to go back and forward.</span>
+                      <span
+                        >Note: Do <b>not</b> use your browser's Back or Reload
+                        buttons while using the EIS Tool, otherwise your query
+                        selections will erase. Use the tool's <b>Back</b> and
+                        <b>Next</b> buttons at the bottom of the form to go back
+                        and forward.</span
+                      >
                     </div>
                     <p>
-                      You may need to wait a moment for the
-                      data to load. If there are errors, follow the
-                      instructions provided to fix the error.
+                      You may need to wait a moment for the data to load. If
+                      there are errors, follow the instructions provided to fix
+                      the error.
                     </p>
                   </div>
+
                   <div id="Results">
                     <a
                       href="#Results"
@@ -1196,12 +1295,11 @@
                       </svg>
                     </div>
                     <p>
-                      In the Results section, review your query data summary, graph indicators, interact with the table, and
-                      generate reports.
+                      In the Results section, review your query data summary,
+                      graph indicators, interact with the table, and generate
+                      reports.
                     </p>
-                    <p>
-                      First, view the summary of your query results.
-                    </p>
+                    <p>First, view the summary of your query results.</p>
                     <figure>
                       <img
                         class="lightbox-image object-scale-down h-144 w-192"
@@ -1222,12 +1320,12 @@
                       >
                         <h4>Graph</h4>
                       </a>
-                      <p>
-                        Click <b>Select</b> to create a graph.
-                      </p>
+                      <p>Click <b>Select</b> to create a graph.</p>
                       <h5>1. Select indicators to Graph</h5>
                       <p>
-                        Click the <b>Select Indicators to Graph</b> button to launch a modal to select Indicators from based on category that exist within the Results Group.
+                        Click the <b>Select Indicators to Graph</b> button to
+                        launch a modal to select Indicators from based on
+                        category that exist within the Results Group.
                       </p>
                       <figure>
                         <img
@@ -1241,40 +1339,42 @@
                         </figcaption>
                       </figure>
                       <p>
-                        Here you can add new fields to graph from the side menu and remove selections from below
-                        <ol>
-                        <li>
-                          Select a field from the menu on the left.
-                        </li>
-                        <li>
-                          (Optional) Remove unnecessary fields with the red <b>X</b> buttons. 
-                        </li>
-                        <li>
-                          Click <b>Submit</b>.
-                        </li>
-                        </ol>
+                        Here you can add new fields to graph from the side menu
+                        and remove selections from below the graph.
                       </p>
+                      <ol>
+                        <li>Select a field from the menu on the left.</li>
+                        <li>
+                          (Optional) Remove unnecessary fields with the red
+                          <b>X</b> buttons.
+                        </li>
+                        <li>Click <b>Submit</b>.</li>
+                      </ol>
+
                       <h5>2. Graphs</h5>
                       <p>
-                        This section allows the user to visualize each Indicator selected on the previous step.
+                        This section allows the user to visualize each Indicator
+                        selected on the previous step.
                       </p>
                       <figure>
-                      <img
-                        class="lightbox-image object-scale-down h-144 w-192"
-                        src="Screenshots/placeholder.png"
-                        alt="Graph produced after using 'Select Indicators to Graph' window"
-                        style="width: 100%"
-                      />
-                      <figcaption class="p-0 m-0" style="text-align: center">
-                        Results: Graph produced after selecting indicators to graph, then clicking <b>Next</b> 
-                      </figcaption>
+                        <img
+                          class="lightbox-image object-scale-down h-144 w-192"
+                          src="Screenshots/placeholder.png"
+                          alt="Graph produced after using 'Select Indicators to Graph' window"
+                          style="width: 100%"
+                        />
+                        <figcaption class="p-0 m-0" style="text-align: center">
+                          Results: Graph produced after selecting indicators to
+                          graph, then clicking <b>Next</b>
+                        </figcaption>
                       </figure>
                       <p>
-                        After selecting the Indicators to graph, click the <b>Next</b> button at the bottom, and the
-                        graph appears.
+                        After selecting the Indicators to graph, click the
+                        <b>Next</b> button at the bottom, and the graph appears.
                       </p>
                       <p>
-                        Use the <b>Box</b> and <b>Histogram</b> toggle to switch between a box plot and histogram format.
+                        Use the <b>Box</b> and <b>Histogram</b> toggle to switch
+                        between a box plot and histogram format.
                       </p>
                       <figure>
                         <img
@@ -1284,12 +1384,13 @@
                           style="width: 100%"
                         />
                         <figcaption class="p-0 m-0" style="text-align: center">
-                          Results: Graph showing <b>Box</b> and <b>Histogram</b> format toggle, <b>Edit</b> button, and hover tools.
+                          Results: Graph showing <b>Box</b> and
+                          <b>Histogram</b> format toggle, <b>Edit</b> button,
+                          and hover tools.
                         </figcaption>
                       </figure>
                       <p>
-                        Use the graph's hover tools to customize your
-                        results:
+                        Use the graph's hover tools to customize your results:
                       </p>
                       <table class="table">
                         <thead>
@@ -1302,82 +1403,207 @@
                         <tbody>
                           <!--   table row 1 -->
                           <tr>
-                            <td><svg viewBox="0 0 1000 1000" class="icon" height="1em" width="1em"><path d="m500 450c-83 0-150-67-150-150 0-83 67-150 150-150 83 0 150 67 150 150 0 83-67 150-150 150z m400 150h-120c-16 0-34 13-39 29l-31 93c-6 15-23 28-40 28h-340c-16 0-34-13-39-28l-31-94c-6-15-23-28-40-28h-120c-55 0-100-45-100-100v-450c0-55 45-100 100-100h800c55 0 100 45 100 100v450c0 55-45 100-100 100z m-400-550c-138 0-250 112-250 250 0 138 112 250 250 250 138 0 250-112 250-250 0-138-112-250-250-250z m365 380c-19 0-35 16-35 35 0 19 16 35 35 35 19 0 35-16 35-35 0-19-16-35-35-35z" transform="matrix(1 0 0 -1 0 850)"></path></svg>
+                            <td>
+                              <svg
+                                viewBox="0 0 1000 1000"
+                                class="icon"
+                                height="1em"
+                                width="1em"
+                              >
+                                <path
+                                  d="m500 450c-83 0-150-67-150-150 0-83 67-150 150-150 83 0 150 67 150 150 0 83-67 150-150 150z m400 150h-120c-16 0-34 13-39 29l-31 93c-6 15-23 28-40 28h-340c-16 0-34-13-39-28l-31-94c-6-15-23-28-40-28h-120c-55 0-100-45-100-100v-450c0-55 45-100 100-100h800c55 0 100 45 100 100v450c0 55-45 100-100 100z m-400-550c-138 0-250 112-250 250 0 138 112 250 250 250 138 0 250-112 250-250 0-138-112-250-250-250z m365 380c-19 0-35 16-35 35 0 19 16 35 35 35 19 0 35-16 35-35 0-19-16-35-35-35z"
+                                  transform="matrix(1 0 0 -1 0 850)"
+                                ></path>
+                              </svg>
                             </td>
-                            <td><b>Download plot as a PNG</b>
-                            </td>
-                            <td>Click to immediately download a PNG file of the graph to your device.
+                            <td><b>Download plot as a PNG</b></td>
+                            <td>
+                              Click to immediately download a PNG file of the
+                              graph to your device.
                             </td>
                           </tr>
 
                           <!--   table row 2 -->
                           <tr>
-                            <td><svg viewBox="0 0 1000 1000" class="icon" height="1em" width="1em"><path d="m1000-25l-250 251c40 63 63 138 63 218 0 224-182 406-407 406-224 0-406-182-406-406s183-406 407-406c80 0 155 22 218 62l250-250 125 125z m-812 250l0 438 437 0 0-438-437 0z m62 375l313 0 0-312-313 0 0 312z" transform="matrix(1 0 0 -1 0 850)"></path></svg></svg>
+                            <td>
+                              <svg
+                                viewBox="0 0 1000 1000"
+                                class="icon"
+                                height="1em"
+                                width="1em"
+                              >
+                                <path
+                                  d="m1000-25l-250 251c40 63 63 138 63 218 0 224-182 406-407 406-224 0-406-182-406-406s183-406 407-406c80 0 155 22 218 62l250-250 125 125z m-812 250l0 438 437 0 0-438-437 0z m62 375l313 0 0-312-313 0 0 312z"
+                                  transform="matrix(1 0 0 -1 0 850)"
+                                ></path>
+                              </svg>
                             </td>
-                            <td><b>Zoom</b>
-                            </td>
-                            <td>Click, then draw a rectangle on the graph to zoom in. With <b>Zoom</b> selected, double click in the graph to reset.
+                            <td><b>Zoom</b></td>
+                            <td>
+                              Click, then draw a rectangle on the graph to zoom
+                              in. With <b>Zoom</b> selected, double click in the
+                              graph to reset.
                             </td>
                           </tr>
 
                           <!--   table row 3 -->
                           <tr>
-                            <td><svg viewBox="0 0 1000 1000" class="icon" height="1em" width="1em"><path d="m1000 350l-187 188 0-125-250 0 0 250 125 0-188 187-187-187 125 0 0-250-250 0 0 125-188-188 186-187 0 125 252 0 0-250-125 0 187-188 188 188-125 0 0 250 250 0 0-126 187 188z" transform="matrix(1 0 0 -1 0 850)"></path></svg>
+                            <td>
+                              <svg
+                                viewBox="0 0 1000 1000"
+                                class="icon"
+                                height="1em"
+                                width="1em"
+                              >
+                                <path
+                                  d="m1000 350l-187 188 0-125-250 0 0 250 125 0-188 187-187-187 125 0 0-250-250 0 0 125-188-188 186-187 0 125 252 0 0-250-125 0 187-188 188 188-125 0 0 250 250 0 0-126 187 188z"
+                                  transform="matrix(1 0 0 -1 0 850)"
+                                ></path>
+                              </svg>
                             </td>
                             <td><b>Pan</b></td>
-                            <td>Click, then click the graph and drag to pan the graph area. With <b>Pan</b> selected, double click on the graph to reset
+                            <td>
+                              Click, then click the graph and drag to pan the
+                              graph area. With <b>Pan</b> selected, double click
+                              on the graph to reset
                             </td>
                           </tr>
 
-                          <!--   table row 4 -->                          
+                          <!--   table row 4 -->
                           <tr>
                             <td>
-                              <svg viewBox="0 0 1000 1000" class="icon" height="1em" width="1em"><path d="m0 850l0-143 143 0 0 143-143 0z m286 0l0-143 143 0 0 143-143 0z m285 0l0-143 143 0 0 143-143 0z m286 0l0-143 143 0 0 143-143 0z m-857-286l0-143 143 0 0 143-143 0z m857 0l0-143 143 0 0 143-143 0z m-857-285l0-143 143 0 0 143-143 0z m857 0l0-143 143 0 0 143-143 0z m-857-286l0-143 143 0 0 143-143 0z m286 0l0-143 143 0 0 143-143 0z m285 0l0-143 143 0 0 143-143 0z m286 0l0-143 143 0 0 143-143 0z" transform="matrix(1 0 0 -1 0 850)"></path></svg>
+                              <svg
+                                viewBox="0 0 1000 1000"
+                                class="icon"
+                                height="1em"
+                                width="1em"
+                              >
+                                <path
+                                  d="m0 850l0-143 143 0 0 143-143 0z m286 0l0-143 143 0 0 143-143 0z m285 0l0-143 143 0 0 143-143 0z m286 0l0-143 143 0 0 143-143 0z m-857-286l0-143 143 0 0 143-143 0z m857 0l0-143 143 0 0 143-143 0z m-857-285l0-143 143 0 0 143-143 0z m857 0l0-143 143 0 0 143-143 0z m-857-286l0-143 143 0 0 143-143 0z m286 0l0-143 143 0 0 143-143 0z m285 0l0-143 143 0 0 143-143 0z m286 0l0-143 143 0 0 143-143 0z"
+                                  transform="matrix(1 0 0 -1 0 850)"
+                                ></path>
+                              </svg>
                             </td>
                             <td><b>Box select</b></td>
-                            <td>Click to activate, then click and drag on the graph to draw a rectangle. Adjust the size of the rectangle until the intended selection is made. Double click the rectangle to erase.</td>
+                            <td>
+                              Click to activate, then click and drag on the
+                              graph to draw a rectangle. Adjust the size of the
+                              rectangle until the intended selection is made.
+                              Double click the rectangle to erase.
+                            </td>
                           </tr>
 
                           <!--  table row 5 -->
                           <tr>
-                            <td><svg viewBox="0 0 1031 1000" class="icon" height="1em" width="1em"><path d="m1018 538c-36 207-290 336-568 286-277-48-473-256-436-463 10-57 36-108 76-151-13-66 11-137 68-183 34-28 75-41 114-42l-55-70 0 0c-2-1-3-2-4-3-10-14-8-34 5-45 14-11 34-8 45 4 1 1 2 3 2 5l0 0 113 140c16 11 31 24 45 40 4 3 6 7 8 11 48-3 100 0 151 9 278 48 473 255 436 462z m-624-379c-80 14-149 48-197 96 42 42 109 47 156 9 33-26 47-66 41-105z m-187-74c-19 16-33 37-39 60 50-32 109-55 174-68-42-25-95-24-135 8z m360 75c-34-7-69-9-102-8 8 62-16 128-68 170-73 59-175 54-244-5-9 20-16 40-20 61-28 159 121 317 333 354s407-60 434-217c28-159-121-318-333-355z" transform="matrix(1 0 0 -1 0 850)"></path></svg></td>
+                            <td>
+                              <svg
+                                viewBox="0 0 1031 1000"
+                                class="icon"
+                                height="1em"
+                                width="1em"
+                              >
+                                <path
+                                  d="m1018 538c-36 207-290 336-568 286-277-48-473-256-436-463 10-57 36-108 76-151-13-66 11-137 68-183 34-28 75-41 114-42l-55-70 0 0c-2-1-3-2-4-3-10-14-8-34 5-45 14-11 34-8 45 4 1 1 2 3 2 5l0 0 113 140c16 11 31 24 45 40 4 3 6 7 8 11 48-3 100 0 151 9 278 48 473 255 436 462z m-624-379c-80 14-149 48-197 96 42 42 109 47 156 9 33-26 47-66 41-105z m-187-74c-19 16-33 37-39 60 50-32 109-55 174-68-42-25-95-24-135 8z m360 75c-34-7-69-9-102-8 8 62-16 128-68 170-73 59-175 54-244-5-9 20-16 40-20 61-28 159 121 317 333 354s407-60 434-217c28-159-121-318-333-355z"
+                                  transform="matrix(1 0 0 -1 0 850)"
+                                ></path>
+                              </svg>
+                            </td>
                             <td><b>Lasso select</b></td>
-                            <td>Click to activate, then click and drag on the graph to draw a rectangle. Adjust the size of the rectangle until the intended selection is made. Double click the rectangle to erase.</td>
+                            <td>
+                              Click to activate, then click and drag on the
+                              graph to draw a rectangle. Adjust the size of the
+                              rectangle until the intended selection is made.
+                              Double click the rectangle to erase.
+                            </td>
                           </tr>
 
                           <!--  table row 6 -->
                           <tr>
-                            <td><svg viewBox="0 0 875 1000" class="icon" height="1em" width="1em"><path d="m1 787l0-875 875 0 0 875-875 0z m687-500l-187 0 0-187-125 0 0 187-188 0 0 125 188 0 0 187 125 0 0-187 187 0 0-125z" transform="matrix(1 0 0 -1 0 850)"></path></svg></td>
+                            <td>
+                              <svg
+                                viewBox="0 0 875 1000"
+                                class="icon"
+                                height="1em"
+                                width="1em"
+                              >
+                                <path
+                                  d="m1 787l0-875 875 0 0 875-875 0z m687-500l-187 0 0-187-125 0 0 187-188 0 0 125 188 0 0 187 125 0 0-187 187 0 0-125z"
+                                  transform="matrix(1 0 0 -1 0 850)"
+                                ></path>
+                              </svg>
+                            </td>
                             <td><b>Zoom in</b></td>
                             <td>
-                              Click to zoom in the graph view. Repeat click until zoomed in as intended. Click the <b>Reset axes</b> icon to reset.
+                              Click to zoom in the graph view. Repeat click
+                              until zoomed in as intended. Click the
+                              <b>Reset axes</b> icon to reset.
                             </td>
                           </tr>
 
                           <!--  table row 7 -->
                           <tr>
-                            <td><svg viewBox="0 0 875 1000" class="icon" height="1em" width="1em"><path d="m0 788l0-876 875 0 0 876-875 0z m688-500l-500 0 0 125 500 0 0-125z" transform="matrix(1 0 0 -1 0 850)"></path></svg></td>
+                            <td>
+                              <svg
+                                viewBox="0 0 875 1000"
+                                class="icon"
+                                height="1em"
+                                width="1em"
+                              >
+                                <path
+                                  d="m0 788l0-876 875 0 0 876-875 0z m688-500l-500 0 0 125 500 0 0-125z"
+                                  transform="matrix(1 0 0 -1 0 850)"
+                                ></path>
+                              </svg>
+                            </td>
                             <td><b>Zoom out</b></td>
                             <td>
-                              Click to zoom out the graph view. Repeat click until zoomed out as intended. Click the <b>Reset axes</b> icon to reset.
+                              Click to zoom out the graph view. Repeat click
+                              until zoomed out as intended. Click the
+                              <b>Reset axes</b> icon to reset.
                             </td>
                           </tr>
 
                           <!--  table row 8 -->
                           <tr>
-                            <td><svg viewBox="0 0 1000 1000" class="icon" height="1em" width="1em"><path d="m250 850l-187 0-63 0 0-62 0-188 63 0 0 188 187 0 0 62z m688 0l-188 0 0-62 188 0 0-188 62 0 0 188 0 62-62 0z m-875-938l0 188-63 0 0-188 0-62 63 0 187 0 0 62-187 0z m875 188l0-188-188 0 0-62 188 0 62 0 0 62 0 188-62 0z m-125 188l-1 0-93-94-156 156 156 156 92-93 2 0 0 250-250 0 0-2 93-92-156-156-156 156 94 92 0 2-250 0 0-250 0 0 93 93 157-156-157-156-93 94 0 0 0-250 250 0 0 0-94 93 156 157 156-157-93-93 0 0 250 0 0 250z" transform="matrix(1 0 0 -1 0 850)"></path></svg></td>
+                            <td>
+                              <svg
+                                viewBox="0 0 1000 1000"
+                                class="icon"
+                                height="1em"
+                                width="1em"
+                              >
+                                <path
+                                  d="m250 850l-187 0-63 0 0-62 0-188 63 0 0 188 187 0 0 62z m688 0l-188 0 0-62 188 0 0-188 62 0 0 188 0 62-62 0z m-875-938l0 188-63 0 0-188 0-62 63 0 187 0 0 62-187 0z m875 188l0-188-188 0 0-62 188 0 62 0 0 62 0 188-62 0z m-125 188l-1 0-93-94-156 156 156 156 92-93 2 0 0 250-250 0 0-2 93-92-156-156-156 156 94 92 0 2-250 0 0-250 0 0 93 93 157-156-157-156-93 94 0 0 0-250 250 0 0 0-94 93 156 157 156-157-93-93 0 0 250 0 0 250z"
+                                  transform="matrix(1 0 0 -1 0 850)"
+                                ></path>
+                              </svg>
+                            </td>
                             <td><b>Autoscale</b></td>
                             <td>
-                              Click to automatically scale the graph axes to best fit the data plotted.
+                              Click to automatically scale the graph axes to
+                              best fit the data plotted.
                             </td>
                           </tr>
 
                           <!--  table row 9 -->
                           <tr>
-                            <td><svg viewBox="0 0 928.6 1000" class="icon" height="1em" width="1em"><path d="m786 296v-267q0-15-11-26t-25-10h-214v214h-143v-214h-214q-15 0-25 10t-11 26v267q0 1 0 2t0 2l321 264 321-264q1-1 1-4z m124 39l-34-41q-5-5-12-6h-2q-7 0-12 3l-386 322-386-322q-7-4-13-4-7 2-12 7l-35 41q-4 5-3 13t6 12l401 334q18 15 42 15t43-15l136-114v109q0 8 5 13t13 5h107q8 0 13-5t5-13v-227l122-102q5-5 6-12t-4-13z" transform="matrix(1 0 0 -1 0 850)"></path></svg></td>
+                            <td>
+                              <svg
+                                viewBox="0 0 928.6 1000"
+                                class="icon"
+                                height="1em"
+                                width="1em"
+                              >
+                                <path
+                                  d="m786 296v-267q0-15-11-26t-25-10h-214v214h-143v-214h-214q-15 0-25 10t-11 26v267q0 1 0 2t0 2l321 264 321-264q1-1 1-4z m124 39l-34-41q-5-5-12-6h-2q-7 0-12 3l-386 322-386-322q-7-4-13-4-7 2-12 7l-35 41q-4 5-3 13t6 12l401 334q18 15 42 15t43-15l136-114v109q0 8 5 13t13 5h107q8 0 13-5t5-13v-227l122-102q5-5 6-12t-4-13z"
+                                  transform="matrix(1 0 0 -1 0 850)"
+                                ></path>
+                              </svg>
+                            </td>
                             <td><b>Reset axes</b></td>
                             <td>
-                              Click to restore the graph axes to their default scale.
+                              Click to restore the graph axes to their default
+                              scale.
                             </td>
                           </tr>
                         </tbody>
@@ -1396,7 +1622,9 @@
                         graphs you created.
                       </p> -->
                       <p>
-                        Use the <b>Edit</b> button above your graph to open the <b>Edit Graph</b> window, where you can change the graph's information or delete the graph.
+                        Use the <b>Edit</b> button above your graph to open the
+                        <b>Edit Graph</b> window, where you can change the
+                        graph's information or delete the graph.
                       </p>
                       <figure>
                         <img
@@ -1410,19 +1638,26 @@
                         </figcaption>
                       </figure>
                       <p>
-                        With the <b>Edit Graph</b> window open, change the title and description in the text boxes. Click <b>Settings</b> to <b>Reset Form</b> and <b>Erase Graphs</b>.
+                        With the <b>Edit Graph</b> window open, change the title
+                        and description in the text boxes. Click
+                        <b>Settings</b> to <b>Reset Form</b> and
+                        <b>Erase Graphs</b>.
                       </p>
                       <div role="alert" class="alert alert-warning">
-                        <span>Note: You cannot undo <b>Reset Form</b> or <b>Erase Graphs</b>.</span>
+                        <span
+                          >Note: You cannot undo <b>Reset Form</b> or
+                          <b>Erase Graphs</b>.</span
+                        >
                       </div>
                       <p>
-                        If you accidentally erase your graphs, your data summary will still be available to create new
-                        graphs.
+                        If you accidentally erase your graphs, your data summary
+                        will still be available to create new graphs.
                       </p>
                       <p>
-                        Click <b>Save Graph</b> to save your changes, or <b>Close</b> to return without saving.
+                        Click <b>Save Graph</b> to save your changes, or
+                        <b>Close</b> to return without saving.
                       </p>
-                    </div>                   
+                    </div>
                     <div id="Export">
                       <a
                         href="#Export"
@@ -1430,56 +1665,43 @@
                         style="text-decoration: none"
                         aria-label="View data in reports and files"
                       >
-                        <h5 class="mt-8">
-                          3. Export
-                        </h5>
+                        <h5 class="mt-8">3. Export</h5>
                       </a>
-                      <p>
-                        This section allows exporting data
+                      <p>This section allows exporting data</p>
                       <ul>
                         <li>
-                          Report: Launches a step through modal that allows the user to configure the PDF.
+                          <b>Report</b>: Launches a step through modal that
+                          allows the user to configure the PDF.
                         </li>
                         <li>
-                          Graphs (.zip): Exports all the created graphs to images that are in a compressed folder
+                          <b>Graphs (.zip)</b>: Exports all the created graphs
+                          to images that are in a compressed folder
                         </li>
                         <li>
-                          Shapefile: Exports any AOIs that were created during this process that can be imported into the app in future queries.
+                          <b>Shapefile</b>: Exports any AOIs that were created
+                          during this process that can be imported into the app
+                          in future queries.
                         </li>
                       </ul>
-                      </p>
                       <!-- <p>
                         Click the <b>Export Results</b> button in the sidebar footer.
                         A menu of options appears:
                       </p> -->
-                      <h6>
-                        Report
-                      </h6>
+                      <h6>Report</h6>
                       <p>
-                        Click <b>Report</b> to generate a PDF report of your data summary.
+                        Click <b>Report</b> to generate a PDF report of your
+                        data summary.
                       </p>
-                      <p>
-                        Add customized content to your report:
-                      </p>
+                      <p>Add customized content to your report:</p>
                       <div>
                         <ul>
-                          <li>
-                            "Title/Description"
-                          </li>
-                          <li>
-                            "Map"
-                          </li>
-                          <li>
-                            "Graphs"
-                          </li>
-                          <li>
-                            "Links"
-                          </li>
+                          <li>"Title/Description"</li>
+                          <li>"Map"</li>
+                          <li>"Graphs"</li>
+                          <li>"Links"</li>
                         </ul>
                       </div>
-                      <p>
-                        Click <b>Submit</b> to generate your PDF file.
-                      </p>
+                      <p>Click <b>Submit</b> to generate your PDF file.</p>
                       <figure>
                         <img
                           class="lightbox-image object-scale-down h-144 w-192"
@@ -1491,18 +1713,16 @@
                           Results: <b>Report Generator</b> window options.
                         </figcaption>
                       </figure>
-                      <h6>
-                        Graphs &#40;.zip&#41;
-                      </h6> 
+                      <h6>Graphs &#40;.zip&#41;</h6>
                       <p>
-                        Click <b>Graphs &#40;.zip&#41;</b> to export all graphs as a zipped folder of image files. The files will download automatically.
+                        Click <b>Graphs &#40;.zip&#41;</b> to export all graphs
+                        as a zipped folder of image files. The files will
+                        download automatically.
                       </p>
-                      <h6>
-                        Shapefile
-                      </h6> 
+                      <h6>Shapefile</h6>
                       <p>
-                        Click <b>Shapefile</b> to export your data summary results
-                          as a shapefile.
+                        Click <b>Shapefile</b> to export your data summary
+                        results as a shapefile.
                       </p>
                       <figure>
                         <img
@@ -1523,12 +1743,15 @@
                         style="text-decoration: none"
                         aria-label="View data in tables"
                       >
-                        <h4 class="mt-8">
-                          Table
-                        </h4>
+                        <h4 class="mt-8">Table</h4>
                       </a>
                       <p>
-                        The table contains the output from the Query Group(s) you ran through the Query Form. To interact, type values in the <b>Filter</b> input to the left to filter the table results. Select the table column names to sort. Click the <b>Export</b> button to download Excel or CSV files of your results to your device.
+                        The table contains the output from the Query Group(s)
+                        you ran through the Query Form. To interact, type values
+                        in the <b>Filter</b> input to the left to filter the
+                        table results. Select the table column names to sort.
+                        Click the <b>Export</b> button to download Excel or CSV
+                        files of your results to your device.
                       </p>
                       <figure>
                         <img
@@ -1541,329 +1764,325 @@
                           Options for interacting with table results.
                         </figcaption>
                       </figure>
+                    </div>
                   </div>
                 </div>
 
-                <div id="Glossary_of_Terms_and_Acronyms" class="prose p-2 scroll-section">
-                    <a
-                      href="#Glossary_of_Terms_and_Acronyms"
-                      class="inline-block"
-                      style="text-decoration: none"
-                      aria-label="Definitions of acronyms and terms"
+                <div
+                  id="Glossary_of_Terms_and_Acronyms"
+                  class="prose p-2 scroll-section"
+                >
+                  <a
+                    href="#Glossary_of_Terms_and_Acronyms"
+                    class="inline-block"
+                    style="text-decoration: none"
+                    aria-label="Definitions of acronyms and terms"
+                  >
+                    <h3>Glossary of Terms and Acronyms</h3>
+                  </a>
+                  <div
+                    class="tooltip ml-1 tooltip-right"
+                    data-tip="Click to Copy Link"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="25"
+                      height="25"
+                      fill="currentColor"
+                      class="bi bi-link-45deg copy-btn align-sub cursor-pointer inline-block opacity-50 hover:opacity-100 transition-opacity duration-300 ease-in-out"
+                      viewBox="0 0 16 16"
+                      data-copy="#Glossary_of_Terms_and_Acronyms"
                     >
-                      <h3>Glossary of Terms and Acronyms</h3>
-                    </a>
-                    <div
-                      class="tooltip ml-1 tooltip-right"
-                      data-tip="Click to Copy Link"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="25"
-                        height="25"
-                        fill="currentColor"
-                        class="bi bi-link-45deg copy-btn align-sub cursor-pointer inline-block opacity-50 hover:opacity-100 transition-opacity duration-300 ease-in-out"
-                        viewBox="0 0 16 16"
-                        data-copy="#Glossary_of_Terms_and_Acronyms"
-                      >
-                        <path
-                          d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1 1 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4 4 0 0 1-.128-1.287z"
-                        />
-                        <path
-                          d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243z"
-                        />
-                      </svg>
-                    </div>
+                      <path
+                        d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1 1 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4 4 0 0 1-.128-1.287z"
+                      />
+                      <path
+                        d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243z"
+                      />
+                    </svg>
+                  </div>
 
-                    <h4>Acronyms</h4>
-                    <div
-                      class="overflow-x-auto rounded-box border border-base-content/5 bg-base-100 mb-8 p-4"
-                    >
-                      <table class="table">
-                        <thead>
-                          <tr>
-                            <th>Acronym</th>
-                            <th>Description</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <!--   table row 1 -->
-                          <tr>
-                            <td>AIM</td>
-                            <td>
-                              Assessment, Inventory, and Monitoring Program
-                            </td>
-                          </tr>
+                  <h4>Acronyms</h4>
+                  <div
+                    class="overflow-x-auto rounded-box border border-base-content/5 bg-base-100 mb-8 p-4"
+                  >
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th>Acronym</th>
+                          <th>Description</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <!--   table row 1 -->
+                        <tr>
+                          <td>AIM</td>
+                          <td>Assessment, Inventory, and Monitoring Program</td>
+                        </tr>
 
-                          <!--  table row 2 -->
-                          <tr>
-                            <td>BLM</td>
-                            <td>Bureau of Land Management</td>
-                          </tr>
+                        <!--  table row 2 -->
+                        <tr>
+                          <td>BLM</td>
+                          <td>Bureau of Land Management</td>
+                        </tr>
 
-                          <!--  table row 3 -->
-                          <tr>
-                            <td>ESD</td>
-                            <td>Ecological Site Description</td>
-                          </tr>
+                        <!--  table row 3 -->
+                        <tr>
+                          <td>ESD</td>
+                          <td>Ecological Site Description</td>
+                        </tr>
 
-                          <!--  table row 4 -->
-                          <tr>
-                            <td>ESS</td>
-                            <td>Ecological Site Summary</td>
-                          </tr>
+                        <!--  table row 4 -->
+                        <tr>
+                          <td>ESS</td>
+                          <td>Ecological Site Summary</td>
+                        </tr>
 
-                          <!--  table row 5 -->
-                          <tr>
-                            <td>LMF</td>
-                            <td>Landscape Modeling Framework</td>
-                          </tr>
+                        <!--  table row 5 -->
+                        <tr>
+                          <td>LMF</td>
+                          <td>Landscape Modeling Framework</td>
+                        </tr>
 
-                          <!--  table row 6 -->
-                          <tr>
-                            <td>MLRA</td>
-                            <td>Major Land Resource Area</td>
-                          </tr>
+                        <!--  table row 6 -->
+                        <tr>
+                          <td>MLRA</td>
+                          <td>Major Land Resource Area</td>
+                        </tr>
 
-                          <!--  table row 7 -->
-                          <tr>
-                            <td>STM</td>
-                            <td>State and Transition Model</td>
-                          </tr>
+                        <!--  table row 7 -->
+                        <tr>
+                          <td>STM</td>
+                          <td>State and Transition Model</td>
+                        </tr>
 
-                          <!--  table row 8 -->
-                          <tr>
-                            <td>TerrADat</td>
-                            <td>Terrestrial AIM Database</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                    <h4>Terms</h4>
-                    <div
-                      class="overflow-x-auto rounded-box border border-base-content/5 bg-base-100 mb-8 p-4"
-                    >
-                      <table class="table">
-                        <thead>
-                          <tr>
-                            <th>Term</th>
-                            <th>Definition</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <!--   table row 1 -->
-                          <tr>
-                            <td>Annual biomass production</td>
-                            <td>
-                              The amount of organic plant matter produced in a
-                              given area over the course of a year
-                            </td>
-                          </tr>
+                        <!--  table row 8 -->
+                        <tr>
+                          <td>TerrADat</td>
+                          <td>Terrestrial AIM Database</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <h4>Terms</h4>
+                  <div
+                    class="overflow-x-auto rounded-box border border-base-content/5 bg-base-100 mb-8 p-4"
+                  >
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th>Term</th>
+                          <th>Definition</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <!--   table row 1 -->
+                        <tr>
+                          <td>Annual biomass production</td>
+                          <td>
+                            The amount of organic plant matter produced in a
+                            given area over the course of a year
+                          </td>
+                        </tr>
 
-                          <!--  table row 2 -->
-                          <tr>
-                            <td>Ecological potential</td>
-                            <td>
-                              The greatest potential fractional cover &#40;bare
-                              ground, herbaceous, litter, shrub, and
-                              sagebrush&#41; represented in the least disturbed
-                              areas and most productive years of the record for
-                              a given plot of land. It is a measurement of how
-                              much biomass could grow in a region given perfect
-                              conditions
-                            </td>
-                          </tr>
+                        <!--  table row 2 -->
+                        <tr>
+                          <td>Ecological potential</td>
+                          <td>
+                            The greatest potential fractional cover &#40;bare
+                            ground, herbaceous, litter, shrub, and
+                            sagebrush&#41; represented in the least disturbed
+                            areas and most productive years of the record for a
+                            given plot of land. It is a measurement of how much
+                            biomass could grow in a region given perfect
+                            conditions
+                          </td>
+                        </tr>
 
-                          <!--  table row 3 -->
-                          <tr>
-                            <td>Ecological restoration and reclamation</td>
-                            <td>
-                              The process of assisting the recovery of severely
-                              degraded ecosystems to benefit native biota
-                              through the establishment of habitats,
-                              populations, communities, or ecosystems that are
-                              similar, but not necessarily identical to
-                              surrounding and naturally occurring ecosystems
-                              <a
-                                id="ecological_restoration_and_reclamation_url"
-                                class="underline"
-                                target="_blank"
-                                >&#40;Gerwing et al., 2021&#41;</a
-                              >
-                            </td>
-                          </tr>
+                        <!--  table row 3 -->
+                        <tr>
+                          <td>Ecological restoration and reclamation</td>
+                          <td>
+                            The process of assisting the recovery of severely
+                            degraded ecosystems to benefit native biota through
+                            the establishment of habitats, populations,
+                            communities, or ecosystems that are similar, but not
+                            necessarily identical to surrounding and naturally
+                            occurring ecosystems
+                            <a
+                              id="ecological_restoration_and_reclamation_url"
+                              class="underline"
+                              target="_blank"
+                              >&#40;Gerwing et al., 2021&#41;</a
+                            >
+                          </td>
+                        </tr>
 
-                          <!--  table row 4 -->
-                          <tr>
-                            <td>Ecological site</td>
-                            <td>
-                              A distinctive kind of land with specific soil and
-                              physical characteristics that differ from other
-                              kinds of land in its ability to produce
-                              distinctive kinds and amounts of vegetation, and
-                              in its ability to respond similarly to management
-                              actions and natural disturbances
-                              <a
-                                id="usda_nrcs_url"
-                                class="underline"
-                                target="_blank"
-                                >&#40;USDA-NRCS&#41;</a
-                              >
-                            </td>
-                          </tr>
+                        <!--  table row 4 -->
+                        <tr>
+                          <td>Ecological site</td>
+                          <td>
+                            A distinctive kind of land with specific soil and
+                            physical characteristics that differ from other
+                            kinds of land in its ability to produce distinctive
+                            kinds and amounts of vegetation, and in its ability
+                            to respond similarly to management actions and
+                            natural disturbances
+                            <a
+                              id="usda_nrcs_url"
+                              class="underline"
+                              target="_blank"
+                              >&#40;USDA-NRCS&#41;</a
+                            >
+                          </td>
+                        </tr>
 
-                          <!--  table row 5 -->
-                          <tr>
-                            <td>Ecoregion</td>
-                            <td>
-                              A major ecosystem defined by distinctive geography
-                              and receiving uniform solar radiation and
-                              moisture. They are areas where ecosystems &#40;and
-                              the type, quality, and quantity of environmental
-                              resources&#41; are generally similar. Designed to
-                              serve as a spatial framework for the research,
-                              assessment, and monitoring of ecosystems and
-                              ecosystem components, ecoregions denote areas of
-                              similarity in the mosaic of biotic, abiotic,
-                              terrestrial, and aquatic ecosystem components with
-                              humans being considered as part of the biota.
-                              Ecoregions are identified by analyzing the
-                              patterns and composition of biotic and abiotic
-                              phenomena that affect or reflect differences in
-                              ecosystem quality and integrity
-                              <a
-                                id="omernik_1987"
-                                class="underline"
-                                target="_blank"
-                                >&#40;Omernik 1987&#41;</a
-                              >
-                              These phenomena include geology, landforms, soils,
-                              vegetation, climate, land use, wildlife, and
-                              hydrology. More details can be found on the
-                              <a
-                                id="epa_url"
-                                class="underline"
-                                target="_blank"
-                                >EPA's website</a
-                              >
-                            </td>
-                          </tr>
+                        <!--  table row 5 -->
+                        <tr>
+                          <td>Ecoregion</td>
+                          <td>
+                            A major ecosystem defined by distinctive geography
+                            and receiving uniform solar radiation and moisture.
+                            They are areas where ecosystems &#40;and the type,
+                            quality, and quantity of environmental
+                            resources&#41; are generally similar. Designed to
+                            serve as a spatial framework for the research,
+                            assessment, and monitoring of ecosystems and
+                            ecosystem components, ecoregions denote areas of
+                            similarity in the mosaic of biotic, abiotic,
+                            terrestrial, and aquatic ecosystem components with
+                            humans being considered as part of the biota.
+                            Ecoregions are identified by analyzing the patterns
+                            and composition of biotic and abiotic phenomena that
+                            affect or reflect differences in ecosystem quality
+                            and integrity
+                            <a
+                              id="omernik_1987"
+                              class="underline"
+                              target="_blank"
+                              >&#40;Omernik 1987&#41;</a
+                            >
+                            These phenomena include geology, landforms, soils,
+                            vegetation, climate, land use, wildlife, and
+                            hydrology. More details can be found on the
+                            <a id="epa_url" class="underline" target="_blank"
+                              >EPA's website</a
+                            >
+                          </td>
+                        </tr>
 
-                          <!--  table row 6 -->
-                          <tr>
-                            <td>Management actions</td>
-                            <td>
-                              Decisions and actions made under an approach to
-                              maintaining the health and productivity of an
-                              ecosystem while sustaining appropriate human uses.
-                              More details can be found in
-                              <a
-                                id="brussard_1998"
-                                class="underline"
-                                target="_blank"
-                              >
-                                Brussard et al., 1998</a
-                              >
-                            </td>
-                          </tr>
+                        <!--  table row 6 -->
+                        <tr>
+                          <td>Management actions</td>
+                          <td>
+                            Decisions and actions made under an approach to
+                            maintaining the health and productivity of an
+                            ecosystem while sustaining appropriate human uses.
+                            More details can be found in
+                            <a
+                              id="brussard_1998"
+                              class="underline"
+                              target="_blank"
+                            >
+                              Brussard et al., 1998</a
+                            >
+                          </td>
+                        </tr>
 
-                          <!--  table row 7 -->
-                          <tr>
-                            <td>Natural Disturbance</td>
-                            <td>
-                              Disturbances are events, like tornados, wildfires
-                              or floods that cause marked changes to the
-                              impacted area. Examples of ecological disturbances
-                              include fires, landslides, flooding, windstorms
-                              and insect and pest outbreaks. Disturbances often
-                              come in the form of short-term or temporary
-                              changes to the landscape but can have very
-                              significant ecosystem impacts. These events often
-                              act quickly but with great impact and thereby are
-                              able to promote changes to the physical structure
-                              of the system. For example, a fire burning over a
-                              mature forest results in a different composition
-                              of species after the disturbance event. Other
-                              types of disturbances may occur over longer,
-                              persistent timeframes that also can promote
-                              changes to the biodiversity or health of the
-                              system. More details can be found on the
-                              <a
-                                id="natural_disturbance_url"
-                                class="underline"
-                                target="_blank"
-                                >USDA's website</a
-                              >
-                            </td>
-                          </tr>
+                        <!--  table row 7 -->
+                        <tr>
+                          <td>Natural Disturbance</td>
+                          <td>
+                            Disturbances are events, like tornados, wildfires or
+                            floods that cause marked changes to the impacted
+                            area. Examples of ecological disturbances include
+                            fires, landslides, flooding, windstorms and insect
+                            and pest outbreaks. Disturbances often come in the
+                            form of short-term or temporary changes to the
+                            landscape but can have very significant ecosystem
+                            impacts. These events often act quickly but with
+                            great impact and thereby are able to promote changes
+                            to the physical structure of the system. For
+                            example, a fire burning over a mature forest results
+                            in a different composition of species after the
+                            disturbance event. Other types of disturbances may
+                            occur over longer, persistent timeframes that also
+                            can promote changes to the biodiversity or health of
+                            the system. More details can be found on the
+                            <a
+                              id="natural_disturbance_url"
+                              class="underline"
+                              target="_blank"
+                              >USDA's website</a
+                            >
+                          </td>
+                        </tr>
 
-                          <!--  table row 8 -->
-                          <tr>
-                            <td>Physiographic features</td>
-                            <td>
-                              The physical features and processes of landforms
-                              and their relation to geologic structures,
-                              including the soils, topography, land slope and
-                              aspect, and local climate, that influence the form
-                              and species composition of plant communities.
-                            </td>
-                          </tr>
-                          <!--  table row 9 -->
-                          <tr>
-                            <td>Plant community composition</td>
-                            <td>
-                              A description of vegetation in a fixed area by the
-                              species present and their abundance.
-                              <a
-                                id="plant_community_composition"
-                                class="underline"
-                                target="_blank"
-                                >&#40;Jaroszynska et al.&#41;</a
-                              >
-                            </td>
-                          </tr>
-                          <!--  table row 10 -->
-                          <tr>
-                            <td>Plant-wildlife interactions</td>
-                            <td>
-                              Relationships between the plants and animals in a
-                              given ecosystem. These relationships include
-                              predation, parasitism, commensalism, or mutualism
-                              and do not require direct physical contact.
-                              Important plant-wildlife interactions are
-                              pollination, seed dispersal, and herbivory. The
-                              plants and animals have co-evolved these adaptive
-                              mechanisms to maximize the chance of survival.
-                            </td>
-                          </tr>
-                          <!--  table row 11 -->
-                          <tr>
-                            <td>State-and-Transition model</td>
-                            <td>
-                              These models synthesize literature and informal
-                              knowledge tied to particular ecological sites to
-                              distinguish changes in vegetation and soils that
-                              are easily reversible versus changes that are
-                              subject to thresholds beyond which reversal is
-                              costly or impossible. The models describe all
-                              possible states, community phases &#40;i.e.,
-                              easily-reversible variants of states&#41;, and
-                              transitions between communities and states.
-                              Transitions contain information about mechanisms,
-                              triggers, thresholds, and indicators of threshold
-                              development. More details can be found on the
-                              <a
-                                id="esd_url"
-                                class="underline"
-                                target="_blank"
-                                >Jornada website</a
-                              >
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
+                        <!--  table row 8 -->
+                        <tr>
+                          <td>Physiographic features</td>
+                          <td>
+                            The physical features and processes of landforms and
+                            their relation to geologic structures, including the
+                            soils, topography, land slope and aspect, and local
+                            climate, that influence the form and species
+                            composition of plant communities.
+                          </td>
+                        </tr>
+                        <!--  table row 9 -->
+                        <tr>
+                          <td>Plant community composition</td>
+                          <td>
+                            A description of vegetation in a fixed area by the
+                            species present and their abundance.
+                            <a
+                              id="plant_community_composition"
+                              class="underline"
+                              target="_blank"
+                              >&#40;Jaroszynska et al.&#41;</a
+                            >
+                          </td>
+                        </tr>
+                        <!--  table row 10 -->
+                        <tr>
+                          <td>Plant-wildlife interactions</td>
+                          <td>
+                            Relationships between the plants and animals in a
+                            given ecosystem. These relationships include
+                            predation, parasitism, commensalism, or mutualism
+                            and do not require direct physical contact.
+                            Important plant-wildlife interactions are
+                            pollination, seed dispersal, and herbivory. The
+                            plants and animals have co-evolved these adaptive
+                            mechanisms to maximize the chance of survival.
+                          </td>
+                        </tr>
+                        <!--  table row 11 -->
+                        <tr>
+                          <td>State-and-Transition model</td>
+                          <td>
+                            These models synthesize literature and informal
+                            knowledge tied to particular ecological sites to
+                            distinguish changes in vegetation and soils that are
+                            easily reversible versus changes that are subject to
+                            thresholds beyond which reversal is costly or
+                            impossible. The models describe all possible states,
+                            community phases &#40;i.e., easily-reversible
+                            variants of states&#41;, and transitions between
+                            communities and states. Transitions contain
+                            information about mechanisms, triggers, thresholds,
+                            and indicators of threshold development. More
+                            details can be found on the
+                            <a id="esd_url" class="underline" target="_blank"
+                              >Jornada website</a
+                            >
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
+
                 <div id="Resources" class="prose p-2 scroll-section">
                   <a
                     href="#Resources"
@@ -1905,29 +2124,35 @@
                       >
                     </li>
                     <li>
-                      <a href="https://www.nrcs.usda.gov/" class="underline"
-                      target="_blank"
+                      <a
+                        href="https://www.nrcs.usda.gov/"
+                        class="underline"
+                        target="_blank"
                       >
                         Natural Resources Conservation Service</a
                       >
                     </li>
                     <li>
-                      <a href="https://jornada.nmsu.edu/" class="underline"
-                      target="_blank"
+                      <a
+                        href="https://jornada.nmsu.edu/"
+                        class="underline"
+                        target="_blank"
                       >
                         Jornada Experimental Range</a
                       >
                     </li>
                     <li>
-                      <a href="https://www.blm.gov/" class="underline"
-                      target="_blank"
+                      <a
+                        href="https://www.blm.gov/"
+                        class="underline"
+                        target="_blank"
                       >
                         Bureau of Land Management</a
                       >
                     </li>
                   </ul>
                   <div>
-                    <!-- Language for 'Why is my shapefile not working?' taken from https://rangelands.app/support/18-shapefile-help -->
+                    <!-- Language for 'Why is my shapefile not working?' taken from https://rangelands.app/support/18-shapefile-help
                     <h5>Why is my shapefile not working?</h5>
                     <p>
                       Although a very common format for storing spatial vector
@@ -2004,28 +2229,7 @@
                         Only the first 50 features of the shapefile will be
                         loaded; the remaining features will be discarded.
                       </li>
-                    </ul>
-                        <a id="natural_resources_conservation_service_url" class="underline"
-                        target="_blank"
-                        >
-                          Natural Resources Conservation Service</a
-                        >
-                      </li>
-                      <li>
-                        <a id="jornada_experimental_range_url" class="underline"
-                        target="_blank"
-                        >
-                          Jornada Experimental Range</a
-                        >
-                      </li>
-                      <li>
-                        <a id="blm_url" class="underline"
-                        target="_blank"
-                        >
-                          Bureau of Land Management</a
-                        >
-                      </li>
-                    </ul>
+                    </ul> -->
                     <div>
                       <!-- Language for 'Why is my shapefile not working?' taken from https://rangelands.app/support/18-shapefile-help -->
                       <h5>Why is my shapefile not working?</h5>
@@ -2049,16 +2253,13 @@
                         </li>
                         <li>
                           3D shapefiles are not supported, please
-                          <a
-                            id="esri_shapefile_conversion_url"
-                            target="_blank"
+                          <a id="esri_shapefile_conversion_url" target="_blank"
                             >convert to 2D</a
                           >.
                         </li>
                         <li>
                           Shapefiles can contain geometry errors. Please
-                          <aclass="esri_repair_geom_url"
-                            target="_blank"
+                          <a class="esri_repair_geom_url" target="_blank"
                             >check and fix the geometries</a
                           >of the shapefile and try again.
                         </li>
@@ -2066,23 +2267,17 @@
                           Shapefiles with complex geometries &#40;i.e., polygons
                           with many vertices&#41; or many features will result
                           in an error. Please reduce the number of features or
-                          <a
-                            id="esri_simplify_url"
-                            target="_blank"
+                          <a id="esri_simplify_url" target="_blank"
                             >simplify them</a
                           >.
                         </li>
                         <li>
-                          <a
-                            id="esri_removing_slivers_url"
-                            target="_blank"
+                          <a id="esri_removing_slivers_url" target="_blank"
                             >Sliver polygons</a
                           >
                           &#40;really, really small polygons that are likely
                           mistakes&#41; will result in an error. Please
-                          <a
-                            class="esri_repair_geom_url"
-                            target="_blank"
+                          <a class="esri_repair_geom_url" target="_blank"
                             >check and fix the geometries</a
                           >
                           of the shapefile.
@@ -2090,9 +2285,7 @@
                         <li>
                           Although multipart polygons are compatible with the
                           EIST, singlepart polygons are recommended.
-                          <a
-                            id="esri_singlepart_url"
-                            target="_blank"
+                          <a id="esri_singlepart_url" target="_blank"
                             >Convert to singlepart polygons</a
                           >.
                         </li>
@@ -2104,8 +2297,7 @@
                     </div>
                     <h5>
                       Need more help?
-                      <a id="contact_email"
-                      >Email us.</a>
+                      <a id="contact_email">Email us.</a>
                     </h5>
                   </div>
                 </div>
@@ -2135,9 +2327,7 @@
 
           // Use Clipboard API
           navigator.clipboard
-            .writeText(
-              `${variables.app_url}/documentation/${textToCopy}`
-            )
+            .writeText(`${variables.app_url}/documentation/${textToCopy}`)
             .catch((err) => {
               console.error("Failed to copy: ", err);
             });
